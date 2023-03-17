@@ -25,7 +25,7 @@ const cloud_3 = styled(css)`
   margin-bottom: -1px;
   margin-left: 50%;
 `;
-const cloud_4 = styled(csss)`
+const cloud_4 = styled(css)`
   -webkit-animation-duration: 152s;
   -moz-animation-duration:    152s;
   -ms-animation-duration:     152s;

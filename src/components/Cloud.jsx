@@ -9,6 +9,6 @@ const Cloud = (size, animation) => {
       <div></div>
     </div>
   )
-}
+};
 
 export default Cloud;
