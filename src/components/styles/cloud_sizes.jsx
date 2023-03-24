@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Cloud = styled(css)`
   -webkit-animation: clouds 60s infinite linear;
@@ -13,7 +13,7 @@ const Cloud = styled(css)`
   margin: 20px 20px 10px 2050px;
   width: 54px;
   height: 5px;
-  background: #f7e7eb;
+  background: black;
   & div {
     -moz-box-shadow: inset -2px -3px 0 0 #f7e7eb;
     -webkit-box-shadow: inset -2px -3px 0 0 #f7e7eb;
@@ -84,7 +84,6 @@ const Cloud = styled(css)`
     }
   }
 `;
-
 const TinyCloud = styled(Cloud)`
   -moz-transform: scale(0.35);
   -ms-transform: scale(0.35);
