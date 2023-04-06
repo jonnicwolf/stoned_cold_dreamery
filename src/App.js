@@ -1,10 +1,18 @@
-import Logo from '../src/components/Logo.jsx'
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import NavBar from './components/NavBar.jsx';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Logo />
+      <header>
+        <NavBar />
+      </header>
+
+      <Routes>
+        <Route exact path='/' element={<Home/>} />
+      </Routes>
     </div>
   );
 }
