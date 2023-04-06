@@ -1,4 +1,4 @@
-import Logo from '../src/components/Logo.jsx'
+import NavBar from './components/NavBar.jsx';
 import './App.css';
 
 function App() {
@@ -6,7 +6,6 @@ function App() {
     <div className="App">
       <header>
         <NavBar />
-        <Logo />
       </header>
     </div>
   );
