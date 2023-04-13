@@ -28,10 +28,11 @@ const Container = styled.div`
   justify-content: space-between;
   background-color: #3ED6FE;
   text-decoration: none;
+  height: 30px;
 `;
 const LeftSubContainer = styled.div`
   display: flex;
-  align-self: flex-start;
+  align-self: center;
   gap: 50px;
   margin-left: 20px;
 `;
@@ -42,7 +43,7 @@ const LogoTray = styled.div`
 const RightSubContainer = styled.div`
   margin-right: 50px;
   display: flex;
-  align-self: flex-end;
+  align-self: center;
   gap: 40px;
   width: 100px;
 `;
