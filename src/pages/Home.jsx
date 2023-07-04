@@ -5,20 +5,18 @@ import {
   LogoPlainEstd,
   LogoDudeEstd,
   LogoTransparentBlack,
-  LogoTransparentWhite,
   ShirtMerch,
   TubBluedream
 } from '../photo_assets/carousel_home';
 
 const Home = () => {
   const slides = [
-  {images: Dudes},
-  {images: LogoPlainEstd},
-  {images: LogoDudeEstd},
-  {images: LogoTransparentBlack},
-  {images: LogoTransparentWhite},
-  {images: ShirtMerch},
-  {images: TubBluedream}
+  Dudes,
+  LogoPlainEstd,
+  LogoDudeEstd,
+  LogoTransparentBlack,
+  ShirtMerch,
+  TubBluedream
   ];
 
   return (
