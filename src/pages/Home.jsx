@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
 
@@ -12,9 +12,10 @@ import {
 } from '../photo_assets/carousel_home';
 
 const banner = require("../photo_assets/advertising possibility 2.1.jpg")
-const logo = require("../photo_assets/SCD_name_white.jpg")
+
 
 const Home = () => {
+
   const carousel_home = [
   Dudes,
   LogoPlainEstd,
@@ -32,11 +33,31 @@ const Home = () => {
 
   return (
     <Container>
-      <Logo src={logo} alt="" />
-      <WebBannerBackground src={banner} alt='banner background'/>
+      {/* <WebBannerBackground src={banner} alt='banner background'/> */}
 
-      {/* <Carousel slides={carousel_home} /> */}
-      {/* <Carousel slides={si} /> */}
+      {/* <Carousel slides={carousel_home} /> 
+      <Carousel slides={carousel_home} /> 
+      <Carousel slides={carousel_home} />  */}
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <div>alkjaaslkjasldj</div>
+      <h1>laksjdlfkjasdfl</h1>
+      <h1>laksjdlfkjasdfl</h1>
+      <h1>laksjdlfkjasdfl</h1>
+      <h1>laksjdlfkjasdfl</h1>
+      <h1>laksjdlfkjasdfl</h1>
+      <h1>laksjdlfkjasdfl</h1>
+      <h1>laksjdlfkjasdfl</h1>
+      <h1>laksjdlfkjasdfl</h1>
+      <h1>laksjdlfkjasdfl</h1>
     </Container>
   )
 };
@@ -45,20 +66,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  // background-color: black;
 `;
 const WebBannerBackground = styled.img`
-  width: 1440px;
+  margin-top: 10vh;
+  width: 1400px;
+  height: 125vh;
   color: white;
 `;
-const Logo = styled.img`
-  position: fixed
-  ;
-  width: 200px;
-  height: 70px;
-  
-  
-`
-
 
 export default Home;
