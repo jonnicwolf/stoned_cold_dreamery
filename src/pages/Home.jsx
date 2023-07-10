@@ -29,39 +29,20 @@ const Home = () => {
     TubBluedream
   ];
 
-  // const signature_flower = [
-  //   indica_jar,
-  //   hybrid_jar,
-  //   sativa_jar
-  // ]
+  const signature_flower = [
+    indica_jar,
+    hybrid_jar,
+    sativa_jar
+  ];
 
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
 
-      <Carousel slides={carousel_home} />
-      {/* <Carousel slides={signature_flower} /> */}
-      
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <div>alkjaaslkjasldj</div>
-      <h1>laksjdlfkjasdfl</h1>
-      <h1>laksjdlfkjasdfl</h1>
-      <h1>laksjdlfkjasdfl</h1>
-      <h1>laksjdlfkjasdfl</h1>
-      <h1>laksjdlfkjasdfl</h1>
-      <h1>laksjdlfkjasdfl</h1>
-      <h1>laksjdlfkjasdfl</h1>
-      <h1>laksjdlfkjasdfl</h1>
-      <h1>laksjdlfkjasdfl</h1>
+      <CarouselContainer>
+        <Carousel slides={carousel_home} />
+        <Carousel slides={signature_flower} />
+      </CarouselContainer>
     </Container>
   )
 };
@@ -76,6 +57,10 @@ const WebBannerBackground = styled.img`
   margin-top: 50px;
   width: 1440px;
   height: 185vh;
+`;
+const CarouselContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 export default Home;
