@@ -8,11 +8,11 @@ const logo_white = require('./photo_assets/carousel_home/scd-logo-white-transpar
 
 function App() {
   const [scrollPixel, setScrollPixel] = useState(0);
-  console.log(scrollPixel)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const scrolled =
+      window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       setScrollPixel(scrolled);
     };
     window.addEventListener('scroll', handleScroll);
@@ -25,8 +25,8 @@ function App() {
     <div className="App">
       <LogoContainer scrollPixel={scrollPixel} >
         {scrollPixel > 100
-          ? <Logo src={logo_black} scrollPixel={scrollPixel} alt='scd logo' />
-          : <Logo src={logo_white} scrollPixel={scrollPixel} alt='scd logo' />
+          ? <Logo src={logo_white} alt='scd logo' />
+          : <Logo src={logo_black} alt='scd logo' />
         }
       </LogoContainer>
 
@@ -38,17 +38,19 @@ function App() {
 };
 
 const LogoContainer = styled.div`
-  position: sticky;
-  height: 90px;
+  position: fixed;
+  height: 10vh;
+  width: 90rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.scrollPixel > 100 ? 'white' : 'black'};
+  background-color: ${props => props.scrollPixel > 100 ? 'black' : 'white'};
+  transition: background-color 0.5s ease;
 `;
 const Logo = styled.img`
   position: fixed;
-  width: 200px;
-  height: 70px;
+  width: 250px;
+  height: 80px;
 `;
 
 export default App;
