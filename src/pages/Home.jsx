@@ -16,11 +16,7 @@ const banner = require("../photo_assets/advertising possibility 2.1.jpg");
 
 const Home = () => {
   const signature_flower = [indica_jar, hybrid_jar, sativa_jar];
-  const flavours = [
-    birthday_cake,
-    blue_dream,
-    sherblato
-  ];
+  const flavours = [birthday_cake, blue_dream, sherblato];
 
   return (
     <Container>

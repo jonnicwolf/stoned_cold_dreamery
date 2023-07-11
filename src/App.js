@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Home from './pages/Home';
 
 const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.png');
@@ -57,6 +57,7 @@ const Logo = styled.img`
 const FooterLogo = styled.img`
   width: 1000px;
   height: 200px;
+  transform: translate(250px)
 `;
 
 export default App;

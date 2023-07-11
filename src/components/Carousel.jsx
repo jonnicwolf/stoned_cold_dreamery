@@ -33,7 +33,7 @@ const ButtonRight = styled.button`
   font-weight: bold;
   margin-right: -68px;
   opacity: 20%;
-  z-index: 2;
+  z-index: 1;
 `;
 const ButtonLeft = styled.button`
   background: none;
@@ -43,13 +43,12 @@ const ButtonLeft = styled.button`
   font-weight: bold;
   margin-left: -70px;
   opacity: 20%;
-  z-index: 2;
+  z-index: 1;
 `;
 const SlideImage = styled.img`
   height: 450px;
   width: 38rem;
   object-fit: cover;
-  z-index: 1;
 `;
 
 export default Carousel;
