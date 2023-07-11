@@ -14,7 +14,6 @@ const Carousel = ({slides}) => {
 
   return (
     <Container>
-      <Flavours>Flavours</Flavours>
       <ButtonRight onClick={()=>slideLeft(slide)}>←</ButtonRight>
       <SlideImage src={slides[slide]} alt="" />
       <ButtonLeft onClick={()=>slideRight(slide)}>→</ButtonLeft>
@@ -29,25 +28,23 @@ const Container = styled.div`
 const ButtonRight = styled.button`
   background: none;
   border: none;
-  color: gold;
+  color: black;
   font-size: 60px;
   font-weight: bold;
   margin-right: -68px;
+  opacity: 20%;
   z-index: 2;
 `;
 const ButtonLeft = styled.button`
   background: none;
   border: none;
-  color: gold;
+  color: black;
   font-size: 60px;
   font-weight: bold;
   margin-left: -70px;
+  opacity: 20%;
   z-index: 2;
 `;
-const Flavours = styled.h1`
-  font-size: 100px;
-  font-color: white;
-`
 const SlideImage = styled.img`
   height: 450px;
   width: 38rem;
