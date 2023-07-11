@@ -10,9 +10,9 @@ const NewsLetterSignUp = () => {
   };
   return (
     <>
-      <Container>
+      <ConeContainer>
         {cones}
-      </Container>
+      </ConeContainer>
       <InputContainer>
         <Title>GET NEWS & UPDATES</Title>
         <Form action="">
@@ -33,15 +33,15 @@ const Button = styled.button`
   transform: translateY(-15px);
   width: 150px;
 `;
-const Container = styled.div`
+const ConeContainer = styled.div`
   background-color: white;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 15px;
   height: 450px;
-  margin-bottom: 10px;
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
 `;
 const Cone = styled.img`

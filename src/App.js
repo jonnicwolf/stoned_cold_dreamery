@@ -22,7 +22,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <Container className="App">
       <LogoContainer scrollPixel={scrollPixel} >
         {scrollPixel > 100
           ? <Logo src={logo_white} alt='scd logo' />
@@ -35,10 +35,13 @@ function App() {
       </Routes>
 
       <FooterLogo src={logo_black} alt='scd logo' />
-    </div>
+    </Container>
   );
 };
 
+const Container = styled.div`
+  height: 100%;
+`
 const LogoContainer = styled.div`
   position: fixed;
   height: 10vh;
@@ -56,7 +59,7 @@ const Logo = styled.img`
 `;
 const FooterLogo = styled.img`
   width: 1400px;
-  height: 190px;
+  height: 350px;
   transform: translate(25px)
 `;
 

@@ -40,6 +40,7 @@ const Container = styled.div`
   background-color: black;
   display: flex;
   flex-direction: column;
+  height: 297.5vh;
 `;
 const Flavours = styled.h1`
   align-self: center;
