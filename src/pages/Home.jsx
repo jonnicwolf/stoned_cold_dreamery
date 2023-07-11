@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
+import NewsLetterSignUp from '../components/NewsLetterSignUp';
 import {
   indica_jar,
   hybrid_jar,
@@ -21,12 +22,15 @@ const Home = () => {
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
+
       <CarouselContainer>
         <Flavours>CREAM</Flavours>
         <Carousel slides={flavours} />
         <Carousel slides={signature_flower} />
         <Herb>HERB</Herb>
       </CarouselContainer>
+
+      <NewsLetterSignUp />
     </Container>
   );
 };

@@ -55,9 +55,9 @@ const Logo = styled.img`
   height: 50px;
 `;
 const FooterLogo = styled.img`
-  width: 1000px;
-  height: 200px;
-  transform: translate(250px)
+  width: 1400px;
+  height: 190px;
+  transform: translate(25px)
 `;
 
 export default App;
