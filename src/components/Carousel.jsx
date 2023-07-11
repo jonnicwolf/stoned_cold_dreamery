@@ -2,34 +2,53 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Carousel = ({slides}) => {
-  const [slide, setSlide] = useState(0);
+  const [slideNum, setSlideNum] = useState(0);
   const carouselLength = slides.length;
 
   function slideLeft (slidePosition) {
-    setSlide(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
+    setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
   };
   function slideRight (slidePosition) {
-    setSlide(slidePosition === carouselLength-1 ? 0 : slidePosition+1);
+    setSlideNum(slidePosition === carouselLength-1 ? 0 : slidePosition+1);
   };
 
   return (
     <Container>
-      <button onClick={()=>slideLeft(slide)}>←</button>
-      <div>
-        <SlideImage src={slides[slide]} alt="" />
-      </div>
-      <button onClick={()=>slideRight(slide)}>→</button>
+      <ButtonRight onClick={()=>slideLeft(slideNum)}>←</ButtonRight>
+      <SlideImage src={slides[slideNum]} alt="" />
+      <ButtonLeft onClick={()=>slideRight(slideNum)}>→</ButtonLeft>
     </Container>
   );
 };
 
-
 const Container = styled.div`
   display: flex;
+  align-items: center;
+`;
+const ButtonRight = styled.button`
+  background: none;
+  border: none;
+  color: black;
+  font-size: 60px;
+  font-weight: bold;
+  margin-right: -68px;
+  opacity: 20%;
+  z-index: 1;
+`;
+const ButtonLeft = styled.button`
+  background: none;
+  border: none;
+  color: black;
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: -70px;
+  opacity: 20%;
+  z-index: 1;
 `;
 const SlideImage = styled.img`
-  width: 700px;
-  height: 400px;
+  height: 450px;
+  width: 38rem;
+  object-fit: cover;
 `;
 
 export default Carousel;
