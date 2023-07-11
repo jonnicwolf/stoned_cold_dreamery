@@ -33,6 +33,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home/>} />
       </Routes>
+
+      <FooterLogo src={logo_black} alt='scd logo' />
     </div>
   );
 };
@@ -50,7 +52,11 @@ const LogoContainer = styled.div`
 const Logo = styled.img`
   position: fixed;
   width: 250px;
-  height: 80px;
+  height: 50px;
+`;
+const FooterLogo = styled.img`
+  width: 1000px;
+  height: 200px;
 `;
 
 export default App;

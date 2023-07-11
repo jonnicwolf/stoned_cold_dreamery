@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Carousel = ({slides}) => {
-  const [slide, setSlide] = useState(0);
+  const [slideNum, setSlideNum] = useState(0);
   const carouselLength = slides.length;
 
   function slideLeft (slidePosition) {
-    setSlide(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
+    setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
   };
   function slideRight (slidePosition) {
-    setSlide(slidePosition === carouselLength-1 ? 0 : slidePosition+1);
+    setSlideNum(slidePosition === carouselLength-1 ? 0 : slidePosition+1);
   };
 
   return (
     <Container>
-      <ButtonRight onClick={()=>slideLeft(slide)}>←</ButtonRight>
-      <SlideImage src={slides[slide]} alt="" />
-      <ButtonLeft onClick={()=>slideRight(slide)}>→</ButtonLeft>
+      <ButtonRight onClick={()=>slideLeft(slideNum)}>←</ButtonRight>
+      <SlideImage src={slides[slideNum]} alt="" />
+      <ButtonLeft onClick={()=>slideRight(slideNum)}>→</ButtonLeft>
     </Container>
   );
 };

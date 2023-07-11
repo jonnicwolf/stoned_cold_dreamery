@@ -1,38 +1,25 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
-
-import {
-  Dudes,
-  LogoPlainEstd,
-  LogoDudeEstd,
-  LogoTransparentBlack,
-  ShirtMerch,
-  TubBluedream
-} from '../photo_assets/carousel_home';
-
 import {
   indica_jar,
   hybrid_jar,
   sativa_jar
 } from '../photo_assets/signature_flower';
+import {
+  birthday_cake,
+  blue_dream,
+  sherblato
+} from '../photo_assets/flavours';
 
 const banner = require("../photo_assets/advertising possibility 2.1.jpg");
 
 const Home = () => {
-  const carousel_home = [
-    Dudes,
-    LogoPlainEstd,
-    LogoDudeEstd,
-    LogoTransparentBlack,
-    ShirtMerch,
-    TubBluedream
-  ];
-
-  const signature_flower = [
-    indica_jar,
-    hybrid_jar,
-    sativa_jar
+  const signature_flower = [indica_jar, hybrid_jar, sativa_jar];
+  const flavours = [
+    birthday_cake,
+    blue_dream,
+    sherblato
   ];
 
   return (
@@ -40,7 +27,7 @@ const Home = () => {
       <WebBannerBackground src={banner} alt='banner background'/>
       <CarouselContainer>
         <Flavours>CREAM</Flavours>
-        <Carousel slides={carousel_home} />
+        <Carousel slides={flavours} />
         <Carousel slides={signature_flower} />
         <Herb>HERB</Herb>
       </CarouselContainer>
@@ -58,9 +45,7 @@ const Flavours = styled.h1`
   align-self: center;
   color: white;
   font-size: 80px;
-  //throw Modak Regular as font in here
   margin: 0;
-  
   text-orientation: upright;
   writing-mode: vertical-rl;
   width: 100px;
@@ -68,7 +53,6 @@ const Flavours = styled.h1`
 const Herb = styled.h1`
   color: white;
   font-size: 100px;
-  //throw Modak Regular as font in here
   margin: 0;
   writing-mode: vertical-rl;
   text-orientation: upright;
