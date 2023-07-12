@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const cone = require('/Users/jonathannarine/GithubRepos/cold_stoned_dreamery/src/photo_assets/logos_banners/cone_whiteBorder.jpg');
+const cone = require('../photo_assets/logos_banners/cone_whiteBorder.jpg');
 
 const NewsLetterSignUp = () => {
   const cones = [];
