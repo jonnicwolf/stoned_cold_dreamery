@@ -16,8 +16,8 @@ const NewsLetterSignUp = () => {
       <InputContainer>
         <Title>GET NEWS & UPDATES</Title>
         <Form action="">
-          <Input type="text" />
-          <Button>SIGN<br/>UP</Button>
+          <Input type="text" placeholder='email address'/>
+          <Button>SIGN UP</Button>
         </Form>
         <Disclaimer>
         By clicking 'SIGN UP,' I represent I am at least the age of twenty-one (21), I have read, understood, and agree to the Terms of Service and Privacy Policy and I agree to receive emails and customer service communications from Houseplant via email. I can unsubscribe at any time by clicking 'unsubscribe' in emails.
@@ -31,11 +31,11 @@ const Button = styled.button`
   border: none;
   background-color: white;
   font-size: 25px;
-  font-weight: bold;
+  font-family: var(--font-family-modak);
   height: 60px;
   overflow: hidden;
   padding: 0;
-  transform: translateY(-15px);
+  transform: translateY(-5px);
   width: 150px;
 `;
 const ConeContainer = styled.div`
@@ -66,7 +66,7 @@ const Form = styled.form`
 `;
 const Input = styled.input`
   border: none;
-  font-size: 40px;
+  font-size: 30px;
   height: 70px;
   outline: none;
   padding: 10px;
