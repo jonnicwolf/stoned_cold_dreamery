@@ -59,7 +59,7 @@ const Logo = styled.img`
 `;
 const FooterLogo = styled.img`
   width: 1400px;
-  height: 350px;
+  height: 240px;
   transform: translate(25px)
 `;
 

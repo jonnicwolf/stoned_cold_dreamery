@@ -19,16 +19,21 @@ const NewsLetterSignUp = () => {
           <Input type="text" />
           <Button>SIGN<br/>UP</Button>
         </Form>
+        <Disclaimer>
+        By clicking 'SIGN UP,' I represent I am at least the age of twenty-one (21), I have read, understood, and agree to the Terms of Service and Privacy Policy and I agree to receive emails and customer service communications from Houseplant via email. I can unsubscribe at any time by clicking 'unsubscribe' in emails.
+        </Disclaimer>
       </InputContainer>
     </>
   );
 };
 
 const Button = styled.button`
-  border: 0;
+  border: none;
   background-color: white;
-  font-size: 30px;
-  height: 100px;
+  font-size: 25px;
+  font-weight: bold;
+  height: 60px;
+  overflow: hidden;
   padding: 0;
   transform: translateY(-15px);
   width: 150px;
@@ -49,15 +54,21 @@ const Cone = styled.img`
   height: 140px;
   opacity: 20%
 `;
+const Disclaimer = styled.div`
+  font-color:black;
+  font-size: 12px;
+  padding-top: 10px;
+  width: 560px;
+`
 const Form = styled.form`
   background-color: white;
+  border: 2px inset aqua;
 `;
 const Input = styled.input`
   border: none;
-  border-right-style: solid;
-  border-right-color: grey;
-  border-right-width: 1px;
-  height: 150px;
+  font-size: 40px;
+  height: 70px;
+  outline: none;
   padding: 10px;
   width: 400px;
 `;
@@ -66,7 +77,7 @@ const InputContainer = styled.div`
 `;
 const Title = styled.h1`
   color: black;
-  transform: translateX(15px);
+  transform: translateX(20px);
   font-size: 50px;
 `;
 

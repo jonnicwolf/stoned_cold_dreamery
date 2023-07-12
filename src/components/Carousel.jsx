@@ -49,6 +49,7 @@ const SlideImage = styled.img`
   height: 450px;
   width: 38rem;
   object-fit: cover;
+  // transition: opacity 1s;
 `;
 
 export default Carousel;
