@@ -51,6 +51,7 @@ const LogoContainer = styled.div`
   align-items: center;
   background-color: ${props => props.scrollPixel > 100 ? 'black' : 'white'};
   transition: background-color 0.5s ease;
+  z-index: 4;
 `;
 const Logo = styled.img`
   position: fixed;

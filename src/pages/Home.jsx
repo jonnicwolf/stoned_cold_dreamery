@@ -38,15 +38,13 @@ const Home = () => {
 const Container = styled.div`
   align-items: center;
   background-color: black;
-
   display: flex;
   flex-direction: column;
   height: 297.5vh;
 `;
 const Flavours = styled.div`
   align-self: center;
-  color: white;
- 
+  color: white; 
   font-family: var(--font-family-modak);
   font-size: 100px;
   letter-spacing: -65px;
@@ -58,7 +56,6 @@ const Flavours = styled.div`
 `;
 const Herb = styled.h1`
   color: white;
-
   font-size: 110px;
   font-family: var(--font-family-modak);
   font-weight: normal;
