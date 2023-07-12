@@ -38,23 +38,33 @@ const Home = () => {
 const Container = styled.div`
   align-items: center;
   background-color: black;
+
   display: flex;
   flex-direction: column;
   height: 297.5vh;
 `;
-const Flavours = styled.h1`
+const Flavours = styled.div`
   align-self: center;
   color: white;
-  font-size: 80px;
+ 
+  font-family: var(--font-family-modak);
+  font-size: 100px;
+  letter-spacing: -65px;
   margin: 0;
   text-orientation: upright;
+  transform: translate(20px, -20px);
   writing-mode: vertical-rl;
-  width: 100px;
+  width: 150px;
 `;
 const Herb = styled.h1`
   color: white;
-  font-size: 100px;
+
+  font-size: 110px;
+  font-family: var(--font-family-modak);
+  font-weight: normal;
+  letter-spacing: -60px;
   margin: 0;
+  transform: translate(-15px, -20px);
   writing-mode: vertical-rl;
   text-orientation: upright;
   align-self: center;
