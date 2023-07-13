@@ -8,12 +8,15 @@ const logo_white = require('./photo_assets/carousel_home/scd-logo-white-transpar
 
 function App() {
   const [scrollPixel, setScrollPixel] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled =
-      window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const screenWidth = document.documentElement.clientWidth;
+      console.log(screenWidth)
       setScrollPixel(scrolled);
+      setScreenWidth(screenWidth);
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -24,7 +27,7 @@ function App() {
   return (
     <Container className="App">
       <LogoContainer scrollPixel={scrollPixel} >
-        {scrollPixel > 100
+        { scrollPixel > 100
           ? <Logo src={logo_white} alt='scd logo' />
           : <Logo src={logo_black} alt='scd logo' />
         }
@@ -34,9 +37,12 @@ function App() {
         <Route exact path='/' element={<Home/>} />
       </Routes>
 
-      <FooterLogoContainer>
-        <FooterLogo src={logo_black} alt='scd logo' />
-      </FooterLogoContainer>
+      { screenWidth <= 768
+        ? null
+        : <FooterLogoContainer>
+            <FooterLogo src={logo_black} alt='scd logo' />
+          </FooterLogoContainer>
+      }
     </Container>
   );
 };
@@ -44,7 +50,6 @@ function App() {
 const Container = styled.div`
   background-color: white;
   height: 100%;
-
 `;
 const LogoContainer = styled.div`
   position: fixed;
@@ -63,14 +68,14 @@ const Logo = styled.img`
 `;
 const FooterLogo = styled.img`
   // border: 5px solid red;
-  width: 90vh;
+  // width: 90vh;
   height: 100px;
 `;
 const FooterLogoContainer = styled.footer`
   position: sticky;
   align-items: center;
   background-color: white;
-  // border: 5px solid red;
+  border: 5px solid red;
   display: flex;
   height: 150px;
   justify-content: center;
