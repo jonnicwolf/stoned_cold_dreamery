@@ -40,7 +40,8 @@ const Container = styled.div`
   background-color: black;
   display: flex;
   flex-direction: column;
-  height: 297.5vh;
+  height: 180%;
+  height: 295vh;
 `;
 const Flavours = styled.div`
   align-self: center;
@@ -55,6 +56,7 @@ const Flavours = styled.div`
   width: 150px;
 `;
 const Herb = styled.h1`
+  align-self: center;
   color: white;
   font-size: 110px;
   font-family: var(--font-family-modak);
@@ -64,7 +66,6 @@ const Herb = styled.h1`
   transform: translate(-15px, -20px);
   writing-mode: vertical-rl;
   text-orientation: upright;
-  align-self: center;
 `;
 const WebBannerBackground = styled.img`
   margin-top: 50px;

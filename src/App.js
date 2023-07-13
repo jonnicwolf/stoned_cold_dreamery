@@ -34,18 +34,22 @@ function App() {
         <Route exact path='/' element={<Home/>} />
       </Routes>
 
-      <FooterLogo src={logo_black} alt='scd logo' />
+      <FooterLogoContainer>
+        <FooterLogo src={logo_black} alt='scd logo' />
+      </FooterLogoContainer>
     </Container>
   );
 };
 
 const Container = styled.div`
+  background-color: white;
   height: 100%;
-`
+
+`;
 const LogoContainer = styled.div`
   position: fixed;
-  height: 10vh;
-  width: 90rem;
+  height: 90px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,14 +58,23 @@ const LogoContainer = styled.div`
   z-index: 4;
 `;
 const Logo = styled.img`
-  position: fixed;
   width: 250px;
-  height: 50px;
+  height: 80px;
 `;
 const FooterLogo = styled.img`
-  width: 1400px;
-  height: 240px;
-  transform: translate(25px)
+  // border: 5px solid red;
+  width: 90vh;
+  height: 100px;
+`;
+const FooterLogoContainer = styled.footer`
+  position: sticky;
+  align-items: center;
+  background-color: white;
+  // border: 5px solid red;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  width: 100%;
 `;
 
 export default App;
