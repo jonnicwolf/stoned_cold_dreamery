@@ -61,14 +61,20 @@ const LogoContainer = styled.div`
   background-color: ${props => props.scrollPixel > 100 ? 'black' : 'white'};
   transition: background-color 0.5s ease;
   z-index: 4;
+  @media (min-width: 390px) {
+    height: 2.1%;
+    width: 27.48%;
+  }
 `;
 const Logo = styled.img`
   width: 250px;
   height: 80px;
+  @media (min-width: 390px) {
+    height: 80%;
+    width: 90%;
+  }
 `;
 const FooterLogo = styled.img`
-  // border: 5px solid red;
-  // width: 90vh;
   height: 100px;
 `;
 const FooterLogoContainer = styled.footer`
