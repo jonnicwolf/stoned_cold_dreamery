@@ -52,6 +52,10 @@ const SlideImage = styled.img`
     height: 100%;
     width: 99vw;
   }
+  @media (min-width: 768px) {
+    transform: translateX(-10px);
+    width: 100vw;
+  }
 `;
 
 export default Carousel;

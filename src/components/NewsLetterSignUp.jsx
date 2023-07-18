@@ -48,6 +48,11 @@ const Button = styled.button`
     transform: translateX(50px);
     width: 30vw;
   }
+  @media (min-width: 768px) {
+    font-size: 30px;
+    transform: translateX(30px);
+     width: 20vw;
+  }
 `;
 const ConeContainer = styled.div`
   background-color: white;
@@ -80,7 +85,7 @@ const Disclaimer = styled.div`
 `
 const Form = styled.form`
   background-color: white;
-  border: 2px inset aqua;
+  border: 3px inset aqua;
 `;
 const Input = styled.input`
   border: none;
@@ -93,6 +98,10 @@ const Input = styled.input`
     width: 50vw;
     font-size: 22px;
   }
+  @media (min-width: 768px) {
+    width: 70vw;
+    font-size: 28px;
+  }
 `;
 const InputContainer = styled.div`
   transform: translateY(-400px);
@@ -104,6 +113,10 @@ const Title = styled.h1`
   @media (min-width: 390px) {
     font-size: 30px;
     transform: translateX(30px);
+  }
+  @media (min-width: 768px) {
+    font-size: 50px;
+    transform: translateX(110px);
   }
 `;
 

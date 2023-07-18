@@ -48,6 +48,7 @@ function App() {
 
 const Container = styled.div`
   height: 100%;
+  overflow-x: hidden;
 `;
 const LogoContainer = styled.div`
   align-items: center;
@@ -65,7 +66,8 @@ const LogoContainer = styled.div`
   }
   @media (min-width: 425px) {
     height: 10vh;
-    width: 130vw;
+    width: 100vw;
+    
   }
 `;
 const Logo = styled.img`
@@ -78,7 +80,7 @@ const Logo = styled.img`
   }
   @media (min-width: 425px) {
     height: 10vh;
-    width: 110vw;
+    width: 70vw;
   }
 `;
 const FooterLogo = styled.img`

@@ -24,7 +24,7 @@ const Home = () => {
       <WebBannerBackground src={banner} alt='banner background'/>
 
       <CarouselContainer>
-        <Flavours>CREAM</Flavours>
+        <Cream>CREAM</Cream>
         <Carousel slides={flavours} />
         <Carousel slides={signature_flower} />
         <Herb>HERB</Herb>
@@ -42,7 +42,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 100%;
 `;
-const Flavours = styled.div`
+const Cream = styled.div`
   align-self: center;
   color: white; 
   font-family: var(--font-family-modak);
@@ -59,6 +59,13 @@ const Flavours = styled.div`
     transform: translate(-20px,-25px);
     width: 85%;
     writing-mode: horizontal-tb;
+  }
+  @media (min-width: 425px) {
+    font-size: 90px;
+    width: 80%;
+  }
+  @media (min-width: 768px) {
+    width: 40%;
   }
 `;
 const Herb = styled.h1`
@@ -86,6 +93,14 @@ const WebBannerBackground = styled.img`
   @media (min-width: 390px) {
     height: 40%;
     width: 100%;
+  }
+  @media (min-width: 425px) {
+    height: 70vh;
+    width: 100vw;
+  }
+  @media (min-width: 768px) {
+    height: 110vh;
+    width: 100vw;
   }
 `;
 const CarouselContainer = styled.div`
