@@ -63,7 +63,7 @@ const LogoContainer = styled.div`
   z-index: 4;
   @media (min-width: 390px) {
     height: 2.1%;
-    width: 27.48%;
+    width: 100vw;
   }
 `;
 const Logo = styled.img`
@@ -71,7 +71,7 @@ const Logo = styled.img`
   height: 80px;
   @media (min-width: 390px) {
     height: 80%;
-    width: 90%;
+    width: 100%;
   }
 `;
 const FooterLogo = styled.img`

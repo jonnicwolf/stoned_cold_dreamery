@@ -40,8 +40,7 @@ const Container = styled.div`
   background-color: black;
   display: flex;
   flex-direction: column;
-  height: 180%;
-  height: 295vh;
+  height: 100%;
 `;
 const Flavours = styled.div`
   align-self: center;
@@ -50,10 +49,17 @@ const Flavours = styled.div`
   font-size: 100px;
   letter-spacing: -65px;
   margin: 0;
-  text-orientation: upright;
   transform: translate(20px, -20px);
   writing-mode: vertical-rl;
   width: 150px;
+  @media (min-width: 390px) {
+    font-size: 90px;
+    height: 70px;
+    letter-spacing: 10px;
+    transform: translateY(-25px);
+    width: 85%;
+    writing-mode: horizontal-tb;
+  }
 `;
 const Herb = styled.h1`
   align-self: center;
@@ -65,16 +71,29 @@ const Herb = styled.h1`
   margin: 0;
   transform: translate(-15px, -20px);
   writing-mode: vertical-rl;
-  text-orientation: upright;
+  @media (min-width: 390px) {
+    font-size: 90px;
+    height: 70px;
+    letter-spacing: 10px;
+    transform: translateY(-25px);
+    writing-mode: horizontal-tb;
+  }
 `;
 const WebBannerBackground = styled.img`
   margin-top: 50px;
   width: 1440px;
   height: 185vh;
+  @media (min-width: 390px) {
+    height: 40%;
+    width: 100%;
+  }
 `;
 const CarouselContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media (min-width: 390px) {
+    flex-direction: column;
+  }
 `;
 
 export default Home;

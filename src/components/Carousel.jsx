@@ -24,6 +24,10 @@ const Carousel = ({slides}) => {
 const Container = styled.div`
   display: flex;
   align-items: center;
+  @media (min-width: 390px) {
+    height: 40%;
+    width: 50%;
+  }
 `;
 const ButtonRight = styled.button`
   background: none;
@@ -49,7 +53,10 @@ const SlideImage = styled.img`
   height: 450px;
   width: 38rem;
   object-fit: cover;
-  // transition: opacity 1s;
+  @media (min-width: 390px) {
+    height: 100%;
+    width: 100vw;
+  }
 `;
 
 export default Carousel;
