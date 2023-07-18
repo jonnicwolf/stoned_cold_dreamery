@@ -112,7 +112,7 @@ const Title = styled.h1`
   font-size: 50px;
   @media (min-width: 390px) {
     font-size: 30px;
-    transform: translateX(30px);
+    transform: translateX(50px);
   }
   @media (min-width: 768px) {
     font-size: 50px;

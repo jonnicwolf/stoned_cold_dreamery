@@ -50,7 +50,8 @@ const SlideImage = styled.img`
   width: 38rem;
   @media (min-width: 390px) {
     height: 100%;
-    width: 99vw;
+    width: 100vw;
+    transform: translateX(-10px);
   }
   @media (min-width: 768px) {
     transform: translateX(-10px);
