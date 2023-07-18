@@ -47,18 +47,17 @@ function App() {
 };
 
 const Container = styled.div`
-  background-color: white;
   height: 100%;
 `;
 const LogoContainer = styled.div`
-  position: fixed;
-  height: 90px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: ${props => props.scrollPixel > 100 ? 'black' : 'white'};
+  background-color: ${props => props.scrollPixel > 100 ? 'black' : 'aqua'};
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  position: fixed;
   transition: background-color 0.5s ease;
+  width: 100%;
   z-index: 4;
   @media (min-width: 390px) {
     height: 7vh;
@@ -66,18 +65,18 @@ const LogoContainer = styled.div`
   }
 `;
 const Logo = styled.img`
-  width: 250px;
   height: 80px;
+  width: 250px;
   @media (min-width: 390px) {
-    height: 80%;
-    width: 100%;
+    position: fixed;
+    height: 6%;
+    width: 70%;
   }
 `;
 const FooterLogo = styled.img`
   height: 100px;
 `;
 const FooterLogoContainer = styled.footer`
-  position: sticky;
   align-items: center;
   background-color: white;
   border: 5px solid red;
@@ -85,6 +84,7 @@ const FooterLogoContainer = styled.footer`
   height: 150px;
   justify-content: center;
   width: 100%;
+  position: sticky;
 `;
 
 export default App;

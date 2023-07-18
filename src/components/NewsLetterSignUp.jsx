@@ -40,7 +40,6 @@ const Button = styled.button`
   font-size: 25px;
   font-family: var(--font-family-modak);
   height: 60px;
-  // overflow: hidden;
   padding: 0;
   transform: translateY(-5px);
   width: 150px;
@@ -65,8 +64,8 @@ const ConeContainer = styled.div`
   }
 `;
 const Cone = styled.img`
-  width: 80px;
   height: 140px;
+  width: 80px;
   opacity: 20%
 `;
 const Disclaimer = styled.div`
