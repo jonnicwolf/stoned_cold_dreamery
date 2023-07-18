@@ -56,7 +56,7 @@ const Flavours = styled.div`
     font-size: 90px;
     height: 70px;
     letter-spacing: 10px;
-    transform: translateY(-25px);
+    transform: translate(-20px,-25px);
     width: 85%;
     writing-mode: horizontal-tb;
   }

@@ -36,21 +36,21 @@ const ButtonRight = styled.button`
   font-size: 60px;
   font-weight: bold;
   margin-right: -68px;
-  opacity: 20%;
+  opacity: 100%;
   z-index: 1;
   @media (min-width: 390px) {
-    border: 1px solid red;
-    font-size: 30px;
-    height: 55vw;
+    height: 55vh;
+    transform: translateX(-30px);
+    width: 100vw;
   }
 `;
 const SlideImage = styled.img`
   height: 450px;
-  width: 38rem;
   object-fit: cover;
+  width: 38rem;
   @media (min-width: 390px) {
     height: 100%;
-    width: 120vw;
+    width: 99vw;
   }
 `;
 
