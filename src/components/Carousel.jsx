@@ -14,9 +14,9 @@ const Carousel = ({slides}) => {
 
   return (
     <Container>
-      <ButtonRight onClick={()=>slideLeft(slideNum)}>←</ButtonRight>
-      <SlideImage src={slides[slideNum]} alt="" />
-      <ButtonLeft onClick={()=>slideRight(slideNum)}>→</ButtonLeft>
+      <ButtonRight onClick={()=>slideLeft(slideNum)}>
+        <SlideImage src={slides[slideNum]} alt="" />
+      </ButtonRight>
     </Container>
   );
 };
@@ -24,6 +24,10 @@ const Carousel = ({slides}) => {
 const Container = styled.div`
   display: flex;
   align-items: center;
+  @media (min-width: 390px) {
+    height: 40%;
+    width: 50%;
+  }
 `;
 const ButtonRight = styled.button`
   background: none;
@@ -32,24 +36,22 @@ const ButtonRight = styled.button`
   font-size: 60px;
   font-weight: bold;
   margin-right: -68px;
-  opacity: 20%;
+  opacity: 100%;
   z-index: 1;
-`;
-const ButtonLeft = styled.button`
-  background: none;
-  border: none;
-  color: black;
-  font-size: 60px;
-  font-weight: bold;
-  margin-left: -70px;
-  opacity: 20%;
-  z-index: 1;
+  @media (min-width: 390px) {
+    height: 55vh;
+    transform: translateX(-30px);
+    width: 100vw;
+  }
 `;
 const SlideImage = styled.img`
   height: 450px;
-  width: 38rem;
   object-fit: cover;
-  // transition: opacity 1s;
+  width: 38rem;
+  @media (min-width: 390px) {
+    height: 100%;
+    width: 99vw;
+  }
 `;
 
 export default Carousel;
