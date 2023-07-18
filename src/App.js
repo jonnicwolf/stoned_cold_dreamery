@@ -14,7 +14,6 @@ function App() {
     const handleScroll = () => {
       const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       const screenWidth = document.documentElement.clientWidth;
-      console.log(screenWidth)
       setScrollPixel(scrolled);
       setScreenWidth(screenWidth);
     };
@@ -62,7 +61,7 @@ const LogoContainer = styled.div`
   transition: background-color 0.5s ease;
   z-index: 4;
   @media (min-width: 390px) {
-    height: 2.1%;
+    height: 7vh;
     width: 100vw;
   }
 `;

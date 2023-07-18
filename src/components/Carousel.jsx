@@ -14,9 +14,9 @@ const Carousel = ({slides}) => {
 
   return (
     <Container>
-      <ButtonRight onClick={()=>slideLeft(slideNum)}>←</ButtonRight>
-      <SlideImage src={slides[slideNum]} alt="" />
-      <ButtonLeft onClick={()=>slideRight(slideNum)}>→</ButtonLeft>
+      <ButtonRight onClick={()=>slideLeft(slideNum)}>
+        <SlideImage src={slides[slideNum]} alt="" />
+      </ButtonRight>
     </Container>
   );
 };
@@ -38,16 +38,11 @@ const ButtonRight = styled.button`
   margin-right: -68px;
   opacity: 20%;
   z-index: 1;
-`;
-const ButtonLeft = styled.button`
-  background: none;
-  border: none;
-  color: black;
-  font-size: 60px;
-  font-weight: bold;
-  margin-left: -70px;
-  opacity: 20%;
-  z-index: 1;
+  @media (min-width: 390px) {
+    border: 1px solid red;
+    font-size: 30px;
+    height: 55vw;
+  }
 `;
 const SlideImage = styled.img`
   height: 450px;
@@ -55,7 +50,7 @@ const SlideImage = styled.img`
   object-fit: cover;
   @media (min-width: 390px) {
     height: 100%;
-    width: 100vw;
+    width: 120vw;
   }
 `;
 
