@@ -35,23 +35,39 @@ const Home = () => {
   );
 };
 
+const CarouselContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  @media (min-width: 390px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+  @media (min-width: 768px) {
+    gap: 20px;
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 100px;
+  }
+`;
 const Container = styled.div`
   align-items: center;
   background-color: black;
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 `;
 const Cream = styled.div`
-  align-self: center;
   color: white; 
   font-family: var(--font-family-modak);
   font-size: 100px;
-  letter-spacing: -65px;
-  margin: 0;
-  transform: translate(20px, -20px);
   writing-mode: vertical-rl;
-  width: 150px;
   @media (min-width: 390px) {
     font-size: 90px;
     height: 70px;
@@ -68,10 +84,11 @@ const Cream = styled.div`
     width: 40%;
   }
   @media (min-width: 1024px) {
-    transform: translate(20px, -25px);
+    font-size: 105px;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    letter-spacing: -65px;
+    letter-spacing: -80px;
+    transform: translate(70px, -200px);
   }
 `;
 const Herb = styled.h1`
@@ -91,6 +108,13 @@ const Herb = styled.h1`
     transform: translateY(-25px);
     writing-mode: horizontal-tb;
   }
+  @media (min-width: 1024px) {
+    font-size: 100px;
+    letter-spacing: -60px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: translate(-65px, -190px) scaleY(1.09);
+  }
 `;
 const WebBannerBackground = styled.img`
   margin-top: 50px;
@@ -109,17 +133,7 @@ const WebBannerBackground = styled.img`
     width: 100vw;
   }
   @media (min-width: 1024px) {
-    
-  }
-`;
-const CarouselContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  @media (min-width: 390px) {
-    flex-direction: column;
-  }
-  @media (min-width: 1024px) {
-    flex-direction: row;
+    height: 200vh;
   }
 `;
 

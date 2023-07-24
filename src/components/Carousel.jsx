@@ -50,21 +50,21 @@ const ButtonRight = styled.button`
   }
 `;
 const SlideImage = styled.img`
-  height: 450px;
   object-fit: cover;
-  width: 38rem;
   @media (min-width: 390px) {
     height: 100%;
-    width: 100vw;
-    transform: translateX(-10px);
+    width: 120vw;
+    transform: translateX(-140px);
   }
   @media (min-width: 768px) {
-    transform: translateX(-10px);
+    transform: translateX(-190px);
     width: 100vw;
   }
   @media (min-width: 1024px) {
-    // width: 50vw;
-    width: 38rem;
+    height: 400px;
+    width: 370px;
+    width: 400px;
+    transform: translateY(5px);
   }
 `;
 

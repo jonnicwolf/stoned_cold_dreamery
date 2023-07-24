@@ -50,7 +50,7 @@ const Button = styled.button`
   }
   @media (min-width: 768px) {
     font-size: 30px;
-    transform: translateX(30px);
+    transform: translateX(19px);
      width: 20vw;
   }
 `;
@@ -82,14 +82,21 @@ const Disclaimer = styled.div`
     transform: translateX(35px);
     width: 90vw;
   }
+  @media (min-width: 1024px) {
+    transform: translateX(70px);
+  }
 `
 const Form = styled.form`
   background-color: white;
   border: 3px inset aqua;
+  @media (min-width: 768px) {
+    width: 95%;
+    transform: translateX(20px);
+  }
   @media (min-width: 1024px) {
     width: 90vw;
     width: 95%;
-    transform: translateX(20px);
+    transform: translateX(30px);
   }
 `;
 const Input = styled.input`
@@ -122,6 +129,9 @@ const Title = styled.h1`
   @media (min-width: 768px) {
     font-size: 50px;
     transform: translateX(110px);
+  }
+  @media (min-width: 1024px) {
+    transform: translateX(250px);
   }
 `;
 
