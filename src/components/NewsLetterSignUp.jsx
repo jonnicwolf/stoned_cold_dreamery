@@ -86,6 +86,11 @@ const Disclaimer = styled.div`
 const Form = styled.form`
   background-color: white;
   border: 3px inset aqua;
+  @media (min-width: 1024px) {
+    width: 90vw;
+    width: 95%;
+    transform: translateX(20px);
+  }
 `;
 const Input = styled.input`
   border: none;

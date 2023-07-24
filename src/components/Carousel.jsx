@@ -43,6 +43,11 @@ const ButtonRight = styled.button`
     transform: translateX(-30px);
     width: 100vw;
   }
+  @media (min-width: 1024px) {
+    width: 30vw;
+    margin: 0;
+    height: 50vh;
+  }
 `;
 const SlideImage = styled.img`
   height: 450px;
@@ -56,6 +61,10 @@ const SlideImage = styled.img`
   @media (min-width: 768px) {
     transform: translateX(-10px);
     width: 100vw;
+  }
+  @media (min-width: 1024px) {
+    // width: 50vw;
+    width: 38rem;
   }
 `;
 

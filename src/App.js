@@ -67,7 +67,9 @@ const LogoContainer = styled.div`
   @media (min-width: 426px) {
     height: 10vh;
     width: 100vw;
-    
+  }
+  @media (min-width: 1024px) {
+    height: 16vh;
   }
 `;
 const Logo = styled.img`
@@ -82,6 +84,10 @@ const Logo = styled.img`
     height: 10vh;
     width: 70vw;
   }
+  @media (min-width: 1024px) {
+    height: 15vh;
+    width: 40vw;
+  }
 `;
 const FooterLogo = styled.img`
   height: 100px;
@@ -89,7 +95,6 @@ const FooterLogo = styled.img`
 const FooterLogoContainer = styled.footer`
   align-items: center;
   background-color: white;
-  border: 5px solid red;
   display: flex;
   height: 150px;
   justify-content: center;

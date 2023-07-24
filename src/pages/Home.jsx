@@ -67,6 +67,12 @@ const Cream = styled.div`
   @media (min-width: 768px) {
     width: 40%;
   }
+  @media (min-width: 1024px) {
+    transform: translate(20px, -25px);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: -65px;
+  }
 `;
 const Herb = styled.h1`
   align-self: center;
@@ -102,12 +108,18 @@ const WebBannerBackground = styled.img`
     height: 110vh;
     width: 100vw;
   }
+  @media (min-width: 1024px) {
+    
+  }
 `;
 const CarouselContainer = styled.div`
   display: flex;
   flex-direction: row;
   @media (min-width: 390px) {
     flex-direction: column;
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
   }
 `;
 
