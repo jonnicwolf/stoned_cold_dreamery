@@ -8,15 +8,12 @@ const Carousel = ({slides}) => {
   function slideLeft (slidePosition) {
     setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
   };
-  function slideRight (slidePosition) {
-    setSlideNum(slidePosition === carouselLength-1 ? 0 : slidePosition+1);
-  };
 
   return (
     <Container>
-      <ButtonRight onClick={()=>slideLeft(slideNum)}>
+      <SlideButton onClick={()=>slideLeft(slideNum)}>
         <SlideImage src={slides[slideNum]} alt="" />
-      </ButtonRight>
+      </SlideButton>
     </Container>
   );
 };
@@ -29,7 +26,7 @@ const Container = styled.div`
     width: 50%;
   }
 `;
-const ButtonRight = styled.button`
+const SlideButton = styled.button`
   background: none;
   border: none;
   color: black;
