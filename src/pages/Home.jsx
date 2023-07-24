@@ -36,11 +36,11 @@ const Home = () => {
 };
 
 const CarouselContainer = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: row;
   gap: 70px;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
   @media (min-width: 390px) {
     flex-direction: column;
@@ -51,6 +51,9 @@ const CarouselContainer = styled.div`
   }
   @media (min-width: 1024px) {
     flex-direction: row;
+    gap: 100px;
+  }
+  @media (min-width: 2560px) {
     gap: 100px;
   }
 `;
@@ -90,6 +93,11 @@ const Cream = styled.div`
     letter-spacing: -80px;
     transform: translate(70px, -200px);
   }
+  @media (min-width: 2560px) {
+    font-size: 200px;
+    letter-spacing: -150px;
+    transform: translateY(-400px);
+  }
 `;
 const Herb = styled.h1`
   align-self: center;
@@ -115,6 +123,11 @@ const Herb = styled.h1`
     text-orientation: upright;
     transform: translate(-65px, -190px) scaleY(1.09);
   }
+  @media (min-width: 2560px) {
+    font-size: 220px;
+    letter-spacing: -150px;
+    transform: translateY(-400px);
+  }
 `;
 const WebBannerBackground = styled.img`
   margin-top: 50px;
@@ -134,6 +147,12 @@ const WebBannerBackground = styled.img`
   }
   @media (min-width: 1024px) {
     height: 200vh;
+  }
+  @media (min-width: 1440px) {
+    height: 250vh;
+  }
+  @media (min-width: 2560px) {
+    height: 300vh;
   }
 `;
 

@@ -48,6 +48,9 @@ const ButtonRight = styled.button`
     margin: 0;
     height: 50vh;
   }
+  @media (min-width: 2560px) {
+    height: 100vh;
+  }
 `;
 const SlideImage = styled.img`
   object-fit: cover;
@@ -65,6 +68,10 @@ const SlideImage = styled.img`
     width: 370px;
     width: 400px;
     transform: translateY(5px);
+  }
+  @media (min-width: 2560px) {
+    height: 100vh;
+    width: 110%;
   }
 `;
 

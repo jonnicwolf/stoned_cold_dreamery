@@ -42,7 +42,6 @@ const Button = styled.button`
   height: 60px;
   padding: 0;
   transform: translateY(-5px);
-  width: 150px;
   @media (min-width: 390px) {
     font-size: 20px;
     transform: translateX(50px);
@@ -52,6 +51,19 @@ const Button = styled.button`
     font-size: 30px;
     transform: translateX(19px);
      width: 20vw;
+  }
+  @media (min-width: 1024px) {
+    font-size: 35px;
+    width: 15vw;
+    transform: translateX(83px);
+  }
+  @media (min-width: 1440px) {
+    transform: translateX(19px);
+    width: 10vw;
+  }
+  @media (min-width: 2560px) {
+    font-size: 40px;
+    width: 7vw;
   }
 `;
 const ConeContainer = styled.div`
@@ -85,6 +97,10 @@ const Disclaimer = styled.div`
   @media (min-width: 1024px) {
     transform: translateX(70px);
   }
+  @media (min-width: 2560px) {
+    width: 40vw;
+    transform: translateX(700px);
+  }
 `
 const Form = styled.form`
   background-color: white;
@@ -97,6 +113,10 @@ const Form = styled.form`
     width: 90vw;
     width: 95%;
     transform: translateX(30px);
+  }
+  @media (min-width: 2560px) {
+    width: 50vw;
+    transform: translateX(590px);
   }
 `;
 const Input = styled.input`
@@ -113,6 +133,16 @@ const Input = styled.input`
   @media (min-width: 768px) {
     width: 70vw;
     font-size: 28px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 35px;
+  }
+  @media (min-width: 1440px) {
+    width: 82.3vw;
+  }
+  @media (min-width: 2560px) {
+    width: 41.5vw;
+    font-size: 45px;
   }
 `;
 const InputContainer = styled.div`
@@ -132,6 +162,13 @@ const Title = styled.h1`
   }
   @media (min-width: 1024px) {
     transform: translateX(250px);
+  }
+  @media (min-width: 1440px) {
+    transform: translateX(450px);
+  }
+  @media (min-width: 2560px) {
+    font-size: 60px;
+    transform: translateX(900px);
   }
 `;
 

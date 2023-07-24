@@ -71,6 +71,9 @@ const LogoContainer = styled.div`
   @media (min-width: 1024px) {
     height: 16vh;
   }
+  @media (min-width: 1440px) {
+    height: 12vh;
+  }
 `;
 const Logo = styled.img`
   height: 80px;
@@ -87,6 +90,10 @@ const Logo = styled.img`
   @media (min-width: 1024px) {
     height: 15vh;
     width: 40vw;
+  }
+  @media (min-width: 1440px) {
+    height: 10vh;
+    width: 30vw;
   }
 `;
 const FooterLogo = styled.img`
