@@ -48,6 +48,7 @@ function App() {
 
 const Container = styled.div`
   height: 100%;
+  overflow-x: hidden;
 `;
 const LogoContainer = styled.div`
   align-items: center;
@@ -63,6 +64,16 @@ const LogoContainer = styled.div`
     height: 7vh;
     width: 100vw;
   }
+  @media (min-width: 426px) {
+    height: 10vh;
+    width: 100vw;
+  }
+  @media (min-width: 1024px) {
+    height: 16vh;
+  }
+  @media (min-width: 1440px) {
+    height: 12vh;
+  }
 `;
 const Logo = styled.img`
   height: 80px;
@@ -72,6 +83,18 @@ const Logo = styled.img`
     height: 6%;
     width: 70%;
   }
+  @media (min-width: 426px) {
+    height: 10vh;
+    width: 70vw;
+  }
+  @media (min-width: 1024px) {
+    height: 15vh;
+    width: 40vw;
+  }
+  @media (min-width: 1440px) {
+    height: 10vh;
+    width: 30vw;
+  }
 `;
 const FooterLogo = styled.img`
   height: 100px;
@@ -79,7 +102,6 @@ const FooterLogo = styled.img`
 const FooterLogoContainer = styled.footer`
   align-items: center;
   background-color: white;
-  border: 5px solid red;
   display: flex;
   height: 150px;
   justify-content: center;

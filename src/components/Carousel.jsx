@@ -43,14 +43,35 @@ const ButtonRight = styled.button`
     transform: translateX(-30px);
     width: 100vw;
   }
+  @media (min-width: 1024px) {
+    width: 30vw;
+    margin: 0;
+    height: 50vh;
+  }
+  @media (min-width: 2560px) {
+    height: 100vh;
+  }
 `;
 const SlideImage = styled.img`
-  height: 450px;
   object-fit: cover;
-  width: 38rem;
   @media (min-width: 390px) {
     height: 100%;
-    width: 99vw;
+    width: 120vw;
+    transform: translateX(-140px);
+  }
+  @media (min-width: 768px) {
+    transform: translateX(-190px);
+    width: 100vw;
+  }
+  @media (min-width: 1024px) {
+    height: 400px;
+    width: 370px;
+    width: 400px;
+    transform: translateY(5px);
+  }
+  @media (min-width: 2560px) {
+    height: 100vh;
+    width: 110%;
   }
 `;
 
