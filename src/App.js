@@ -52,7 +52,7 @@ const Container = styled.div`
 `;
 const LogoContainer = styled.div`
   align-items: center;
-  background-color: ${props => props.scrollPixel > 100 ? 'black' : 'aqua'};
+  background-color: ${props => props.scrollPixel > 100 ? 'black' : '#7ae9ff'};
   display: flex;
   height: 90px;
   justify-content: center;
