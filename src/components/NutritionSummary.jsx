@@ -6,10 +6,10 @@ const NutritionFacts = ({size}) => {
   return (
     <NutritionSummary>
       <Title>
-        <p><b>Nutrition Summary</b></p>
-        <p>4 servings per container | {size}</p>
+        <P><b>Nutrition Summary</b></P>
+        <P>4 servings per container | {size}</P>
       </Title>
-
+      <br />
       <StatContainer>
         <Stat>
           <strong>260</strong>
@@ -32,7 +32,7 @@ const NutritionFacts = ({size}) => {
           <StatName>Protein</StatName>
         </Stat>
       </StatContainer>
-      <UnderlineBreak></UnderlineBreak>
+      <UnderlineBreak />
 
     </NutritionSummary>
   );
@@ -42,6 +42,10 @@ const NutritionFacts = ({size}) => {
 const NutritionSummary = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 1vh;
+`;
+const P = styled.p`
+  margin: 0;
 `;
 const StatContainer = styled.div`
   display: flex;
@@ -66,6 +70,5 @@ const UnderlineBreak = styled.span`
   padding-top: 1vh;
   border-bottom: 1px solid black;
   width: 100%;
-
 `;
 export default NutritionFacts;

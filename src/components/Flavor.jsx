@@ -12,21 +12,21 @@ const Flavor = () => {
       </ImgContainer>
       <ImgDiv>
         <ProductTitle>
-          <h1>Birthday Cake</h1>
-          <div>French vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</div>
+          <Title>Birthday Cake</Title>
+          <P>French vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</P>
+          <UnderlineBreak />
         </ProductTitle>
+
         <NutritionSummary size='1Pt / 1500mg'/>
-        <br />
-        <br />
-        <br />
-        
+
         <div>nutrition facts <button>&#9660;</button></div>
-        
+
         <div>ingredients <button>&#9660;</button></div>
         <div>nutrition facts <button>&#9660;</button></div>
         <br />
+
         <div>
-        about this item <button>&#9660;</button>
+          about this item <button>&#9660;</button>
         </div>
       </ImgDiv>
       <ImgDiv>
@@ -61,6 +61,21 @@ const ImgDiv = styled.div`
   width: 30vw;
 `;
 const ProductTitle = styled.div`
-  border: 1px solid red;
-`
+  margin-bottom: 2vh;
+`;
+const Title = styled.h1`
+  font-family: 'Permanent Marker', cursive;
+  font-weight: normal;
+  font-size: 36px;
+  margin: 0;
+`;
+const P = styled.p`
+  font-family: 'Chakra Petch', sans-serif;
+  margin: 0;
+`;
+const UnderlineBreak = styled.span`
+  padding-top: 1vh;
+  border-bottom: 1px solid black;
+  width: 100%;
+`;
 export default Flavor;
