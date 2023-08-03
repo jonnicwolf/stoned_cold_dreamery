@@ -20,13 +20,9 @@ const Flavor = () => {
         <NutritionSummary size='1Pt / 1500mg'/>
 
         <div>nutrition facts <button>&#9660;</button></div>
-
         <div>ingredients <button>&#9660;</button></div>
         <div>nutrition facts <button>&#9660;</button></div>
-        <br />
-
-        <div>
-          about this item <button>&#9660;</button>
+        <div>about this item <button>&#9660;</button>
         </div>
       </ImgDiv>
       <ImgDiv>
@@ -74,8 +70,8 @@ const P = styled.p`
   margin: 0;
 `;
 const UnderlineBreak = styled.span`
-  padding-top: 1vh;
   border-bottom: 1px solid black;
   width: 100%;
+  padding-top: 1vh;
 `;
 export default Flavor;
