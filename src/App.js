@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './pages/Home';
+import Flavors from "./pages/Flavors";
 
 const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.png');
 const logo_white = require('./photo_assets/carousel_home/scd-logo-white-transparent.png');
@@ -34,6 +35,7 @@ function App() {
 
       <Routes>
         <Route exact path='/' element={<Home/>} />
+        <Route exact path='/flavors' element={<Flavors />} />
       </Routes>
 
       { screenWidth <= 768
