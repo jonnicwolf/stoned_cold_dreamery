@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import NutritionSummary from './NutritionSummary';
+
 import { birthday_cake } from '../photo_assets/flavours';
 
 const Flavor = () => {
@@ -13,6 +15,10 @@ const Flavor = () => {
           <h1>Birthday Cake</h1>
           <div>French vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</div>
         </ProductTitle>
+        <NutritionSummary size='1Pt / 1500mg'/>
+        <br />
+        <br />
+        <br />
         
         <div>nutrition facts <button>&#9660;</button></div>
         

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
 :root {
   --font-family-modak: 'Modak', cursive;
+  --font-family-chakra-petch: 'Chakra Petch', sans-serif;
   --font-weight-normal: 100;
   --font-weight-bold: 700;
 }
