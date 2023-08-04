@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import NutritionSummary from './NutritionSummary';
 import NutritionFacts from './NutritionFacts';
 import Ingredients from './Ingredients';
+import Cart from './Cart';
 
 import { birthday_cake } from '../photo_assets/flavours';
 import AboutThisItem from './AboutThisItem';
@@ -30,7 +31,7 @@ const Flavor = ({title, description}) => {
       </Segment>
 
       <Segment>
-        add to cart
+        <Cart />
       </Segment>
     </Container>
   );

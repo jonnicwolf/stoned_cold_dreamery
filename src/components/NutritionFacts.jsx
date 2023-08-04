@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const NutritionFacts = () => {
-  const [dropStatus, setDropStatus] = useState('none');
   const [isVisible, setVisibility] = useState(false);
 
   function handleDropClick () {
-    if (dropStatus === 'none') {
-      setDropStatus('block');
+    if (!isVisible) {
       setVisibility(true);
     } else {
-      setDropStatus('none');
       setVisibility(false);
     }
   };
