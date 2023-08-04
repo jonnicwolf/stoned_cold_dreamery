@@ -39,6 +39,9 @@ const Cart = () => {
         </Select>
 
       </QuantityButton>
+      <AddToCart>Add To Cart</AddToCart>
+      <BuyNow>Buy Now</BuyNow>
+
       
       {/* qty button
       <button>add to cart </button>
@@ -51,15 +54,32 @@ const Cart = () => {
   );
 };
 
+const CartButton = styled.button`
+  border-radius: 15px;
+  border: none;
+  height: 3vh;
+  width: 20vw;
+  // margin: 3px;
+`;
+const AddToCart = styled(CartButton)`
+  background-color: #69e0f0;
+`;
+const BuyNow = styled(CartButton)`
+  background-color: #05b8ff;
+`;
 const Container = styled.div`
   align-items: center;
   border: 1px solid grey;
   border-radius: 10px; 
   display: flex;
+  font-family: 'Chakra Petra', sans-serif;
   flex-direction: column;
+  gap: 10px;
   height: 80vh;
+  padding: 25px;
 `;
 const InStock = styled.div`
+  align-self: flex-start;
   color: green;
   font-family: 'Chakra Petra', sans-serif;
 `;
@@ -67,11 +87,14 @@ const PerOz = styled.div`
   font-size: 10px;
 `;
 const Price = styled.span`
+  align-self: flex-start;
   font-family: 'Chakra Petra', sans-serif;
   font-size: 20px;
 `;
 const QuantityButton = styled.button`
-  border: 1px solid red;
+  // border: 1px solid red;
+  align-self: flex-start;
+  border: none;
   box-shadow: 2px 1px 10px grey;
   border-radius: 9px;
 `;
