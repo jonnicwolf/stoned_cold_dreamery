@@ -52,11 +52,11 @@ const NutritionFacts = () => {
                   </tr>
                   <tr>
                     <TdA><b>45%</b></TdA>
-                    <TdB>Saturated fat 9g</TdB>
+                    <TdB style={{paddingLeft: '30px'}}>Saturated fat 9g</TdB>
                   </tr>
                   <tr>
                     <TdA><b></b></TdA>
-                    <TdB>        Trans Fat 0g</TdB>
+                    <TdB style={{paddingLeft: '30px'}}>Trans Fat 0g</TdB>
                   </tr>
                   <tr>
                     <TdA><b>17%</b></TdA>
@@ -72,11 +72,11 @@ const NutritionFacts = () => {
                   </tr>
                   <tr>
                     <TdA><b>8%</b></TdA>
-                    <TdB><span></span>Dietary Fiber 2g</TdB>
+                    <TdB style={{paddingLeft: '30px'}}>Dietary Fiber 2g</TdB>
                   </tr>
                   <tr>
                     <TdA></TdA>
-                    <TdB>Sugars 22g</TdB>
+                    <TdB style={{paddingLeft: '30px'}}>Sugars 22g</TdB>
                   </tr>
                   <tr>
                     <TdA></TdA>
@@ -121,7 +121,8 @@ const Container = styled.div`
   margin-top: 1vh;
 `;
 const Disclaimer = styled.div`
-
+  padding-top: 5px;
+  font-size: 12px;
 `;
 const DropButton = styled.button`
   background: none;
@@ -149,11 +150,13 @@ const TdA = styled.td`
   border: 1px solid grey;
   border-left: 0;
   border-bottom: 0;
+  font-size: 14px;
 `;
 const TdB = styled.td`
   border: 1px solid grey;
   border-right: 0;
   border-bottom: 0;
+  font-size: 14px;
   width: 100%
 `;
 const Title = styled.div`
