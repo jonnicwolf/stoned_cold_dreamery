@@ -5,10 +5,14 @@ const NutritionFacts = () => {
   return (
     <Container>
       <Title>
-        <div><b>Nutrition Facts</b></div>
-        <div>4 servings per container</div>
+        <TitleDropButton>
+          <b>Nutrition Facts</b> 
+          <button>&#9660;</button>
+        </TitleDropButton>
       </Title>
+      
       <ServingSize>
+        <div style={{width: '100%'}}>4 servings per container</div>
         <div>Serving Size</div>
         <div>1Pt</div>
       </ServingSize>
@@ -109,6 +113,7 @@ const ServingSize = styled.div`
   // border: 1px solid red;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 3px;
   padding-bottom: 0;
@@ -117,6 +122,9 @@ const Calories = styled.table`
 `;
 const CalorieBreakdown = styled.table`
   border-spacing: 0;
+`;
+const DropContent = styled.div`
+
 `;
 const TdA = styled.td`
   border: 1px solid grey;
@@ -131,6 +139,10 @@ const TdB = styled.td`
 `;
 const Title = styled.div`
   padding: 3px;
+`;
+const TitleDropButton = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
 export default NutritionFacts;
