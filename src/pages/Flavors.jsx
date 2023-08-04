@@ -13,13 +13,7 @@ const Flavors = () => {
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br /> 
-      <br />
       <Flavor />
-      
     </div>
   )
 }

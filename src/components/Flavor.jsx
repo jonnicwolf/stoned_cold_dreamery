@@ -7,7 +7,7 @@ import Ingredients from './Ingredients';
 import { birthday_cake } from '../photo_assets/flavours';
 import AboutThisItem from './AboutThisItem';
 
-const Flavor = () => {
+const Flavor = ({title, description}) => {
   return (
     <Container>
       <ImgContainer>
@@ -38,8 +38,9 @@ const Flavor = () => {
 
 const Container = styled.div`
   align-items: center;
-  border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   gap: 20px;
   padding: 2vw;
@@ -56,7 +57,7 @@ const Img = styled.img`
   transform: translate(-125px, -180px);
 `;
 const Segment = styled.div`
-  border: 1px solid red;
+  // border: 1px solid red;
   height: 150vh;
   width: 30vw;
 `;
