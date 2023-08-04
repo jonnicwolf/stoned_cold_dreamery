@@ -33,6 +33,11 @@ const NutritionFacts = () => {
         </ServingSize>
         <UnderlineBreak />
         <Calories>
+          <CalorieTitle>
+            <div><b>Calories</b></div>
+            <div><b>260</b></div>
+            <UnderlineBreak />
+          </CalorieTitle>
           <tbody>
             <tr>
               <td></td>
@@ -128,11 +133,6 @@ const DropButton = styled.button`
   background: none;
   border: none;
 `;
-const UnderlineBreak = styled.span`
-  padding-top: .05vh;
-  border-bottom: 1px solid black;
-  width: 100%;
-`;
 const ServingSize = styled.div`
   display: flex;
   flex-direction: row;
@@ -142,6 +142,12 @@ const ServingSize = styled.div`
   padding-bottom: 0;
 `;
 const Calories = styled.table`
+`;
+const CalorieTitle = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 5px;
 `;
 const CalorieBreakdown = styled.table`
   border-spacing: 0;
@@ -165,6 +171,11 @@ const Title = styled.div`
 const TitleDropButton = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+const UnderlineBreak = styled.span`
+  padding-top: .05vh;
+  border-bottom: 1px solid black;
+  width: 100%;
 `;
 
 export default NutritionFacts;

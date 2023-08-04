@@ -17,7 +17,7 @@ const Flavor = ({title, description}) => {
       <Segment>
         <ProductTitle>
           <Title>Birthday Cake</Title>
-          <P>French vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</P>
+          <P>French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</P>
           <UnderlineBreak />
         </ProductTitle>
 
@@ -38,7 +38,6 @@ const Flavor = ({title, description}) => {
 
 const Container = styled.div`
   align-items: center;
-  // border: 1px solid red;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -46,6 +45,7 @@ const Container = styled.div`
   padding: 2vw;
 `;
 const ImgContainer = styled.div`
+  position: sticky;
   height: 50vh;
   width: 50vw;
   overflow: hidden;
