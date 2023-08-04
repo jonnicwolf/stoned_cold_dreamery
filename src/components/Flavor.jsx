@@ -22,7 +22,6 @@ const Flavor = () => {
         <NutritionSummary size='1Pt / 1500mg'/>
         
         <NutritionFacts />
-        
 
         <div>ingredients <button>&#9660;</button></div>
         <div>nutrition facts <button>&#9660;</button></div>

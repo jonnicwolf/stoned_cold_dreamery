@@ -1,91 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const NutritionFacts = () => {
+  const [dropStatus, setDropStatus] = useState('none');
+  const [isVisible, setVisibility] = useState(false);
+
+  function handleDropClick () {
+    if (dropStatus === 'none') {
+      setDropStatus('block');
+      setVisibility(true);
+    } else {
+      setDropStatus('none');
+      setVisibility(false);
+    }
+  };
+  console.log("drop status", dropStatus)
   return (
     <Container>
       <Title>
         <TitleDropButton>
           <b>Nutrition Facts</b> 
-          <button>&#9660;</button>
+          <DropButton onClick={()=>handleDropClick()}>&#9660;</DropButton>
         </TitleDropButton>
       </Title>
-      
-      <ServingSize>
-        <div style={{width: '100%'}}>4 servings per container</div>
-        <div>Serving Size</div>
-        <div>1Pt</div>
-      </ServingSize>
-      <UnderlineBreak />
-      <Calories>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <TdB style={{borderTop: '0', borderLeft: '0'}}>
-              % Daily Value*
-            </TdB>
-          </tr>
-          <tr>
-            <CalorieBreakdown>
-              <tr>
-                <TdA><b>26%</b></TdA>
-                <TdB><b>Total Fat</b> 17g</TdB>
-              </tr>
-              <tr>
-                <TdA><b>45%</b></TdA>
-                <TdB>Saturated fat 9g</TdB>
-              </tr>
-              <tr>
-                <TdA><b></b></TdA>
-                <TdB>        Trans Fat 0g</TdB>
-              </tr>
-              <tr>
-                <TdA><b>17%</b></TdA>
-                <TdB><b>Cholesterol</b> 50mg</TdB>
-              </tr>
-              <tr>
-                <TdA><b>2%</b></TdA>
-                <TdB><b>Sodium</b> 55mg</TdB>
-              </tr>
-              <tr>
-                <TdA><b>8%</b></TdA>
-                <TdB><b>Total Carbohydrate</b> 25g</TdB>
-              </tr>
-              <tr>
-                <TdA><b>8%</b></TdA>
-                <TdB><span></span>Dietary Fiber 2g</TdB>
-              </tr>
-              <tr>
-                <TdA></TdA>
-                <TdB>Sugars 22g</TdB>
-              </tr>
-              <tr>
-                <TdA></TdA>
-                <TdB><b>Protein</b> 4g</TdB>
-              </tr>
-              <tr>
-                <TdA>10%</TdA>
-                <TdB>Vitamin A</TdB>
-              </tr>
-              <tr>
-                <TdA>0%</TdA>
-                <TdB>Vitamin C</TdB>
-              </tr>
-              <tr>
-                <TdA>10%</TdA>
-                <TdB>Calcium</TdB>
-              </tr>
-              <tr>
-                <TdA style={{borderBottom: '1px solid grey'}}>6%</TdA>
-                <TdB style={{borderBottom: '1px solid grey'}}>Iron</TdB>
-              </tr>
-            </CalorieBreakdown>
-          </tr>
-        </tbody>
-      </Calories>
+
+      { isVisible ?
+      <>
+        <ServingSize>
+          <div style={{width: '100%'}}>4 servings per container</div>
+          <div>Serving Size</div>
+          <div>1Pt</div>
+        </ServingSize>
+        <UnderlineBreak />
+        <Calories>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <TdB style={{borderTop: '0', borderLeft: '0'}}>
+                % Daily Value*
+              </TdB>
+            </tr>
+            <tr>
+              <CalorieBreakdown>
+                <tbody>
+                  <tr>
+                    <TdA><b>26%</b></TdA>
+                    <TdB><b>Total Fat</b> 17g</TdB>
+                  </tr>
+                  <tr>
+                    <TdA><b>45%</b></TdA>
+                    <TdB>Saturated fat 9g</TdB>
+                  </tr>
+                  <tr>
+                    <TdA><b></b></TdA>
+                    <TdB>        Trans Fat 0g</TdB>
+                  </tr>
+                  <tr>
+                    <TdA><b>17%</b></TdA>
+                    <TdB><b>Cholesterol</b> 50mg</TdB>
+                  </tr>
+                  <tr>
+                    <TdA><b>2%</b></TdA>
+                    <TdB><b>Sodium</b> 55mg</TdB>
+                  </tr>
+                  <tr>
+                    <TdA><b>8%</b></TdA>
+                    <TdB><b>Total Carbohydrate</b> 25g</TdB>
+                  </tr>
+                  <tr>
+                    <TdA><b>8%</b></TdA>
+                    <TdB><span></span>Dietary Fiber 2g</TdB>
+                  </tr>
+                  <tr>
+                    <TdA></TdA>
+                    <TdB>Sugars 22g</TdB>
+                  </tr>
+                  <tr>
+                    <TdA></TdA>
+                    <TdB><b>Protein</b> 4g</TdB>
+                  </tr>
+                  <tr>
+                    <TdA>10%</TdA>
+                    <TdB>Vitamin A</TdB>
+                  </tr>
+                  <tr>
+                    <TdA>0%</TdA>
+                    <TdB>Vitamin C</TdB>
+                  </tr>
+                  <tr>
+                    <TdA>10%</TdA>
+                    <TdB>Calcium</TdB>
+                  </tr>
+                  <tr>
+                    <TdA style={{borderBottom: '1px solid grey'}}>6%</TdA>
+                    <TdB style={{borderBottom: '1px solid grey'}}>Iron</TdB>
+                  </tr>
+                </tbody>
+              </CalorieBreakdown>
+            </tr>
+          </tbody>
+        </Calories>
+      </>
+      : null
+      }
 
       <Disclaimer>
         *The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
@@ -104,13 +124,16 @@ const Container = styled.div`
 const Disclaimer = styled.div`
 
 `;
+const DropButton = styled.button`
+  background: none;
+  border: none;
+`;
 const UnderlineBreak = styled.span`
   padding-top: .05vh;
   border-bottom: 1px solid black;
   width: 100%;
 `;
 const ServingSize = styled.div`
-  // border: 1px solid red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -122,9 +145,6 @@ const Calories = styled.table`
 `;
 const CalorieBreakdown = styled.table`
   border-spacing: 0;
-`;
-const DropContent = styled.div`
-
 `;
 const TdA = styled.td`
   border: 1px solid grey;
