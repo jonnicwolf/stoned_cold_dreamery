@@ -20,7 +20,10 @@ const Cart = () => {
   return (
     <Container>
       <Price>
-        $15.99 
+        <span style={{fontSize: '11px'}}>$</span>
+        <b>
+          15.99 
+        </b>
         <br />
         <PerOz>
           ($0.99 / Fl Oz)
