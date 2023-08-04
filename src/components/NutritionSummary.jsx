@@ -33,7 +33,6 @@ const NutritionFacts = ({size}) => {
         </Stat>
       </StatContainer>
       <UnderlineBreak />
-
     </NutritionSummary>
   );
 };
@@ -51,6 +50,7 @@ const StatContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+  padding-left: 3px;
 `;
 const Stat = styled.div`
   align-items: center;
@@ -65,10 +65,12 @@ const StatName = styled.div`
 `;
 const Title = styled.div`
   font-family: 'Chakra Petch', sans-serif;
+  padding-left: 3px;
 `;
 const UnderlineBreak = styled.span`
   padding-top: 1vh;
   border-bottom: 1px solid black;
   width: 100%;
 `;
+
 export default NutritionFacts;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NutritionSummary from './NutritionSummary';
+import NutritionFacts from './NutritionFacts';
 
 import { birthday_cake } from '../photo_assets/flavours';
 
@@ -10,7 +11,8 @@ const Flavor = () => {
       <ImgContainer>
         <Img src={birthday_cake} />
       </ImgContainer>
-      <ImgDiv>
+
+      <Segment>
         <ProductTitle>
           <Title>Birthday Cake</Title>
           <P>French vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</P>
@@ -18,16 +20,19 @@ const Flavor = () => {
         </ProductTitle>
 
         <NutritionSummary size='1Pt / 1500mg'/>
+        
+        <NutritionFacts />
+        
 
-        <div>nutrition facts <button>&#9660;</button></div>
         <div>ingredients <button>&#9660;</button></div>
         <div>nutrition facts <button>&#9660;</button></div>
         <div>about this item <button>&#9660;</button>
         </div>
-      </ImgDiv>
-      <ImgDiv>
+      </Segment>
+
+      <Segment>
         add to cart
-      </ImgDiv>
+      </Segment>
     </Container>
   );
 };
@@ -51,9 +56,9 @@ const Img = styled.img`
   width: 60vw;
   transform: translate(-125px, -180px);
 `;
-const ImgDiv = styled.div`
+const Segment = styled.div`
   border: 1px solid red;
-  height: 50vh;
+  height: 150vh;
   width: 30vw;
 `;
 const ProductTitle = styled.div`
