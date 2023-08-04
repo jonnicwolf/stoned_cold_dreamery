@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import NutritionSummary from './NutritionSummary';
 import NutritionFacts from './NutritionFacts';
+import Ingredients from './Ingredients';
 
 import { birthday_cake } from '../photo_assets/flavours';
 
@@ -20,10 +21,11 @@ const Flavor = () => {
         </ProductTitle>
 
         <NutritionSummary size='1Pt / 1500mg'/>
-        
+
         <NutritionFacts />
 
-        <div>ingredients <button>&#9660;</button></div>
+        <Ingredients />
+
         <div>nutrition facts <button>&#9660;</button></div>
         <div>about this item <button>&#9660;</button>
         </div>
@@ -78,4 +80,5 @@ const UnderlineBreak = styled.span`
   width: 100%;
   padding-top: 1vh;
 `;
+
 export default Flavor;
