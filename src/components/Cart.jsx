@@ -20,7 +20,11 @@ const Cart = () => {
   return (
     <Container>
       <Price>
-        $15.99 ($0.99 / Fl Oz)
+        $15.99 
+        <br />
+        <PerOz>
+          ($0.99 / Fl Oz)
+        </PerOz>
       </Price>
       <InStock><b>In Stock</b></InStock>
       <QuantityButton onClick={()=>handleDropClick()}>
@@ -42,14 +46,24 @@ const Cart = () => {
       <AddToCart>Add To Cart</AddToCart>
       <BuyNow>Buy Now</BuyNow>
 
-      
-      {/* qty button
-      <button>add to cart </button>
-      <button>buy now</button>
-      <div>Payment Secure transaction in blue</div>
-      <div>Ships from Stoned Cold Dreamery LLC</div>
-      <div>Sold by Stoned Cold Dreamery Inc</div>
-      <div>Returns | Eligible for Refund or Replacement if damaged or defective</div> */}
+      <PaymentInfo>
+        <Info>
+          <InfoLeft>Payment</InfoLeft>
+          <InfoRight>Secure transaction</InfoRight>
+        </Info>
+        <Info>
+          <InfoLeft>Ships from</InfoLeft>
+          <InfoRight style={{color: 'black'}}>Stoned Cold Dreamery LLC</InfoRight>
+        </Info>
+        <Info>
+          <InfoLeft>Sold by</InfoLeft>
+          <InfoRight>Stoned Cold Dreamery Inc</InfoRight>
+        </Info>
+        <Info>
+          <InfoLeft>Returns</InfoLeft>
+          <InfoRight>Eligible for Refund or Replacement if damaged or defective</InfoRight>
+        </Info>
+      </PaymentInfo>
     </Container>
   );
 };
@@ -59,7 +73,6 @@ const CartButton = styled.button`
   border: none;
   height: 3vh;
   width: 20vw;
-  // margin: 3px;
 `;
 const AddToCart = styled(CartButton)`
   background-color: #69e0f0;
@@ -75,16 +88,34 @@ const Container = styled.div`
   font-family: 'Chakra Petra', sans-serif;
   flex-direction: column;
   gap: 10px;
-  height: 80vh;
+  height: 45vh;
   padding: 25px;
+`;
+const Info = styled.div`
+  display: flex;
+  gap: 45px;
+`;
+const InfoLeft = styled.div`
+  width: 5vw;
+`;
+const InfoRight = styled.div`
+  color: blue;
+  text-wrap: wrap;
+  width: 12vw;
 `;
 const InStock = styled.div`
   align-self: flex-start;
   color: green;
   font-family: 'Chakra Petra', sans-serif;
 `;
-const PerOz = styled.div`
-  font-size: 10px;
+const PaymentInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 10px;
+`;
+const PerOz = styled.span`
+  font-size: 11px;
 `;
 const Price = styled.span`
   align-self: flex-start;
@@ -92,7 +123,6 @@ const Price = styled.span`
   font-size: 20px;
 `;
 const QuantityButton = styled.button`
-  // border: 1px solid red;
   align-self: flex-start;
   border: none;
   box-shadow: 2px 1px 10px grey;
