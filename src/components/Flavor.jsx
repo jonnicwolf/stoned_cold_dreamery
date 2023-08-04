@@ -5,6 +5,7 @@ import NutritionFacts from './NutritionFacts';
 import Ingredients from './Ingredients';
 
 import { birthday_cake } from '../photo_assets/flavours';
+import AboutThisItem from './AboutThisItem';
 
 const Flavor = () => {
   return (
@@ -25,10 +26,7 @@ const Flavor = () => {
         <NutritionFacts />
 
         <Ingredients />
-
-        <div>nutrition facts <button>&#9660;</button></div>
-        <div>about this item <button>&#9660;</button>
-        </div>
+        <AboutThisItem />
       </Segment>
 
       <Segment>
