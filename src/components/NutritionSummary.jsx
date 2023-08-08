@@ -49,8 +49,8 @@ const P = styled.p`
 const StatContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  padding-left: 3px;
+  justify-content: center;
+  gap: 30px;
 `;
 const Stat = styled.div`
   align-items: center;
