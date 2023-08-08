@@ -20,16 +20,18 @@ const Cart = () => {
   return (
     <Container>
       <Price>
-        <span style={{fontSize: '11px'}}>$</span>
-        <b>
-          15.99 
-        </b>
-        <br />
+        <div>
+          <span style={{fontSize: '11px'}}>$</span>
+          <b>15.99</b>
+        </div>
+
         <PerOz>
-          ($0.99 / Fl Oz)
+          [$0.99 / Fl Oz]
         </PerOz>
       </Price>
+
       <InStock><b>In Stock</b></InStock>
+
       <QuantityButton onClick={()=>handleDropClick()}>
         Qty: 
         <Select value={quantity} onChange={handleQuantityChange}>
@@ -79,16 +81,34 @@ const CartButton = styled.button`
 `;
 const AddToCart = styled(CartButton)`
   background-color: #69e0f0;
+  cursor: pointer;
+  font-family: 'Chakra Petch', sans-serif;
+
+  &:hover {
+    box-shadow: 2px 1px 10px #69e0f0;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.1s ease-in;
+  }
 `;
 const BuyNow = styled(CartButton)`
   background-color: #05b8ff;
+  cursor: pointer;
+  font-family: 'Chakra Petch', sans-serif;
+
+  &:hover {
+    box-shadow: 2px 1px 10px #05b8ff;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.1s ease-in;
+  }
 `;
 const Container = styled.div`
   align-items: center;
   border: 1px solid grey;
   border-radius: 10px; 
   display: flex;
-  font-family: 'Chakra Petra', sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
   flex-direction: column;
   gap: 10px;
   height: 45vh;
@@ -109,7 +129,7 @@ const InfoRight = styled.div`
 const InStock = styled.div`
   align-self: flex-start;
   color: green;
-  font-family: 'Chakra Petra', sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
 `;
 const PaymentInfo = styled.div`
   display: flex;
@@ -122,8 +142,10 @@ const PerOz = styled.span`
 `;
 const Price = styled.span`
   align-self: flex-start;
-  font-family: 'Chakra Petra', sans-serif;
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 30px;
 `;
 const QuantityButton = styled.button`
   align-self: flex-start;
