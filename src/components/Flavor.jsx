@@ -17,7 +17,15 @@ const Flavor = ({title, description}) => {
 
       <Segment>
         <ProductTitle>
-          <Title>Birthday Cake</Title>
+          <Title>
+            Birthday Cake
+            <FlavorDropList>
+              <option value="Neutral">--</option>
+              <option value="Birthday Cake">Birthday Cake</option>
+              <option value="Sherblato">Sherblato</option>
+              <option value="Blue Dream">Blue Dream</option>
+            </FlavorDropList>
+          </Title>
           <P>French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</P>
           <UnderlineBreak />
         </ProductTitle>
@@ -42,6 +50,9 @@ const Container = styled.div`
 const Img = styled.img`
   width: 60vw;
   transform: translate(-125px, -80px);
+`;
+const FlavorDropList = styled.select`
+  border: none;
 `;
 const Segment = styled.div`
   display: flex;
