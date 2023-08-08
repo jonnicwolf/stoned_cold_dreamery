@@ -171,6 +171,7 @@ const TitleDropButton = styled.div`
 `;
 const UnderlineBreak = styled.span`
   padding-top: .05vh;
+  padding-top: 1vh;
   border-bottom: 1px solid black;
   width: 100%;
 `;

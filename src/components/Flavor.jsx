@@ -21,11 +21,8 @@ const Flavor = ({title, description}) => {
           <P>French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</P>
           <UnderlineBreak />
         </ProductTitle>
-
         <NutritionSummary size='1Pt / 1500mg'/>
-
         <NutritionFacts />
-
         <Ingredients />
         <AboutThisItem />
       </Segment>
@@ -38,11 +35,8 @@ const Flavor = ({title, description}) => {
 };
 
 const Container = styled.div`
-  align-items: center;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 20px;
+  gap: 30px;
   padding: 2vw;
 `;
 const ImgContainer = styled.div`
@@ -59,6 +53,8 @@ const Img = styled.img`
 `;
 const Segment = styled.div`
   // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
   height: 150vh;
   width: 30vw;
 `;

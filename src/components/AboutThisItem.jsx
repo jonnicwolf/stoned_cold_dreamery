@@ -15,7 +15,7 @@ const AboutThisItem = () => {
     <Container>
       <Title>
         <TitleDropButton>
-          <b>Nutrition Facts</b> 
+          <b>About This Item</b> 
           <DropButton onClick={()=>handleDropClick()}>&#9660;</DropButton>
         </TitleDropButton>
       </Title>
@@ -67,7 +67,7 @@ const TitleDropButton = styled.div`
   justify-content: space-between;
 `;
 const UnderlineBreak = styled.span`
-  padding-top: .05vh;
+  padding-top: 1vh;
   border-bottom: 1px solid black;
   width: 100%;
 `;
