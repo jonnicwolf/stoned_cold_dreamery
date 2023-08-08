@@ -39,24 +39,20 @@ const Container = styled.div`
   gap: 30px;
   padding: 2vw;
 `;
-const ImgContainer = styled.div`
-  position: sticky;
-  height: 50vh;
-  width: 50vw;
-  overflow: hidden;
-`;
 const Img = styled.img`
-  border: 1px solid red;
-  height: 80vh;
   width: 60vw;
-  transform: translate(-125px, -180px);
+  transform: translate(-125px, -80px);
 `;
 const Segment = styled.div`
-  // border: 1px solid red;
   display: flex;
   flex-direction: column;
-  height: 150vh;
   width: 30vw;
+  height: 100%;
+`;
+const ImgContainer = styled(Segment)`
+  overflow: hidden;
+  position: sticky;
+  width: 60vw;
 `;
 const ProductTitle = styled.div`
   margin-bottom: 2vh;

@@ -111,7 +111,8 @@ const Container = styled.div`
   font-family: 'Chakra Petch', sans-serif;
   flex-direction: column;
   gap: 10px;
-  height: 45vh;
+  // height: 45vh;
+  height: 100%;
   padding: 25px;
 `;
 const Info = styled.div`
