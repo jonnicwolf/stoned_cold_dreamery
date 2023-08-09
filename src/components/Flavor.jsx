@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import NutritionSummary from './NutritionSummary';
 import NutritionFacts from './NutritionFacts';
 import Ingredients from './Ingredients';
 import Cart from './Cart';
-
-import { birthday_cake } from '../photo_assets/flavours';
 import AboutThisItem from './AboutThisItem';
 
-const Flavor = ({title, description}) => {
+import { birthday_cake } from '../photo_assets/flavours';
+
+const Flavor = () => {
+  const [flavor,setFlavor] = useState('birthdayCake');
+  const flavors = {
+    birthdayCake: {
+      description: 'French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis',
+      name:'Birthday Cake',
+    },
+    sherblato: {
+      description: 'Strawberry ice cream with dark chocolate syrup, infused with our in house grown Sherblato cannabis',
+      name: 'Sherblato'
+    },
+    blueDream: {
+      description: 'Blueberry ice cream with a blackberry syrup, infused with our in house grown Blue Dream cannabis.',
+      name: 'Blue Dream'
+    },
+  }
+  function handleFlavor (event) {
+    setFlavor(event.target.value);
+  };
+
   return (
     <Container>
       <ImgContainer>
@@ -18,15 +37,14 @@ const Flavor = ({title, description}) => {
       <Segment>
         <ProductTitle>
           <Title>
-            Birthday Cake
-            <FlavorDropList>
-              <option value="Neutral">--</option>
-              <option value="Birthday Cake">Birthday Cake</option>
-              <option value="Sherblato">Sherblato</option>
-              <option value="Blue Dream">Blue Dream</option>
+            {flavors[flavor].name}
+            <FlavorDropList value={flavor} onChange={handleFlavor}>
+              <option value="birthdayCake">Birthday Cake</option>
+              <option value="sherblato">Sherblato</option>
+              <option value="blueDream">Blue Dream</option>
             </FlavorDropList>
           </Title>
-          <P>French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis</P>
+          <P>{flavors[flavor].description}</P>
           <UnderlineBreak />
         </ProductTitle>
         <NutritionSummary size='1Pt / 1500mg'/>

@@ -3,16 +3,7 @@ import styled from 'styled-components';
 
 const Cart = () => {
   const [quantity, setQuantity] = useState(1);
-  const [isVisible, setVisibility] = useState(false);
 
-  function handleDropClick () {
-    if (!isVisible) {
-      setVisibility(true);
-    } else {
-      setVisibility(false);
-    }
-  };
- 
   const handleQuantityChange = (event) => {
     setQuantity(parseInt(event.target.value, 10));
   };
@@ -32,7 +23,7 @@ const Cart = () => {
 
       <InStock><b>In Stock</b></InStock>
 
-      <QuantityButton onClick={()=>handleDropClick()}>
+      <QuantityButton>
         Qty: 
         <Select value={quantity} onChange={handleQuantityChange}>
           <option value="1">1</option>
