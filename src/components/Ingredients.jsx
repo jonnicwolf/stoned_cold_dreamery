@@ -19,7 +19,12 @@ const Ingredients = () => {
       <Title>
         <TitleDropButton>
           <b>Ingredients</b> 
-          <DropButton onClick={()=>handleDropClick()}>&#9660;</DropButton>
+          <DropButton onClick={()=>handleDropClick()}>
+            {isVisible
+              ? <>&#9650;</>
+              : <>&#9660;</>
+            }
+          </DropButton>
         </TitleDropButton>
       </Title>
       {isVisible ?

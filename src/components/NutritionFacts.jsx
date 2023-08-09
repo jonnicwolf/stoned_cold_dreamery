@@ -17,7 +17,12 @@ const NutritionFacts = () => {
       <Title>
         <TitleDropButton>
           <b>Nutrition Facts</b> 
-          <DropButton onClick={()=>handleDropClick()}>&#9660;</DropButton>
+          <DropButton onClick={()=>handleDropClick()}>
+            {isVisible
+              ? <>&#9650;</>
+              : <>&#9660;</>
+            }
+          </DropButton>
         </TitleDropButton>
       </Title>
 
@@ -154,12 +159,14 @@ const TdA = styled.td`
   border-left: 0;
   border-bottom: 0;
   font-size: 14px;
+  padding-right: 3px;
 `;
 const TdB = styled.td`
   border: 1px solid grey;
   border-right: 0;
   border-bottom: 0;
   font-size: 14px;
+  padding-left: 5px;
   width: 100%
 `;
 const Title = styled.div`
@@ -171,6 +178,7 @@ const TitleDropButton = styled.div`
 `;
 const UnderlineBreak = styled.span`
   padding-top: .05vh;
+  padding-top: 1vh;
   border-bottom: 1px solid black;
   width: 100%;
 `;

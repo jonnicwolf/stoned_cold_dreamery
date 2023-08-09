@@ -5,18 +5,21 @@ const AboutThisItem = () => {
   const [isVisible, setVisibility] = useState(false);
 
   function handleDropClick () {
-    if (!isVisible) {
-      setVisibility(true);
-    } else setVisibility(false);
-    
+    if (!isVisible) setVisibility(true);
+    else setVisibility(false);
   };
  
   return (
     <Container>
       <Title>
         <TitleDropButton>
-          <b>Nutrition Facts</b> 
-          <DropButton onClick={()=>handleDropClick()}>&#9660;</DropButton>
+          <b>About This Item</b> 
+          <DropButton onClick={()=>handleDropClick()}>
+            {isVisible
+              ? <>&#9650;</>
+              : <>&#9660;</>
+            }
+          </DropButton>
         </TitleDropButton>
       </Title>
       { isVisible ?
@@ -67,7 +70,7 @@ const TitleDropButton = styled.div`
   justify-content: space-between;
 `;
 const UnderlineBreak = styled.span`
-  padding-top: .05vh;
+  padding-top: 1vh;
   border-bottom: 1px solid black;
   width: 100%;
 `;

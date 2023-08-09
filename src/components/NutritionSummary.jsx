@@ -49,19 +49,21 @@ const P = styled.p`
 const StatContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 20px;
-  padding-left: 3px;
 `;
 const Stat = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 16px;
+  font-size: 2vh;
   text-style: bold;
 `;
 const StatName = styled.div`
-  font-size: 12px;
+  font-size: 1.257vh;
+  font-size: 1.7vh;
+  text-wrap: nowrap;
 `;
 const Title = styled.div`
   font-family: 'Chakra Petch', sans-serif;
