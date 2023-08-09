@@ -6,7 +6,7 @@ import Ingredients from './Ingredients';
 import Cart from './Cart';
 import AboutThisItem from './AboutThisItem';
 
-import { birthday_cake } from '../photo_assets/flavours';
+import { birthday_cake, blue_dream, sherblato } from '../photo_assets/flavours';
 
 const Flavor = () => {
   const [flavor,setFlavor] = useState('birthdayCake');
@@ -14,14 +14,17 @@ const Flavor = () => {
     birthdayCake: {
       description: 'French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis',
       name:'Birthday Cake',
+      photo: birthday_cake
     },
     sherblato: {
       description: 'Strawberry ice cream with dark chocolate syrup, infused with our in house grown Sherblato cannabis',
-      name: 'Sherblato'
+      name: 'Sherblato',
+      photo: sherblato
     },
     blueDream: {
       description: 'Blueberry ice cream with a blackberry syrup, infused with our in house grown Blue Dream cannabis.',
-      name: 'Blue Dream'
+      name: 'Blue Dream',
+      photo: blue_dream
     },
   }
   function handleFlavor (event) {
@@ -31,21 +34,17 @@ const Flavor = () => {
   return (
     <Container>
       <ImgContainer>
-        <Img src={birthday_cake} />
+        <Img src={flavors[flavor].photo} />
       </ImgContainer>
 
       <Segment>
         <ProductTitle>
-          <Title>
-            {flavors[flavor].name}
-            <FlavorDropList value={flavor} onChange={handleFlavor}>
-              <option value="birthdayCake">Birthday Cake</option>
-              <option value="sherblato">Sherblato</option>
-              <option value="blueDream">Blue Dream</option>
-            </FlavorDropList>
-          </Title>
+          <FlavorDropList value={flavor} onChange={handleFlavor}>
+            <Option value="birthdayCake">Birthday Cake</Option>
+            <Option value="sherblato">Sherblato</Option>
+            <Option value="blueDream">Blue Dream</Option>
+          </FlavorDropList>
           <P>{flavors[flavor].description}</P>
-          <UnderlineBreak />
         </ProductTitle>
         <NutritionSummary size='1Pt / 1500mg'/>
         <NutritionFacts />
@@ -71,6 +70,14 @@ const Img = styled.img`
 `;
 const FlavorDropList = styled.select`
   border: none;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: normal;
+  font-size: 36px;
+  margin: 0;
+  outline: none;
+  &:active {
+    border: none;
+  }
 `;
 const Segment = styled.div`
   display: flex;
@@ -86,11 +93,8 @@ const ImgContainer = styled(Segment)`
 const ProductTitle = styled.div`
   margin-bottom: 2vh;
 `;
-const Title = styled.h1`
-  font-family: 'Permanent Marker', cursive;
-  font-weight: normal;
-  font-size: 36px;
-  margin: 0;
+const Option = styled.option`
+  font-size: 10px;
 `;
 const P = styled.p`
   font-family: 'Chakra Petch', sans-serif;
