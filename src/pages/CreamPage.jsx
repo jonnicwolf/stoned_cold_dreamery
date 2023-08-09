@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import NutritionSummary from './NutritionSummary';
-import NutritionFacts from './NutritionFacts';
-import Ingredients from './Ingredients';
-import Cart from './Cart';
-import AboutThisItem from './AboutThisItem';
+import NutritionSummary from '../components/NutritionSummary';
+import NutritionFacts from '../components/NutritionFacts';
+import Ingredients from '../components/Ingredients';
+import Cart from '../components/Cart';
+import AboutThisItem from '../components/AboutThisItem';
 
 import { birthday_cake, blue_dream, sherblato } from '../photo_assets/flavours';
 
@@ -60,9 +60,12 @@ const Flavor = () => {
 };
 
 const Container = styled.div`
+  align-items: center;
   display: flex;
+  height: 100%;
   gap: 30px;
   padding: 2vw;
+  margin-top: 18vh;
 `;
 const Img = styled.img`
   width: 60vw;
@@ -99,11 +102,6 @@ const Option = styled.option`
 const P = styled.p`
   font-family: 'Chakra Petch', sans-serif;
   margin: 0;
-`;
-const UnderlineBreak = styled.span`
-  border-bottom: 1px solid black;
-  width: 100%;
-  padding-top: 1vh;
 `;
 
 export default Flavor;

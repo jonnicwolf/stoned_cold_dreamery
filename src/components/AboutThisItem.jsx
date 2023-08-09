@@ -5,10 +5,8 @@ const AboutThisItem = () => {
   const [isVisible, setVisibility] = useState(false);
 
   function handleDropClick () {
-    if (!isVisible) {
-      setVisibility(true);
-    } else setVisibility(false);
-    
+    if (!isVisible) setVisibility(true);
+    else setVisibility(false);
   };
  
   return (
