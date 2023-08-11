@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NutritionSummary from '../components/NutritionSummary';
 import NutritionFacts from '../components/NutritionFacts';
 import Ingredients from '../components/Ingredients';
-import Cart from '../components/Cart';
+import Cart from '../components/AddToCart';
 import AboutThisItem from '../components/AboutThisItem';
 
 import { birthday_cake, blue_dream, sherblato } from '../photo_assets/flavours';
