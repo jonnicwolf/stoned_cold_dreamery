@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useCart } from './CartProvider';
 
-const AddToCart = () => {
+const AddToCart = ({id, name, price}) => {
   const [quantity, setQuantity] = useState(1);
-
+  const { addItemToCart } = useCart();
   const handleQuantityChange = (event) => {
     setQuantity(parseInt(event.target.value, 10));
   };
@@ -39,7 +40,7 @@ const AddToCart = () => {
         </Select>
 
       </QuantityButton>
-      <AddToCartButton>Add To Cart</AddToCartButton>
+      <AddToCartButton onClick={()=> addItemToCart({id, name, price})}>Add To Cart</AddToCartButton>
       <BuyNowButton>Buy Now</BuyNowButton>
 
       <PaymentInfo>

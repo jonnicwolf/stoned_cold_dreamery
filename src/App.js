@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import HomePage from './pages/HomePage';
 import CreamPage from "./pages/CreamPage";
+import ShoppingCart from './components/ShoppingCart';
 
 const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.png');
 const logo_white = require('./photo_assets/carousel_home/scd-logo-white-transparent.png');
@@ -36,6 +37,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<HomePage/>} />
         <Route exact path='/cream' element={<CreamPage />} />
+        <Route exact path='/cart' element={<ShoppingCart />} />
       </Routes>
 
       { screenWidth <= 768

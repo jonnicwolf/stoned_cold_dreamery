@@ -7,6 +7,7 @@ import Cart from '../components/AddToCart';
 import AboutThisItem from '../components/AboutThisItem';
 
 import { birthday_cake, blue_dream, sherblato } from '../photo_assets/flavours';
+const products = require('../data.json')
 
 const Flavor = () => {
   const [flavor,setFlavor] = useState('birthdayCake');
@@ -30,6 +31,8 @@ const Flavor = () => {
   function handleFlavor (event) {
     setFlavor(event.target.value);
   };
+
+  console.log(products.cream )
 
   return (
     <Container>
