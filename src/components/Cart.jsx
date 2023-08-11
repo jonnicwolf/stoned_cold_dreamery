@@ -22,10 +22,10 @@ const Cart = () => {
   const total = cartItems.reduce((total, item) => total + item.price, 0);
 
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <CartContext.Provider value={{ cartItems, addItemToCart, removeItemFromCart, clearCart, total }}>
+      { children }
+    </CartContext.Provider>
+  );
+};
 
 export default Cart;
