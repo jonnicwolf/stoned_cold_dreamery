@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import { useCart } from './CartProvider';
 
 const ShoppingCart = () => {
-  // const { cartItems, cartTotal, removeItemFromCart, clearCart } = useCart();
-  const { cartTotal, removeItemFromCart, clearCart } = useCart();
+  const { cartItems, cartTotal, removeItemFromCart, clearCart } = useCart();
+  // const { cartTotal, removeItemFromCart, clearCart } = useCart();
 
-  const cartItems = [
-    { id:'mug', name: 'Birthday Cake', price: 15.99 },
-    { id:'mug1', name: 'Sherblato', price: 15.99 },
-  ]
-
+  // const cartItems = [
+  //   { id:'mug', name: 'Birthday Cake', price: 15.99 },
+  //   { id:'mug1', name: 'Sherblato', price: 15.99 },
+  // ]
 
   return (
     <>
@@ -57,11 +56,11 @@ const Container = styled.div`
   width: 50vw;
 `;
 const Item = styled.div`
-  justify-content: space-between;
   border: 1px solid green;
   display: flex;
-  width: 50%;
   margin-bottom: 1vh;
+  justify-content: space-between;
+  width: 50%;
 `;
 const ItemInfo = styled.div`
   display: flex;

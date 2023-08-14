@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useCart } from './CartProvider';
 
-const AddToCart = ({id, name, price}) => {
+const products = require('../data.json');
+
+const AddToCart = ({ item, itemType }) => {
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart } = useCart();
   const handleQuantityChange = (event) => {
     setQuantity(parseInt(event.target.value, 10));
   };
+  //filter products for item being added 
+
+  useEffect(()=>
+    {
+      const matchingItem = products.itemType.filter(product=> )
+    }
+  ,[])
 
   return (
     <Container>
@@ -22,7 +31,7 @@ const AddToCart = ({id, name, price}) => {
         </PerOz>
       </Price>
 
-      <InStock><b>In Stock</b></InStock>
+      <InStock> <b>In Stock</b> </InStock>
 
       <QuantityButton>
         Qty: 
@@ -40,7 +49,7 @@ const AddToCart = ({id, name, price}) => {
         </Select>
 
       </QuantityButton>
-      <AddToCartButton onClick={()=> addItemToCart({id, name, price})}>Add To Cart</AddToCartButton>
+      <AddToCartButton onClick={()=> addItemToCart()}>Add To Cart</AddToCartButton>
       <BuyNowButton>Buy Now</BuyNowButton>
 
       <PaymentInfo>

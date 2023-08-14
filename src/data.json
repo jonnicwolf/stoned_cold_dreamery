@@ -1,6 +1,6 @@
 {
-  "cream": [
-    {
+  "cream": {
+    "birthdayCake": {
       "id": "1-1-1",
       "description": "French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis",
       "dosage": 1500,
@@ -10,7 +10,7 @@
       "size": 1,
       "quantity": 999
     },
-    {
+    "sherblato": {
       "id": "1-1-3",
       "description": "Strawberry ice cream with dark chocolate syrup, infused with our in house grown Sherblato cannabis",
       "dosage": 1500,
@@ -20,7 +20,7 @@
       "size": 1,
       "quantity": 999
     },
-    {
+    "blueDream": {
       "id": "1-1-6",
       "description": "Blueberry ice cream with a blackberry syrup, infused with our in house grown Blue Dream cannabis",
       "dosage": 1500,
@@ -30,8 +30,8 @@
       "size": 1,
       "quantity": 999
     }
-  ],
-  "smokable":[{}],
-  "hardware":[{}],
-  "sticker":[{}]
+  },
+  "smokable": {},
+  "hardware": {},
+  "sticker": {}
 }
