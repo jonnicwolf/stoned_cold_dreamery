@@ -3,10 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import HomePage from './pages/HomePage';
 import CreamPage from "./pages/CreamPage";
-import ShoppingCart from './components/ShoppingCart';
+import CartPage from './pages/CartPage';
 
-const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.png');
-const logo_white = require('./photo_assets/carousel_home/scd-logo-white-transparent.png');
+const photoRoot = './photo_assets/carousel_home/'
+const logo_black = require(photoRoot+'scd-logo-transparent.png');
+const logo_white = require(photoRoot+'scd-logo-white-transparent.png');
 
 function App() {
   const [scrollPixel, setScrollPixel] = useState(0);
@@ -37,7 +38,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<HomePage/>} />
         <Route exact path='/cream' element={<CreamPage />} />
-        <Route exact path='/cart' element={<ShoppingCart />} />
+        <Route exact path='/cart' element={<CartPage />} />
       </Routes>
 
       { screenWidth <= 768

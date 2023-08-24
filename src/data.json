@@ -6,7 +6,7 @@
       "dosage": 1500,
       "name": "Birthday Cake",
       "price": 15.99,
-      "photo": "./src/photo_assets/flavours/birthday_cake.jpg",
+      "photo": "birthday_cake.jpg",
       "size": 1,
       "quantity": 999
     },
@@ -15,7 +15,7 @@
       "description": "Strawberry ice cream with dark chocolate syrup, infused with our in house grown Sherblato cannabis",
       "dosage": 1500,
       "name": "Sherblato",
-      "photo": "./src/photo_assets/flavours/sherblato.jpg",
+      "photo": "sherblato.jpg",
       "price": 15.99,
       "size": 1,
       "quantity": 999
@@ -25,7 +25,7 @@
       "description": "Blueberry ice cream with a blackberry syrup, infused with our in house grown Blue Dream cannabis",
       "dosage": 1500,
       "name": "Blue Dream",
-      "photo": "./src/photo_assets/flavours/blue_dream.jpg",
+      "photo": "blue_dream.jpg",
       "price": 15.99,
       "size": 1,
       "quantity": 999

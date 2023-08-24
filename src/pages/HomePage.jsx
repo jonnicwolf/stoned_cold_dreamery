@@ -2,30 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
 import NewsLetterSignUp from '../components/NewsLetterSignUp';
-import {
-  indica_jar,
-  hybrid_jar,
-  sativa_jar
-} from '../photo_assets/signature_flower';
-import {
-  birthday_cake,
-  blue_dream,
-  sherblato
-} from '../photo_assets/flavours';
+import {indica_jar, hybrid_jar, sativa_jar} from '../photo_assets/signature_flower';
+import {birthday_cake,blue_dream,sherblato} from '../photo_assets/flavours';
 
-const banner = require("../photo_assets/advertising possibility 2.1.jpg");
+const signature_flower = [ indica_jar, hybrid_jar, sativa_jar ];
+const flavors = [ birthday_cake, blue_dream , sherblato ];
+const banner = require('../photo_assets/carousel_home/scd-logo-estd.jpg');
 
 const Home = () => {
-  const signature_flower = [indica_jar, hybrid_jar, sativa_jar];
-  const flavours = [birthday_cake, blue_dream, sherblato];
-
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
-
       <CarouselContainer>
         <Cream>CREAM</Cream>
-        <Carousel slides={flavours} />
+        <Carousel slides={flavors} />
         <Carousel slides={signature_flower} />
         <Herb>HERB</Herb>
       </CarouselContainer>

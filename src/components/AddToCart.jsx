@@ -1,29 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useCart } from './CartProvider';
+import { Link } from 'react-router-dom';
 
 const products = require('../data.json');
 
 const AddToCart = ({ item, itemType }) => {
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart } = useCart();
-  const handleQuantityChange = (event) => {
-    setQuantity(parseInt(event.target.value, 10));
-  };
-  //filter products for item being added 
+  const handleQuantityChange = (event) => { setQuantity(parseInt(event.target.value, 10)) };
 
-  useEffect(()=>
-    {
-      const matchingItem = products.itemType.filter(product=> )
-    }
-  ,[])
+  const matchingItem = products[itemType][item];
+  const isInStock = products[itemType][item].quantity > 0;
 
   return (
     <Container>
       <Price>
         <div>
           <span style={{fontSize: '11px'}}>$</span>
-          <b>15.99</b>
+          <b>{matchingItem.price}</b>
         </div>
 
         <PerOz>
@@ -31,10 +26,12 @@ const AddToCart = ({ item, itemType }) => {
         </PerOz>
       </Price>
 
-      <InStock> <b>In Stock</b> </InStock>
+      <InStock>
+        { isInStock ? <b>In Stock</b> : <b>Out of Stock</b> }
+      </InStock>
 
       <QuantityButton>
-        Qty: 
+        Qty:
         <Select value={quantity} onChange={handleQuantityChange}>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -49,8 +46,12 @@ const AddToCart = ({ item, itemType }) => {
         </Select>
 
       </QuantityButton>
-      <AddToCartButton onClick={()=> addItemToCart()}>Add To Cart</AddToCartButton>
-      <BuyNowButton>Buy Now</BuyNowButton>
+      <AddToCartButton onClick={()=> addItemToCart(matchingItem)}>Add To Cart</AddToCartButton>
+      <Link to='/cart'>
+        <ViewCartButton>
+            View Cart
+        </ViewCartButton>
+      </Link>
 
       <PaymentInfo>
         <Info>
@@ -92,7 +93,7 @@ const AddToCartButton = styled(CartButton)`
     transition: opacity 0.1s ease-in;
   }
 `;
-const BuyNowButton = styled(CartButton)`
+const ViewCartButton = styled(CartButton)`
   background-color: #05b8ff;
   cursor: pointer;
   font-family: 'Chakra Petch', sans-serif;
