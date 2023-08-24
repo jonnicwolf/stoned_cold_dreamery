@@ -10,7 +10,7 @@ const ShoppingCart = () => {
 
   return (
     <Container>
-      <Header>Shopping Cart</Header>c
+      <Header>Shopping Cart</Header>
       <div>
         {cartItems.map((item) => (
           <Item key={item.id}>
@@ -29,7 +29,10 @@ const ShoppingCart = () => {
             : <Empty>Your cart is empty</Empty>
         }
       </Total>
-      <ClearButton onClick={clearCart}>Clear Cart</ClearButton>
+      {cartItems.length > 0
+        ? <ClearButton onClick={clearCart}>Clear Cart</ClearButton>
+        : null
+      }
     </Container>
   );
 };
