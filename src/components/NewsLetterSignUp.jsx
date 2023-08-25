@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const cone = '/photo_assets/logos_banners/cone_whiteBorder.png'
+const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png')
 
 const NewsLetterSignUp = () => {
   const clientWidth = document.documentElement.clientWidth;
