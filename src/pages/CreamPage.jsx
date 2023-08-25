@@ -6,47 +6,30 @@ import Ingredients from '../components/Ingredients';
 import AddToCart from '../components/AddToCart';
 import AboutThisItem from '../components/AboutThisItem';
 
-const photoRoot = process.env.PUBLIC_URL + '/photo_assets/flavours/';
-
-// const products = require('../../data.json')
-
 const Flavor = () => {
-  const [flavor,setFlavor] = useState('birthdayCake');
-  const flavors = {
-    birthdayCake: {
-      description: 'French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis',
-      name:'Birthday Cake',
-      photo: photoRoot+'birthday_cake'
-    },
-    sherblato: {
-      description: 'Strawberry ice cream with dark chocolate syrup, infused with our in house grown Sherblato cannabis',
-      name: 'Sherblato',
-      photo: photoRoot+'sherblato'
-    },
-    blueDream: {
-      description: 'Blueberry ice cream with a blackberry syrup, infused with our in house grown Blue Dream cannabis.',
-      name: 'Blue Dream',
-      photo: photoRoot+'blue_dream'
-    },
-  }
+  const [flavor,setFlavor] = useState('birthday_cake');
+  const { cream } = require('../data.json')
+
   function handleFlavor (event) {
     setFlavor(event.target.value);
   };
 
+  console.log(cream[flavor].photo)
+
   return (
     <Container>
       <ImgContainer>
-        <Img src={photoRoot+flavor} />
+        <Img src={ cream[flavor].photo } alt={ cream[flavor].name } />
       </ImgContainer>
 
       <Segment>
         <ProductTitle>
-          <FlavorDropList value={photoRoot+flavor} onChange={handleFlavor}>
-            <Option value="birthdayCake">Birthday Cake</Option>
+          <FlavorDropList value={flavor} onChange={handleFlavor}>
+            <Option value="birthday_cake">Birthday Cake</Option>
             <Option value="sherblato">Sherblato</Option>
-            <Option value="blueDream">Blue Dream</Option>
+            <Option value="blue_dream">Blue Dream</Option>
           </FlavorDropList>
-          <P>{flavors[flavor].description}</P>
+          <P>{cream[flavor].description}</P>
         </ProductTitle>
         <NutritionSummary size='1Pt / 1500mg'/>
         <NutritionFacts />
@@ -71,7 +54,7 @@ const Container = styled.div`
 `;
 const Img = styled.img`
   width: 60vw;
-  transform: translate(-125px, -80px);
+  // transform: translate(-125px, -80px);
 `;
 const FlavorDropList = styled.select`
   border: none;

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
 import NewsLetterSignUp from '../components/NewsLetterSignUp';
-import {indica_jar, hybrid_jar, sativa_jar} from '../photo_assets/signature_flower';
-import {birthday_cake,blue_dream,sherblato} from '../photo_assets/flavours';
+import {indica_jar, hybrid_jar, sativa_jar} from '../photo_assets/signature_flower/index.js';
+import {birthday_cake,blue_dream,sherblato} from '../photo_assets/flavors/index.js';
 
 const signature_flower = [ indica_jar, hybrid_jar, sativa_jar ];
 const flavors = [ birthday_cake, blue_dream , sherblato ];

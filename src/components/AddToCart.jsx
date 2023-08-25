@@ -46,11 +46,10 @@ const AddToCart = ({ item, itemType }) => {
         </Select>
 
       </QuantityButton>
+
       <AddToCartButton onClick={()=> addItemToCart(matchingItem)}>Add To Cart</AddToCartButton>
       <Link to='/cart'>
-        <ViewCartButton>
-            View Cart
-        </ViewCartButton>
+        <ViewCartButton> View Cart </ViewCartButton>
       </Link>
 
       <PaymentInfo>
