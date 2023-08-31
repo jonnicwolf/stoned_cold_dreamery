@@ -24,9 +24,9 @@ const ShoppingCart = () => {
       <div>
         { cartItems.length !== 0
             ? <Total>
-                <p>Subtotal (${cartItems.length} item/s): ${total}</p>
-                <p>Tax ${(total/100*NYCTax).toFixed(2)}</p>
-                <p>Total ${total/100 * NYCTax + total}</p>
+                <div>Subtotal (${cartItems.length} item/s): ${total}</div>
+                <div>Tax ${(total/100*NYCTax).toFixed(2)}</div>
+                <div>Total ${total/100 * NYCTax + total}</div>
               </Total>
             : <Empty>Your cart is empty</Empty>
         }
@@ -78,14 +78,15 @@ const Header = styled.h3`
 const Item = styled.div`
   display: flex;
   margin-bottom: 1vh;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 50vw;
 `;
 const ItemInfo = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-family: Permanent Marker;
-  font-size: 40px;
+  font-size: 30px;
 `;
 const ItemPhoto = styled.img`
   height: 15vh;
@@ -94,6 +95,8 @@ const ItemPhoto = styled.img`
 const Total = styled.div`
   display: flex;
   flex-direction: column;
+  font-size: 20px;
+  gap: 0.5vh;
 `;
 const XButton = styled.button`
   background: none;
