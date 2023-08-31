@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Cart = () => {
+const AddItemToCart = () => {
   const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (event) => {
@@ -40,7 +41,9 @@ const Cart = () => {
 
       </QuantityButton>
       <AddToCart>Add To Cart</AddToCart>
-      <BuyNow>Buy Now</BuyNow>
+      <Link to='/cart'>
+        <BuyNow>View Cart</BuyNow>
+      </Link>
 
       <PaymentInfo>
         <Info>
@@ -150,4 +153,4 @@ const Select = styled.select`
   background: none;
 `;
 
-export default Cart;
+export default AddItemToCart;
