@@ -1,9 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+import Cart from '../components/Cart';
 
 const CartPage = () => {
   return (
-    <div>CartPage</div>
+    <Container>
+      <Cart />
+
+    </Container>
   );
 };
+
+const Container = styled.div`
+  border: 1px solid red;
+  margin-top: 12vh;
+  // display: flex;
+`;
 
 export default CartPage;

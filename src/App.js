@@ -58,7 +58,7 @@ const LogoContainer = styled.div`
   align-items: center;
   background-color: ${props => props.scrollPixel > 100 ? 'black' : '#7ae9ff'};
   display: flex;
-  height: 90px;
+  height: 10vh;
   justify-content: center;
   position: fixed;
   transition: background-color 0.5s ease;
