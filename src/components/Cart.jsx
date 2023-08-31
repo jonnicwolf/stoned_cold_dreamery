@@ -35,6 +35,7 @@ const ShoppingCart = () => {
         ? <ClearButton onClick={clearCart}>Clear Cart</ClearButton>
         : null
       }
+      <button>checkout</button>
     </Container>
   );
 };
