@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import NutritionSummary from '../components/NutritionSummary';
 import NutritionFacts from '../components/NutritionFacts';
 import Ingredients from '../components/Ingredients';
-import Cart from '../components/AddItemToCart';
+import AddToCart from '../components/AddItemToCart';
 import AboutThisItem from '../components/AboutThisItem';
 
 import { birthday_cake, blue_dream, sherblato } from '../photo_assets/flavours';
 
 const Flavor = () => {
-  const [flavor,setFlavor] = useState('birthdayCake');
+  const [flavor,setFlavor] = useState('birthday_cake');
+
   const flavors = {
     birthdayCake: {
       description: 'French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis',
@@ -26,10 +27,13 @@ const Flavor = () => {
       name: 'Blue Dream',
       photo: blue_dream
     },
-  }
+  };
+
   function handleFlavor (event) {
     setFlavor(event.target.value);
   };
+
+  console.log('flavor', flavor);
 
   return (
     <Container>
@@ -40,9 +44,9 @@ const Flavor = () => {
       <Segment>
         <ProductTitle>
           <FlavorDropList value={flavor} onChange={handleFlavor}>
-            <Option value="birthdayCake">Birthday Cake</Option>
+            <Option value="birthday_cake">Birthday Cake</Option>
             <Option value="sherblato">Sherblato</Option>
-            <Option value="blueDream">Blue Dream</Option>
+            <Option value="blue_dream">Blue Dream</Option>
           </FlavorDropList>
           <P>{flavors[flavor].description}</P>
         </ProductTitle>
@@ -53,7 +57,7 @@ const Flavor = () => {
       </Segment>
 
       <Segment>
-        <Cart />
+        <AddToCart item={flavor} itemType={'cream'} />
       </Segment>
     </Container>
   );
