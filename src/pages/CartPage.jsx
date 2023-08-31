@@ -13,8 +13,9 @@ const CartPage = () => {
 
 const Container = styled.div`
   border: 1px solid red;
-  margin-top: 12vh;
-  // display: flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh;
 `;
 
 export default CartPage;

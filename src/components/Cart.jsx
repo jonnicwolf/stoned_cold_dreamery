@@ -37,13 +37,13 @@ const ShoppingCart = () => {
 
 const Container = styled.div`
   align-items: center;
+  justify-content: center;
   border: 1px solid grey;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   font-family: 'Chakra Petch', sans-serif;
   gap: 5vh;
-  margin-top: 2vh;
   padding: 20px;
   width: 50vw;
 `;
@@ -65,7 +65,7 @@ const ClearButton = styled.button`
   }
 `;
 const Empty = styled.p`
-  font-size: 20px;
+  font-size: 50px;
 `;
 const Header = styled.h3`
   margin: 0;
