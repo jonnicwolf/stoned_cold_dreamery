@@ -1,0 +1,37 @@
+{
+  "cream": {
+    "birthday_cake": {
+      "id": "1-1-1",
+      "description": "French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis",
+      "dosage": 1500,
+      "name": "Birthday Cake",
+      "price": 15.99,
+      "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/flavors/birthday_cake.jpg",
+      "size": 1,
+      "quantity": 999
+    },
+    "sherblato": {
+      "id": "1-1-3",
+      "description": "Strawberry ice cream with dark chocolate syrup, infused with our in house grown Sherblato cannabis",
+      "dosage": 1500,
+      "name": "Sherblato",
+      "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/flavors/sherblato.jpg",
+      "price": 15.99,
+      "size": 1,
+      "quantity": 999
+    },
+    "blue_dream": {
+      "id": "1-1-6",
+      "description": "Blueberry ice cream with a blackberry syrup, infused with our in house grown Blue Dream cannabis",
+      "dosage": 1500,
+      "name": "Blue Dream",
+      "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/flavors/blue_dream.jpg",
+      "price": 15.99,
+      "size": 1,
+      "quantity": 999
+    }
+  },
+  "smokable": {},
+  "hardware": {},
+  "sticker": {}
+}
