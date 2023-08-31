@@ -6,6 +6,7 @@ export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  console.log(cartItems)
 
   function addItemToCart (item) { setCartItems(prev => [...prev, item]) };
   function removeItemFromCart (itemId) { setCartItems(prev => prev.filter((item)=> item.id !== itemId)); };

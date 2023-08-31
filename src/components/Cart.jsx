@@ -4,9 +4,7 @@ import { useCart } from './CartProvider';
 
 const ShoppingCart = () => {
   const { cartItems, cartTotal, removeItemFromCart, clearCart } = useCart();
-
-  const photoRoot = process.env.PUBLIC_URL + '/photo_assets/flavours/';
-  console.log('ShoppingCart: ',photoRoot)
+  const photoRoot = '../photo_assets/flavours'
 
   return (
     <Container>

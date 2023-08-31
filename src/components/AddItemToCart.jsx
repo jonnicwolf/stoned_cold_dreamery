@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useCart } from './CartProvider';
+import { Link } from 'react-router-dom';
 
-const AddItemToCart = () => {
+const products = require('../data.json');
+
+const AddToCart = ({ item, itemType }) => {
   const [quantity, setQuantity] = useState(1);
+  const { addItemToCart } = useCart();
+  const handleQuantityChange = (event) => { setQuantity(parseInt(event.target.value, 10)) };
 
-  const handleQuantityChange = (event) => {
-    setQuantity(parseInt(event.target.value, 10));
-  };
+  const matchingItem = products[itemType][item];
+  const isInStock = products[itemType][item].quantity > 0;
 
   return (
     <Container>
       <Price>
         <div>
           <span style={{fontSize: '11px'}}>$</span>
-          <b>15.99</b>
+          <b>{matchingItem.price}</b>
         </div>
 
         <PerOz>
@@ -22,10 +26,12 @@ const AddItemToCart = () => {
         </PerOz>
       </Price>
 
-      <InStock><b>In Stock</b></InStock>
+      <InStock>
+        { isInStock ? <b>In Stock</b> : <b>Out of Stock</b> }
+      </InStock>
 
       <QuantityButton>
-        Qty: 
+        Qty:
         <Select value={quantity} onChange={handleQuantityChange}>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -40,9 +46,10 @@ const AddItemToCart = () => {
         </Select>
 
       </QuantityButton>
-      <AddToCart>Add To Cart</AddToCart>
+
+      <AddToCartButton onClick={()=> addItemToCart(matchingItem)}>Add To Cart</AddToCartButton>
       <Link to='/cart'>
-        <BuyNow>View Cart</BuyNow>
+        <ViewCartButton> View Cart </ViewCartButton>
       </Link>
 
       <PaymentInfo>
@@ -73,7 +80,7 @@ const CartButton = styled.button`
   height: 3vh;
   width: 20vw;
 `;
-const AddToCart = styled(CartButton)`
+const AddToCartButton = styled(CartButton)`
   background-color: #69e0f0;
   cursor: pointer;
   font-family: 'Chakra Petch', sans-serif;
@@ -85,7 +92,7 @@ const AddToCart = styled(CartButton)`
     transition: opacity 0.1s ease-in;
   }
 `;
-const BuyNow = styled(CartButton)`
+const ViewCartButton = styled(CartButton)`
   background-color: #05b8ff;
   cursor: pointer;
   font-family: 'Chakra Petch', sans-serif;
@@ -100,12 +107,11 @@ const BuyNow = styled(CartButton)`
 const Container = styled.div`
   align-items: center;
   border: 1px solid grey;
-  border-radius: 10px; 
+  border-radius: 10px;
   display: flex;
   font-family: 'Chakra Petch', sans-serif;
   flex-direction: column;
   gap: 10px;
-  // height: 45vh;
   height: 100%;
   padding: 25px;
 `;
@@ -153,4 +159,4 @@ const Select = styled.select`
   background: none;
 `;
 
-export default AddItemToCart;
+export default AddToCart;
