@@ -101,7 +101,15 @@ const Total = styled.div`
 const XButton = styled.button`
   background: none;
   border: none;
+  border-radius: 50px;
   padding: 2vw;
+
+  &:hover {
+    box-shadow: 2px 1px 10px red;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.1s ease-in;
+  }
 `;
 
 export default ShoppingCart;
