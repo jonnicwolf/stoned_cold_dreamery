@@ -5,7 +5,6 @@ const cone = require('../photo_assets/logos_banners/cone_whiteBorder.jpg');
 
 const NewsLetterSignUp = () => {
   const clientWidth = document.documentElement.clientWidth;
-  console.log(clientWidth)
   const cones = [];
   for (let i=0; i<=44; i++) {
     cones.push(<Cone src={cone} alt=''/>)

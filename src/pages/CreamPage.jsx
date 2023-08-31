@@ -12,7 +12,7 @@ const Flavor = () => {
   const [flavor,setFlavor] = useState('birthday_cake');
 
   const flavors = {
-    birthdayCake: {
+    birthday_cake: {
       description: 'French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis',
       name:'Birthday Cake',
       photo: birthday_cake
@@ -22,7 +22,7 @@ const Flavor = () => {
       name: 'Sherblato',
       photo: sherblato
     },
-    blueDream: {
+    blue_dream: {
       description: 'Blueberry ice cream with a blackberry syrup, infused with our in house grown Blue Dream cannabis.',
       name: 'Blue Dream',
       photo: blue_dream
@@ -32,8 +32,6 @@ const Flavor = () => {
   function handleFlavor (event) {
     setFlavor(event.target.value);
   };
-
-  console.log('flavor', flavor);
 
   return (
     <Container>

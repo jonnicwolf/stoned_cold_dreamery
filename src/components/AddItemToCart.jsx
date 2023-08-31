@@ -4,17 +4,14 @@ import { useCart } from './CartProvider';
 import { Link } from 'react-router-dom';
 
 const products = require('../data.json');
-console.log(products)
 
 const AddToCart = ({ item, itemType }) => {
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart } = useCart();
   const handleQuantityChange = (event) => { setQuantity(parseInt(event.target.value, 10)) };
 
-  // const matchingItem = products[itemType][item];
-  // const isInStock = products[itemType][item].quantity > 0;
-  console.log('matchingItem', products[itemType])
-  console.log(item)
+  const matchingItem = products[itemType][item];
+  const isInStock = products[itemType][item].quantity > 0;
 
   return (
     <Container>
@@ -30,7 +27,7 @@ const AddToCart = ({ item, itemType }) => {
       </Price>
 
       <InStock>
-        {/* { isInStock ? <b>In Stock</b> : <b>Out of Stock</b> } */}
+        { isInStock ? <b>In Stock</b> : <b>Out of Stock</b> }
       </InStock>
 
       <QuantityButton>
