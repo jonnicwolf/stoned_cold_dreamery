@@ -6,7 +6,6 @@ const CartPage = () => {
   return (
     <Container>
       <Cart />
-
     </Container>
   );
 };

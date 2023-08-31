@@ -17,7 +17,7 @@ const ShoppingCart = () => {
               <span>{item.name}</span>
               <span>${item.price}</span>
             </ItemInfo>
-            <button onClick={()=> removeItemFromCart(item.id)}>❌</button>
+            <XButton onClick={()=> removeItemFromCart(item.id)}>❌</XButton>
           </Item>
         ))}
       </div>
@@ -89,7 +89,11 @@ const ItemPhoto = styled.img`
   width: 15vw;
 `;
 const Total = styled.div`
-
+`;
+const XButton = styled.button`
+  background: none;
+  border: none;
+  padding: 2vw;
 `;
 
 export default ShoppingCart;
