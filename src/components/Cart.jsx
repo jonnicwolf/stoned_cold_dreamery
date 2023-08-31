@@ -26,7 +26,7 @@ const ShoppingCart = () => {
             ? <Total>
                 <div>Subtotal (${cartItems.length} item/s): ${total}</div>
                 <div>Tax ${(total/100*NYCTax).toFixed(2)}</div>
-                <div>Total ${total/100 * NYCTax + total}</div>
+                <div>Total ${(total/100 * NYCTax + total).toFixed(2)}</div>
               </Total>
             : <Empty>Your cart is empty</Empty>
         }
