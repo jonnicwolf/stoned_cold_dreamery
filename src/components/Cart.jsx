@@ -4,15 +4,15 @@ import { useCart } from './CartProvider';
 
 const ShoppingCart = () => {
   const { cartItems, cartTotal, removeItemFromCart, clearCart } = useCart();
-  const photoRoot = '../photo_assets/flavours'
-
+  
+  console.log(cartItems)
   return (
     <Container>
       <Header>Shopping Cart</Header>
       <div>
         {cartItems.map((item) => (
           <Item key={item.id}>
-            <ItemPhoto src={photoRoot+item.photo} alt="" />
+            <ItemPhoto src={item.photo} alt="" />
             <ItemInfo>
               <span>{item.name}</span>
               <span>${item.price}</span>
