@@ -4,8 +4,7 @@ import { useCart } from './CartProvider';
 
 const ShoppingCart = () => {
   const { cartItems, cartTotal, removeItemFromCart, clearCart } = useCart();
-  
-  console.log(cartItems)
+
   return (
     <Container>
       <Header>Shopping Cart</Header>
@@ -72,7 +71,6 @@ const Header = styled.h3`
   font-size: 35px;
 `;
 const Item = styled.div`
-  border: 1px solid green;
   display: flex;
   margin-bottom: 1vh;
   justify-content: space-between;
