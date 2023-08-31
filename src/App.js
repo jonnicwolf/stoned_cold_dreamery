@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import HomePage from './pages/HomePage';
 import CreamPage from "./pages/CreamPage";
 import CartPage from './pages/CartPage';
+import CheckoutPage from './pages/CheckoutPage';
 
 const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.png');
 const logo_white = require('./photo_assets/carousel_home/scd-logo-white-transparent.png');
@@ -38,6 +39,7 @@ function App() {
         <Route exact path='/' element={<HomePage/>} />
         <Route exact path='/cream' element={<CreamPage />} />
         <Route exact path='/cart' element={<CartPage />} />
+        <Route exact path='/checkout' element={<CheckoutPage />} />
       </Routes>
 
       { screenWidth <= 768
