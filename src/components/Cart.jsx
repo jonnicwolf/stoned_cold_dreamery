@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { useCart } from './CartProvider';
 
 const ShoppingCart = () => {
-  const { cartItems, cartTotal, removeItemFromCart, clearCart } = useCart();
+  const { cartItems, total, removeItemFromCart, clearCart } = useCart();
+  const NYCTax = 8.875;
 
   return (
     <Container>
@@ -20,12 +21,16 @@ const ShoppingCart = () => {
           </Item>
         ))}
       </div>
-      <Total>
+      <div>
         { cartItems.length !== 0
-            ? <p>Subtotal (${cartItems.length} item/s): ${cartTotal}</p>
+            ? <Total>
+                <p>Subtotal (${cartItems.length} item/s): ${total}</p>
+                <p>Tax ${(total/100*NYCTax).toFixed(2)}</p>
+                <p>Total ${total/100 * NYCTax + total}</p>
+              </Total>
             : <Empty>Your cart is empty</Empty>
         }
-      </Total>
+      </div>
       {cartItems.length > 0
         ? <ClearButton onClick={clearCart}>Clear Cart</ClearButton>
         : null
@@ -42,7 +47,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   font-family: 'Chakra Petch', sans-serif;
-  gap: 5vh;
+  gap: 2vh;
   padding: 20px;
   width: 50vw;
 `;
@@ -87,6 +92,8 @@ const ItemPhoto = styled.img`
   width: 15vw;
 `;
 const Total = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 const XButton = styled.button`
   background: none;
