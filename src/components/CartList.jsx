@@ -7,7 +7,6 @@ const CartList = () => {
   const NYCTax = 8.875;
   return (
     <Container>
-      <Header>Shopping Cart</Header>
       <div>
         {cartItems.map((item) => (
           <Item key={item.id}>
