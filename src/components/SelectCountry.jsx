@@ -3,6 +3,7 @@ import React from 'react';
 const SelectCountry = () => {
   return (
     <select>
+      <option value="" selected disabled hidden>Country or region</option>
       <option value="Afghanistan">Afghanistan</option>
       <option value="Albania">Albania</option>
       <option value="Algeria">Algeria</option>

@@ -41,23 +41,26 @@ const ShoppingCart = () => {
         <header>shipping info</header>
         <form action="">
           <label htmlFor="email">Email</label><br/>
-          <input type="email" />
+          <input type="email" /><br />
 
           <label htmlFor="cardInfo">Card information</label><br/>
-          <input type="number" />
+          <input type="number" placeholder='1234 1234 1234 1234'/>
           <input type="month" />
-          <input type="number" />
+          <input type="number" placeholder='cvc'/>
+          <br />
 
           <label htmlFor="email">Name on card</label><br/>
           <input type="text" />
+          <br />
 
-          <label htmlFor="">Billing Address</label>
+          <label htmlFor="">Billing Address</label><br />
           <SelectCountry />
           <input type="text" />
           <input type="text" />
           <input type="text" />
           <input type="number" />
           <SelectState />
+          <br />
 
           <label htmlFor="">Shipping Address</label>
           <SelectCountry />
