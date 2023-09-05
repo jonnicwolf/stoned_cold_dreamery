@@ -1,8 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const SelectState = () => {
   return (
-    <select id="country-state" name="country-state">
+    <Container id="country-state" name="country-state">
       <option value="">Select state</option>
       <option value="AL">Alabama</option>
       <option value="AK">Alaska</option>
@@ -70,8 +71,15 @@ const SelectState = () => {
       <option value="WV">West Virginia</option>
       <option value="WI">Wisconsin</option>
       <option value="WY">Wyoming</option>
-    </select>
+    </Container>
   );
 };
 
+const Container = styled.select`
+  border: none;
+  // border-bottom: 1px solid grey;
+  font-size: 18px;
+  width: 100%;
+  padding: 4px;
+`;
 export default SelectState;

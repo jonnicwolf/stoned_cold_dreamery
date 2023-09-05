@@ -1,8 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const SelectCountry = () => {
   return (
-    <select>
+    <Container>
       <option value="" selected disabled hidden>Country or region</option>
       <option value="Afghanistan">Afghanistan</option>
       <option value="Albania">Albania</option>
@@ -243,8 +244,16 @@ const SelectCountry = () => {
       <option value="Serbia">Serbia</option>
       <option value="Zambia">Zambia</option>
       <option value="Zimbabwe">Zimbabwe</option>
-    </select>
+    </Container>
   );
 };
+
+const Container = styled.select`
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 100%;
+  padding: 4px;
+  font-size: 18px;
+`;
 
 export default SelectCountry;
