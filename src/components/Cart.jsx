@@ -14,7 +14,7 @@ const ShoppingCart = () => {
 
 const Container = styled.div`
   display: flex;
-  gap: 5vw;
+  gap: 4vw;
 `;
 
 export default ShoppingCart;
