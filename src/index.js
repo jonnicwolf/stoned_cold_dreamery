@@ -4,17 +4,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import { CartProvider } from './components/CartProvider';
-import { Elements } from '@stripe/react-stripe-js';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <Router>
       <CartProvider>
-        <Elements stripe={process.env.REACT_APP_STRIPE}>
           <App />
-        </Elements>
       </CartProvider>
     </Router>
   </React.StrictMode>

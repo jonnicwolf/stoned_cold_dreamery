@@ -1,10 +1,14 @@
 import React from 'react';
-import { PaymentElement } from '@stripe/react-stripe-js';
+import styled from 'styled-components';
 
 const CheckoutPage = () => {
   return (
-    <PaymentElement />
+    <Container>CheckoutPage</Container>
   );
 };
 
-export default CheckoutPage;
+const Container = styled.div`
+  margin-top: 12vh;
+`;
+
+export default CheckoutPage
