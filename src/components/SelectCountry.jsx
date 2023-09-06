@@ -252,7 +252,7 @@ const Container = styled.select`
   border: none;
   border-bottom: 1px solid grey;
   width: 100%;
-  padding: 4px;
+  padding: 5px;
   font-size: 18px;
 `;
 

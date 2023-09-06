@@ -22,9 +22,16 @@ const CartList = () => {
       <div>
         { cartItems.length !== 0
             ? <Total>
-                <div>Subtotal ({cartItems.length} item/s): ${total}</div>
-                <div>Tax ${(total/100*NYCTax).toFixed(2)}</div>
-                <div>Total ${(total/100 * NYCTax + total).toFixed(2)}</div>
+                <div>
+                  <div>Subtotal [{cartItems.length} {cartItems.length > 1 ? 'items' : 'item'}]</div>
+                  <div>Tax</div>
+                  <div>Total</div>
+                </div>
+                <div>
+                  <div>${total}</div>
+                  <div>${(total/100*NYCTax).toFixed(2)}</div>
+                  <div>${(total/100 * NYCTax + total).toFixed(2)}</div>
+                </div>
               </Total>
             : <Empty>Your cart is empty</Empty>
         }
@@ -69,10 +76,6 @@ const ClearButton = styled.button`
 const Empty = styled.p`
   font-size: 50px;
 `;
-const Header = styled.h3`
-  margin: 0;
-  font-size: 35px;
-`;
 const Item = styled.div`
   display: flex;
   margin-bottom: 1vh;
@@ -92,9 +95,8 @@ const ItemPhoto = styled.img`
 `;
 const Total = styled.div`
   display: flex;
-  flex-direction: column;
   font-size: 20px;
-  gap: 0.5vh;
+  gap: 20vh;
 `;
 const XButton = styled.button`
   background: none;
