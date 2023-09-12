@@ -10,7 +10,6 @@ const NavBar = () => {
   return (
     <Container>
       <LeftSubContainer>
-
         <StyledLink><></></StyledLink>
       </LeftSubContainer>
 
