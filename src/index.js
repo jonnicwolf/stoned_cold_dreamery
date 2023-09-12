@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <CartProvider>
-          <App />
+        <App />
       </CartProvider>
     </Router>
   </React.StrictMode>

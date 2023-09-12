@@ -3,40 +3,23 @@ import styled from 'styled-components';
 import NutritionSummary from '../components/NutritionSummary';
 import NutritionFacts from '../components/NutritionFacts';
 import Ingredients from '../components/Ingredients';
-import AddToCart from '../components/AddItemToCart';
+import AddToCart from '../components/AddToCart';
 import AboutThisItem from '../components/AboutThisItem';
-
-import { birthday_cake, blue_dream, sherblato } from '../photo_assets/flavours';
 
 const Flavor = () => {
   const [flavor,setFlavor] = useState('birthday_cake');
-
-  const flavors = {
-    birthday_cake: {
-      description: 'French Vanilla ice cream and lemon cake chucks infused with our in house grown Birthday Cake cannabis',
-      name:'Birthday Cake',
-      photo: birthday_cake
-    },
-    sherblato: {
-      description: 'Strawberry ice cream with dark chocolate syrup, infused with our in house grown Sherblato cannabis',
-      name: 'Sherblato',
-      photo: sherblato
-    },
-    blue_dream: {
-      description: 'Blueberry ice cream with a blackberry syrup, infused with our in house grown Blue Dream cannabis.',
-      name: 'Blue Dream',
-      photo: blue_dream
-    },
-  };
+  const { cream } = require('../data.json')
 
   function handleFlavor (event) {
     setFlavor(event.target.value);
   };
 
+  console.log(cream[flavor].photo)
+
   return (
     <Container>
       <ImgContainer>
-        <Img src={flavors[flavor].photo} />
+        <Img src={ cream[flavor].photo } alt={ cream[flavor].name } />
       </ImgContainer>
 
       <Segment>
@@ -46,7 +29,7 @@ const Flavor = () => {
             <Option value="sherblato">Sherblato</Option>
             <Option value="blue_dream">Blue Dream</Option>
           </FlavorDropList>
-          <P>{flavors[flavor].description}</P>
+          <P>{cream[flavor].description}</P>
         </ProductTitle>
         <NutritionSummary size='1Pt / 1500mg'/>
         <NutritionFacts />
@@ -62,7 +45,7 @@ const Flavor = () => {
 };
 
 const Container = styled.div`
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   height: 100%;
   gap: 30px;
@@ -71,7 +54,7 @@ const Container = styled.div`
 `;
 const Img = styled.img`
   width: 60vw;
-  transform: translate(-125px, -80px);
+  // transform: translate(-125px, -80px);
 `;
 const FlavorDropList = styled.select`
   border: none;
