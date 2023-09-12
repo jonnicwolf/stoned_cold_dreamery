@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import ShoppingCart from '../components/ShoppingCart';
+import CartList from '../components/CartList';
+import CheckoutForm from '../components/CheckoutForm';
 
 const CartPage = () => {
   return (
     <Container>
-      <ShoppingCart />
+      <CartList />
+      <CheckoutForm />
     </Container>
   );
 };
@@ -13,7 +15,8 @@ const CartPage = () => {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 18vh;
+  gap: 4vw;
+  margin-top: 10vh;
 `;
 
 export default CartPage;
