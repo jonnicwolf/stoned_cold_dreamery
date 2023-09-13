@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import { useCart } from './CartProvider';
 
-const NavBar = () => {
+const NavBar = ({ scrollPixel }) => {
   const { cartItems } = useCart();
-  console.log(cartItems)
+
   return (
-    <Container>
+    <Container scrollPixel={ scrollPixel }>
       <LeftSubContainer>
         <StyledLink><></></StyledLink>
       </LeftSubContainer>
@@ -24,7 +24,7 @@ const NavBar = () => {
           style={{fontSize: '5vh', display: 'flex'}}
           to='/cart'
         >
-          <div style={{fontSize: '3vh', color: 'black'}}>{cartItems.length}</div>
+          <CartItems scrollPixel={scrollPixel}>{cartItems.length}</CartItems>
           <div>🛒</div>
         </StyledLink>
       </RightSubContainer>
@@ -32,19 +32,25 @@ const NavBar = () => {
   );
 };
 
+const CartItems = styled.div`
+  color: ${props => props.scrollPixel > 100 ? 'white' : 'black'};
+  font-size: 3vh;
+`;
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  background-color: #7ae9ff;
-  text-decoration: none;
+  background-color: ${props => props.scrollPixel > 100 ? 'black' : '#7ae9ff'};
   height: 10vh;
+  justify-content: space-between;
+  position: fixed;
+  text-decoration: none;
   width: 100vw;
+  z-index: 2;
 `;
 const LeftSubContainer = styled.div`
-  display: flex;
   align-self: center;
-  justify-content: center;
+  display: flex;
   gap: 50px;
+  justify-content: center;
   // margin-left: 20px;
   // width: 30vw;
   width: 70px;
