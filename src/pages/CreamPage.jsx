@@ -50,7 +50,7 @@ const Container = styled.div`
   height: 100%;
   gap: 30px;
   padding: 2vw;
-  margin-top: 3vh;
+  margin-top: 10vh;
 `;
 const Img = styled.img`
   width: 60vw;
