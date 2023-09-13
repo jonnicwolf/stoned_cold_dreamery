@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NutritionSummary from '../components/NutritionSummary';
 import NutritionFacts from '../components/NutritionFacts';
 import Ingredients from '../components/Ingredients';
-import AddToCart from '../components/AddToCart';
+import AddItemToCart from '../components/AddItemToCart';
 import AboutThisItem from '../components/AboutThisItem';
 
 const Flavor = () => {
@@ -38,7 +38,7 @@ const Flavor = () => {
       </Segment>
 
       <Segment>
-        <AddToCart item={flavor} itemType={'cream'} />
+        <AddItemToCart item={flavor} itemType={'cream'} />
       </Segment>
     </Container>
   );
@@ -50,11 +50,11 @@ const Container = styled.div`
   height: 100%;
   gap: 30px;
   padding: 2vw;
-  margin-top: 18vh;
+  margin-top: 3vh;
 `;
 const Img = styled.img`
   width: 60vw;
-  // transform: translate(-125px, -80px);
+  transform: translate(-125px, -80px);
 `;
 const FlavorDropList = styled.select`
   border: none;
@@ -75,7 +75,6 @@ const Segment = styled.div`
 `;
 const ImgContainer = styled(Segment)`
   overflow: hidden;
-  position: sticky;
   width: 60vw;
 `;
 const ProductTitle = styled.div`
