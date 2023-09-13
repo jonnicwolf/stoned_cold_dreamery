@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import HomePage from './pages/HomePage';
@@ -7,26 +7,27 @@ import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import NavBar from './components/NavBar';
 
-function App() {
-  
-  
+const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.png');
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  //     const screenWidth = document.documentElement.clientWidth;
-  //     setScrollPixel(scrolled);
-  //     setScreenWidth(screenWidth);
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
+function App() {
+  const [scrollPixel, setScrollPixel] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const screenWidth = document.documentElement.clientWidth;
+      setScrollPixel(scrolled);
+      setScreenWidth(screenWidth);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <Container className="App">
-      <NavBar />
+      <NavBar scrollPixel={scrollPixel} />
       {/* <LogoContainer scrollPixel={scrollPixel} >
         { scrollPixel > 100
           ? <Logo src={logo_white} alt='scd logo' />
@@ -41,12 +42,12 @@ function App() {
         <Route exact path='/checkout' element={<CheckoutPage />} />
       </Routes>
 
-      {/* { screenWidth <= 768
+      { screenWidth <= 768
         ? null
         : <FooterLogoContainer>
             <FooterLogo src={logo_black} alt='scd logo' />
           </FooterLogoContainer>
-      } */}
+      }
     </Container>
   );
 };
@@ -104,14 +105,18 @@ const Container = styled.div`
 // const FooterLogo = styled.img`
 //   height: 100px;
 // `;
-// const FooterLogoContainer = styled.footer`
-//   align-items: center;
-//   background-color: white;
-//   display: flex;
-//   height: 150px;
-//   justify-content: center;
-//   width: 100%;
-//   position: sticky;
-// `;
+const FooterLogoContainer = styled.footer`
+  align-items: center;
+  background-color: white;
+  display: flex;
+  height: 12vh;
+  justify-content: center;
+  width: 100%;
+  position: sticky;
+`;
+const FooterLogo = styled.img`
+  width: 30vw;
+  height: 10vh;
+`;
 
 export default App;
