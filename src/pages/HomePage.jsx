@@ -13,11 +13,18 @@ const Home = () => {
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
+
       <CarouselContainer>
-        <Cream>CREAM</Cream>
-        <Carousel slides={flavors} />
-        <Carousel slides={signature_flower} />
-        <Herb>HERB</Herb>
+
+        <CarouselItem>
+          <Cream>CREAM</Cream>
+          <Carousel slides={flavors} />
+        </CarouselItem>
+
+        <CarouselItem>
+            <Carousel slides={signature_flower} />
+            <Herb>HERB</Herb>
+        </CarouselItem>
       </CarouselContainer>
 
       <NewsLetterSignUp />
@@ -25,99 +32,49 @@ const Home = () => {
   );
 };
 
-const CarouselContainer = styled.div`
-  align-items: center;
+const CarouselItem = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 70px;
+  width: 50vw;
+`;
+const CarouselContainer = styled.div`
+  display: flex;
   justify-content: center;
-  overflow: hidden;
-  @media (min-width: 390px) {
-    flex-direction: column;
-    gap: 10px;
-  }
-  @media (min-width: 768px) {
-    gap: 20px;
-  }
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    gap: 100px;
-  }
-  @media (min-width: 2560px) {
-    gap: 100px;
-  }
+  height: 60vh;
+  width: 100vw;
+  margin: 0;
 `;
 const Container = styled.div`
   align-items: center;
   background-color: black;
   display: flex;
   flex-direction: column;
+  gap: 5px;
   height: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
 `;
 const Cream = styled.div`
-  color: white; 
-  font-family: var(--font-family-modak);
+  color: white;
+  font-family: Modak;
   font-size: 100px;
+  letter-spacing: -10vh;
+  width: 6vw;
   writing-mode: vertical-rl;
-  @media (min-width: 390px) {
-    font-size: 90px;
-    height: 70px;
-    letter-spacing: 10px;
-    transform: translate(-20px,-25px);
-    width: 85%;
-    writing-mode: horizontal-tb;
-  }
-  @media (min-width: 425px) {
-    font-size: 90px;
-    width: 80%;
-  }
-  @media (min-width: 768px) {
-    width: 40%;
-  }
-  @media (min-width: 1024px) {
-    font-size: 105px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    letter-spacing: -80px;
-    transform: translate(70px, -200px);
-  }
-  @media (min-width: 2560px) {
-    font-size: 200px;
-    letter-spacing: -150px;
-    transform: translateY(-400px);
-  }
+  text-orientation: upright;
+  transform: translate(30px, 30px);
 `;
 const Herb = styled.h1`
   align-self: center;
   color: white;
   font-size: 110px;
-  font-family: var(--font-family-modak);
+  font-family: Modak;
   font-weight: normal;
-  letter-spacing: -60px;
+  letter-spacing: -87px;
   margin: 0;
-  transform: translate(-15px, -20px);
+  width: 7vw;
   writing-mode: vertical-rl;
-  @media (min-width: 390px) {
-    font-size: 90px;
-    height: 70px;
-    letter-spacing: 10px;
-    transform: translateY(-25px);
-    writing-mode: horizontal-tb;
-  }
-  @media (min-width: 1024px) {
-    font-size: 100px;
-    letter-spacing: -60px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    transform: translate(-65px, -190px) scaleY(1.09);
-  }
-  @media (min-width: 2560px) {
-    font-size: 220px;
-    letter-spacing: -150px;
-    transform: translateY(-400px);
-  }
+  text-orientation: upright;
+  transform: translate(30px, -30px);
 `;
 const WebBannerBackground = styled.img`
   margin-top: 50px;

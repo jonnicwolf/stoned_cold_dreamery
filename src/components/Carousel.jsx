@@ -10,66 +10,52 @@ const Carousel = ({slides}) => {
   };
 
   return (
-    <Container>
-      <SlideButton onClick={()=>slideLeft(slideNum)}>
-        <SlideImage src={slides[slideNum]} alt="" />
-      </SlideButton>
-    </Container>
+    <SlideButton onClick={()=>slideLeft(slideNum)}>
+      <SlideImage src={slides[slideNum]} alt="" />
+    </SlideButton>
   );
 };
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  @media (min-width: 390px) {
-    height: 40%;
-    width: 50%;
-  }
-`;
-const SlideButton = styled.button`
-  background: none;
-  border: none;
-  color: black;
-  font-size: 60px;
-  font-weight: bold;
-  margin-right: -68px;
-  opacity: 100%;
+const SlideButton = styled.div`
+  width: 100%;
+  height: 100%;
   z-index: 1;
-  @media (min-width: 390px) {
-    height: 55vh;
-    transform: translateX(-30px);
-    width: 100vw;
-  }
-  @media (min-width: 1024px) {
-    width: 30vw;
-    margin: 0;
-    height: 50vh;
-  }
-  @media (min-width: 2560px) {
-    height: 100vh;
-  }
+  // @media (min-width: 390px) {
+  //   height: 55vh;
+  //   transform: translateX(-30px);
+  //   width: 100vw;
+  // }
+  // @media (min-width: 1024px) {
+  //   width: 40vw;
+  //   height: 40vh;
+  // }
+  // @media (min-width: 2560px) {
+  //   height: 100vh;
+  // }
 `;
 const SlideImage = styled.img`
-  object-fit: cover;
-  @media (min-width: 390px) {
-    height: 100%;
-    width: 120vw;
-    transform: translateX(-140px);
-  }
-  @media (min-width: 768px) {
-    transform: translateX(-190px);
-    width: 100vw;
-  }
-  @media (min-width: 1024px) {
-    height: 400px;
-    width: 370px;
-    width: 400px;
-    transform: translateY(5px);
-  }
-  @media (min-width: 2560px) {
-    height: 100vh;
-    width: 110%;
-  }
+  width: 100%;
+  height: 100%;
+  // @media (min-width: 390px) {
+  //   height: 100%;
+  //   width: 120vw;
+  //   transform: translateX(-140px);
+  // }
+  // @media (min-width: 768px) {
+  //   transform: translateX(-190px);
+  //   width: 100vw;
+  // }
+  // @media (min-width: 1024px) {
+  //   border: 3px solid red;
+  //   height: 50vh;
+  //   width: 40vw;
+  //   // transform: translateY(5px);
+  //   // z-index: 5;
+  // }
+  // @media (min-width: 2560px) {
+  //   height: 100vh;
+  //   width: 110%;
+  // }
 `;
 
 export default Carousel;
