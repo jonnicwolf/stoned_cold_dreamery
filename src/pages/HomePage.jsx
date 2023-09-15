@@ -34,14 +34,15 @@ const Home = () => {
 
 const CarouselItem = styled.div`
   display: flex;
+  height: 100%;
   width: 50vw;
 `;
 const CarouselContainer = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
   height: 60vh;
   width: 100vw;
-  margin: 0;
 `;
 const Container = styled.div`
   align-items: center;
@@ -62,6 +63,10 @@ const Cream = styled.div`
   writing-mode: vertical-rl;
   text-orientation: upright;
   transform: translate(30px, 30px);
+  @media (min-width: 1024px) {
+    font-size: 80px;
+    letter-spacing: -9vh;
+  }
 `;
 const Herb = styled.h1`
   align-self: center;
@@ -75,6 +80,10 @@ const Herb = styled.h1`
   writing-mode: vertical-rl;
   text-orientation: upright;
   transform: translate(30px, -30px);
+  @media (min-width: 1024px) {
+    font-size: 90px;
+    letter-spacing: -10vh;
+  }
 `;
 const WebBannerBackground = styled.img`
   margin-top: 50px;
