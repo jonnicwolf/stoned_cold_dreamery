@@ -51,14 +51,13 @@ const LeftSubContainer = styled.div`
   display: flex;
   gap: 50px;
   justify-content: center;
-  // margin-left: 20px;
-  // width: 30vw;
   width: 70px;
   padding: 1vh;
 `;
 const LogoTray = styled.div`
-  // margin-right: 200px;
   align-self: center;
+  height: 100%;
+  width: 120vw;
 `;
 const RightSubContainer = styled.div`
   // margin-right: 50px;

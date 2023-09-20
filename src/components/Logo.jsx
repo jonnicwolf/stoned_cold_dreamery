@@ -37,23 +37,23 @@ const Logo = () => {
 const LogoImg = styled.img`
   height: 6vh;
   width: 20vw;
-  // @media (min-width: 390px) {
-  //   position: fixed;
-  //   height: 6%;
-  //   width: 70%;
-  // }
-  // @media (min-width: 426px) {
-  //   height: 10vh;
-  //   width: 70vw;
-  // }
-  // @media (min-width: 1024px) {
-  //   height: 15vh;
-  //   width: 40vw;
-  // }
-  // @media (min-width: 1440px) {
-  //   height: 10vh;
-  //   width: 30vw;
-  // }
+  @media (min-width: 390px) {
+    position: fixed;
+    height: 6%;
+    width: 70%;
+  }
+  @media (min-width: 425px) {
+    height: 10vh;
+    width: 70vw;
+  }
+  @media (min-width: 1024px) {
+    height: 15vh;
+    width: 40vw;
+  }
+  @media (min-width: 1440px) {
+    height: 10vh;
+    width: 30vw;
+  }
 `;
 
 export default Logo;
