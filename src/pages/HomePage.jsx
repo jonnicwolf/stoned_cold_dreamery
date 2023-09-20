@@ -13,11 +13,17 @@ const Home = () => {
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
+
       <CarouselContainer>
-        <Cream>CREAM</Cream>
-        <Carousel slides={flavors} />
-        <Carousel slides={signature_flower} />
-        <Herb>HERB</Herb>
+        <CarouselItem>
+          <Cream>CREAM</Cream>
+          <Carousel slides={flavors} />
+        </CarouselItem>
+
+        <CarouselItem>
+            <Carousel slides={signature_flower} />
+            <Herb>HERB</Herb>
+        </CarouselItem>
       </CarouselContainer>
 
       <NewsLetterSignUp />
@@ -25,26 +31,22 @@ const Home = () => {
   );
 };
 
-const CarouselContainer = styled.div`
-  align-items: center;
+const CarouselItem = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 70px;
-  justify-content: center;
-  overflow: hidden;
-  @media (min-width: 390px) {
+  width: 50vw;
+  @media (min-width: 425px) {
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
   }
-  @media (min-width: 768px) {
-    gap: 20px;
-  }
-  @media (min-width: 1024px) {
-    flex-direction: row;
-    gap: 100px;
-  }
-  @media (min-width: 2560px) {
-    gap: 100px;
+`;
+const CarouselContainer = styled.div`
+  display: flex;
+  align-items: center;
+  height: 60vh;
+  width: 100vw;
+  @media (min-width: 425px) {
+    flex-direction: column;
+    height: auto;
   }
 `;
 const Container = styled.div`
@@ -52,71 +54,68 @@ const Container = styled.div`
   background-color: black;
   display: flex;
   flex-direction: column;
+  gap: 5px;
   height: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
 `;
 const Cream = styled.div`
-  color: white; 
-  font-family: var(--font-family-modak);
+  align-self:center;
+  color: white;
+  font-family: Modak;
   font-size: 100px;
+  letter-spacing: -10vh;
+  width: 6vw;
   writing-mode: vertical-rl;
-  @media (min-width: 390px) {
-    font-size: 90px;
-    height: 70px;
-    letter-spacing: 10px;
-    transform: translate(-20px,-25px);
-    width: 85%;
-    writing-mode: horizontal-tb;
-  }
-  @media (min-width: 425px) {
-    font-size: 90px;
-    width: 80%;
+  text-orientation: upright;
+  text-align: center;
+  @media (min-width: 1024px) {
+    font-size: 80px;
+    letter-spacing: -9vh;
   }
   @media (min-width: 768px) {
-    width: 40%;
+    font-size: 70px;
+    letter-spacing: -8vh;
+    width: 7vw;
   }
-  @media (min-width: 1024px) {
-    font-size: 105px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    letter-spacing: -80px;
-    transform: translate(70px, -200px);
-  }
-  @media (min-width: 2560px) {
-    font-size: 200px;
-    letter-spacing: -150px;
-    transform: translateY(-400px);
+  @media (min-width: 425px) {
+    writing-mode: unset;
+    font-size: 65px;
+    width: 100%;
+    letter-spacing: 0.5vh;
   }
 `;
-const Herb = styled.h1`
+const Herb = styled.p`
   align-self: center;
   color: white;
   font-size: 110px;
-  font-family: var(--font-family-modak);
+  font-family: Modak;
   font-weight: normal;
-  letter-spacing: -60px;
+  letter-spacing: -87px;
   margin: 0;
-  transform: translate(-15px, -20px);
+  width: 7vw;
   writing-mode: vertical-rl;
-  @media (min-width: 390px) {
-    font-size: 90px;
-    height: 70px;
-    letter-spacing: 10px;
-    transform: translateY(-25px);
-    writing-mode: horizontal-tb;
-  }
+  text-orientation: upright;
+  text-align: center;
+  transform: translate(30px, -30px);
   @media (min-width: 1024px) {
-    font-size: 100px;
-    letter-spacing: -60px;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    transform: translate(-65px, -190px) scaleY(1.09);
+    font-size: 90px;
+    letter-spacing: -10vh;
   }
-  @media (min-width: 2560px) {
-    font-size: 220px;
-    letter-spacing: -150px;
-    transform: translateY(-400px);
+  @media (min-width: 768px) {
+    font-size: 70px;
+    letter-spacing: -8vh;
+    transform: translate(25px);
+  }
+  @media (min-width: 425px) {
+    font-size: 70px;
+    writing-mode: unset;
+    letter-spacing: 1vw;
+    transform: none;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+    height: 11.5vh;
   }
 `;
 const WebBannerBackground = styled.img`
