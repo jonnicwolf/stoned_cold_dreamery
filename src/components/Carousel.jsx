@@ -25,6 +25,9 @@ const SlideButton = styled.div`
   //   transform: translateX(-30px);
   //   width: 100vw;
   // }
+  @media (min-width: 425px) {
+    height: 60vh;
+  }
   // @media (min-width: 1024px) {
   //   width: 40vw;
   //   height: 40vh;
@@ -56,6 +59,9 @@ const SlideImage = styled.img`
   //   height: 100vh;
   //   width: 110%;
   // }
+  @media (min-width: 425px) {
+    width: 100%
+  }
 `;
 
 export default Carousel;
