@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
 import NewsLetterSignUp from '../components/NewsLetterSignUp';
@@ -15,12 +16,12 @@ const Home = () => {
       <WebBannerBackground src={banner} alt='banner background'/>
 
       <CarouselContainer>
-        <CarouselItem>
+        <CarouselItem to='/cream'>
           <Cream>CREAM</Cream>
           <Carousel slides={flavors} />
         </CarouselItem>
 
-        <CarouselItem>
+        <CarouselItem to='/herb'>
             <Carousel slides={signature_flower} />
             <Herb>HERB</Herb>
         </CarouselItem>
@@ -31,10 +32,10 @@ const Home = () => {
   );
 };
 
-const CarouselItem = styled.div`
+const CarouselItem = styled(Link)`
   display: flex;
   width: 50vw;
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     flex-direction: column;
     width: 100%;
   }
@@ -44,7 +45,7 @@ const CarouselContainer = styled.div`
   align-items: center;
   height: 60vh;
   width: 100vw;
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     flex-direction: column;
     height: auto;
   }
@@ -60,25 +61,27 @@ const Container = styled.div`
   overflow-x: hidden;
 `;
 const Cream = styled.div`
-  align-self:center;
+  align-self: center;
   color: white;
   font-family: Modak;
   font-size: 100px;
   letter-spacing: -10vh;
+  justify-content: center;
   width: 6vw;
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-align: center;
-  @media (min-width: 1024px) {
+  transform: translate(26px,-10px);
+  @media (max-width: 1024px) {
     font-size: 80px;
     letter-spacing: -9vh;
   }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 70px;
     letter-spacing: -8vh;
     width: 7vw;
   }
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     writing-mode: unset;
     font-size: 65px;
     width: 100%;
@@ -98,16 +101,16 @@ const Herb = styled.p`
   text-orientation: upright;
   text-align: center;
   transform: translate(30px, -30px);
-  @media (min-width: 1024px) {
+  @media (max-width: 1024px) {
     font-size: 90px;
     letter-spacing: -10vh;
   }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 70px;
     letter-spacing: -8vh;
     transform: translate(25px);
   }
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     font-size: 70px;
     writing-mode: unset;
     letter-spacing: 1vw;
@@ -122,25 +125,25 @@ const WebBannerBackground = styled.img`
   margin-top: 50px;
   width: 1440px;
   height: 185vh;
-  @media (min-width: 390px) {
+  @media (max-width: 390px) {
     height: 40%;
     width: 100%;
   }
-  @media (min-width: 425px) {
+  @media (max-width: 425px) {
     height: 70vh;
     width: 100vw;
   }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     height: 110vh;
     width: 100vw;
   }
-  @media (min-width: 1024px) {
+  @media (max-width: 1024px) {
     height: 200vh;
   }
-  @media (min-width: 1440px) {
+  @media (max-width: 1440px) {
     height: 250vh;
   }
-  @media (min-width: 2560px) {
+  @media (max-width: 2560px) {
     height: 300vh;
   }
 `;
