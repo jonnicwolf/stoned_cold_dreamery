@@ -35,6 +35,7 @@ const Home = () => {
 const CarouselItem = styled(Link)`
   display: flex;
   width: 50vw;
+  text-decoration: none;
   @media (max-width: 425px) {
     flex-direction: column;
     width: 100%;
@@ -86,6 +87,8 @@ const Cream = styled.div`
     font-size: 65px;
     width: 100%;
     letter-spacing: 0.5vh;
+    transform: none;
+    // height: 50%;
   }
 `;
 const Herb = styled.p`
