@@ -14,8 +14,6 @@ const Flavor = () => {
     setFlavor(event.target.value);
   };
 
-  console.log(cream[flavor].photo)
-
   return (
     <Container>
       <ImgContainer>
