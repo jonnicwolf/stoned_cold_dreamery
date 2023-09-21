@@ -131,8 +131,8 @@ const WebBannerBackground = styled.img`
     height: 40%;
     width: 100%;
   }
-  @media (max-width: 425px) {
-    height: 70vh;
+  @media (max-width: 424px) {
+    height: 170vh;
     width: 100vw;
   }
   @media (max-width: 768px) {
@@ -146,7 +146,7 @@ const WebBannerBackground = styled.img`
     height: 250vh;
   }
   @media (max-width: 2560px) {
-    height: 300vh;
+    height: 100vh;
   }
 `;
 
