@@ -71,7 +71,7 @@ const Cream = styled.div`
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-align: center;
-  transform: translate(26px,-10px);
+  transform: translate(26px,-25px);
   @media (max-width: 1024px) {
     font-size: 80px;
     letter-spacing: -9vh;
