@@ -22,8 +22,12 @@ const Carousel = ({slides}) => {
     <SlideButton
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      onClick={()=>slideLeft(slideNum)}>
-      <SlideImage src={slides[slideNum]} alt="" />
+      onClick={()=>slideLeft(slideNum)}
+      >
+      <SlideImage
+        alt=""
+        src={slides[slideNum]}
+      />
     </SlideButton>
   );
 };
@@ -39,6 +43,11 @@ const SlideButton = styled.div`
 const SlideImage = styled.img`
   width: 100%;
   height: 100%;
+  transition: opacity 1.5s ease-in-out;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export default Carousel;

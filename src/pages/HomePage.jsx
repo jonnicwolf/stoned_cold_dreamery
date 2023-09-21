@@ -35,6 +35,7 @@ const Home = () => {
 const CarouselItem = styled(Link)`
   display: flex;
   width: 50vw;
+  transition: 
   @media (max-width: 425px) {
     flex-direction: column;
     width: 100%;
