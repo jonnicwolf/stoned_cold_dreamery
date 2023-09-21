@@ -88,7 +88,6 @@ const Cream = styled.div`
     width: 100%;
     letter-spacing: 0.5vh;
     transform: none;
-    // height: 50%;
   }
 `;
 const Herb = styled.p`
