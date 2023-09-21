@@ -23,7 +23,7 @@ const Carousel = ({slides}) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={()=>slideLeft(slideNum)}
-      >
+    >
       <SlideImage
         alt=""
         src={slides[slideNum]}

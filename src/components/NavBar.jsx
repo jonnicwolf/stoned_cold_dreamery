@@ -43,6 +43,7 @@ const Container = styled.div`
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
+  transition: all 1s ease-out;
   width: 100vw;
   z-index: 2;
 `;
