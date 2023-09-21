@@ -141,12 +141,15 @@ const WebBannerBackground = styled.img`
   }
   @media (max-width: 1024px) {
     height: 200vh;
+    width: 100%;
   }
   @media (max-width: 1440px) {
     height: 250vh;
+    width: 100%;
   }
   @media (max-width: 2560px) {
-    height: 100vh;
+    height: 200vh;
+    width: 100%;
   }
 `;
 

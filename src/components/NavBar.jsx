@@ -62,6 +62,9 @@ const LogoTray = styled.div`
   @media (max-width: 425px) {
     width: 120vw;
   }
+  @media(max-width: 768px) {
+    width: 40vw;
+  }
 `;
 const RightSubContainer = styled.div`
   // margin-right: 50px;
