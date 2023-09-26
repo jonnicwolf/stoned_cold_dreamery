@@ -21,7 +21,7 @@ const Carousel = ({slides}) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => slideLeft(slideNum)}
-      >
+    >
       <SlideImage
         alt=""
         src={slides[slideNum]}
@@ -42,9 +42,10 @@ const SlideImage = styled.img`
   width: 100%;
   height: 100%;
   transition: opacity 1.5s ease-in-out;
-  opacity: 0.9;
+  opacity: 0.7;
   &:hover {
     opacity: 1;
+    border-right: 5px solid black;
   }
 `;
 

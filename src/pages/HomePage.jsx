@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
@@ -11,20 +11,37 @@ const flavors = [ birthday_cake, blue_dream , sherblato ];
 const banner = require('../photo_assets/carousel_home/scd-logo-estd.jpg');
 
 const Home = () => {
+  const [hover1, setHover1] = useState(false);
+  const [hover2, setHover2] = useState(false);
+
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
 
       <CarouselContainer>
-        <CarouselItem to='/cream'>
-          <Cream>CREAM</Cream>
+        <CarouselItem1
+          style={{backgroundColor: hover1 ? 'white' : 'black'}}
+          onMouseEnter={()=>setHover1(true)}
+          onMouseLeave={()=>setHover1(false)}
+          to='/cream'>
+          <Cream style={{color: hover1 ? 'black' : 'white'}}>
+            CREAM
+          </Cream>
           <Carousel slides={flavors} />
-        </CarouselItem>
+        </CarouselItem1>
 
-        <CarouselItem to='/herb'>
-            <Carousel slides={signature_flower} />
-            <Herb>HERB</Herb>
-        </CarouselItem>
+        <CarouselItem2
+          style={{backgroundColor: hover2 ? 'white' : 'black'}}
+          onMouseEnter={()=>setHover2(true)}
+          onMouseLeave={()=>setHover2(false)}
+          to='/herb'>
+            <Carousel
+              slides={signature_flower}
+              style={{border: hover2 ? '50px solid blue' : '50px solid red'}} />
+            <Herb style={{color: hover2 ? 'black' : 'white'}}>
+              HERB
+            </Herb>
+        </CarouselItem2>
       </CarouselContainer>
 
       <NewsLetterSignUp />
@@ -40,6 +57,12 @@ const CarouselItem = styled(Link)`
     flex-direction: column;
     width: 100%;
   }
+`;
+const CarouselItem1 = styled(CarouselItem)`
+  background-color: none;
+`;
+const CarouselItem2 = styled(CarouselItem)`
+  background-color: none;
 `;
 const CarouselContainer = styled.div`
   display: flex;
