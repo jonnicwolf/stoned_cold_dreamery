@@ -43,6 +43,7 @@ const Container = styled.div`
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
+  transition: all 1s ease-out;
   width: 100vw;
   z-index: 2;
 `;
@@ -57,7 +58,13 @@ const LeftSubContainer = styled.div`
 const LogoTray = styled.div`
   align-self: center;
   height: 100%;
-  width: 120vw;
+  width: 30vw;
+  @media (max-width: 425px) {
+    width: 120vw;
+  }
+  @media(max-width: 768px) {
+    width: 40vw;
+  }
 `;
 const RightSubContainer = styled.div`
   // margin-right: 50px;

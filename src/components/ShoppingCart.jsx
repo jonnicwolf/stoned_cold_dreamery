@@ -6,7 +6,6 @@ const ShoppingCart = () => {
   const { cartItems, cartTotal, removeItemFromCart, clearCart } = useCart();
 
   const photoRoot = process.env.PUBLIC_URL + '/photo_assets/flavours/';
-  console.log('ShoppingCart: ',photoRoot)
 
   return (
     <Container>

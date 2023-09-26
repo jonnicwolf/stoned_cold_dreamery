@@ -9,16 +9,12 @@ const AddToCart = ({ item, itemType }) => {
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart } = useCart();
   const handleQuantityChange = (event) => { setQuantity(parseInt(event.target.value, 10)) };
-  console.log(`quantity: ${quantity}`)
 
   const matchingItem = products[itemType][item];
   const isInStock = products[itemType][item].quantity > 0;
 
   const handleAddToCart = (quantity, matchingItem) => {
-    for (let i=0; i < quantity; i++) {
-      addItemToCart(matchingItem)
-      console.log('item added')
-    }
+    for (let i=0; i < quantity; i++) { addItemToCart(matchingItem) };
     return quantity;
   }
 

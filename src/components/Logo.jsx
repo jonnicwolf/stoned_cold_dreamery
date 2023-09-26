@@ -11,7 +11,6 @@ const logo_white = require('../photo_assets/carousel_home/scd-logo-white-transpa
 
 const Logo = () => {
   const [scrollPixel, setScrollPixel] = useState(0);
-  console.log(scrollPixel)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,8 +45,11 @@ const LogoImg = styled.img`
     height: 10vh;
     width: 70vw;
   }
+  @media (max-width: 768px) {
+    width: 40vw;
+  }
   @media (min-width: 1024px) {
-    height: 15vh;
+    height: 10vh;
     width: 40vw;
   }
   @media (min-width: 1440px) {

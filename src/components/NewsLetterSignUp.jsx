@@ -48,6 +48,12 @@ const Button = styled.button`
   height: 60px;
   padding: 0;
   transform: translateY(-5px);
+  &:hover {
+    background-color: black;
+    border-radius: 30px 0 0 30px;
+    color: white;
+    transition: background-color 1.5s ease-out-in;
+  }
   @media (min-width: 390px) {
     font-size: 18px;
     transform: translateX(0.1px);
