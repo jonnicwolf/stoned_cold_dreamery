@@ -20,34 +20,30 @@ const Home = () => {
 
       <CarouselContainer>
         <CarouselItem1
-          // style={{backgroundColor: hover1 ? 'white' : 'black'}}
-          // onMouseEnter={()=>setHover1(true)}
-          // onMouseLeave={()=>setHover1(false)}
-          // to='/cream'
+          style={{backgroundColor: hover1 ? 'white' : 'black'}}
+          onMouseEnter={()=>setHover1(true)}
+          onMouseLeave={()=>setHover1(false)}
+          to='/cream'
         >
-          <Cream
-          // style={{color: hover1 ? 'black' : 'white'}}
-          >
+          <Cream style={{color: hover1 ? 'black' : 'white'}}>
             CREAM
           </Cream>
           <Carousel slides={flavors} />
         </CarouselItem1>
 
         <CarouselItem2
-          // style={{backgroundColor: hover2 ? 'white' : 'black'}}
-          // onMouseEnter={()=>setHover2(true)}
-          // onMouseLeave={()=>setHover2(false)}
-          // to='/herb'
+          style={{backgroundColor: hover2 ? 'white' : 'black'}}
+          onMouseEnter={()=>setHover2(true)}
+          onMouseLeave={()=>setHover2(false)}
+          to='/herb'
         >
-            <Carousel
-              slides={signature_flower}
-              style={{border: hover2 ? '50px solid blue' : '50px solid red'}}
-              />
-            <Herb
-            // style={{color: hover2 ? 'black' : 'white'}}
-            >
-              HERB
-            </Herb>
+          <Carousel
+            slides={signature_flower}
+            style={{border: hover2 ? '50px solid blue' : '50px solid red'}}
+            />
+          <Herb style={{color: hover2 ? 'black' : 'white'}}>
+            HERB
+          </Herb>
         </CarouselItem2>
       </CarouselContainer>
 
@@ -95,7 +91,6 @@ const Container = styled.div`
 const Cream = styled.div`
   align-self: center;
   color: white;
-  color: black;
   font-family: Modak;
   font-size: 100px;
   letter-spacing: -10vh;
@@ -125,7 +120,6 @@ const Cream = styled.div`
 const Herb = styled.p`
   align-self: center;
   color: white;
-  color: black;
   font-size: 110px;
   font-family: Modak;
   font-weight: normal;
