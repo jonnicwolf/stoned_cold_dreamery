@@ -8,7 +8,7 @@ import AboutThisItem from '../components/AboutThisItem';
 
 const Flavor = () => {
   const [flavor,setFlavor] = useState('birthday_cake');
-  const { cream } = require('../data.json')
+  const { cream } = require('../data.json');
 
   function handleFlavor (event) {
     setFlavor(event.target.value);
