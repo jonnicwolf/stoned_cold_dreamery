@@ -20,25 +20,32 @@ const Home = () => {
 
       <CarouselContainer>
         <CarouselItem1
-          style={{backgroundColor: hover1 ? 'white' : 'black'}}
-          onMouseEnter={()=>setHover1(true)}
-          onMouseLeave={()=>setHover1(false)}
-          to='/cream'>
-          <Cream style={{color: hover1 ? 'black' : 'white'}}>
+          // style={{backgroundColor: hover1 ? 'white' : 'black'}}
+          // onMouseEnter={()=>setHover1(true)}
+          // onMouseLeave={()=>setHover1(false)}
+          // to='/cream'
+        >
+          <Cream
+          // style={{color: hover1 ? 'black' : 'white'}}
+          >
             CREAM
           </Cream>
           <Carousel slides={flavors} />
         </CarouselItem1>
 
         <CarouselItem2
-          style={{backgroundColor: hover2 ? 'white' : 'black'}}
-          onMouseEnter={()=>setHover2(true)}
-          onMouseLeave={()=>setHover2(false)}
-          to='/herb'>
+          // style={{backgroundColor: hover2 ? 'white' : 'black'}}
+          // onMouseEnter={()=>setHover2(true)}
+          // onMouseLeave={()=>setHover2(false)}
+          // to='/herb'
+        >
             <Carousel
               slides={signature_flower}
-              style={{border: hover2 ? '50px solid blue' : '50px solid red'}} />
-            <Herb style={{color: hover2 ? 'black' : 'white'}}>
+              style={{border: hover2 ? '50px solid blue' : '50px solid red'}}
+              />
+            <Herb
+            // style={{color: hover2 ? 'black' : 'white'}}
+            >
               HERB
             </Herb>
         </CarouselItem2>
@@ -59,10 +66,11 @@ const CarouselItem = styled(Link)`
   }
 `;
 const CarouselItem1 = styled(CarouselItem)`
-  background-color: none;
+  background-color: white;
+  
 `;
 const CarouselItem2 = styled(CarouselItem)`
-  background-color: none;
+  background-color: white;
 `;
 const CarouselContainer = styled.div`
   display: flex;
@@ -87,6 +95,7 @@ const Container = styled.div`
 const Cream = styled.div`
   align-self: center;
   color: white;
+  color: black;
   font-family: Modak;
   font-size: 100px;
   letter-spacing: -10vh;
@@ -95,7 +104,7 @@ const Cream = styled.div`
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-align: center;
-  transform: translate(26px,-25px);
+  transform: translate(32px,-25px);
   @media (max-width: 1024px) {
     font-size: 80px;
     letter-spacing: -9vh;
@@ -116,6 +125,7 @@ const Cream = styled.div`
 const Herb = styled.p`
   align-self: center;
   color: white;
+  color: black;
   font-size: 110px;
   font-family: Modak;
   font-weight: normal;
@@ -125,7 +135,7 @@ const Herb = styled.p`
   writing-mode: vertical-rl;
   text-orientation: upright;
   text-align: center;
-  transform: translate(30px, -30px);
+  transform: translate(36px, -30px);
   @media (max-width: 1024px) {
     font-size: 90px;
     letter-spacing: -10vh;

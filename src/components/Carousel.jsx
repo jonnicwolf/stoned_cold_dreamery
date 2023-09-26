@@ -43,6 +43,7 @@ const SlideImage = styled.img`
   height: 100%;
   transition: opacity 1.5s ease-in-out;
   opacity: 0.7;
+  border-right: 5px solid black;
   &:hover {
     opacity: 1;
     border-right: 5px solid black;
