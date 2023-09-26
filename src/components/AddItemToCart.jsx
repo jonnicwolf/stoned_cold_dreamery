@@ -27,7 +27,7 @@ const AddToCart = ({ item, itemType }) => {
         </div>
 
         <PerOz>
-          [$0.99 / Fl Oz]
+          ${(matchingItem.price/matchingItem.size).toFixed(2)} / Oz
         </PerOz>
       </Price>
 

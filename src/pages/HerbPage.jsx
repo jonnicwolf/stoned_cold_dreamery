@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import NutritionSummary from '../components/NutritionSummary';
-import NutritionFacts from '../components/NutritionFacts';
-import Ingredients from '../components/Ingredients';
 import AddItemToCart from '../components/AddItemToCart';
-import AboutThisItem from '../components/AboutThisItem';
 
-const Flavor = () => {
-  const [flavor,setFlavor] = useState('birthday_cake');
-  const { cream } = require('../data.json');
+const HerbPage = () => {
+  const [flavor,setFlavor] = useState('indica');
+  const { smokable } = require('../data.json');
 
   function handleFlavor (event) {
     setFlavor(event.target.value);
@@ -17,42 +13,34 @@ const Flavor = () => {
   return (
     <Container>
       <ImgContainer>
-        <Img src={ cream[flavor].photo } alt={ cream[flavor].name } />
+        <Img src={ smokable[flavor].photo } alt={ smokable[flavor].name }/>
       </ImgContainer>
 
       <Segment>
         <ProductTitle>
           <FlavorDropList value={flavor} onChange={handleFlavor}>
-            <Option value="birthday_cake">Birthday Cake</Option>
-            <Option value="sherblato">Sherblato</Option>
-            <Option value="blue_dream">Blue Dream</Option>
+            <Option value="indica">King Louis</Option>
+            <Option value="sativa">Blue Dream</Option>
+            <Option value="hybrid">Ovan</Option>
           </FlavorDropList>
-          <P>{cream[flavor].description}</P>
+          <P>{smokable[flavor].description}</P>
         </ProductTitle>
-        <NutritionSummary size='1Pt / 1500mg'/>
-        <NutritionFacts />
-        <Ingredients />
-        <AboutThisItem />
       </Segment>
 
       <Segment>
-        <AddItemToCart item={flavor} itemType={'cream'} />
+        <AddItemToCart item={flavor} itemType={'smokable'} />
       </Segment>
     </Container>
   );
 };
 
 const Container = styled.div`
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   height: 100%;
   gap: 30px;
   padding: 2vw;
   margin-top: 10vh;
-`;
-const Img = styled.img`
-  width: 60vw;
-  transform: translate(-125px, -80px);
 `;
 const FlavorDropList = styled.select`
   border: none;
@@ -75,8 +63,9 @@ const ImgContainer = styled(Segment)`
   overflow: hidden;
   width: 60vw;
 `;
-const ProductTitle = styled.div`
-  margin-bottom: 2vh;
+const Img = styled.img`
+  width: 60vw;
+  transform: translate(-125px, -80px);
 `;
 const Option = styled.option`
   font-size: 10px;
@@ -85,5 +74,8 @@ const P = styled.p`
   font-family: 'Chakra Petch', sans-serif;
   margin: 0;
 `;
+const ProductTitle = styled.div`
+  margin-bottom: 2vh;
+`;
 
-export default Flavor;
+export default HerbPage;

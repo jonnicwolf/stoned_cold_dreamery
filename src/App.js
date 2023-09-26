@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import CreamPage from "./pages/CreamPage";
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
+import HerbPage from './pages/HerbPage';
 import NavBar from './components/NavBar';
 
 const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.png');
@@ -12,6 +13,7 @@ const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.pn
 function App() {
   const [scrollPixel, setScrollPixel] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -31,6 +33,7 @@ function App() {
 
       <Routes>
         <Route exact path='/' element={<HomePage/>} />
+        <Route exact path='/herb' element={<HerbPage />} />
         <Route exact path='/cream' element={<CreamPage />} />
         <Route exact path='/cart' element={<CartPage />} />
         <Route exact path='/checkout' element={<CheckoutPage />} />
