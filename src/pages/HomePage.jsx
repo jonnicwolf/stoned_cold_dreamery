@@ -174,8 +174,8 @@ const WebBannerBackground = styled.img`
     width: 100%;
   }
   @media (max-width: 2560px) {
-    height: 200vh;
-    width: 100%;
+    height: 110vh;
+    width: 40%;
   }
 `;
 
