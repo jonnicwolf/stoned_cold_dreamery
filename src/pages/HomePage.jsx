@@ -63,7 +63,6 @@ const CarouselItem = styled(Link)`
 `;
 const CarouselItem1 = styled(CarouselItem)`
   background-color: white;
-  
 `;
 const CarouselItem2 = styled(CarouselItem)`
   background-color: white;
