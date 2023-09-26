@@ -5,22 +5,21 @@ const Carousel = ({slides}) => {
   const [slideNum, setSlideNum] = useState(0);
   const [hover, setHover] = useState(false);
   const carouselLength = slides.length;
- 
+
   useEffect(() => {
+    function slideLeft (slidePosition) {
+      setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
+    };
     let interval;
     if (hover) interval = setInterval(() => slideLeft(slideNum), 500);
     return () => clearInterval(interval);
   }, [slideNum, hover]);
 
-  function slideLeft (slidePosition) {
-    setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
-  };
 
   return (
     <SlideButton
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      onClick={() => slideLeft(slideNum)}
     >
       <SlideImage
         alt=""
