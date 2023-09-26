@@ -7,7 +7,7 @@
       "name": "Birthday Cake",
       "price": 15.99,
       "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/flavors/birthday_cake.jpg",
-      "size": 1,
+      "size": 16,
       "quantity": 999
     },
     "sherblato": {
@@ -17,7 +17,7 @@
       "name": "Sherblato",
       "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/flavors/sherblato.jpg",
       "price": 15.99,
-      "size": 1,
+      "size": 16,
       "quantity": 999
     },
     "blue_dream": {
@@ -27,7 +27,7 @@
       "name": "Blue Dream",
       "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/flavors/blue_dream.jpg",
       "price": 15.99,
-      "size": 1,
+      "size": 16,
       "quantity": 999
     }
   },
@@ -39,7 +39,10 @@
       "cbd": 0,
       "taste": "Sweet, Berries, Lemon",
       "size": 3.5,
-      "description": "Blue Dream is a sativa-dominant hybrid marijuana strain made by crossing Blueberry with Haze. This strain produces a balanced high, along with effects such as cerebral stimulation and full-body relaxation. Blue dream is 18% THC but has a low CBD percentage, making this potent strain a fan favorite of both novice and veteran cannabis consumers. In terms of flavor, Blue Dream is reported to smell and taste like sweet berries. Medical marijuana patients often use Blue Dream to treat symptoms of depression, chronic pain, and nausea. "
+      "description": "Blue Dream is a sativa-dominant hybrid marijuana strain made by crossing Blueberry with Haze. This strain produces a balanced high, along with effects such as cerebral stimulation and full-body relaxation. Blue dream is 18% THC but has a low CBD percentage, making this potent strain a fan favorite of both novice and veteran cannabis consumers. In terms of flavor, Blue Dream is reported to smell and taste like sweet berries. Medical marijuana patients often use Blue Dream to treat symptoms of depression, chronic pain, and nausea. ",
+      "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/signature_flower/sativa_jar.jpg",
+      "price": 40.99,
+      "quantity": 999
     },
     "hybrid": {
       "strain": "Ovan",
@@ -48,7 +51,10 @@
       "cbd": 0,
       "taste": "Sweet, Tangerine, Chocolate, Pine",
       "size": 3.5,
-      "description": "Ovan is an indica-dominant hybrid marijuana strain made by crossing Ice Cream Cake with Pineapple Express. This strain produces an intense high, along with effects such as cerebral stimulation and full-body relaxation. Ovan is 29.7% THC with a decent CBD percentage at 11%, making this potent strain a fan favorite of both novice and veteran cannabis consumers. In terms of flavor, Ovan is reported to smell like Lime, Salt and Rosemary and tastes strongly of Tangerine with a hint of Chocolate and Pine. Medical marijuana patients often use Blue Dream to treat symptoms of depression, chronic pain, and nausea. "
+      "description": "Ovan is an indica-dominant hybrid marijuana strain made by crossing Ice Cream Cake with Pineapple Express. This strain produces an intense high, along with effects such as cerebral stimulation and full-body relaxation. Ovan is 29.7% THC with a decent CBD percentage at 11%, making this potent strain a fan favorite of both novice and veteran cannabis consumers. In terms of flavor, Ovan is reported to smell like Lime, Salt and Rosemary and tastes strongly of Tangerine with a hint of Chocolate and Pine. Medical marijuana patients often use Blue Dream to treat symptoms of depression, chronic pain, and nausea. ",
+      "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/signature_flower/hybrid_jar.jpg",
+      "price": 40.99,
+      "quantity": 999
     },
     "indica": {
       "strain": "King Louis XIII",
@@ -57,7 +63,10 @@
       "cbd": 0,
       "taste": "Pine, Earth, Musk",
       "size": 3.5,
-      "description": "King Louis XIII, also known as 'King Louis,' 'Louis XIII Kush' is an indica marijuana strain made by crossing OG Kush with LA Confidential. It's namesake might be most famous for making wigs on men de rigeur for the French aristocracy, but in Southern California the name will bring to mind a popular indica-dominant strain. This strain announces itself as many people did in the 1600s: by its smell. The difference is this monarch’s odor is one that’s meant to be enjoyed; its dense nugs have an overwhelmingly piney smell with an earthy musk that will have you thinking of your last forest adventure. Because of its OG Kush, heritage Louis XIII has a very similar spicy kush aroma. "
+      "description": "King Louis XIII, also known as 'King Louis', 'Louis XIII Kush' is an indica marijuana strain made by crossing OG Kush with LA Confidential. It's namesake might be most famous for making wigs on men de rigeur for the French aristocracy, but in Southern California the name will bring to mind a popular indica-dominant strain. This strain announces itself as many people did in the 1600s: by its smell. The difference is this monarch’s odor is one that’s meant to be enjoyed; its dense nugs have an overwhelmingly piney smell with an earthy musk that will have you thinking of your last forest adventure. Because of its OG Kush, heritage Louis XIII has a very similar spicy kush aroma. ",
+      "photo": "https://scdphotobucket.s3.amazonaws.com/scd_photoAssests/photo_assets/signature_flower/indica_jar.jpg",
+      "price": 40.99,
+      "quantity": 0
     }
   },
   "hardware": {},
