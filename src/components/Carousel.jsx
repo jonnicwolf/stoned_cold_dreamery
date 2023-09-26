@@ -13,7 +13,7 @@ const Carousel = ({slides}) => {
     let interval;
     if (hover) interval = setInterval(() => slideLeft(slideNum), 500);
     return () => clearInterval(interval);
-  }, [slideNum, hover]);
+  }, [slideNum, hover, carouselLength]);
 
 
   return (
