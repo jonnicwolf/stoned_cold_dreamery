@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
@@ -13,6 +13,21 @@ const banner = require('../photo_assets/carousel_home/scd-logo-estd.jpg');
 const Home = () => {
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
+  const [scrollPixel, setScrollPixel] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const screenWidth = document.documentElement.clientWidth;
+      setScrollPixel(scrolled);
+      setScreenWidth(screenWidth);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <Container>
@@ -35,15 +50,9 @@ const Home = () => {
           style={{backgroundColor: hover2 ? 'white' : 'black'}}
           onMouseEnter={()=>setHover2(true)}
           onMouseLeave={()=>setHover2(false)}
-          to='/herb'
-        >
-          <Carousel
-            slides={signature_flower}
-            style={{border: hover2 ? '50px solid blue' : '50px solid red'}}
-            />
-          <Herb style={{color: hover2 ? 'black' : 'white'}}>
-            HERB
-          </Herb>
+          to='/herb'>
+          <Carousel slides={signature_flower} style={{border: hover2 ? '50px solid blue' : '50px solid red'}} />
+          <Herb style={{color: hover2 ? 'black' : 'white'}}>HERB</Herb>
         </CarouselItem2>
       </CarouselContainer>
 
@@ -75,6 +84,9 @@ const CarouselContainer = styled.div`
   @media (max-width: 425px) {
     flex-direction: column;
     height: auto;
+  }
+  @media (min-width: 1440px) {
+    width: 66%;
   }
 `;
 const Container = styled.div`
@@ -150,7 +162,7 @@ const Herb = styled.p`
   }
 `;
 const WebBannerBackground = styled.img`
-  margin-top: 50px;
+  margin-top: -100px;
   width: 1440px;
   height: 185vh;
   @media (max-width: 390px) {
@@ -174,8 +186,8 @@ const WebBannerBackground = styled.img`
     width: 100%;
   }
   @media (max-width: 2560px) {
-    height: 110vh;
-    width: 40%;
+    height: 170vh;
+    width: 100%;
   }
 `;
 

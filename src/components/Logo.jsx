@@ -24,12 +24,7 @@ const Logo = () => {
   }, []);
 
   return (
-    <>
-      { scrollPixel > 100
-        ? <LogoImg src={logo_white} alt='scd logo' />
-        : <LogoImg src={logo_black} alt='scd logo' />
-      }
-    </>
+    <LogoImg src={logo_white} alt='scd logo' />
   );
 };
 
