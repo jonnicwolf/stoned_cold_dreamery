@@ -33,8 +33,9 @@ const NavBar = ({ scrollPixel }) => {
 };
 
 const CartItems = styled.div`
-  color: ${props => props.scrollPixel > 100 ? 'white' : 'black'};
-  font-size: 3vh;
+  color: white;
+  font-size: 2vh;
+  transform: translate(10px,0);
 `;
 const Container = styled.div`
   display: flex;
@@ -73,6 +74,7 @@ const RightSubContainer = styled.div`
   justify-content: center;
   gap: 5vw;
   width: 70px;
+  transform: translateX(-15px);
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
