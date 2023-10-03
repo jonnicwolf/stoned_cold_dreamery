@@ -85,9 +85,6 @@ const CarouselContainer = styled.div`
     flex-direction: column;
     height: auto;
   }
-  @media (min-width: 1440px) {
-    width: 66%;
-  }
 `;
 const Container = styled.div`
   align-items: center;
