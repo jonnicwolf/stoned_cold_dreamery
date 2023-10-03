@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
@@ -13,23 +13,6 @@ const banner = require('../photo_assets/carousel_home/scd-logo-estd.jpg');
 const Home = () => {
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
-  const [scrollPixel, setScrollPixel] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      const screenWidth = document.documentElement.clientWidth;
-      setScrollPixel(scrolled);
-      setScreenWidth(screenWidth);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  console.log(document.documentElement.clientWidth);
 
   return (
     <Container>
