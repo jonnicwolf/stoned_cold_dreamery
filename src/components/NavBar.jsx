@@ -33,12 +33,14 @@ const NavBar = ({ scrollPixel }) => {
 };
 
 const CartItems = styled.div`
-  color: ${props => props.scrollPixel > 100 ? 'white' : 'black'};
-  font-size: 3vh;
+  color: white;
+  font-size: 2vh;
+  transform: translate(10px,0);
 `;
 const Container = styled.div`
   display: flex;
-  background-color: ${props => props.scrollPixel > 100 ? 'black' : '#7ae9ff'};
+  // background-color: ${props => props.scrollPixel > 100 ? 'black' : '#7ae9ff'};
+  background-color: ${props => props.scrollPixel > 100 ? 'black' : 'none'};
   height: 10vh;
   justify-content: space-between;
   position: fixed;
@@ -67,14 +69,12 @@ const LogoTray = styled.div`
   }
 `;
 const RightSubContainer = styled.div`
-  // margin-right: 50px;
-  // margin-right: 170px;
   display: flex;
   align-self: center;
   justify-content: center;
-  // gap: 170px;
   gap: 5vw;
   width: 70px;
+  transform: translateX(-15px);
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;

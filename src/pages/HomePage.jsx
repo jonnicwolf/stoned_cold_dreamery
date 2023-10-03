@@ -35,15 +35,9 @@ const Home = () => {
           style={{backgroundColor: hover2 ? 'white' : 'black'}}
           onMouseEnter={()=>setHover2(true)}
           onMouseLeave={()=>setHover2(false)}
-          to='/herb'
-        >
-          <Carousel
-            slides={signature_flower}
-            style={{border: hover2 ? '50px solid blue' : '50px solid red'}}
-            />
-          <Herb style={{color: hover2 ? 'black' : 'white'}}>
-            HERB
-          </Herb>
+          to='/herb'>
+          <Carousel slides={signature_flower} style={{border: hover2 ? '50px solid blue' : '50px solid red'}} />
+          <Herb style={{color: hover2 ? 'black' : 'white'}}>HERB</Herb>
         </CarouselItem2>
       </CarouselContainer>
 
@@ -72,6 +66,7 @@ const CarouselContainer = styled.div`
   align-items: center;
   height: 60vh;
   width: 100vw;
+  
   @media (max-width: 425px) {
     flex-direction: column;
     height: auto;
@@ -99,6 +94,10 @@ const Cream = styled.div`
   text-orientation: upright;
   text-align: center;
   transform: translate(32px,-25px);
+  @media (max-width: 2560px) {
+    font-size: 140px;
+    letter-spacing: -10vh;
+  }
   @media (max-width: 1024px) {
     font-size: 80px;
     letter-spacing: -9vh;
@@ -129,6 +128,11 @@ const Herb = styled.p`
   text-orientation: upright;
   text-align: center;
   transform: translate(36px, -30px);
+  @media (max-width: 2560px) {
+    font-size: 145px;
+    letter-spacing: -10vh;
+    transform: translateX(25px);
+  }
   @media (max-width: 1024px) {
     font-size: 90px;
     letter-spacing: -10vh;
@@ -150,7 +154,7 @@ const Herb = styled.p`
   }
 `;
 const WebBannerBackground = styled.img`
-  margin-top: 50px;
+  margin-top: -100px;
   width: 1440px;
   height: 185vh;
   @media (max-width: 390px) {
@@ -174,7 +178,7 @@ const WebBannerBackground = styled.img`
     width: 100%;
   }
   @media (max-width: 2560px) {
-    height: 200vh;
+    height: 170vh;
     width: 100%;
   }
 `;

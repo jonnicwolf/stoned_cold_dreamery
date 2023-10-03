@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 // import Cloud from './Cloud';
 // import {cloud, animation} from './customizations';
@@ -6,30 +6,11 @@ import styled from 'styled-components';
 // const {tiny} = cloud;
 // const [motion1] = animation;
 
-const logo_black = require('../photo_assets/carousel_home/scd-logo-transparent.png');
 const logo_white = require('../photo_assets/carousel_home/scd-logo-white-transparent.png');
 
 const Logo = () => {
-  const [scrollPixel, setScrollPixel] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      setScrollPixel(scrolled);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <>
-      { scrollPixel > 100
-        ? <LogoImg src={logo_white} alt='scd logo' />
-        : <LogoImg src={logo_black} alt='scd logo' />
-      }
-    </>
+    <LogoImg src={logo_white} alt='scd logo' />
   );
 };
 
