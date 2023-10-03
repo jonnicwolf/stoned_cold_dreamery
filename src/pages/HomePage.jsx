@@ -29,6 +29,8 @@ const Home = () => {
     };
   }, []);
 
+  console.log(document.documentElement.clientWidth);
+
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
@@ -81,6 +83,7 @@ const CarouselContainer = styled.div`
   align-items: center;
   height: 60vh;
   width: 100vw;
+  
   @media (max-width: 425px) {
     flex-direction: column;
     height: auto;
@@ -108,6 +111,10 @@ const Cream = styled.div`
   text-orientation: upright;
   text-align: center;
   transform: translate(32px,-25px);
+  @media (max-width: 2560px) {
+    font-size: 140px;
+    letter-spacing: -10vh;
+  }
   @media (max-width: 1024px) {
     font-size: 80px;
     letter-spacing: -9vh;
@@ -138,6 +145,11 @@ const Herb = styled.p`
   text-orientation: upright;
   text-align: center;
   transform: translate(36px, -30px);
+  @media (max-width: 2560px) {
+    font-size: 145px;
+    letter-spacing: -10vh;
+    transform: translateX(25px);
+  }
   @media (max-width: 1024px) {
     font-size: 90px;
     letter-spacing: -10vh;
