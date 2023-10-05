@@ -39,7 +39,6 @@ const CartItems = styled.div`
 `;
 const Container = styled.div`
   display: flex;
-  // background-color: ${props => props.scrollPixel > 100 ? 'black' : '#7ae9ff'};
   background-color: ${props => props.scrollPixel > 100 ? 'black' : 'none'};
   height: 10vh;
   justify-content: space-between;
