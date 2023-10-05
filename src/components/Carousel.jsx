@@ -36,10 +36,10 @@ const SlideButton = styled.div`
   @media (min-width: 750px) and (max-width: 1149px) {
     height: 50vh;
   }
-  @media (min-width: 650px) and (max-width: 749px) {
+  @media (min-width: 600px) and (max-width: 749px) {
     height: 35vh;
   }
-  @media (max-width: 649px) {
+  @media (max-width: 599px) {
     height: 20vh;
   }
 `;

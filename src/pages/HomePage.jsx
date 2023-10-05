@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
 import NewsLetterSignUp from '../components/NewsLetterSignUp';
-import {indica_jar, hybrid_jar, sativa_jar} from '../photo_assets/signature_flower/index.js';
-import {birthday_cake,blue_dream,sherblato} from '../photo_assets/flavors/index.js';
+import { indica_jar, hybrid_jar, sativa_jar } from '../photo_assets/signature_flower/index.js';
+import { birthday_cake,blue_dream,sherblato } from '../photo_assets/flavors/index.js';
 
 const signature_flower = [ indica_jar, hybrid_jar, sativa_jar ];
 const flavors = [ birthday_cake, blue_dream , sherblato ];
@@ -68,6 +68,15 @@ const CarouselContainer = styled.div`
   align-items: center;
   height: 60vh;
   width: 100vw;
+  @media (min-width: 750px) and (max-width: 1149px) {
+    height: 50vh;
+  }
+  @media (min-width: 600px) and (max-width: 749px) {
+    height: 35vh;
+  }
+  @media (max-width: 599px) {
+    height: 20vh;
+  }
   @media (max-width: 425px) {
     flex-direction: column;
     height: auto;
@@ -101,21 +110,18 @@ const Cream = styled.div`
     align-items: center;
     font-size: 120px;
     letter-spacing: -8vh;
-    transform: none;
   }
   @media (min-width: 1320px) and (max-width: 1619px) {
     align-items: center;
     font-size: 110px;
     justify-content: center;
     letter-spacing: -8vh;
-    transform: none;
   }
   @media (min-width: 1145px) and (max-width: 1319px) {
     font-size: 95px;
     justify-content: center;
     letter-spacing: -7.5vh;
     padding-bottom: 50px;
-    transform: none;
   }
   @media (min-width: 1025px) and (max-width: 1144px) {
     font-size: 90px;
@@ -123,7 +129,6 @@ const Cream = styled.div`
     letter-spacing: -6.5vh;
     padding: 5px;
     padding-bottom: 45px;
-    transform: none;
   }
   @media (min-width: 966px) and (max-width: 1024px) {
     font-size: 80px;
@@ -131,34 +136,29 @@ const Cream = styled.div`
     justify-content: center;
     padding: 5px;
     padding-bottom: 40px;
-    transform: none;
   }
   @media (min-width: 769px) and (max-width: 965px) {
     font-size: 65px;
     letter-spacing: -4vh;
     justify-content: center;
     padding-bottom: 40px;
-    transform: none;
   }
   @media (max-width: 768px) and (min-width: 600px) {
     font-size: 55px;
     letter-spacing: -3.5vh;
     justify-content: center;
-    transform: none;
   }
   @media(max-width: 599px) {
-    font-size: 45px;
-    letter-spacing: -3.5vh;
+    font-size: 40px;
+    letter-spacing: -3vh;
     justify-content: center;
     padding: 5px;
-    transform: none;
-
+    padding-bottom: 10px;
   }
   @media (max-width: 425px) {
     font-size: 70px;
     writing-mode: unset;
     letter-spacing: 1vw;
-    transform: none;
     width: 100%;
     margin: 0;
     height: 11.5vh;
