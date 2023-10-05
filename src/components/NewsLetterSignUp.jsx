@@ -47,7 +47,7 @@ const Button = styled.button`
   font-family: var(--font-family-modak);
   height: 60px;
   padding: 0;
-  transform: translateY(-5px);
+  // transform: translateY(-5px);
   &:hover {
     background-color: black;
     border-radius: 30px 0 0 30px;
@@ -118,6 +118,7 @@ const Form = styled.form`
   background-color: white;
   border: 3px inset aqua;
   display: flex;
+  justify-content: space-between;
   width: 50vw;
   @media (min-width: 424px) {
     width: 80vw;
