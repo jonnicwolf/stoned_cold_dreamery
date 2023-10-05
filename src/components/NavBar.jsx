@@ -60,12 +60,15 @@ const LeftSubContainer = styled.div`
 const LogoTray = styled.div`
   align-self: center;
   height: 100%;
-  width: 30vw;
-  @media (max-width: 425px) {
-    width: 120vw;
+  width: 20vw;
+  @media (min-width: 1700px) and (max-width: 2000px) {
+    width: 30vw;
   }
-  @media(max-width: 768px) {
+  @media (min-width: 650px) and (max-width: 1699px) {
     width: 40vw;
+  }
+  @media (min-width: 400px) and (max-width: 649px) {
+    width: 50vw;
   }
 `;
 const RightSubContainer = styled.div`

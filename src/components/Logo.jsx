@@ -17,25 +17,17 @@ const Logo = () => {
 const LogoImg = styled.img`
   height: 6vh;
   width: 20vw;
-  @media (min-width: 390px) {
-    position: fixed;
-    height: 6%;
-    width: 70%;
-  }
-  @media (min-width: 425px) {
-    height: 10vh;
-    width: 70vw;
-  }
-  @media (max-width: 768px) {
-    width: 40vw;
-  }
-  @media (min-width: 1024px) {
-    height: 10vh;
-    width: 40vw;
-  }
-  @media (min-width: 1440px) {
+  @media (min-width: 1700px) and (max-width: 2000px) {
     height: 10vh;
     width: 30vw;
+  }
+  @media (min-width: 650px) and (max-width: 1699px) {
+    height: 10vh;
+    width: 40vw;
+  }
+  @media (min-width: 400px) and (max-width: 649px) {
+    height: 7vh;
+    width: 50vw;
   }
 `;
 
