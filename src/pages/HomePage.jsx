@@ -14,6 +14,8 @@ const Home = () => {
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
 
+  console.log('screenWidth: ', document.documentElement.clientWidth);
+
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
@@ -66,7 +68,6 @@ const CarouselContainer = styled.div`
   align-items: center;
   height: 60vh;
   width: 100vw;
-  
   @media (max-width: 425px) {
     flex-direction: column;
     height: auto;
@@ -116,7 +117,8 @@ const Cream = styled.div`
   }
 `;
 const Herb = styled.p`
-  align-self: center;
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 110px;
   font-family: Modak;
@@ -126,21 +128,78 @@ const Herb = styled.p`
   width: 7vw;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  text-align: center;
   transform: translate(36px, -30px);
   @media (max-width: 2560px) {
     font-size: 145px;
     letter-spacing: -10vh;
     transform: translateX(25px);
   }
-  @media (max-width: 1024px) {
+  @media (min-width: 2420px) and (max-width: 2560px) {
+    transform: none;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+  }
+  @media (min-width: 2020px) and (max-width: 2419px) {
+    transform: none;
+    display: flex;
+    align-items: center;
+  }
+  @media (min-width: 1620px) and (max-width: 2019px) {
+    transform: none;
+    // display: flex;
+    // align-items: center;
+  }
+  @media (min-width: 1320px) and (max-width: 1619px) {
+    align-items: center;
+    font-size: 130px;
+    justify-content: center;
+    transform: none;
+  }
+  @media (min-width: 1145px) and (max-width: 1319px) {
+    font-size: 120px;
+    justify-content: center;
+    letter-spacing: -8.5vh;
+    transform: none;
+    padding-bottom: 50px;
+  }
+  @media (min-width: 1025px) and (max-width: 1144px) {
+    font-size: 100px;
+    justify-content: center;
+    letter-spacing: -6.5vh;
+    transform: none;
+    padding-bottom: 45px;
+  }
+  @media (min-width: 966px) and (max-width: 1024px) {
+    transform: none;
     font-size: 90px;
-    letter-spacing: -10vh;
+    border: 1px solid red;
+    letter-spacing: -6vh;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  @media (min-width: 769px) and (max-width: 965px) {
+    transform: none;
+    font-size: 65px;
+    // border: 1px solid red;
+    letter-spacing: -4vh;
+    justify-content: center;
+    padding-bottom: 40px;
   }
   @media (max-width: 768px) {
+    transform: none;
     font-size: 70px;
-    letter-spacing: -8vh;
-    transform: translate(25px);
+    letter-spacing: -3.5vh;
+    justify-content: center;
+    // font-size: 70px;
+    // writing-mode: unset;
+    // letter-spacing: 1vw;
+    // transform: none;
+    // width: 100%;
+    // margin: 0;
+    // z-index: 1;
+    // height: 11.5vh;
+    // border: 1px solid red;
   }
   @media (max-width: 425px) {
     font-size: 70px;
