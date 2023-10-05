@@ -252,31 +252,16 @@ const Herb = styled.p`
 `;
 const WebBannerBackground = styled.img`
   margin-top: -100px;
-  width: 1440px;
-  height: 185vh;
-  @media (max-width: 390px) {
-    height: 40%;
-    width: 100%;
+  width: 100vw;
+  height: 80vh;
+  @media (max-width: 2560px) {
+    height: 180vh;
   }
-  @media (max-width: 424px) {
-    height: 170vh;
-    width: 100vw;
-  }
-  @media (max-width: 768px) {
-    height: 110vh;
-    width: 100vw;
-  }
-  @media (max-width: 1024px) {
-    height: 200vh;
-    width: 100%;
+  @media (max-width: 1950px) {
+    height: 150vh
   }
   @media (max-width: 1440px) {
-    height: 250vh;
-    width: 100%;
-  }
-  @media (max-width: 2560px) {
-    height: 170vh;
-    width: 100%;
+    height: 110vh;
   }
 `;
 
