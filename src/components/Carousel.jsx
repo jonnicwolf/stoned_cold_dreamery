@@ -30,11 +30,17 @@ const Carousel = ({slides}) => {
 };
 
 const SlideButton = styled.div`
+  height: 60vh;
   width: 100%;
-  height: 100%;
   z-index: 1;
-  @media (min-width: 425px) {
-    height: 60vh;
+  @media (min-width: 750px) and (max-width: 1149px) {
+    height: 50vh;
+  }
+  @media (min-width: 650px) and (max-width: 749px) {
+    height: 35vh;
+  }
+  @media (max-width: 649px) {
+    height: 20vh;
   }
 `;
 const SlideImage = styled.img`
