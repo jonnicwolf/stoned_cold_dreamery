@@ -15,7 +15,7 @@ const Logo = () => {
 };
 
 const LogoImg = styled.img`
-  height: 6vh;
+  height: 10vh;
   width: 20vw;
   @media (min-width: 1700px) and (max-width: 2000px) {
     height: 10vh;
