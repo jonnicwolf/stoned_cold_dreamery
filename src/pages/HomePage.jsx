@@ -232,22 +232,23 @@ const Herb = styled.p`
     padding: 5px;
     padding-right: 0;
   }
-  @media(max-width: 599px) {
+  @media (max-width: 599px) {
     font-size: 45px;
     letter-spacing: -3.5vh;
     justify-content: center;
     padding: 5px;
     transform: none;
   }
-  @media (max-width: 425px) {
+  @media (min-width: 320px) and (max-width: 425px) {
+    padding-bottom: 0;
     font-size: 70px;
-    writing-mode: unset;
-    letter-spacing: 1vw;
-    transform: none;
-    width: 100%;
-    margin: 0;
-    z-index: 1;
     height: 11.5vh;
+    letter-spacing: 1vw;
+    margin: 0;
+    transform: translateY(10px);
+    width: 100%;
+    writing-mode: unset;
+    z-index: 1;
   }
 `;
 const WebBannerBackground = styled.img`
