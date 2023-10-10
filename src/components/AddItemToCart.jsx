@@ -64,14 +64,17 @@ const AddToCart = ({ item, itemType }) => {
           <InfoLeft>Payment</InfoLeft>
           <InfoRight>Secure transaction</InfoRight>
         </Info>
+
         <Info>
           <InfoLeft>Ships from</InfoLeft>
           <InfoRight style={{color: 'black'}}>Stoned Cold Dreamery LLC</InfoRight>
         </Info>
+
         <Info>
           <InfoLeft>Sold by</InfoLeft>
           <InfoRight>Stoned Cold Dreamery Inc</InfoRight>
         </Info>
+
         <Info>
           <InfoLeft>Returns</InfoLeft>
           <InfoRight>Eligible for Refund or Replacement if damaged or defective</InfoRight>
@@ -85,7 +88,7 @@ const CartButton = styled.button`
   border-radius: 15px;
   border: none;
   height: 3vh;
-  width: 20vw;
+  width: 80vw;
 `;
 const AddToCartButton = styled(CartButton)`
   background-color: #69e0f0;
@@ -125,14 +128,23 @@ const Container = styled.div`
 const Info = styled.div`
   display: flex;
   gap: 45px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    justify-content: space-evenly;
+  }
 `;
 const InfoLeft = styled.div`
   width: 5vw;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 20vw;
+  }
 `;
 const InfoRight = styled.div`
   color: blue;
   text-wrap: wrap;
   width: 12vw;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 50vw;
+  }
 `;
 const InStock = styled.div`
   align-self: flex-start;
@@ -144,6 +156,7 @@ const PaymentInfo = styled.div`
   flex-direction: column;
   font-size: 12px;
   gap: 10px;
+  width: 100%;
 `;
 const PerOz = styled.span`
   font-size: 11px;
