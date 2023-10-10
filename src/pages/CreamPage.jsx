@@ -16,11 +16,11 @@ const Flavor = () => {
 
   return (
     <Container>
-      <ImgContainer>
+      <ImageContainer>
         <Img src={ cream[flavor].photo } alt={ cream[flavor].name } />
-      </ImgContainer>
+      </ImageContainer>
 
-      <Segment>
+      <Segment2>
         <ProductTitle>
           <FlavorDropList value={flavor} onChange={handleFlavor}>
             <Option value="birthday_cake">Birthday Cake</Option>
@@ -33,11 +33,11 @@ const Flavor = () => {
         <NutritionFacts />
         <Ingredients />
         <AboutThisItem />
-      </Segment>
+      </Segment2>
 
-      <Segment>
+      <Segment3>
         <AddItemToCart item={flavor} itemType={'cream'} />
-      </Segment>
+      </Segment3>
     </Container>
   );
 };
@@ -49,10 +49,18 @@ const Container = styled.div`
   gap: 30px;
   padding: 2vw;
   margin-top: 10vh;
+  @media (min-width: 320px) and (max-width: 425px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 const Img = styled.img`
   width: 60vw;
   transform: translate(-125px, -80px);
+  @media (min-width: 320px) and (max-width: 425px) {
+    transform: none;
+    width: 100%;
+  }
 `;
 const FlavorDropList = styled.select`
   border: none;
@@ -70,13 +78,28 @@ const Segment = styled.div`
   flex-direction: column;
   width: 30vw;
   height: 100%;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 100%;
+  }
 `;
-const ImgContainer = styled(Segment)`
+const ImageContainer = styled(Segment)`
   overflow: hidden;
   width: 60vw;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 90vw;
+  }
+`;
+const Segment2 = styled(Segment)`
+  order: 3;
+`;
+const Segment3 = styled(Segment)`
+  order: 2;
 `;
 const ProductTitle = styled.div`
   margin-bottom: 2vh;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 93vw;
+  }
 `;
 const Option = styled.option`
   font-size: 10px;

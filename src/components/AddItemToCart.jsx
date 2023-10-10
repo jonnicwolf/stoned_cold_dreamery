@@ -17,10 +17,12 @@ const AddToCart = ({ item, itemType }) => {
     for (let i=0; i < quantity; i++) { addItemToCart(matchingItem) };
     return quantity;
   }
+  console.log(matchingItem)
 
   return (
     <Container>
       <Price>
+      <Name>{matchingItem.name}</Name>
         <div>
           <span style={{fontSize: '11px'}}>$</span>
           <b>{matchingItem.price}</b>
@@ -150,6 +152,14 @@ const InStock = styled.div`
   align-self: flex-start;
   color: green;
   font-family: 'Chakra Petch', sans-serif;
+`;
+const Name = styled.div`
+  display: none;
+  font-family: Permanent Marker;
+  font-size: 32px;
+@media (min-width: 320px) and (max-width: 425px) {
+  display: block;
+}
 `;
 const PaymentInfo = styled.div`
   display: flex;
