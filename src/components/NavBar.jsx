@@ -22,16 +22,20 @@ const NavBar = ({ scrollPixel }) => {
       <RightSubContainer>
         <StyledLink
           style={{fontSize: '5vh', display: 'flex'}}
-          to='/cart'
-        >
+          to='/cart'>
           <CartItems scrollPixel={scrollPixel}>{cartItems.length}</CartItems>
-          <div>🛒</div>
+          <CartIcon>🛒</CartIcon>
         </StyledLink>
       </RightSubContainer>
     </Container>
   );
 };
 
+const CartIcon = styled.div`
+  @media (min-width: 320px) and (max-width: 425px) {
+    font-size: 25px;
+  }
+`
 const CartItems = styled.div`
   color: white;
   font-size: 2vh;
@@ -69,6 +73,10 @@ const LogoTray = styled.div`
   @media (min-width: 400px) and (max-width: 649px) {
     width: 50vw;
   }
+  @media (min-width: 320px) and (max-width: 425px) {
+    padding-top: 15px;
+    width: 50vw;
+  }
 `;
 const RightSubContainer = styled.div`
   display: flex;
@@ -77,6 +85,9 @@ const RightSubContainer = styled.div`
   gap: 5vw;
   width: 70px;
   transform: translateX(-15px);
+  @media (min-width: 320px) and (max-width: 425px) {
+    transform: none;
+  }
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
