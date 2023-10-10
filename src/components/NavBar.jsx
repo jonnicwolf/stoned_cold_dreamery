@@ -40,6 +40,10 @@ const CartItems = styled.div`
   color: white;
   font-size: 2vh;
   transform: translate(10px,0);
+  @media (min-width: 320px) and (max-width: 768px){
+    transform: translate(3px, -5px);
+    font-size: 2.5vh;
+  }
 `;
 const Container = styled.div`
   display: flex;
@@ -51,6 +55,10 @@ const Container = styled.div`
   transition: all 1s ease-out;
   width: 100vw;
   z-index: 2;
+  @media (min-width: 320px) and (max-width: 425px) {
+    background-color: black;
+    height: 7.5vh;
+  }
 `;
 const LeftSubContainer = styled.div`
   align-self: center;
