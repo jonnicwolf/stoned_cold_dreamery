@@ -47,17 +47,16 @@ const Button = styled.button`
   font-family: var(--font-family-modak);
   height: 60px;
   padding: 0;
-  // transform: translateY(-5px);
   &:hover {
     background-color: black;
     border-radius: 30px 0 0 30px;
     color: white;
     transition: background-color 1.5s ease-out-in;
   }
-  @media (min-width: 390px) {
-    font-size: 18px;
-    transform: translateX(0.1px);
-    width: 20vw;
+  @media (min-width: 320px) and (max-width: 425px) {
+    font-size: 16px;
+    width: 18vw;
+    line-height: 15px;
   }
   @media (min-width: 768px) {
     font-size: 25px;
@@ -106,9 +105,9 @@ const Disclaimer = styled.div`
   font-size: 12px;
   padding-top: 10px;
   width: 50vw;
-  @media (min-width: 390px) {
-    font-size: 10px;
-    width: 80vw;
+  @media (min-width: 320px) and (max-width: 425px) {
+    font-size: 6px;
+    width: 70vw;
   }
   @media (min-width: 2560px) {
     width: 40vw;
@@ -120,7 +119,7 @@ const Form = styled.form`
   display: flex;
   justify-content: space-between;
   width: 50vw;
-  @media (min-width: 424px) {
+  @media (min-width: 320px) and (max-width: 425px) {
     width: 80vw;
   }
   @media (min-width: 768px) {
@@ -140,9 +139,9 @@ const Input = styled.input`
   outline: none;
   padding: 10px;
   width: 42vw;
-  @media (min-width: 390px) {
-    width: 56vw;
-    font-size: 22px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 60vw;
+    font-size: 20px;
   }
   @media (min-width: 768px) {
     width: 70vw;
@@ -170,8 +169,8 @@ const InputContainer = styled.div`
 const Title = styled.h1`
   color: black;
   font-size: 50px;
-  @media (min-width: 390px) {
-    font-size: 30px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    font-size: 25px;
   }
   @media (min-width: 768px) {
     font-size: 50px;
