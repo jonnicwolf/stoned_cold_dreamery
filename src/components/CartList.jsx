@@ -55,6 +55,10 @@ const Container = styled.div`
   justify-content: center;
   padding: 20px;
   width: 50vw;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 90vw;
+    padding: 0;
+  }
 `;
 const ClearButton = styled.button`
   background: none;
@@ -65,7 +69,6 @@ const ClearButton = styled.button`
   font-size: 20px;
   margin-top: 1vh;
   width: 12vw;
-
   &:hover {
     box-shadow: 2px 1px 10px red;
     font-weight: bold;
@@ -75,6 +78,9 @@ const ClearButton = styled.button`
 `;
 const Empty = styled.p`
   font-size: 50px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    font-size: 34px;
+  }
 `;
 const Item = styled.div`
   display: flex;

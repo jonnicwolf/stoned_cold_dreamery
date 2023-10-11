@@ -17,6 +17,10 @@ const Container = styled.div`
   justify-content: center;
   gap: 4vw;
   margin-top: 10vh;
+  @media (min-width: 320px) and (max-width: 425px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export default CartPage;
