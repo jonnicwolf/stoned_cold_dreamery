@@ -8,12 +8,12 @@ const CheckoutForm = () => {
     <Container>
       <Form action="">
         <label htmlFor="email" required>Email*</label>
-        <Input type="email" style={{border: '1px solid grey', borderRadius: '5px'}}/>
+        <Input type="email" style={{border: '1px solid grey', borderRadius: '5px'}} placeholder='holly.golightly@gmail.com' required/>
         <br />
 
         <label htmlFor="cardInfo" required>Card information*</label>
         <Info>
-          <CardInfo type="number" placeholder='1234 1234 1234 1234' required />
+          <CardInput type="number" placeholder='1234 1234 1234 1234' required />
           <SideBySide>
             <Input type="month" placeholder='mm/yy' style={{borderRight: '1px solid grey'}} required />
             <Input type="text" placeholder='CVC' required />
@@ -22,7 +22,7 @@ const CheckoutForm = () => {
         <br />
 
         <label htmlFor="name">Name on card*</label>
-        <Input type="text" style={{border: '1px solid grey', borderRadius: '5px'}} required />
+        <Input type="text" style={{border: '1px solid grey', borderRadius: '5px'}} placeholder='Holly Golightly' required />
         <br />
 
         <label htmlFor="billing">Billing Address*</label>
@@ -74,12 +74,6 @@ const Info = styled.div`
   border-radius: 8px;
   padding: 4px;
 `;
-const CardInfo = styled(Info)`
-  border: none;
-  height: 2vh;
-  border-bottom: 1px solid grey;
-  border-radius: 0;
-`;
 const Input = styled.input`
   border: none;
   font-size: 18px;
@@ -103,6 +97,13 @@ const Address2 = styled(Input)`
   @media (min-width: 320px) and (max-width: 425px) {
     width: 93%;
   }
+`;
+const CardInput = styled(Input)`
+  border: none;
+  height: 2vh;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+  width: 95.5%;
 `;
 const SideBySide = styled.div`
   display: flex;

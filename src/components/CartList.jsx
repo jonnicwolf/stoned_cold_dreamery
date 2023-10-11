@@ -59,6 +59,9 @@ const Container = styled.div`
     width: 90vw;
     padding: 0;
   }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    border: 1px solid red;
+  }
 `;
 const ClearButton = styled.button`
   background: none;
@@ -83,6 +86,9 @@ const Empty = styled.p`
   }
   @media (min-width: 426px) and (max-width: 768px) {
     font-size: 40px;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 45px;
   }
 `;
 const Item = styled.div`
