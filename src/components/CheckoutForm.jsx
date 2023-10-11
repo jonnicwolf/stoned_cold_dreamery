@@ -92,11 +92,17 @@ const Input = styled.input`
 `;
 const Address1 = styled(Input)`
   border-bottom: 1px solid grey;
-  width: 93%;
+  width: 95%;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 93%;
+  }
 `;
 const Address2 = styled(Input)`
   border-bottom: 1px solid grey;
-  width: 93%;
+  width: 95%;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 93%;
+  }
 `;
 const SideBySide = styled.div`
   display: flex;

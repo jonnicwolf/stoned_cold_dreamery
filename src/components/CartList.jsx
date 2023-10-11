@@ -8,7 +8,7 @@ const CartList = () => {
   return (
     <Container>
       <div>
-        {cartItems.map((item) => (
+        { cartItems.map((item) => (
           <Item key={item.id}>
             <ItemPhoto src={item.photo} alt="" />
             <ItemInfo>
@@ -81,6 +81,9 @@ const Empty = styled.p`
   @media (min-width: 320px) and (max-width: 425px) {
     font-size: 34px;
   }
+  @media (min-width: 426px) and (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 const Item = styled.div`
   display: flex;
@@ -109,7 +112,6 @@ const XButton = styled.button`
   border: none;
   border-radius: 50px;
   padding: 2vw;
-
   &:hover {
     box-shadow: 2px 1px 10px red;
     font-weight: bold;
