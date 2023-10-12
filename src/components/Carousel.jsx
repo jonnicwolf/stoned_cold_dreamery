@@ -42,6 +42,9 @@ const SlideButton = styled.div`
   @media (max-width: 599px) {
     height: 20vh;
   }
+  @media (min-width: 320px) and (max-width: 425px) {
+    height: 40vh;
+  }
 `;
 const SlideImage = styled.img`
   width: 100%;

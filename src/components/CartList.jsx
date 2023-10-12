@@ -8,7 +8,7 @@ const CartList = () => {
   return (
     <Container>
       <div>
-        {cartItems.map((item) => (
+        { cartItems.map((item) => (
           <Item key={item.id}>
             <ItemPhoto src={item.photo} alt="" />
             <ItemInfo>
@@ -55,6 +55,10 @@ const Container = styled.div`
   justify-content: center;
   padding: 20px;
   width: 50vw;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 90vw;
+    padding: 0;
+  }
 `;
 const ClearButton = styled.button`
   background: none;
@@ -65,7 +69,6 @@ const ClearButton = styled.button`
   font-size: 20px;
   margin-top: 1vh;
   width: 12vw;
-
   &:hover {
     box-shadow: 2px 1px 10px red;
     font-weight: bold;
@@ -75,6 +78,15 @@ const ClearButton = styled.button`
 `;
 const Empty = styled.p`
   font-size: 50px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    font-size: 34px;
+  }
+  @media (min-width: 426px) and (max-width: 768px) {
+    font-size: 40px;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    font-size: 45px;
+  }
 `;
 const Item = styled.div`
   display: flex;
@@ -103,7 +115,6 @@ const XButton = styled.button`
   border: none;
   border-radius: 50px;
   padding: 2vw;
-
   &:hover {
     box-shadow: 2px 1px 10px red;
     font-weight: bold;

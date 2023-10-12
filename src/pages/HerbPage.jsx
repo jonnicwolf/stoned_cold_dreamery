@@ -16,7 +16,7 @@ const HerbPage = () => {
         <Img src={ smokable[flavor].photo } alt={ smokable[flavor].name }/>
       </ImgContainer>
 
-      <Segment>
+      <Segment1>
         <ProductTitle>
           <FlavorDropList value={flavor} onChange={handleFlavor}>
             <Option value="indica">King Louis</Option>
@@ -25,11 +25,11 @@ const HerbPage = () => {
           </FlavorDropList>
           <P>{smokable[flavor].description}</P>
         </ProductTitle>
-      </Segment>
+      </Segment1>
 
-      <Segment>
+      <Segment2>
         <AddItemToCart item={flavor} itemType={'smokable'} />
-      </Segment>
+      </Segment2>
     </Container>
   );
 };
@@ -41,6 +41,9 @@ const Container = styled.div`
   gap: 30px;
   padding: 2vw;
   margin-top: 10vh;
+  @media (min-width: 320px) and (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 const FlavorDropList = styled.select`
   border: none;
@@ -58,14 +61,30 @@ const Segment = styled.div`
   flex-direction: column;
   width: 30vw;
   height: 100%;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 90vw;
+  }
+`;
+const Segment1 = styled(Segment)`
+  order: 3;
+`;
+const Segment2 = styled(Segment)`
+  order: 2;
 `;
 const ImgContainer = styled(Segment)`
   overflow: hidden;
   width: 60vw;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 100vw;
+  }
 `;
 const Img = styled.img`
   width: 60vw;
   transform: translate(-125px, -80px);
+  @media (min-width: 320px) and (max-width: 425px) {
+    transform: none;
+    width: 100%;
+  }
 `;
 const Option = styled.option`
   font-size: 10px;
@@ -76,6 +95,9 @@ const P = styled.p`
 `;
 const ProductTitle = styled.div`
   margin-bottom: 2vh;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 93vw;
+  }
 `;
 
 export default HerbPage;

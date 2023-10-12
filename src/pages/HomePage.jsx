@@ -14,8 +14,6 @@ const Home = () => {
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
 
-  console.log('screenWidth: ', document.documentElement.clientWidth);
-
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>
@@ -105,56 +103,56 @@ const Cream = styled.div`
   @media (min-width: 1716px) and (max-width: 2560px) {
     font-size: 130px;
     letter-spacing: -10vh;
-  }
+  };
   @media (min-width: 1620px) and (max-width: 1715px) {
     align-items: center;
     font-size: 120px;
     letter-spacing: -8vh;
-  }
+  };
   @media (min-width: 1320px) and (max-width: 1619px) {
     align-items: center;
     font-size: 110px;
     justify-content: center;
     letter-spacing: -8vh;
-  }
+  };
   @media (min-width: 1145px) and (max-width: 1319px) {
     font-size: 95px;
     justify-content: center;
     letter-spacing: -7.5vh;
     padding-bottom: 50px;
-  }
+  };
   @media (min-width: 1025px) and (max-width: 1144px) {
     font-size: 90px;
     justify-content: center;
     letter-spacing: -6.5vh;
     padding: 5px;
     padding-bottom: 45px;
-  }
+  };
   @media (min-width: 966px) and (max-width: 1024px) {
     font-size: 80px;
-    letter-spacing: -6vh;
+    letter-spacing: -9vh;
     justify-content: center;
     padding: 5px;
     padding-bottom: 40px;
-  }
+  };
   @media (min-width: 769px) and (max-width: 965px) {
     font-size: 65px;
     letter-spacing: -4vh;
     justify-content: center;
     padding-bottom: 40px;
-  }
+  };
   @media (max-width: 768px) and (min-width: 600px) {
     font-size: 55px;
     letter-spacing: -3.5vh;
     justify-content: center;
-  }
+  };
   @media(max-width: 599px) {
     font-size: 40px;
     letter-spacing: -3vh;
     justify-content: center;
     padding: 5px;
     padding-bottom: 10px;
-  }
+  };
   @media (max-width: 425px) {
     font-size: 70px;
     writing-mode: unset;
@@ -163,7 +161,7 @@ const Cream = styled.div`
     margin: 0;
     height: 11.5vh;
     z-index: 1;
-  }
+  };
 `;
 const Herb = styled.p`
   display: flex;
@@ -180,50 +178,45 @@ const Herb = styled.p`
   @media (max-width: 2560px) {
     font-size: 145px;
     letter-spacing: -10vh;
-  }
+  };
   @media (min-width: 2420px) and (max-width: 2560px) {
     display: flex;
-    
-  }
+  };
   @media (min-width: 2020px) and (max-width: 2419px) {
     align-items: center;
     display: flex;
-    
-  }
+  };
   @media (min-width: 1320px) and (max-width: 2019px) {
     align-items: center;
     font-size: 130px;
     justify-content: center;
-  }
+  };
   @media (min-width: 1145px) and (max-width: 1319px) {
     font-size: 110px;
     justify-content: center;
     letter-spacing: -8.5vh;
     padding-bottom: 50px;
     transform: none;
-  }
+  };
   @media (min-width: 1025px) and (max-width: 1144px) {
     font-size: 100px;
     justify-content: center;
     letter-spacing: -6.5vh;
     padding-bottom: 45px;
     transform: none;
-  }
+  };
   @media (min-width: 966px) and (max-width: 1024px) {
     font-size: 90px;
-    border: 1px solid red;
-    letter-spacing: -6vh;
     justify-content: center;
-    padding-bottom: 40px;
     transform: none;
-  }
+  };
   @media (min-width: 769px) and (max-width: 965px) {
     transform: none;
     font-size: 65px;
     letter-spacing: -4vh;
     justify-content: center;
     padding-bottom: 40px;
-  }
+  };
   @media (max-width: 768px) {
     transform: none;
     font-size: 60px;
@@ -231,24 +224,25 @@ const Herb = styled.p`
     justify-content: center;
     padding: 5px;
     padding-right: 0;
-  }
-  @media(max-width: 599px) {
+  };
+  @media (max-width: 599px) {
     font-size: 45px;
     letter-spacing: -3.5vh;
     justify-content: center;
     padding: 5px;
     transform: none;
-  }
-  @media (max-width: 425px) {
+  };
+  @media (min-width: 320px) and (max-width: 425px) {
+    padding-bottom: 0;
     font-size: 70px;
-    writing-mode: unset;
-    letter-spacing: 1vw;
-    transform: none;
-    width: 100%;
-    margin: 0;
-    z-index: 1;
     height: 11.5vh;
-  }
+    letter-spacing: 1vw;
+    margin: 0;
+    transform: translateY(10px);
+    width: 100%;
+    writing-mode: unset;
+    z-index: 1;
+  };
 `;
 const WebBannerBackground = styled.img`
   margin-top: -100px;
@@ -256,13 +250,13 @@ const WebBannerBackground = styled.img`
   height: 80vh;
   @media (max-width: 2560px) {
     height: 180vh;
-  }
+  };
   @media (max-width: 1950px) {
     height: 150vh
-  }
+  };
   @media (max-width: 1440px) {
     height: 110vh;
-  }
+  };
 `;
 
 export default Home;

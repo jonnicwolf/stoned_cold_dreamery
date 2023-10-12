@@ -17,6 +17,13 @@ const Container = styled.div`
   justify-content: center;
   gap: 4vw;
   margin-top: 10vh;
+  @media (min-width: 320px) and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    padding: 5vw;
+  }
 `;
 
 export default CartPage;
