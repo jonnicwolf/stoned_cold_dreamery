@@ -14,8 +14,6 @@ const Home = () => {
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
 
-  console.log('screenWidth: ', document.documentElement.clientWidth);
-
   return (
     <Container>
       <WebBannerBackground src={banner} alt='banner background'/>

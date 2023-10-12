@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
@@ -7,8 +7,7 @@ import { useCart } from './CartProvider';
 const NavBar = ({ scrollPixel }) => {
   const { cartItems } = useCart();
   const location = useLocation();
-
-  const background = location.pathname !== '/' ? 'black' : 'none'
+  const background = location.pathname !== '/' ? 'black' : 'none';
 
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
