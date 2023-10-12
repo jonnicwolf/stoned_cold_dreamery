@@ -68,9 +68,11 @@ const CarouselContainer = styled.div`
   width: 100vw;
   @media (min-width: 750px) and (max-width: 1149px) {
     height: 50vh;
+    
   }
   @media (min-width: 600px) and (max-width: 749px) {
     height: 35vh;
+    
   }
   @media (max-width: 599px) {
     height: 20vh;
@@ -110,10 +112,10 @@ const Cream = styled.div`
     letter-spacing: -8vh;
   };
   @media (min-width: 1320px) and (max-width: 1619px) {
-    align-items: center;
     font-size: 110px;
     justify-content: center;
-    letter-spacing: -8vh;
+    letter-spacing: -12vh;
+    padding-bottom: 50px;
   };
   @media (min-width: 1145px) and (max-width: 1319px) {
     font-size: 95px;
@@ -134,12 +136,13 @@ const Cream = styled.div`
     justify-content: center;
     padding: 5px;
     padding-bottom: 40px;
+    color: red;
   };
   @media (min-width: 769px) and (max-width: 965px) {
     font-size: 65px;
-    letter-spacing: -4vh;
+    letter-spacing: -9vh;
     justify-content: center;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
   };
   @media (max-width: 768px) and (min-width: 600px) {
     font-size: 55px;
@@ -188,8 +191,10 @@ const Herb = styled.p`
   };
   @media (min-width: 1320px) and (max-width: 2019px) {
     align-items: center;
-    font-size: 130px;
+    font-size: 115px;
     justify-content: center;
+    letter-spacing: -12vh;
+    padding-bottom: 50px;
   };
   @media (min-width: 1145px) and (max-width: 1319px) {
     font-size: 110px;
@@ -213,7 +218,7 @@ const Herb = styled.p`
   @media (min-width: 769px) and (max-width: 965px) {
     transform: none;
     font-size: 65px;
-    letter-spacing: -4vh;
+    letter-spacing: -9vh;
     justify-content: center;
     padding-bottom: 40px;
   };

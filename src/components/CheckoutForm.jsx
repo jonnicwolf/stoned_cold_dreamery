@@ -39,7 +39,7 @@ const CheckoutForm = () => {
         <br />
 
         <SideBySide>
-          <input type="radio" />
+          <input type="checkbox" />
           <label htmlFor="matchAddresses">Billing address is shipping address</label>
         </SideBySide><br />
 
