@@ -17,7 +17,6 @@ const AddToCart = ({ item, itemType }) => {
     for (let i=0; i < quantity; i++) { addItemToCart(matchingItem) };
     return quantity;
   }
-  console.log(matchingItem)
 
   return (
     <Container>
@@ -51,15 +50,12 @@ const AddToCart = ({ item, itemType }) => {
           <option value="9">9</option>
           <option value="10">10</option>
         </Select>
-
       </QuantityButton>
 
-      {/* <AddToCartButton onClick={()=> addItemToCart(matchingItem)}>Add To Cart</AddToCartButton> */}
-      {/* <AddToCartButton onClick={()=> handleAddToCart(quantity, matchingItem)}>Add To Cart</AddToCartButton> */}
       <AddToCartButton onClick={()=> handleAddToCart(quantity, matchingItem)}>Add To Cart</AddToCartButton>
-      <Link to='/cart'>
+      <ViewCartLink to='/cart'>
         <ViewCartButton> View Cart </ViewCartButton>
-      </Link>
+      </ViewCartLink>
 
       <PaymentInfo>
         <Info>
@@ -90,13 +86,15 @@ const CartButton = styled.button`
   border-radius: 15px;
   border: none;
   height: 3vh;
-  width: 80vw;
+  width: 100%;
+  @media (min-width: 320px) and (max-width: 425px) {
+    width: 80vw;
+  }
 `;
 const AddToCartButton = styled(CartButton)`
   background-color: #69e0f0;
   cursor: pointer;
   font-family: 'Chakra Petch', sans-serif;
-
   &:hover {
     box-shadow: 2px 1px 10px #69e0f0;
     font-weight: bold;
@@ -108,7 +106,6 @@ const ViewCartButton = styled(CartButton)`
   background-color: #05b8ff;
   cursor: pointer;
   font-family: 'Chakra Petch', sans-serif;
-
   &:hover {
     box-shadow: 2px 1px 10px #05b8ff;
     font-weight: bold;
@@ -116,6 +113,9 @@ const ViewCartButton = styled(CartButton)`
     transition: opacity 0.1s ease-in;
   }
 `;
+const ViewCartLink = styled(Link)`
+  width: 100%;
+` 
 const Container = styled.div`
   align-items: center;
   border: 1px solid grey;
