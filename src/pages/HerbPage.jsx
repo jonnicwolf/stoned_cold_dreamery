@@ -67,19 +67,23 @@ const Segment = styled.div`
 `;
 const Segment1 = styled(Segment)`
   order: 3;
+  transform: translateY(-20vh);
 `;
 const Segment2 = styled(Segment)`
   order: 2;
+  transform: translateY(-20vh);
 `;
 const ImgContainer = styled(Segment)`
   overflow: hidden;
   width: 60vw;
+  margin-top: -10vh;
   @media (min-width: 320px) and (max-width: 425px) {
     width: 100vw;
   }
 `;
 const Img = styled.img`
   width: 60vw;
+  height: 120vh;
   transform: translate(-125px, -80px);
   @media (min-width: 320px) and (max-width: 425px) {
     transform: none;
