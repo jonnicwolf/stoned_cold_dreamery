@@ -30,14 +30,15 @@ const NavBar = ({ scrollPixel }) => {
 };
 
 const CartIcon = styled.div`
+  font-size: 40px;
   @media (min-width: 320px) and (max-width: 425px) {
-    font-size: 25px;
+    font-size: 15px;
   }
 `;
 const CartItems = styled.div`
   color: white;
   font-size: 2vh;
-  transform: translate(10px,0);
+  // transform: translate(10px,0);
   @media (min-width: 320px) and (max-width: 768px){
     transform: translate(3px, -5px);
     font-size: 2.5vh;
@@ -46,7 +47,7 @@ const CartItems = styled.div`
 const Container = styled.div`
   display: flex;
   background-color: ${props => props.scrollPixel > 100 ? 'black' : props.background};
-  height: 10vh;
+  height: auto;
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
@@ -57,14 +58,6 @@ const Container = styled.div`
     background-color: black;
     height: 7.5vh;
   }
-`;
-const LeftSubContainer = styled.div`
-  align-self: center;
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  width: 70px;
-  padding: 1vh;
 `;
 const LogoTray = styled.div`
   height: 100%;
@@ -87,7 +80,8 @@ const LogoTray = styled.div`
 `;
 const RightSubContainer = styled.div`
   display: flex;
-  align-self: center;
+  padding-top: 15px;
+  // align-self: center;
   justify-content: center;
   gap: 5vw;
   width: 70px;
@@ -101,7 +95,7 @@ const StyledLink = styled(Link)`
   color: #FFFFFF;
   font-family: Modak;
   font-weight: normal;
-  transition: 0.3s;
+  transition: 0.3s; 
 `;
 
 export default NavBar;
