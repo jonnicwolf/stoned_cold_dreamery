@@ -11,10 +11,6 @@ const NavBar = ({ scrollPixel }) => {
 
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
-      <LeftSubContainer>
-        <StyledLink><></></StyledLink>
-      </LeftSubContainer>
-
       <LogoTray>
         <StyledLink to='/'>
           <Logo />
@@ -71,9 +67,10 @@ const LeftSubContainer = styled.div`
   padding: 1vh;
 `;
 const LogoTray = styled.div`
-  align-self: center;
   height: 100%;
   width: 20vw;
+  padding-left: 15px;
+  padding-top: 15px;
   @media (min-width: 1700px) and (max-width: 2000px) {
     width: 30vw;
   }
