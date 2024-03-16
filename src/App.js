@@ -22,9 +22,8 @@ function App() {
       setScreenWidth(screenWidth);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -48,6 +47,10 @@ function App() {
     </Container>
   );
 };
+
+// #debf60
+// #376c88
+// #812323
 
 const Container = styled.div`
   height: 100%;

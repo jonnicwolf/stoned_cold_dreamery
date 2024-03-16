@@ -13,6 +13,7 @@ const banner = require('../photo_assets/carousel_home/scd-logo-estd.jpg');
 const Home = () => {
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
+  const backgroundColors = ['#debf60','#376c88','#812323'];
 
   return (
     <Container>
@@ -23,12 +24,9 @@ const Home = () => {
           style={{backgroundColor: hover1 ? 'white' : 'black'}}
           onMouseEnter={()=>setHover1(true)}
           onMouseLeave={()=>setHover1(false)}
-          to='/cream'
-        >
-          <Cream style={{color: hover1 ? 'black' : 'white'}}>
-            CREAM
-          </Cream>
-          <Carousel slides={flavors} />
+          to='/cream'>
+          <Cream style={{color: hover1 ? 'black' : 'white'}}>CREAM</Cream>
+          <Carousel slides={flavors} backgroundColors={backgroundColors} />
         </CarouselItem1>
 
         <CarouselItem2
@@ -36,7 +34,10 @@ const Home = () => {
           onMouseEnter={()=>setHover2(true)}
           onMouseLeave={()=>setHover2(false)}
           to='/herb'>
-          <Carousel slides={signature_flower} style={{border: hover2 ? '50px solid blue' : '50px solid red'}} />
+          <Carousel 
+            slides={signature_flower}
+            backgroundColors={backgroundColors}
+            style={{border: hover2 ? '50px solid blue' : '50px solid red'}} />
           <Herb style={{color: hover2 ? 'black' : 'white'}}>HERB</Herb>
         </CarouselItem2>
       </CarouselContainer>
@@ -46,42 +47,6 @@ const Home = () => {
   );
 };
 
-const CarouselItem = styled(Link)`
-  display: flex;
-  width: 50vw;
-  text-decoration: none;
-  @media (max-width: 425px) {
-    flex-direction: column;
-    width: 100%;
-  }
-`;
-const CarouselItem1 = styled(CarouselItem)`
-  background-color: white;
-`;
-const CarouselItem2 = styled(CarouselItem)`
-  background-color: white;
-`;
-const CarouselContainer = styled.div`
-  display: flex;
-  align-items: center;
-  height: 60vh;
-  width: 100vw;
-  @media (min-width: 750px) and (max-width: 1149px) {
-    height: 50vh;
-    
-  }
-  @media (min-width: 600px) and (max-width: 749px) {
-    height: 35vh;
-    
-  }
-  @media (max-width: 599px) {
-    height: 20vh;
-  }
-  @media (max-width: 425px) {
-    flex-direction: column;
-    height: auto;
-  }
-`;
 const Container = styled.div`
   align-items: center;
   background-color: black;
@@ -91,163 +56,6 @@ const Container = styled.div`
   height: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
-`;
-const Cream = styled.div`
-  align-items: center;
-  color: white;
-  display: flex;
-  font-family: Modak;
-  font-size: 100px;
-  letter-spacing: -10vh;
-  width: 6vw;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  @media (min-width: 1716px) and (max-width: 2560px) {
-    font-size: 130px;
-    letter-spacing: -10vh;
-  };
-  @media (min-width: 1620px) and (max-width: 1715px) {
-    align-items: center;
-    font-size: 120px;
-    letter-spacing: -8vh;
-  };
-  @media (min-width: 1320px) and (max-width: 1619px) {
-    font-size: 110px;
-    justify-content: center;
-    letter-spacing: -12vh;
-    padding-bottom: 50px;
-  };
-  @media (min-width: 1145px) and (max-width: 1319px) {
-    font-size: 95px;
-    justify-content: center;
-    letter-spacing: -7.5vh;
-    padding-bottom: 50px;
-  };
-  @media (min-width: 1025px) and (max-width: 1144px) {
-    font-size: 90px;
-    justify-content: center;
-    letter-spacing: -6.5vh;
-    padding: 5px;
-    padding-bottom: 45px;
-  };
-  @media (min-width: 966px) and (max-width: 1024px) {
-    font-size: 80px;
-    letter-spacing: -9vh;
-    justify-content: center;
-    padding: 5px;
-    padding-bottom: 40px;
-    color: red;
-  };
-  @media (min-width: 769px) and (max-width: 965px) {
-    font-size: 65px;
-    letter-spacing: -9vh;
-    justify-content: center;
-    padding-bottom: 25px;
-  };
-  @media (max-width: 768px) and (min-width: 600px) {
-    font-size: 55px;
-    letter-spacing: -3.5vh;
-    justify-content: center;
-  };
-  @media(max-width: 599px) {
-    font-size: 40px;
-    letter-spacing: -3vh;
-    justify-content: center;
-    padding: 5px;
-    padding-bottom: 10px;
-  };
-  @media (max-width: 425px) {
-    font-size: 70px;
-    writing-mode: unset;
-    letter-spacing: 1vw;
-    width: 100%;
-    margin: 0;
-    height: 11.5vh;
-    z-index: 1;
-  };
-`;
-const Herb = styled.p`
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 110px;
-  font-family: Modak;
-  font-weight: normal;
-  letter-spacing: -87px;
-  margin: 0;
-  width: 7vw;
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  @media (max-width: 2560px) {
-    font-size: 145px;
-    letter-spacing: -10vh;
-  };
-  @media (min-width: 2420px) and (max-width: 2560px) {
-    display: flex;
-  };
-  @media (min-width: 2020px) and (max-width: 2419px) {
-    align-items: center;
-    display: flex;
-  };
-  @media (min-width: 1320px) and (max-width: 2019px) {
-    align-items: center;
-    font-size: 115px;
-    justify-content: center;
-    letter-spacing: -12vh;
-    padding-bottom: 50px;
-  };
-  @media (min-width: 1145px) and (max-width: 1319px) {
-    font-size: 110px;
-    justify-content: center;
-    letter-spacing: -8.5vh;
-    padding-bottom: 50px;
-    transform: none;
-  };
-  @media (min-width: 1025px) and (max-width: 1144px) {
-    font-size: 100px;
-    justify-content: center;
-    letter-spacing: -6.5vh;
-    padding-bottom: 45px;
-    transform: none;
-  };
-  @media (min-width: 966px) and (max-width: 1024px) {
-    font-size: 90px;
-    justify-content: center;
-    transform: none;
-  };
-  @media (min-width: 769px) and (max-width: 965px) {
-    transform: none;
-    font-size: 65px;
-    letter-spacing: -9vh;
-    justify-content: center;
-    padding-bottom: 40px;
-  };
-  @media (max-width: 768px) {
-    transform: none;
-    font-size: 60px;
-    letter-spacing: -3.5vh;
-    justify-content: center;
-    padding: 5px;
-    padding-right: 0;
-  };
-  @media (max-width: 599px) {
-    font-size: 45px;
-    letter-spacing: -3.5vh;
-    justify-content: center;
-    padding: 5px;
-    transform: none;
-  };
-  @media (min-width: 320px) and (max-width: 425px) {
-    padding-bottom: 0;
-    font-size: 70px;
-    height: 11.5vh;
-    letter-spacing: 1vw;
-    margin: 0;
-    transform: translateY(10px);
-    width: 100%;
-    writing-mode: unset;
-    z-index: 1;
-  };
 `;
 const WebBannerBackground = styled.img`
   margin-top: -100px;
@@ -263,5 +71,113 @@ const WebBannerBackground = styled.img`
     height: 110vh;
   };
 `;
+const CarouselContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100vw;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: auto;
+  }
+  @media(min-width: 601px) and (max-width: 768px) {
+    height: 100%;
+  } 
+  @media (min-width: 769px) and (max-width: 1024px) {
+    height: 100%;
+  }
+  @media (min-width: 1025px) {
+    height: 75vh;
+    height: 100%;
+  }
+`;
+const CarouselItem = styled(Link)`
+  display: flex;
+  width: 50vw;
+  text-decoration: none;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+const CarouselItem1 = styled(CarouselItem)`
+  background-color: white;
+`;
+const CarouselItem2 = styled(CarouselItem)`
+  background-color: white;
+`;
+const Cream = styled.div`
+  align-items: center;
+  color: white;
+  display: flex;
+  font-family: Modak;
+  font-size: 100px;
+  letter-spacing: -10vh;
+  width: 6vw;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  @media (max-width: 600px) {
+    width: auto;
+    writing-mode: horizontal-tb;
+    align-self: center;
+    justify-content: center;
+    font-size: 3.5em;
+    letter-spacing: 1vh;
+  }
+  @media(min-width: 601px) and (max-width: 768px) {
+    justify-content: space-around;
+    font-size: 3rem;
+    letter-spacing: -2.5vh;
+  } 
+  @media (min-width: 769px) and (max-width: 1024px) {
+    justify-content: space-around;
+    font-size: 4rem;
+    letter-spacing: -3.5vh;
+  }
+  @media (min-width: 1025px) {
+    width: 18%;
+    justify-content: space-around;
+    font-size: 7rem;
+    letter-spacing: -6vh;
+  }
+`;
+const Herb = styled.div`
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 110px;
+  font-family: Modak;
+  font-weight: normal;
+  letter-spacing: -87px;
+  margin: 0;
+  width: 7vw;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  @media (max-width: 600px) {
+    writing-mode: horizontal-tb;
+    align-self: center;
+    justify-content: center;
+    font-size: 3.5em;
+    letter-spacing: 1vh;
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    text-orientation: upright;
+    justify-content: space-around;
+    font-size: 3rem;
+    letter-spacing: 1%:
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    justify-content: space-around;
+    font-size: 4rem;
+    letter-spacing: -3vh;
+  }
+  @media (min-width: 1025px) {
+    justify-content: space-around;
+    font-size: 7rem;
+    letter-spacing: -6vh;
+    width: 18%
+  }
+`;
+
 
 export default Home;
