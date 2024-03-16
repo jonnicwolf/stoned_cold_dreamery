@@ -160,8 +160,14 @@ const Herb = styled.div`
     font-size: 3.5em;
     letter-spacing: 1vh;
   }
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 601px) and (max-width: 769px) {
+    justify-content: space-around;
+    font-size: 3.2rem;
+    letter-spacing: -3vh;
+  }
+  @media (min-width: 770px) and (max-width: 1024px) {
     text-orientation: upright;
+    border: 5px solid red;
     justify-content: space-around;
     font-size: 3rem;
     letter-spacing: 1%:
