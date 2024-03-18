@@ -3,8 +3,31 @@ import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import { useCart } from './CartProvider';
+import Cloud from './Cloud';
+import {cloud, animation} from '../components/customizations';
 
 const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
+const {
+  tiny,
+  small,
+  normal,
+  large
+} = cloud;
+const [
+  motion_one,
+  motion_two,
+  motion_three,
+  motion_four,
+  motion_five,
+  motion_six,
+  motion_seven,
+  motion_eight,
+  motion_nine,
+  motion_ten,
+  motion_eleven,
+  motion_twelve
+] = animation;
+
 
 const NavBar = ({ scrollPixel }) => {
   const { cartItems } = useCart();
@@ -15,8 +38,14 @@ const NavBar = ({ scrollPixel }) => {
     <Container scrollPixel={ scrollPixel } background={ background }>
       <LogoTray>
         <StyledLink to='/'>
-          <Logo />
+          <LogoOrderDiv>
+            <Logo />
+          </LogoOrderDiv>
         </StyledLink>
+        <CloudContainer1>
+          <Cloud scale={normal} animation={motion_two}/>
+        </CloudContainer1>
+        
       </LogoTray>
 
       <RightSubContainer>
@@ -35,7 +64,6 @@ const CartIcon = styled.img`
 const CartItems = styled.div`
   color: white;
   font-size: 1.5vh;
-  
   @media (min-width: 320px) and (max-width: 768px){
     transform: translate(3px, -5px);
     font-size: 2.5vh;
@@ -48,7 +76,6 @@ const Container = styled.div`
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
-  transition: all 1s ease-out;
   width: 100vw;
   z-index: 2;
   @media (min-width: 320px) and (max-width: 425px) {
@@ -56,25 +83,30 @@ const Container = styled.div`
     height: 7.5vh;
   }
 `;
+const CloudContainer = styled.div`
+  display: flex;
+  height: 10px;
+`;
+const CloudContainer1 = styled(CloudContainer)`
+  flex-direction: column;
+  transform: translate(-50px, -16px);
+  z-index: 1;
+  width: 4vw;
+`;
 const LogoTray = styled.div`
   align-items: center;
   display:flex;
   padding-left: 25px;
-  height: 100%;
-  width: 20vw;
-  @media (min-width: 1700px) and (max-width: 2000px) {
-    width: 30vw;
-  }
-  @media (min-width: 650px) and (max-width: 1699px) {
-    width: 40vw;
-  }
-  @media (min-width: 400px) and (max-width: 649px) {
-    width: 50vw;
-  }
-  @media (min-width: 320px) and (max-width: 425px) {
-    padding-top: 15px;
-    width: 50vw;
-  }
+  align-self: flex-start;
+  flex-wrap: wrap;
+  border-radius: 0 50px 50px 0;
+  position: relative;
+  width: 19vw;
+  overflow: hidden;
+`;
+const LogoOrderDiv = styled.div`
+  position: relative;
+  z-index: 2;
 `;
 const RightSubContainer = styled.div`
   display: flex;
