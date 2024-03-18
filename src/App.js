@@ -8,8 +8,6 @@ import CheckoutPage from './pages/CheckoutPage';
 import HerbPage from './pages/HerbPage';
 import NavBar from './components/NavBar';
 
-const logo_black = require('./photo_assets/carousel_home/scd-logo-transparent.png');
-
 function App() {
   const [scrollPixel, setScrollPixel] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);

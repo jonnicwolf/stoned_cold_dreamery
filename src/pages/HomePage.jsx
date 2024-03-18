@@ -49,13 +49,11 @@ const Container = styled.div`
   background-color: black;
   display: flex;
   flex-direction: column;
-  gap: 5px;
   height: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
 `;
 const WebBannerBackground = styled.img`
-  margin-top: 10vh;
   width: 100vw;
   height: 100%;
   @media (max-width: 600px) {
@@ -66,14 +64,13 @@ const CarouselContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100vw;
-
   @media (max-width: 600px) {
     flex-direction: column;
     height: auto;
   }
   @media(min-width: 601px) and (max-width: 768px) {
     height: 100%;
-  } 
+  }
   @media (min-width: 769px) and (max-width: 1024px) {
     height: 100%;
   }
@@ -174,6 +171,5 @@ const Herb = styled.div`
     width: 18%
   }
 `;
-
 
 export default Home;
