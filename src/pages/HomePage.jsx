@@ -55,9 +55,9 @@ const Container = styled.div`
   overflow-x: hidden;
 `;
 const WebBannerBackground = styled.img`
-  margin-top: -100px;
+  margin-top: 10vh;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   @media (max-width: 600px) {
     height: 80vh;
   }
