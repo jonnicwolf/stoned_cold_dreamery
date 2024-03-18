@@ -15,7 +15,7 @@ const {
 } = cloud;
 const [
   // motion_one,
-  motion_two,
+  // motion_two,
   motion_three,
   // motion_four,
   // motion_five,
