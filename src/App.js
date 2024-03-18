@@ -7,6 +7,7 @@ import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import HerbPage from './pages/HerbPage';
 import NavBar from './components/NavBar';
+import Sandbox from './pages/Sandbox';
 
 function App() {
   const [scrollPixel, setScrollPixel] = useState(0);
@@ -30,6 +31,7 @@ function App() {
 
       <Routes>
         <Route exact path='/' element={<HomePage/>} />
+        <Route path='/sandbox' element={<Sandbox />}/>
         <Route exact path='/herb' element={<HerbPage />} />
         <Route exact path='/cream' element={<CreamPage />} />
         <Route exact path='/cart' element={<CartPage />} />
