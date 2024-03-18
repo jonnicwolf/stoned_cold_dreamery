@@ -7,7 +7,7 @@ const cloud = {
 
 const animation = [
   {duration: '2s',  left: '50%'},
-  {duration: '10s',  left: '40%'},
+  {duration: '10s',  left: '-100%'},
   {duration: '20s',  left: '50%'},
   {duration: '83s',  left: '51%'},
   {duration: '96s',  left: '73%'},

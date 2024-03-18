@@ -16,7 +16,7 @@ const {
 const [
   // motion_one,
   motion_two,
-  // motion_three,
+  motion_three,
   // motion_four,
   // motion_five,
   // motion_six,
@@ -43,7 +43,7 @@ const NavBar = ({ scrollPixel }) => {
           </LogoOrderDiv>
         </StyledLink>
         <CloudContainer1>
-          <Cloud scale={normal} animation={motion_two}/>
+          <Cloud scale={normal} animation={motion_three}/>
         </CloudContainer1>
         
       </LogoTray>
