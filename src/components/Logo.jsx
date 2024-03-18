@@ -24,8 +24,8 @@ const LogoImg = styled.img`
     width: 15vw;
   }
   @media (min-width: 1700px) {
-    height: 5vh;
-    width: 50vw;
+    height: 4vh;
+    width: 15vw;
   }
 `;
 
