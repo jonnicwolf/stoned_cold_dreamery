@@ -8,24 +8,24 @@ import {cloud, animation} from '../components/customizations';
 
 const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
 const {
-  tiny,
-  small,
+  // tiny,
+  // small,
   normal,
-  large
+  // large
 } = cloud;
 const [
-  motion_one,
+  // motion_one,
   motion_two,
-  motion_three,
-  motion_four,
-  motion_five,
-  motion_six,
-  motion_seven,
-  motion_eight,
-  motion_nine,
-  motion_ten,
-  motion_eleven,
-  motion_twelve
+  // motion_three,
+  // motion_four,
+  // motion_five,
+  // motion_six,
+  // motion_seven,
+  // motion_eight,
+  // motion_nine,
+  // motion_ten,
+  // motion_eleven,
+  // motion_twelve
 ] = animation;
 
 
