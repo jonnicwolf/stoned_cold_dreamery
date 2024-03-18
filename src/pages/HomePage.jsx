@@ -34,10 +34,7 @@ const Home = () => {
           onMouseEnter={()=>setHover2(true)}
           onMouseLeave={()=>setHover2(false)}
           to='/herb'>
-          <Carousel 
-            slides={signature_flower}
-            backgroundColors={backgroundColors}
-            style={{border: hover2 ? '50px solid blue' : '50px solid red'}} />
+          <Carousel slides={signature_flower} backgroundColors={backgroundColors} />
           <Herb style={{color: hover2 ? 'black' : 'white'}}>HERB</Herb>
         </CarouselItem2>
       </CarouselContainer>
@@ -60,16 +57,10 @@ const Container = styled.div`
 const WebBannerBackground = styled.img`
   margin-top: -100px;
   width: 100vw;
-  height: 80vh;
-  @media (max-width: 2560px) {
-    height: 180vh;
-  };
-  @media (max-width: 1950px) {
-    height: 150vh
-  };
-  @media (max-width: 1440px) {
-    height: 110vh;
-  };
+  height: 100vh;
+  @media (max-width: 600px) {
+    height: 80vh;
+  }
 `;
 const CarouselContainer = styled.div`
   display: flex;
@@ -167,7 +158,6 @@ const Herb = styled.div`
   }
   @media (min-width: 770px) and (max-width: 1024px) {
     text-orientation: upright;
-    border: 5px solid red;
     justify-content: space-around;
     font-size: 3rem;
     letter-spacing: 1%:

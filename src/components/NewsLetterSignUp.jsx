@@ -50,9 +50,9 @@ const Button = styled.button`
     color: white;
     transition: background-color 1.5s ease-out-in;
   }
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media (min-width: 425px) {
     font-size: 16px;
-    width: 18vw;
+    width: 10vw;
     line-height: 15px;
   }
   @media (min-width: 768px) {
@@ -83,12 +83,13 @@ const Disclaimer = styled.div`
   font-size: 12px;
   padding-top: 10px;
   width: 50vw;
-  @media (min-width: 320px) and (max-width: 425px) {
-    font-size: 6px;
+  @media (min-width: 425px) {
+    font-size: 10px;
     width: 70vw;
   }
-  @media (min-width: 2560px) {
-    width: 40vw;
+  @media (min-width: 660px) {
+    font-size: 16px;
+    width: 60vw;
   }
 `;
 const Form = styled.form`
@@ -97,7 +98,7 @@ const Form = styled.form`
   display: flex;
   justify-content: space-between;
   width: 50vw;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media (min-width: 425px) {
     width: 80vw;
   }
   @media (min-width: 768px) {
@@ -116,8 +117,8 @@ const Input = styled.input`
   outline: none;
   padding: 10px;
   width: 42vw;
-  @media (min-width: 320px) and (max-width: 425px) {
-    width: 60vw;
+  @media (min-width: 425px) {
+    width: 50vw;
     font-size: 20px;
   }
   @media (min-width: 768px) {
@@ -143,12 +144,14 @@ const InputContainer = styled.div`
   z-index: 4;
   height: 0.1vh;
   opacity: 1;
+  width: 100%;
 `;
 const Title = styled.h1`
+  align-self: center;
   color: black;
   font-size: 50px;
-  @media (min-width: 320px) and (max-width: 425px) {
-    font-size: 25px;
+  @media (min-width: 425px) {
+    font-size: 40px;
   }
   @media (min-width: 768px) {
     font-size: 50px;

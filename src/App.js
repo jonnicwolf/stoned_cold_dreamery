@@ -41,33 +41,29 @@ function App() {
       { screenWidth <= 768
         ? null
         : <FooterLogoContainer>
-            <FooterLogo src={logo_black} alt='scd logo' />
+            <Copyright>&#9400; 2020 - 2040 The Stoned Cold Dreamery. All rights reserved. </Copyright>
           </FooterLogoContainer>
       }
     </Container>
   );
 };
 
-// #debf60
-// #376c88
-// #812323
-
 const Container = styled.div`
   height: 100%;
   overflow-x: hidden;
 `;
+const Copyright = styled.p`
+  font-size: 1.5vh;
+  font-family: Permanent Marker;
+`
 const FooterLogoContainer = styled.footer`
   align-items: center;
   background-color: white;
   display: flex;
-  height: 12vh;
+  height: 5vh;
   justify-content: center;
   width: 100%;
   position: sticky;
-`;
-const FooterLogo = styled.img`
-  width: 30vw;
-  height: 10vh;
 `;
 
 export default App;
