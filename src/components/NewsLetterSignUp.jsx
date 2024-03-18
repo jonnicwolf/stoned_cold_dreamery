@@ -4,41 +4,38 @@ import styled from 'styled-components';
 const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png')
 
 const NewsLetterSignUp = () => {
-  const clientWidth = document.documentElement.clientWidth;
-  const cones = [];
-
-  for (let i=0; i<=670; i++) {
-    cones.push(<Cone src={cone} alt=''/>)
-  };
-  if (clientWidth === 390) cones.length = 12;
 
   return (
-    <Container>
-
+    <ConeContainer>
       <InputContainer>
-        <Title>GET NEWS & UPDATES</Title>
-        <Form action="">
-          <Input type="text" placeholder='email address'/>
-          <Button>SIGN UP</Button>
-        </Form>
-        <Disclaimer>
-          By clicking 'SIGN UP,' I represent I am at least the age of twenty-one (21), I have read, understood, and agree to the Terms of Service and Privacy Policy and I agree to receive emails and customer service communications from Houseplant via email. I can unsubscribe at any time by clicking 'unsubscribe' in emails.
-        </Disclaimer>
-      </InputContainer>
-
-      <ConeContainer> {cones} </ConeContainer>
-
-    </Container>
+          <Title>GET NEWS & UPDATES</Title>
+          <Form action="">
+            <Input type="text" placeholder='email address'/>
+            <Button>SIGN UP</Button>
+          </Form>
+          <Disclaimer>
+            By clicking 'SIGN UP,' I represent I am at least the age of twenty-one (21), I have read, understood, and agree to the Terms of Service and Privacy Policy and I agree to receive emails and customer service communications from The Stoned Cold Dreamery via email. I can unsubscribe at any time by clicking 'unsubscribe' in emails.
+          </Disclaimer>
+        </InputContainer>
+      <Container>
+      </Container>
+    </ConeContainer>
   );
 };
 
 const Container = styled.div`
   width: 100%;
-  height: 10%;
+  position: relative;
+  height: 30vh;
   display: flex;
+  opacity: 20%;
   flex-direction: column;
   margin-top: 5px;
   margin-bottom: 5px;
+  background-image: url(${cone});
+  background-color: rgb(255,255,255);
+  background-size: 70px 70px;
+  z-index: 2;
 `;
 const Button = styled.button`
   border: none;
@@ -75,30 +72,11 @@ const Button = styled.button`
   }
 `;
 const ConeContainer = styled.div`
+  height: 30vh;
+  width: 100%;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 5px;
-  height: 29vh;
-  overflow: hidden;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position: relative;
-  width: 100vw;
+  opacity: 100%;
   z-index: 1;
-  @media (min-width: 768px) {
-    height: 33vh;
-  }
-  @media (min-width: 1024px) {
-    height: 39vh;
-    gap: 10px;
-  }
-`;
-const Cone = styled.img`
-  height: 3vh;
-  width: 3vw;
-  opacity: 20%;
 `;
 const Disclaimer = styled.div`
   font-color:black;
@@ -127,7 +105,6 @@ const Form = styled.form`
   }
   @media (min-width: 1024px) {
     width: 90vw;
-    
   }
   @media (min-width: 2560px) {
     width: 50vw;
@@ -163,8 +140,9 @@ const InputContainer = styled.div`
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 4;
   height: 0.1vh;
+  opacity: 1;
 `;
 const Title = styled.h1`
   color: black;
@@ -179,5 +157,10 @@ const Title = styled.h1`
     font-size: 60px;
   }
 `;
+// const GlobalStyle = createGlobalStyle`
+//   body *:not(${InputContainer}) {
+//     opacity: 0.2;
+//   }
+
 
 export default NewsLetterSignUp;
