@@ -4,6 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 import { useCart } from './CartProvider';
 
+const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
+
 const NavBar = ({ scrollPixel }) => {
   const { cartItems } = useCart();
   const location = useLocation();
@@ -11,10 +13,6 @@ const NavBar = ({ scrollPixel }) => {
 
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
-      <LeftSubContainer>
-        <StyledLink><></></StyledLink>
-      </LeftSubContainer>
-
       <LogoTray>
         <StyledLink to='/'>
           <Logo />
@@ -22,26 +20,22 @@ const NavBar = ({ scrollPixel }) => {
       </LogoTray>
 
       <RightSubContainer>
-        <StyledLink
-          style={{fontSize: '5vh', display: 'flex'}}
-          to='/cart'>
-          <CartItems scrollPixel={scrollPixel}>{cartItems.length}</CartItems>
-          <CartIcon>🛒</CartIcon>
+        <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
+          <CartItems>{cartItems.length}</CartItems>
+          <CartIcon src={cart} />
         </StyledLink>
       </RightSubContainer>
     </Container>
   );
 };
 
-const CartIcon = styled.div`
-  @media (min-width: 320px) and (max-width: 425px) {
-    font-size: 25px;
-  }
+const CartIcon = styled.img`
+  height: 3vh;
 `;
 const CartItems = styled.div`
   color: white;
-  font-size: 2vh;
-  transform: translate(10px,0);
+  font-size: 1.5vh;
+  
   @media (min-width: 320px) and (max-width: 768px){
     transform: translate(3px, -5px);
     font-size: 2.5vh;
@@ -50,7 +44,7 @@ const CartItems = styled.div`
 const Container = styled.div`
   display: flex;
   background-color: ${props => props.scrollPixel > 100 ? 'black' : props.background};
-  height: 10vh;
+  height: 5vh;
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
@@ -62,16 +56,10 @@ const Container = styled.div`
     height: 7.5vh;
   }
 `;
-const LeftSubContainer = styled.div`
-  align-self: center;
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  width: 70px;
-  padding: 1vh;
-`;
 const LogoTray = styled.div`
-  align-self: center;
+  align-items: center;
+  display:flex;
+  padding-left: 25px;
   height: 100%;
   width: 20vw;
   @media (min-width: 1700px) and (max-width: 2000px) {

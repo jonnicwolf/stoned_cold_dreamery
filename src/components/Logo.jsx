@@ -15,23 +15,17 @@ const Logo = () => {
 };
 
 const LogoImg = styled.img`
-  height: 10vh;
-  width: 20vw;
-  @media (min-width: 1700px) and (max-width: 2000px) {
-    height: 10vh;
+  @media (max-width: 600px) {
+    height: 5vh;
     width: 30vw;
   }
-  @media (min-width: 650px) and (max-width: 1699px) {
-    height: 10vh;
-    width: 40vw;
+  @media (min-width: 601px) and (max-width: 1699px) {
+    height: 3vh;
+    width: 15vw;
   }
-  @media (min-width: 426px) and (max-width: 649px) {
-    height: 7vh;
-    width: 50vw;
-  }
-  @media (min-width: 320px) and (max-width: 425px) {
-    height: 5vh;
-    width: 50vw;
+  @media (min-width: 1700px) {
+    height: 4vh;
+    width: 15vw;
   }
 `;
 
