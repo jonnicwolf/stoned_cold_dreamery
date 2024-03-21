@@ -58,10 +58,7 @@ const Container = styled.div`
 const Img = styled.img`
   width: 50vw;
   border-radius: 30px;
-  // object-fit: scale-down;
-  // transform: translateX(-17%);
   @media only screen and (max-width: 768px) {
-    // transform: translateX(10%);
     align-self: center;
     height: 40vh;
     width: 90%;
@@ -103,8 +100,12 @@ const ImageContainer = styled(Segment)`
 `;
 const Segment2 = styled(Segment)`
   order: 3;
+  border: 1px solid grey;
+  border-radius: 10px;
   @media only screen and (max-width: 767px) {
     width: 100%;
+    padding: 5px;
+    border: none;
   }
 `;
 const Segment3 = styled(Segment)`

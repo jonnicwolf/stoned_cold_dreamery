@@ -87,7 +87,7 @@ const CartButton = styled.button`
   border: none;
   height: 3vh;
   width: 100%;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     width: 80vw;
   }
 `;
@@ -130,13 +130,13 @@ const Container = styled.div`
 const Info = styled.div`
   display: flex;
   gap: 45px;
-  @media (min-width: 320px) and (max-width: 425px) {
-    justify-content: space-evenly;
+  @media only screen and (max-width: 767px) {
+    justify-content: space-around;
   }
 `;
 const InfoLeft = styled.div`
   width: 5vw;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     width: 20vw;
   }
 `;
@@ -144,7 +144,8 @@ const InfoRight = styled.div`
   color: blue;
   text-wrap: wrap;
   width: 12vw;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
+    text-wrap: none;
     width: 50vw;
   }
 `;
