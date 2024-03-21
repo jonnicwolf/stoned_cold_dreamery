@@ -50,7 +50,7 @@ const Button = styled.button`
     color: white;
     transition: background-color 1.5s ease-out-in;
   }
-  @media (min-width: 425px) {
+  @media only screen and (max-width: 767px) {
     font-size: 16px;
     width: 10vw;
     line-height: 15px;
@@ -98,10 +98,10 @@ const Form = styled.form`
   display: flex;
   justify-content: space-between;
   width: 50vw;
-  @media (min-width: 425px) {
-    width: 80vw;
+  @media only screen and (max-width: 767px) {
+    width: 95vw;
   }
-  @media (min-width: 768px) {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
     width: 90vw;
   }
   @media (min-width: 1024px) {
@@ -117,9 +117,9 @@ const Input = styled.input`
   outline: none;
   padding: 10px;
   width: 42vw;
-  @media (min-width: 425px) {
+  @media only screen and (max-width: 767px) {
     width: 50vw;
-    font-size: 20px;
+    font-size: 25px;
   }
   @media (min-width: 768px) {
     width: 70vw;
@@ -150,10 +150,10 @@ const Title = styled.h1`
   align-self: center;
   color: black;
   font-size: 50px;
-  @media (min-width: 425px) {
-    font-size: 40px;
+  @media only screen and (max-width: 767px) {
+    font-size: 30px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     font-size: 50px;
   }
   @media (min-width: 2560px) {

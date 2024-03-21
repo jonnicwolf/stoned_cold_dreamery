@@ -43,6 +43,7 @@ const Container = styled.div`
   margin-top: 10vh;
   @media only screen and (max-width: 767px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 const FlavorDropList = styled.select`
@@ -61,9 +62,6 @@ const Segment = styled.div`
   flex-direction: column;
   width: 30vw;
   height: 100%;
-  @media (min-width: 320px) and (max-width: 425px) {
-    width: 90vw;
-  }
 `;
 const Segment1 = styled(Segment)`
   order: 3;
