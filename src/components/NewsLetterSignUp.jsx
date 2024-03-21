@@ -78,15 +78,18 @@ const ConeContainer = styled.div`
   background-color: white;
   opacity: 100%;
   z-index: 1;
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 5vh;
+  }
 `;
 const Disclaimer = styled.div`
   font-color:black;
   font-size: 12px;
   padding-top: 10px;
   width: 50vw;
-  @media (min-width: 425px) {
+  @media only screen and (max-width: 767px) {
     font-size: 10px;
-    width: 70vw;
+    width: 95vw;
   }
   @media (min-width: 660px) {
     font-size: 16px;
