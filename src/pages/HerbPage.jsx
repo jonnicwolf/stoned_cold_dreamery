@@ -126,6 +126,9 @@ const Option = styled.option`
 const P = styled.p`
   font-family: 'Chakra Petch', sans-serif;
   margin: 0;
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-bottom: 40px;
+  }
 `;
 const ProductTitle = styled.div`
   margin-bottom: 2vh;
