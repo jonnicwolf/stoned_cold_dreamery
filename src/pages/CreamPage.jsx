@@ -44,6 +44,7 @@ const Flavor = () => {
 
 const Container = styled.div`
   align-items: flex-start;
+  border: 1px solid red;
   display: flex;
   height: 100%;
   gap: 30px;
@@ -55,8 +56,9 @@ const Container = styled.div`
   }
 `;
 const Img = styled.img`
-  width: 60vw;
-  transform: translate(-125px, -80px);
+  width: 50vw;
+  object-fit: scale-down;
+  transform: translateX(-17%);
   @media (min-width: 320px) and (max-width: 425px) {
     transform: none;
     width: 100%;
@@ -85,15 +87,20 @@ const Segment = styled.div`
 const ImageContainer = styled(Segment)`
   overflow: hidden;
   width: 60vw;
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid red;
   @media (min-width: 320px) and (max-width: 425px) {
     width: 90vw;
   }
 `;
 const Segment2 = styled(Segment)`
   order: 3;
+  border: 1px solid red;
 `;
 const Segment3 = styled(Segment)`
   order: 2;
+  border: 1px solid red;
 `;
 const ProductTitle = styled.div`
   margin-bottom: 2vh;

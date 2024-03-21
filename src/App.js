@@ -63,7 +63,9 @@ const FooterLogoContainer = styled.footer`
   height: 5vh;
   justify-content: center;
   width: 100%;
-  position: sticky;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
 `;
 
 export default App;
