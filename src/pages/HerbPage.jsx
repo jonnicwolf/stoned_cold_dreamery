@@ -41,7 +41,7 @@ const Container = styled.div`
   gap: 30px;
   padding: 2vw;
   margin-top: 10vh;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     flex-direction: column;
   }
 `;
@@ -68,26 +68,36 @@ const Segment = styled.div`
 const Segment1 = styled(Segment)`
   order: 3;
   transform: translateY(-20vh);
+  @media only screen and (max-width: 767px) {
+    transform: none;
+    width: 90%;
+  }
 `;
 const Segment2 = styled(Segment)`
   order: 2;
   transform: translateY(-20vh);
+  @media only screen and (max-width: 767px) {
+    transform: none;
+    width: 100%;
+  }
 `;
 const ImgContainer = styled(Segment)`
   overflow: hidden;
   width: 60vw;
   margin-top: -10vh;
-  @media (min-width: 320px) and (max-width: 425px) {
-    width: 100vw;
+  @media only screen and (max-width: 767px) {
+    margin-top: 0;
+    width: 100%;
   }
 `;
 const Img = styled.img`
   width: 60vw;
   height: 120vh;
   transform: translate(-125px, -80px);
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     transform: none;
     width: 100%;
+    height: auto;
   }
 `;
 const Option = styled.option`
