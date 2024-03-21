@@ -6,14 +6,14 @@ import SelectState from './SelectState';
 const CheckoutForm = () => {
   return (
     <Container>
-      <Form action="">
+      <Form action={alert('This is a mock website. We do not accept any payments nor will we service this order. Thank you for shopping with the Stoned Cold Dreamery')}>
         <label htmlFor="email" required>Email*</label>
         <Input type="email" style={{border: '1px solid grey', borderRadius: '5px'}} placeholder='holly.golightly@gmail.com' required/>
         <br />
 
         <label htmlFor="cardInfo" required>Card information*</label>
         <Info>
-          <CardInput type="number" placeholder='1234 1234 1234 1234' required />
+          <CardInput type="text" placeholder='1234 1234 1234 1234' required />
           <SideBySide>
             <Input type="month" placeholder='mm/yy' style={{borderRight: '1px solid grey'}} required />
             <Input type="text" placeholder='CVC' required />
@@ -29,7 +29,7 @@ const CheckoutForm = () => {
         <Info>
           <SelectCountry /><br />
           <Address1 type="text" placeholder='Address line 1' required /><br />
-          <Address2 type="text" placeholder='Address line 2' required />
+          <Address2 type="text" placeholder='Address line 2' />
           <SideBySide>
             <Input type="text" style={{borderRight: '1px solid grey', borderBottom: '1px solid grey'}} placeholder='City' required />
             <Input type="number" style={{borderBottom: '1px solid grey', width: '100%'}} placeholder='Zip' required />
