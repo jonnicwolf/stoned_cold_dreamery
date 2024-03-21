@@ -92,6 +92,9 @@ const CartButton = styled.button`
   @media only screen and (max-width: 767px) {
     width: 80vw;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+  }
 `;
 const CartButtonContainer = styled.div`
   display: flex;
@@ -99,6 +102,7 @@ const CartButtonContainer = styled.div`
   flex-direction: column;
   gap: 10px;
   justify-content: center;
+  width: 90%;
 `;
 const AddToCartButton = styled(CartButton)`
   background-color: #69e0f0;
@@ -110,6 +114,9 @@ const AddToCartButton = styled(CartButton)`
     opacity: 0.8;
     transition: opacity 0.1s ease-in;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+   font-size: 20px;
+  }
 `;
 const ViewCartButton = styled(CartButton)`
   background-color: #05b8ff;
@@ -120,6 +127,9 @@ const ViewCartButton = styled(CartButton)`
     font-weight: bold;
     opacity: 0.8;
     transition: opacity 0.1s ease-in;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 20px;
   }
 `;
 const ViewCartLink = styled(Link)`
@@ -142,11 +152,18 @@ const Info = styled.div`
   @media only screen and (max-width: 767px) {
     justify-content: space-around;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    justify-content: space-evenly;
+    font-size: 15px;
+  }
 `;
 const InfoLeft = styled.div`
   width: 5vw;
   @media only screen and (max-width: 767px) {
     width: 20vw;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+   text-wrap: nowrap;
   }
 `;
 const InfoRight = styled.div`
@@ -156,6 +173,9 @@ const InfoRight = styled.div`
   @media only screen and (max-width: 767px) {
     text-wrap: none;
     width: 50vw;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 30%;
   }
 `;
 const InStock = styled.div`
@@ -177,6 +197,7 @@ const PaymentInfo = styled.div`
   font-size: 12px;
   gap: 10px;
   width: 100%;
+  justify-content: space-between;
 `;
 const PerOz = styled.span`
   font-size: 11px;

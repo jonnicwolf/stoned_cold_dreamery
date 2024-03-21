@@ -22,6 +22,7 @@ const Container = styled.div`
     align-items: center;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: column;
     padding: 5vw;
   }
 `;
