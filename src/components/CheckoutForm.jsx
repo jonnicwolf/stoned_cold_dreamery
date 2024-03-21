@@ -51,7 +51,7 @@ const CheckoutForm = () => {
 
 
 const Container = styled.div`
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     width: 90vw;
     margin-bottom: 5vh;
   }

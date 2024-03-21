@@ -17,11 +17,12 @@ const Container = styled.div`
   justify-content: center;
   gap: 4vw;
   margin-top: 15vh;
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
   }
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: column;
     padding: 5vw;
   }
 `;

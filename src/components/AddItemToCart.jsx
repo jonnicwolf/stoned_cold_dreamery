@@ -52,10 +52,12 @@ const AddToCart = ({ item, itemType }) => {
         </Select>
       </QuantityButton>
 
-      <AddToCartButton onClick={()=> handleAddToCart(quantity, matchingItem)}>Add To Cart</AddToCartButton>
-      <ViewCartLink to='/cart'>
-        <ViewCartButton> View Cart </ViewCartButton>
-      </ViewCartLink>
+      <CartButtonContainer>
+        <AddToCartButton onClick={()=> handleAddToCart(quantity, matchingItem)}>Add To Cart</AddToCartButton>
+        <ViewCartLink to='/cart'>
+          <ViewCartButton> View Cart </ViewCartButton>
+        </ViewCartLink>
+      </CartButtonContainer>
 
       <PaymentInfo>
         <Info>
@@ -87,9 +89,20 @@ const CartButton = styled.button`
   border: none;
   height: 3vh;
   width: 100%;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     width: 80vw;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+  }
+`;
+const CartButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  width: 90%;
 `;
 const AddToCartButton = styled(CartButton)`
   background-color: #69e0f0;
@@ -100,6 +113,9 @@ const AddToCartButton = styled(CartButton)`
     font-weight: bold;
     opacity: 0.8;
     transition: opacity 0.1s ease-in;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+   font-size: 20px;
   }
 `;
 const ViewCartButton = styled(CartButton)`
@@ -112,10 +128,13 @@ const ViewCartButton = styled(CartButton)`
     opacity: 0.8;
     transition: opacity 0.1s ease-in;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 20px;
+  }
 `;
 const ViewCartLink = styled(Link)`
   width: 100%;
-` 
+`;
 const Container = styled.div`
   align-items: center;
   border: 1px solid grey;
@@ -130,22 +149,33 @@ const Container = styled.div`
 const Info = styled.div`
   display: flex;
   gap: 45px;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
+    justify-content: space-around;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
     justify-content: space-evenly;
+    font-size: 15px;
   }
 `;
 const InfoLeft = styled.div`
   width: 5vw;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     width: 20vw;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+   text-wrap: nowrap;
   }
 `;
 const InfoRight = styled.div`
   color: blue;
   text-wrap: wrap;
   width: 12vw;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
+    text-wrap: none;
     width: 50vw;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 30%;
   }
 `;
 const InStock = styled.div`
@@ -167,6 +197,7 @@ const PaymentInfo = styled.div`
   font-size: 12px;
   gap: 10px;
   width: 100%;
+  justify-content: space-between;
 `;
 const PerOz = styled.span`
   font-size: 11px;

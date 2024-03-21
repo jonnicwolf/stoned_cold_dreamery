@@ -78,6 +78,7 @@ const Container = styled.div`
   text-decoration: none;
   width: 100vw;
   z-index: 2;
+  overflow: hidden;
   @media (min-width: 320px) and (max-width: 425px) {
     background-color: black;
     height: 7.5vh;
@@ -92,6 +93,9 @@ const CloudContainer1 = styled(CloudContainer)`
   transform: translate(-50px, -16px);
   z-index: 1;
   width: 4vw;
+  @media only screen and (max-width: 767px) {
+    transform: translate(-50px, -20px);
+  }
 `;
 const LogoTray = styled.div`
   align-items: center;
@@ -103,6 +107,14 @@ const LogoTray = styled.div`
   position: relative;
   width: 19vw;
   overflow: hidden;
+  @media only screen and (max-width: 767px) {
+    width: 55vw;
+    padding-left: 10px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 55vw;
+    padding-left: 10px;
+  }
 `;
 const LogoOrderDiv = styled.div`
   position: relative;
@@ -114,9 +126,12 @@ const RightSubContainer = styled.div`
   justify-content: center;
   gap: 5vw;
   width: 70px;
-  transform: translateX(-15px);
-  @media (min-width: 320px) and (max-width: 425px) {
-    transform: none;
+  transform: translateY(-15px);
+  @media only screen and (max-width: 767px) {
+    transform: translateY(5px);
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    transform: translateY(5px);
   }
 `;
 const StyledLink = styled(Link)`

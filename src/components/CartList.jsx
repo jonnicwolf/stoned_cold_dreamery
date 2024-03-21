@@ -55,7 +55,11 @@ const Container = styled.div`
   justify-content: center;
   padding: 20px;
   width: 50vw;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
+    width: 90vw;
+    padding: 0;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
     width: 90vw;
     padding: 0;
   }

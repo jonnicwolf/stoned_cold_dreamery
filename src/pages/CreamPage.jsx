@@ -49,16 +49,22 @@ const Container = styled.div`
   gap: 30px;
   padding: 2vw;
   margin-top: 10vh;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     align-items: center;
     flex-direction: column;
   }
 `;
 const Img = styled.img`
-  width: 60vw;
-  transform: translate(-125px, -80px);
-  @media (min-width: 320px) and (max-width: 425px) {
-    transform: none;
+  width: 50vw;
+  border-radius: 30px;
+  @media only screen and (max-width: 768px) {
+    align-self: center;
+    height: 40vh;
+    width: 90%;
+    object-fit: cover;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    transform: translateX(10%);
     width: 100%;
   }
 `;
@@ -85,15 +91,27 @@ const Segment = styled.div`
 const ImageContainer = styled(Segment)`
   overflow: hidden;
   width: 60vw;
-  @media (min-width: 320px) and (max-width: 425px) {
-    width: 90vw;
+  height: 100%;
+  border-radius: 30px;
+  @media only screen and (max-width: 767px) {
+    width: auto;
   }
 `;
 const Segment2 = styled(Segment)`
   order: 3;
+  border: 1px solid grey;
+  border-radius: 10px;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    padding: 5px;
+    border: none;
+  }
 `;
 const Segment3 = styled(Segment)`
   order: 2;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const ProductTitle = styled.div`
   margin-bottom: 2vh;

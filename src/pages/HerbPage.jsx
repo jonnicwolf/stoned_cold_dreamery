@@ -41,8 +41,13 @@ const Container = styled.div`
   gap: 30px;
   padding: 2vw;
   margin-top: 10vh;
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     flex-direction: column;
+    align-items: center;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px){
+    flex-direction: column;
+    align-items: center;
   }
 `;
 const FlavorDropList = styled.select`
@@ -61,33 +66,58 @@ const Segment = styled.div`
   flex-direction: column;
   width: 30vw;
   height: 100%;
-  @media (min-width: 320px) and (max-width: 425px) {
-    width: 90vw;
-  }
 `;
 const Segment1 = styled(Segment)`
   order: 3;
   transform: translateY(-20vh);
+  @media only screen and (max-width: 767px) {
+    transform: none;
+    width: 90%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    transform: none;
+    width: 90%;
+  }
 `;
 const Segment2 = styled(Segment)`
   order: 2;
   transform: translateY(-20vh);
+  @media only screen and (max-width: 767px) {
+    transform: none;
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    transform: none;
+    width: 90%;
+  }
 `;
 const ImgContainer = styled(Segment)`
   overflow: hidden;
   width: 60vw;
   margin-top: -10vh;
-  @media (min-width: 320px) and (max-width: 425px) {
-    width: 100vw;
+  @media only screen and (max-width: 767px) {
+    margin-top: 0;
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-top: 0;
+    width: 100%;
+    // overflow: visible;
   }
 `;
 const Img = styled.img`
   width: 60vw;
   height: 120vh;
   transform: translate(-125px, -80px);
-  @media (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     transform: none;
     width: 100%;
+    height: auto;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    transform: none;
+    width: 100%;
+    height: auto;
   }
 `;
 const Option = styled.option`
