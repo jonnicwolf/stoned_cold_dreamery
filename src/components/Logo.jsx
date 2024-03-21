@@ -1,28 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Cloud from './Cloud';
-// import {cloud, animation} from './customizations';
-
-// const {tiny, small, normal, large} = cloud;
-// const [motion1] = animation;
-// const motion_one = animation[1]
 
 const logo_white = require('../photo_assets/carousel_home/scd-logo-white-transparent.png');
 
 const Logo = () => {
   return (
-  <LogoContainer>
     <LogoImg src={logo_white} alt='scd logo' />
-  </LogoContainer>
   );
 };
-const LogoContainer = styled.div`
 
-`;
 const LogoImg = styled.img`
   @media (max-width: 600px) {
     height: 5vh;
-    width: 30vw;
+    width: 35vw;
   }
   @media (min-width: 601px) and (max-width: 1699px) {
     height: 3vh;

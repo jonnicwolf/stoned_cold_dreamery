@@ -52,10 +52,12 @@ const AddToCart = ({ item, itemType }) => {
         </Select>
       </QuantityButton>
 
-      <AddToCartButton onClick={()=> handleAddToCart(quantity, matchingItem)}>Add To Cart</AddToCartButton>
-      <ViewCartLink to='/cart'>
-        <ViewCartButton> View Cart </ViewCartButton>
-      </ViewCartLink>
+      <CartButtonContainer>
+        <AddToCartButton onClick={()=> handleAddToCart(quantity, matchingItem)}>Add To Cart</AddToCartButton>
+        <ViewCartLink to='/cart'>
+          <ViewCartButton> View Cart </ViewCartButton>
+        </ViewCartLink>
+      </CartButtonContainer>
 
       <PaymentInfo>
         <Info>
@@ -91,6 +93,13 @@ const CartButton = styled.button`
     width: 80vw;
   }
 `;
+const CartButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+`;
 const AddToCartButton = styled(CartButton)`
   background-color: #69e0f0;
   cursor: pointer;
@@ -115,7 +124,7 @@ const ViewCartButton = styled(CartButton)`
 `;
 const ViewCartLink = styled(Link)`
   width: 100%;
-` 
+`;
 const Container = styled.div`
   align-items: center;
   border: 1px solid grey;

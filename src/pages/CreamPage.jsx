@@ -44,7 +44,6 @@ const Flavor = () => {
 
 const Container = styled.div`
   align-items: flex-start;
-  border: 1px solid red;
   display: flex;
   height: 100%;
   gap: 30px;
