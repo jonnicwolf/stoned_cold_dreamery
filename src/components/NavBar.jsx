@@ -111,6 +111,10 @@ const LogoTray = styled.div`
     width: 55vw;
     padding-left: 10px;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 55vw;
+    padding-left: 10px;
+  }
 `;
 const LogoOrderDiv = styled.div`
   position: relative;
@@ -124,6 +128,9 @@ const RightSubContainer = styled.div`
   width: 70px;
   transform: translateY(-15px);
   @media only screen and (max-width: 767px) {
+    transform: translateY(5px);
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
     transform: translateY(5px);
   }
 `;
