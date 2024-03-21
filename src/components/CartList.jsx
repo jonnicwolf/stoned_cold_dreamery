@@ -63,6 +63,10 @@ const Container = styled.div`
     width: 90vw;
     padding: 0;
   }
+  @media only screen and (min-width: 1024px) {
+    width: 90vw;
+    padding: 0;
+  }
 `;
 const ClearButton = styled.button`
   background: none;

@@ -133,6 +133,9 @@ const RightSubContainer = styled.div`
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     transform: translateY(5px);
   }
+  @media only screen and (min-width: 1024px) {
+    transform: none;
+  }
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;

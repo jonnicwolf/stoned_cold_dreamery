@@ -57,6 +57,9 @@ const Container = styled.div`
     flex-direction: column;
     // justify-content: center;
   }
+  @media only screen and (min-width: 1024px) {
+    
+  }
 `;
 const Img = styled.img`
   width: 50vw;
@@ -70,6 +73,9 @@ const Img = styled.img`
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     // transform: translateX(10%);
     width: 100%;
+  }
+  @media only screen and (min-width: 1024px) {
+    transform: translateX(-20%);
   }
 `;
 const FlavorDropList = styled.select`
@@ -122,6 +128,9 @@ const Segment2 = styled(Segment)`
     padding: 5px;
     border: none;
     padding-bottom: 50px;
+  }
+  @media only screen and (min-width: 1024px) {
+    padding: 15px;
   }
 `;
 const Segment3 = styled(Segment)`
