@@ -23,7 +23,7 @@ const AddToCart = ({ item, itemType }) => {
       <Price>
       <Name>{matchingItem.name}</Name>
         <div>
-          <span style={{fontSize: '11px'}}>$</span>
+          <DollarSign>$</DollarSign>
           <b>{matchingItem.price}</b>
         </div>
 
@@ -103,6 +103,9 @@ const CartButtonContainer = styled.div`
   gap: 10px;
   justify-content: center;
   width: 90%;
+  @media only screen and (max-width: 767px) {
+    width: auto;
+  }
 `;
 const AddToCartButton = styled(CartButton)`
   background-color: #69e0f0;
@@ -135,6 +138,12 @@ const ViewCartButton = styled(CartButton)`
 const ViewCartLink = styled(Link)`
   width: 100%;
 `;
+const DollarSign = styled.span`
+  font-size: 11px;
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+   font-size: 20px;
+  }
+`;
 const Container = styled.div`
   align-items: center;
   border: 1px solid grey;
@@ -145,6 +154,10 @@ const Container = styled.div`
   gap: 10px;
   height: 100%;
   padding: 25px;
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 90vw;
+    width: 90%;
+  }
 `;
 const Info = styled.div`
   display: flex;
@@ -208,6 +221,9 @@ const Price = styled.span`
   flex-direction: column;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 30px;
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 50px;
+  }
 `;
 const QuantityButton = styled.button`
   align-self: flex-start;

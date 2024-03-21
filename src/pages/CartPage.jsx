@@ -25,6 +25,9 @@ const Container = styled.div`
     flex-direction: column;
     padding: 5vw;
   }
+  @media only screen and (min-width: 1024px) {
+    padding: 5vw;
+  }
 `;
 
 export default CartPage;

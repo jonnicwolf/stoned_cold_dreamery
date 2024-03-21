@@ -53,6 +53,13 @@ const Container = styled.div`
     align-items: center;
     flex-direction: column;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    flex-direction: column;
+    // justify-content: center;
+  }
+  @media only screen and (min-width: 1024px) {
+    
+  }
 `;
 const Img = styled.img`
   width: 50vw;
@@ -64,8 +71,11 @@ const Img = styled.img`
     object-fit: cover;
   }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    transform: translateX(10%);
+    // transform: translateX(10%);
     width: 100%;
+  }
+  @media only screen and (min-width: 1024px) {
+    transform: translateX(-20%);
   }
 `;
 const FlavorDropList = styled.select`
@@ -77,6 +87,9 @@ const FlavorDropList = styled.select`
   outline: none;
   &:active {
     border: none;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    font-size: 45px;
   }
 `;
 const Segment = styled.div`
@@ -96,6 +109,10 @@ const ImageContainer = styled(Segment)`
   @media only screen and (max-width: 767px) {
     width: auto;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: auto;
+    align-self: center;
+  }
 `;
 const Segment2 = styled(Segment)`
   order: 3;
@@ -106,11 +123,23 @@ const Segment2 = styled(Segment)`
     padding: 5px;
     border: none;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    padding-bottom: 50px;
+  }
+  @media only screen and (min-width: 1024px) {
+    padding: 15px;
+  }
 `;
 const Segment3 = styled(Segment)`
   order: 2;
   @media only screen and (max-width: 767px) {
     width: 100%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 100vw;
   }
 `;
 const ProductTitle = styled.div`

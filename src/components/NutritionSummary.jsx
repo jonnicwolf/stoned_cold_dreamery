@@ -51,6 +51,9 @@ const StatContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 20px;
+  @media only screen and (min-width: 1024px) {
+    gap: 10px;
+  }
 `;
 const Stat = styled.div`
   align-items: center;
@@ -59,11 +62,18 @@ const Stat = styled.div`
   font-family: 'Chakra Petch', sans-serif;
   font-size: 2vh;
   text-style: bold;
+  @media only screen and (min-width: 1024px) {
+    font-size: 15px;
+  }
 `;
 const StatName = styled.div`
   font-size: 1.257vh;
   font-size: 1.7vh;
   text-wrap: nowrap;
+  @media only screen and (min-width: 1024px) {
+    font-size: 15px;
+  }
+
 `;
 const Title = styled.div`
   font-family: 'Chakra Petch', sans-serif;
