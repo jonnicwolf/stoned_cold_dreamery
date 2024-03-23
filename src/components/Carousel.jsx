@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const Carousel = ({slides, backgroundColors }) => {
+const Carousel = ({ slides, cover, time, activationMode }) => {
   const [slideNum, setSlideNum] = useState(0);
   const [hover, setHover] = useState(false);
   const carouselLength = slides.length;
 
+  function slideLeft (slidePosition) {
+    setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
+  }; 
+
   useEffect(() => {
-    function slideLeft (slidePosition) {
-      setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
-    }; 
     let interval;
-    if (hover) interval = setInterval(() => slideLeft(slideNum), 500);
+
+    if (activationMode === 'hover' && hover) interval = setInterval( ()=> slideLeft(slideNum), time );
+    else if (activationMode !== 'hover' && hover === false) interval = setInterval( ()=> slideLeft(slideNum), time );
+    
     return () => clearInterval(interval);
-  }, [slideNum, hover, carouselLength]);
+  }, [slideNum, hover, carouselLength, activationMode, time]);
 
   return (
     <SlideButton onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-      <SlideImage  src={slides[slideNum]} alt=""/>
+      <SlideImage cover={cover} src={slides[slideNum]} alt=""/>
     </SlideButton>
   );
 };
@@ -38,8 +42,13 @@ const SlideButton = styled.div`
 `;
 const SlideImage = styled.img`
   width: 100%;
-  height: 100%;
-  transition: opacity 1.5s ease-in-out;
+  height: 100%;  
+  transition: all 2s ease-in-out;
+  ${({ cover }) =>
+    cover &&
+    css`
+      object-fit: fill;
+  `}
   opacity: 0.7;
   &:hover {
     opacity: 1;

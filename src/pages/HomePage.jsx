@@ -4,20 +4,22 @@ import styled from 'styled-components';
 import Carousel from '../components/Carousel';
 import NewsLetterSignUp from '../components/NewsLetterSignUp';
 import { indica_jar, hybrid_jar, sativa_jar } from '../photo_assets/signature_flower/index.js';
-import { birthday_cake,blue_dream,sherblato } from '../photo_assets/flavors/index.js';
+import { birthday_cake,blue_dream, sherblato } from '../photo_assets/flavors/index.js';
+import { boricanna, boricanna_shared_joint, logo_dude_pink } from '../photo_assets/carousel_home/index.js';
 
 const signature_flower = [ indica_jar, hybrid_jar, sativa_jar ];
-const flavors = [ birthday_cake, blue_dream , sherblato ];
-const banner = require('../photo_assets/carousel_home/scd-logo-estd.jpg');
+const flavors = [ birthday_cake, blue_dream, sherblato ];
+const banners = [ logo_dude_pink, boricanna_shared_joint, boricanna ];
 
 const Home = () => {
   const [hover1, setHover1] = useState(false);
   const [hover2, setHover2] = useState(false);
-  const backgroundColors = ['#debf60','#376c88','#812323'];
 
   return (
     <Container>
-      <WebBannerBackground src={banner} alt='banner background'/>
+      <WebBannerBackground>
+        <Carousel slides={banners} cover={true} time={5000} activationMode={'automatic'}/>
+      </WebBannerBackground>
 
       <CarouselContainer>
         <CarouselItem1
@@ -26,7 +28,7 @@ const Home = () => {
           onMouseLeave={()=>setHover1(false)}
           to='/cream'>
           <Cream style={{color: hover1 ? 'black' : 'white'}}>CREAM</Cream>
-          <Carousel slides={flavors} backgroundColors={backgroundColors} />
+          <Carousel slides={flavors} cover={false} time={50} activationMode={'hover'}/>
         </CarouselItem1>
 
         <CarouselItem2
@@ -34,7 +36,7 @@ const Home = () => {
           onMouseEnter={()=>setHover2(true)}
           onMouseLeave={()=>setHover2(false)}
           to='/herb'>
-          <Carousel slides={signature_flower} backgroundColors={backgroundColors} />
+          <Carousel slides={signature_flower} cover={false} time={50} activationMode={'hover'} />
           <Herb style={{color: hover2 ? 'black' : 'white'}}>HERB</Herb>
         </CarouselItem2>
       </CarouselContainer>
@@ -53,9 +55,10 @@ const Container = styled.div`
   overflow-y: hidden;
   overflow-x: hidden;
 `;
-const WebBannerBackground = styled.img`
+const WebBannerBackground = styled.div`
   width: 100vw;
   height: 100%;
+  
   @media (max-width: 600px) {
     height: 80vh;
   }
