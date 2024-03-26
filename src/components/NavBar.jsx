@@ -28,7 +28,6 @@ const [
   // motion_twelve
 ] = animation;
 
-
 const NavBar = ({ scrollPixel }) => {
   const { cartItems } = useCart();
   const location = useLocation();
@@ -36,6 +35,7 @@ const NavBar = ({ scrollPixel }) => {
 
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
+
       <LogoTray>
         <StyledLink to='/'>
           <LogoOrderDiv>
@@ -45,7 +45,6 @@ const NavBar = ({ scrollPixel }) => {
         <CloudContainer1>
           <Cloud scale={normal} animation={motion_three}/>
         </CloudContainer1>
-        
       </LogoTray>
 
       <RightSubContainer>
@@ -54,6 +53,7 @@ const NavBar = ({ scrollPixel }) => {
           <CartIcon src={cart} />
         </StyledLink>
       </RightSubContainer>
+
     </Container>
   );
 };
@@ -101,6 +101,7 @@ const LogoTray = styled.div`
   align-items: center;
   display:flex;
   padding-left: 25px;
+  padding-top: 10px;
   align-self: flex-start;
   flex-wrap: wrap;
   border-radius: 0 50px 50px 0;
