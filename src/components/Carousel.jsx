@@ -28,14 +28,14 @@ const Carousel = ({ slides, cover, time, activationMode, size }) => {
         setFade(false);
       }, (time/2));
     }; 
-    
+
     let interval;
 
     if (activationMode === 'hover' && hover) interval = setInterval( ()=> slideLeft(slideNum), time );
     else if (activationMode !== 'hover' && hover === false) interval = setInterval( ()=> slideLeft(slideNum), time );
     
     return () => clearInterval(interval);
-  }, [slideNum, hover, carouselLength, activationMode, time, slideLeft]);
+  }, [slideNum, hover, carouselLength, activationMode, time]);
 
   return (
     <SlideButton
