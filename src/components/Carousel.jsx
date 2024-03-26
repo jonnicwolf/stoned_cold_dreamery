@@ -19,15 +19,16 @@ const Carousel = ({ slides, cover, time, activationMode, size }) => {
       size_prop = '40vh';
   };
 
-  function slideLeft (slidePosition) {
-    setFade(true);
-    setTimeout(()=>{
-      setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
-      setFade(false);
-    }, (time/2));
-  }; 
 
   useEffect(() => {
+    function slideLeft (slidePosition) {
+      setFade(true);
+      setTimeout(()=>{
+        setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
+        setFade(false);
+      }, (time/2));
+    }; 
+    
     let interval;
 
     if (activationMode === 'hover' && hover) interval = setInterval( ()=> slideLeft(slideNum), time );
