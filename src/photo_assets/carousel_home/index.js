@@ -1,5 +1,4 @@
-export const [
-  boricanna,
+export const [ boricanna,
   boricanna_shared_joint,
   logo_dude_pink,
   logo_plain_estd,
@@ -8,9 +7,9 @@ export const [
   shirt_merch,
   tub_bluedream
 ] = [
-  require('../../photo_assets/carousel_home/AdobeStock_436600503.jpg'),
+  
+  require('../../photo_assets/Boricanna_webBanner.jpg'),
   require('../../photo_assets/carousel_home/boricanna-shared-joint.jpg'),
-  require('../../photo_assets/carousel_home/scd-dude-pink.jpg'),
   require('../../photo_assets/carousel_home/scd-dude-pink.jpg'),
   require('../../photo_assets/carousel_home/scd-logo-estd.jpg'),
   require('../../photo_assets/carousel_home/scd-logo-transparent.png'),
