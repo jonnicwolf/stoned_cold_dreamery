@@ -34,7 +34,7 @@ const Carousel = ({ slides, cover, time, activationMode, size }) => {
     else if (activationMode !== 'hover' && hover === false) interval = setInterval( ()=> slideLeft(slideNum), time );
     
     return () => clearInterval(interval);
-  }, [slideNum, hover, carouselLength, activationMode, time]);
+  }, [slideNum, hover, carouselLength, activationMode, time, slideLeft]);
 
   return (
     <SlideButton

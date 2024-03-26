@@ -48,14 +48,14 @@ const Home = () => {
           onMouseEnter={()=>setHover2(true)}
           onMouseLeave={()=>setHover2(false)}
           to='/herb'>
-          <Carousel_Wrap>
+          <CarouselWrap>
             <Carousel
               slides={signature_flower}
               cover={false}
               time={carousel_cream_speed}
               activationMode={'hover'}
               size={'small'} />
-            </Carousel_Wrap>
+            </CarouselWrap>
           <Herb style={{color: hover2 ? 'black' : 'white'}}>HERB</Herb>
         </CarouselItem2>
       </CarouselContainer>
@@ -117,7 +117,7 @@ const CarouselItem1 = styled(CarouselItem)`
 const CarouselItem2 = styled(CarouselItem)`
   background-color: white;
 `;
-const Carousel_Wrap = styled.div`
+const CarouselWrap = styled.div`
   @media (max-width: 769px) {
     order: 1;
   }
