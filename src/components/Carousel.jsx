@@ -19,7 +19,6 @@ const Carousel = ({ slides, cover, time, activationMode, size }) => {
       size_prop = '40vh';
   };
 
-
   useEffect(() => {
     function slideLeft (slidePosition) {
       setFade(true);
@@ -42,7 +41,7 @@ const Carousel = ({ slides, cover, time, activationMode, size }) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       size={size_prop}
-      >
+    >
       <SlideImage
         cover={cover}
         src={slides[slideNum]}

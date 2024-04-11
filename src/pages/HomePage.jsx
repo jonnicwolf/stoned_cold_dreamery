@@ -118,6 +118,7 @@ const CarouselItem2 = styled(CarouselItem)`
   background-color: white;
 `;
 const CarouselWrap = styled.div`
+  width: 70vw;
   @media (max-width: 769px) {
     order: 1;
   }
@@ -155,6 +156,7 @@ const Cream = styled.div`
     // justify-content: center;
     font-size: 7rem;
     letter-spacing: -6vh;
+    // transform: translateY(%);
   }
 `;
 const Herb = styled.div`
@@ -166,7 +168,7 @@ const Herb = styled.div`
   font-weight: normal;
   letter-spacing: -87px;
   margin: 0;
-  width: 7vw;
+  width: 7.5vw;
   writing-mode: vertical-rl;
   text-orientation: upright;
   @media (max-width: 600px) {
@@ -198,7 +200,7 @@ const Herb = styled.div`
     justify-content: center;
     font-size: 7rem;
     letter-spacing: -6vh;
-    width: 18%;
+    // width: 18%;
     transform: translateY(-30px);
   }
 `;
