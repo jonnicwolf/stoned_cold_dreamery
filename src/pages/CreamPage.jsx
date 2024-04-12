@@ -50,7 +50,6 @@ const Info = styled.div`
   gap: 3vh;
   justify-content: center;
   width: 80vw;
-  border: 1px solid red;
   @media only screen and (max-width: 1023px) {
     flex-direction: column;
   }
@@ -59,7 +58,7 @@ const Container = styled.div`
   align-items: center;
   display: flex;
   height: 100%;
-  gap: 30px;
+  gap: 2vh;
   padding: 2vw;
   margin-top: 10vh;
   flex-direction: column;
