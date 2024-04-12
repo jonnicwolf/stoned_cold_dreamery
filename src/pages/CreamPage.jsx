@@ -50,7 +50,8 @@ const Info = styled.div`
   gap: 3vh;
   justify-content: center;
   width: 80vw;
-  @media only screen and (max-width: 768px) {
+  border: 1px solid red;
+  @media only screen and (max-width: 1023px) {
     flex-direction: column;
   }
 `;

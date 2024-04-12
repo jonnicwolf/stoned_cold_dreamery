@@ -16,12 +16,12 @@ const AddToCart = ({ item, itemType }) => {
   const handleAddToCart = (quantity, matchingItem) => {
     for (let i=0; i < quantity; i++) { addItemToCart(matchingItem) };
     return quantity;
-  }
+  };
 
   return (
     <Container>
       <Price>
-      <Name>{matchingItem.name}</Name>
+        <Name>{matchingItem.name}</Name>
         <div>
           <DollarSign>$</DollarSign>
           <b>{matchingItem.price}</b>
@@ -101,10 +101,12 @@ const CartButtonContainer = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  padding: 0;
   justify-content: center;
-  width: 90%;
+  border: 1px solid red;
+  width: 60%;
   @media only screen and (max-width: 767px) {
-    width: auto;
+    // width: auto;
   }
 `;
 const AddToCartButton = styled(CartButton)`
@@ -162,16 +164,20 @@ const Container = styled.div`
 const Info = styled.div`
   display: flex;
   gap: 45px;
-  @media only screen and (max-width: 767px) {
-    justify-content: space-around;
+  // border: 1px solid red;
+  width: 80%;
+  justify-content: space-between;
+  @media only screen and (max-width: 1023px) {
+    // justify-content: space-around;
   }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     font-size: 15px;
   }
 `;
 const InfoLeft = styled.div`
   width: 5vw;
+  // border: 1px solid green;
   @media only screen and (max-width: 767px) {
     width: 20vw;
   }
@@ -181,6 +187,7 @@ const InfoLeft = styled.div`
 `;
 const InfoRight = styled.div`
   color: blue;
+  // border: 1px solid blue;
   text-wrap: wrap;
   width: 12vw;
   @media only screen and (max-width: 767px) {
@@ -209,8 +216,9 @@ const PaymentInfo = styled.div`
   flex-direction: column;
   font-size: 12px;
   gap: 10px;
-  width: 100%;
-  justify-content: space-between;
+  width: 60%;
+  border: 1px solid red;
+  align-items: center;
 `;
 const PerOz = styled.span`
   font-size: 11px;
@@ -221,6 +229,7 @@ const Price = styled.span`
   flex-direction: column;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 30px;
+  border: 1px solid red;
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     font-size: 50px;
   }
