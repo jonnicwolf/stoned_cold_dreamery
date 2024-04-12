@@ -104,7 +104,7 @@ const CartButtonContainer = styled.div`
   padding: 0;
   justify-content: center;
   border: 1px solid red;
-  width: 60%;
+  width: 80%;
   @media only screen and (max-width: 767px) {
     // width: auto;
   }
@@ -216,7 +216,7 @@ const PaymentInfo = styled.div`
   flex-direction: column;
   font-size: 12px;
   gap: 10px;
-  width: 60%;
+  width: 80%;
   border: 1px solid red;
   align-items: center;
 `;
