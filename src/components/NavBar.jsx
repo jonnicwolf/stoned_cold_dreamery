@@ -59,15 +59,11 @@ const NavBar = ({ scrollPixel }) => {
 };
 
 const CartIcon = styled.img`
-  height: 3vh;
+  height: 2rem;
 `;
 const CartItems = styled.div`
   color: white;
-  font-size: 1.5vh;
-  @media (min-width: 320px) and (max-width: 768px){
-    transform: translate(3px, -5px);
-    font-size: 2.5vh;
-  }
+  font-size: 2rem;
 `;
 const Container = styled.div`
   display: flex;
@@ -109,7 +105,8 @@ const LogoTray = styled.div`
   width: 19vw;
   overflow: hidden;
   @media only screen and (max-width: 767px) {
-    width: 55vw;
+    border: 1px solid red;
+    width: 45vw;
     padding-left: 10px;
   }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
