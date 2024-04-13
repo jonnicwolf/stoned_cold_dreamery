@@ -39,12 +39,17 @@ function App() {
         <Route exact path='/checkout' element={<CheckoutPage />} />
       </Routes>
 
-      { screenWidth <= 768
+      {/* { screenWidth <= 768
         ? null
-        : <FooterLogoContainer>
-            <Copyright>&#9400; 2020 - 2040 The Stoned Cold Dreamery. All rights reserved. </Copyright>
-          </FooterLogoContainer>
-      }
+        : 
+        // <FooterLogoContainer>
+        //     <Copyright>
+              <>
+              &#9400; 2020 - 2040 The Stoned Cold Dreamery. All rights reserved.
+              </>
+          //     {/* </Copyright>
+          // </FooterLogoContainer> */}
+      {/* } */}
     </Container>
   );
 };
