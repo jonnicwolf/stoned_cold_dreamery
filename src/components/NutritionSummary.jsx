@@ -49,8 +49,10 @@ const P = styled.p`
 const StatContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-self: center;
+  justify-content: space-between;
   gap: 20px;
+  width: 95%;
   @media only screen and (min-width: 1024px) {
     gap: 10px;
   }
@@ -60,20 +62,12 @@ const Stat = styled.div`
   display: flex;
   flex-direction: column;
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 2vh;
+  font-size: 2em;
   text-style: bold;
-  @media only screen and (min-width: 1024px) {
-    font-size: 15px;
-  }
 `;
 const StatName = styled.div`
-  font-size: 1.257vh;
-  font-size: 1.7vh;
+  font-size: 50%;
   text-wrap: nowrap;
-  @media only screen and (min-width: 1024px) {
-    font-size: 15px;
-  }
-
 `;
 const Title = styled.div`
   font-family: 'Chakra Petch', sans-serif;

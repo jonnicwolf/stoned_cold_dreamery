@@ -20,63 +20,64 @@ const Flavor = () => {
         <Img src={ cream[flavor].photo } alt={ cream[flavor].name } />
       </ImageContainer>
 
-      <Segment2>
-        <ProductTitle>
-          <FlavorDropList value={flavor} onChange={handleFlavor}>
-            <Option value="birthday_cake">Birthday Cake</Option>
-            <Option value="sherblato">Sherblato</Option>
-            <Option value="blue_dream">Blue Dream</Option>
-          </FlavorDropList>
-          <P>{cream[flavor].description}</P>
-        </ProductTitle>
-        <NutritionSummary size='1Pt / 1500mg'/>
-        <NutritionFacts />
-        <Ingredients />
-        <AboutThisItem />
-      </Segment2>
+      <Info>
+        <Segment2>
+          <ProductTitle>
+            <FlavorDropList value={flavor} onChange={handleFlavor}>
+              <Option value="birthday_cake">Birthday Cake</Option>
+              <Option value="sherblato">Sherblato</Option>
+              <Option value="blue_dream">Blue Dream</Option>
+            </FlavorDropList>
+            <P>{cream[flavor].description}</P>
+          </ProductTitle>
+          <NutritionSummary size='1Pt / 1500mg'/>
+          <NutritionFacts />
+          <Ingredients />
+          <AboutThisItem />
+        </Segment2>
 
-      <Segment3>
-        <AddItemToCart item={flavor} itemType={'cream'} />
-      </Segment3>
+        <Segment3>
+          <AddItemToCart item={flavor} itemType={'cream'} />
+        </Segment3>
+      </Info>
+
     </Container>
   );
 };
 
-const Container = styled.div`
-  align-items: flex-start;
+const Info = styled.div`
   display: flex;
-  height: 100%;
-  gap: 30px;
-  padding: 2vw;
-  margin-top: 10vh;
-  @media only screen and (max-width: 767px) {
-    align-items: center;
+  gap: 3vh;
+  justify-content: center;
+  width: 80vw;
+  @media only screen and (max-width: 1023px) {
     flex-direction: column;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    flex-direction: column;
-    // justify-content: center;
-  }
-  @media only screen and (min-width: 1024px) {
-    
   }
 `;
+const Container = styled.div`
+  align-items: center;
+  display: flex;
+  height: 100%;
+  gap: 2vh;
+  padding: 2vw;
+  margin-top: 10vh;
+  flex-direction: column;
+`;
 const Img = styled.img`
-  width: 50vw;
   border-radius: 30px;
   @media only screen and (max-width: 768px) {
-    align-self: center;
-    height: 40vh;
-    width: 90%;
+    // align-self: center;
+    // height: 40vh;
+    width: 100%;
     object-fit: cover;
   }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     // transform: translateX(10%);
     width: 100%;
   }
-  @media only screen and (min-width: 1024px) {
-    transform: translateX(-20%);
-  }
+  // @media only screen and (min-width: 1024px) {
+  //   transform: translateX(-20%);
+  // }
 `;
 const FlavorDropList = styled.select`
   border: none;
@@ -103,9 +104,10 @@ const Segment = styled.div`
 `;
 const ImageContainer = styled(Segment)`
   overflow: hidden;
-  width: 60vw;
+  width: 80vw;
   height: 100%;
   border-radius: 30px;
+  align-self: center;
   @media only screen and (max-width: 767px) {
     width: auto;
   }
@@ -116,8 +118,9 @@ const ImageContainer = styled(Segment)`
 `;
 const Segment2 = styled(Segment)`
   order: 3;
-  border: 1px solid grey;
+  // border: 1px solid grey;
   border-radius: 10px;
+  width: 40vw;
   @media only screen and (max-width: 767px) {
     width: 100%;
     padding: 5px;
@@ -135,11 +138,14 @@ const Segment2 = styled(Segment)`
 `;
 const Segment3 = styled(Segment)`
   order: 2;
+  width: 40vw;
   @media only screen and (max-width: 767px) {
     width: 100%;
+    border: none;
   }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     width: 100vw;
+    border: none;
   }
 `;
 const ProductTitle = styled.div`
