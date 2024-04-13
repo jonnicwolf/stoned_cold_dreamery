@@ -7,7 +7,9 @@ import Logo from './Logo';
 const Footer = () => {
   return (
     <Container>
-      <NewsLetterSignUp />
+      <NewsLetterSignUpWrapper>
+        <NewsLetterSignUp />
+      </NewsLetterSignUpWrapper>
 
       <AboutLinks>
         <LeftBox>
@@ -34,7 +36,7 @@ const Footer = () => {
       </AboutLinks>
 
       <FooterLogoContainer>
-        <Logo />
+        <Logo size={'large'}/>
         {/* <Copyright>&#9400; 2020 - 2040 The Stoned Cold Dreamery. All rights reserved. </Copyright> */}
       </FooterLogoContainer>
       
@@ -42,14 +44,18 @@ const Footer = () => {
   );
 };
 
+const NewsLetterSignUpWrapper = styled.div`
+  height: 30%;
+`;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10vh;
+  height: 70vh;
 `;
 const AboutLinks = styled.div`
   display: flex;
-  margin-top: 10vh;
+  height: 50%;
 `;
 const LeftBox = styled.div`
   display: flex;
@@ -95,14 +101,15 @@ const Copyright = styled.p`
   font-size: 1.5vh;
   font-family: Permanent Marker;
 `
-const FooterLogoContainer = styled.footer`
+const FooterLogoContainer = styled.div`
   align-items: center;
   background-color: black;
   display: flex;
   height: 20%;
+  border: 1px solid yellow;
   justify-content: center;
   width: 100%;
-  position: fixed;
+  // position: fixed;
   bottom: 0;
   z-index: 5;
 `;

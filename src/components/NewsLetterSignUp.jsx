@@ -17,8 +17,7 @@ const NewsLetterSignUp = () => {
             By clicking 'SIGN UP,' I represent I am at least the age of twenty-one (21), I have read, understood, and agree to the Terms of Service and Privacy Policy and I agree to receive emails and customer service communications from The Stoned Cold Dreamery via email. I can unsubscribe at any time by clicking 'unsubscribe' in emails.
           </Disclaimer>
         </InputContainer>
-      <Container>
-      </Container>
+      <Container />
     </ConeContainer>
   );
 };
@@ -73,11 +72,13 @@ const Button = styled.button`
   }
 `;
 const ConeContainer = styled.div`
-  height: 30vh;
+  border: 1px solid red;
+  height: 100%;
   width: 100%;
   background-color: white;
   opacity: 100%;
   z-index: 1;
+  overflow: hidden;
   @media only screen and (max-width: 767px) {
     padding-bottom: 5vh;
   }
