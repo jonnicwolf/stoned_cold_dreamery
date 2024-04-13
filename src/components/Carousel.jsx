@@ -55,12 +55,6 @@ const SlideButton = styled.div`
   height: 100%;
   width: 100%;
   z-index: 1;
-  @media(min-width: 601px) and (max-width: 768px) {
-    height: 30vh;
-  }
-  @media (min-width: 769px) and (max-width: 1024px) {
-    height: 46vh;
-  }
   @media (min-width: 1025px) {
     height: ${prop => prop.size};
   }
