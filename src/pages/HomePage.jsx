@@ -78,28 +78,20 @@ const Container = styled.div`
 const WebBannerBackground = styled.div`
   width: 100vw;
   height: 100vh;
-  // @media (min-width: 600px) {
-  //   height: 80vh;
-  //   height: 100vh;
-  // }
 `;
 const CarouselContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100vw;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1023px) {
     flex-direction: column;
-  }
-  @media (min-width: 769px) and (max-width: 1024px) {
-    height: 100%;
   }
 `;
 const CarouselItem = styled(Link)`
   display: flex;
   width: 50vw;
   text-decoration: none;
-  @media only screen and (max-width: 768px) {
-    // border: 1px solid red;
+  @media only screen and (max-width: 1023px) {
     flex-direction: column;
     width: 100%;
   }
@@ -120,25 +112,18 @@ const Cream = styled.div`
   width: 6vw;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1023px) {
     width: auto;
     writing-mode: horizontal-tb;
     align-self: center;
     justify-content: center;
     font-size: 3.5em;
     letter-spacing: 1vh;
-  } 
-  @media (min-width: 769px) and (max-width: 1024px) {
-    justify-content: space-around;
-    font-size: 4rem;
-    letter-spacing: -3.5vh;
   }
   @media (min-width: 1025px) {
     width: 18%;
-    // justify-content: center;
     font-size: 7rem;
     letter-spacing: -6vh;
-    // transform: translateY(%);
   }
 `;
 const Herb = styled.div`
@@ -153,7 +138,7 @@ const Herb = styled.div`
   width: 7.5vw;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1023px) {
     writing-mode: horizontal-tb;
     align-self: center;
     justify-content: center;
@@ -161,22 +146,10 @@ const Herb = styled.div`
     letter-spacing: 1vh;
     order: 1;
   }
-  @media (min-width: 770px) and (max-width: 1024px) {
-    text-orientation: upright;
-    justify-content: space-around;
-    font-size: 3rem;
-    letter-spacing: 1%:
-  }
-  @media (min-width: 769px) and (max-width: 1024px) {
-    justify-content: space-around;
-    font-size: 4rem;
-    letter-spacing: -3vh;
-  }
-  @media (min-width: 1025px) {
+  @media (min-width: 1024px) {
     justify-content: center;
     font-size: 7rem;
     letter-spacing: -6vh;
-    // width: 18%;
     transform: translateY(-30px);
   }
 `;
