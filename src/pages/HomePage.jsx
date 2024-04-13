@@ -61,7 +61,6 @@ const Home = () => {
         </CarouselItem2>
       </CarouselContainer>
 
-      <NewsLetterSignUp />
     </Container>
   );
 };

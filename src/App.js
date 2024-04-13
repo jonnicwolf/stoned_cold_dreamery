@@ -53,20 +53,5 @@ const Container = styled.div`
   height: 100%;
   overflow-x: hidden;
 `;
-const Copyright = styled.p`
-  font-size: 1.5vh;
-  font-family: Permanent Marker;
-`
-const FooterLogoContainer = styled.footer`
-  align-items: center;
-  background-color: white;
-  display: flex;
-  height: 5vh;
-  justify-content: center;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: 5;
-`;
 
 export default App;
