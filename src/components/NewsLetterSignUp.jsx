@@ -41,31 +41,12 @@ const Button = styled.button`
   font-family: var(--font-family-modak);
   height: 60px;
   padding: 0;
+  width: 20%;
+  border-radius: 30px;
   &:hover {
     background-color: black;
-    border-radius: 30px 0 0 30px;
     color: white;
-    transition: background-color 1.5s ease-out-in;
-  }
-  @media only screen and (max-width: 767px) {
-    font-size: 16px;
-    width: 10vw;
-    line-height: 15px;
-  }
-  @media (min-width: 768px) {
-    font-size: 25px;
-     width: 18vw;
-  }
-  @media (min-width: 1024px) {
-    font-size: 35px;
-    width: 15vw;
-  }
-  @media (min-width: 1440px) {
-    width: 10vw;
-  }
-  @media (min-width: 2560px) {
-    font-size: 40px;
-    width: 7vw;
+    transition: background-color 0.15s ease-in;
   }
 `;
 const ConeContainer = styled.div`
@@ -82,59 +63,23 @@ const Disclaimer = styled.div`
   font-color:black;
   font-size: 12px;
   padding-top: 10px;
-  width: 50vw;
-  @media only screen and (max-width: 767px) {
-    font-size: 10px;
-    width: 95vw;
-  }
-  @media (min-width: 660px) {
-    font-size: 16px;
-    width: 60vw;
-  }
+  width: 59%;
 `;
 const Form = styled.form`
   background-color: white;
   border: 3px inset aqua;
   display: flex;
   justify-content: space-between;
-  width: 50vw;
-  @media only screen and (max-width: 767px) {
-    width: 95vw;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: 90vw;
-  }
-  @media (min-width: 1024px) {
-    width: 90vw;
-  }
-  @media (min-width: 2560px) {
-    width: 50vw;
-  }
+  width: 60%;
+  border-radius: 30px;
 `;
 const Input = styled.input`
   border: none;
   font-size: 30px;
   outline: none;
   padding: 10px;
-  width: 42vw;
-  @media only screen and (max-width: 767px) {
-    width: 50vw;
-    font-size: 25px;
-  }
-  @media (min-width: 768px) {
-    width: 70vw;
-    font-size: 28px;
-  }
-  @media (min-width: 1024px) {
-    font-size: 35px;
-  }
-  @media (min-width: 1440px) {
-    width: 82.3vw;
-  }
-  @media (min-width: 2560px) {
-    width: 41.5vw;
-    font-size: 45px;
-  }
+  width: 80%;
+  border-radius: 30px;
 `;
 const InputContainer = styled.div`
   display: flex;
