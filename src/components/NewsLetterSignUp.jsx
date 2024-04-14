@@ -37,12 +37,15 @@ const Container = styled.div`
 const Button = styled.button`
   border: none;
   background-color: white;
-  font-size: clamp(2vw,3vw, 25px);
+  font-size: 3vw;
   font-family: var(--font-family-modak);
   height: 60px;
   padding: 0;
   width: 20%;
   border-radius: 30px;
+  @media screen and (min-width: 1800px) {
+    font-size: 1.5vw
+  }
   &:hover {
     background-color: black;
     color: white;
@@ -95,7 +98,7 @@ const InputContainer = styled.div`
 const Title = styled.h1`
   align-self: center;
   color: black;
-  font-size: 2.5em;
+  font-size: 4vh;
   font-family: 'Bebas Neue';
   @media screen and (max-width: 500px) {
     font-size: 9vw;

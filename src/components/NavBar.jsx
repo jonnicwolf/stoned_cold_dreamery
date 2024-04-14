@@ -39,7 +39,7 @@ const NavBar = ({ scrollPixel }) => {
 
   useEffect(()=> {
     setIsMobile(window.innerWidth < 700);
-  },[window.innerWidth])
+  },[])
 
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
@@ -78,24 +78,21 @@ const CartIcon = styled.img`
 const CartItems = styled.div`
   color: white;
   font-size: 2rem;
-  max-
 `;
 const Container = styled.div`
   display: flex;
   background-color: ${props => props.scrollPixel > 100 ? 'black' : props.background};
   height: 5vw;
   min-height: 60px;
-  border: 1px solid red;
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
   width: 100vw;
   z-index: 2;
   overflow: hidden;
-  // @media (min-width: 320px) and (max-width: 425px) {
-  //   background-color: black;
-  //   height: 7.5vh;
-  // }
+  @media screen and (min-width: 1500px) {
+    height: 5vh;
+  }
 `;
 const CloudContainer = styled.div`
   display: flex;
@@ -116,8 +113,7 @@ const Cone = styled.img`
 `
 const LogoTray = styled.div`
   align-items: center;
-  display:flex;
-  // padding-top: 10px;
+  display: flex;
   align-self: flex-start;
   flex-wrap: wrap;
   border-radius: 0 50px 50px 0;
@@ -125,7 +121,6 @@ const LogoTray = styled.div`
   width: 40%;
   overflow: hidden;
   height: 100%;
-  border: 1px solid red;
   @media only screen and (max-width: 767px) {
     width: 60%;
   }
@@ -135,13 +130,15 @@ const LogoOrderDiv = styled.div`
   z-index: 2;
 `;
 const RightSubContainer = styled.div`
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20%;
+  width: 10%;
   @media only screen and (max-width: 767px) {
     width: 15%;
+  }
+  @media screen and (min-width: 1500px) {
+    width: 5%;
   }
 `;
 const StyledLink = styled(Link)`
