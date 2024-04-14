@@ -62,7 +62,7 @@ const SlideButton = styled.div`
 const SlideImage = styled.img`
   width: 100%;
   height: 100%;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s linear;
   ${({ cover }) => cover && css` object-fit: fill; `}
   opacity: 0.7;
   opacity: ${({ fade }) => (fade ? 0 : 1)}; // Control opacity based on fade state

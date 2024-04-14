@@ -63,7 +63,7 @@ const NewsLetterSignUpWrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
+  margin-top: 1vh;
   height: 70vh;
   @media screen and (max-width: 767px) {
     height: 350vw;

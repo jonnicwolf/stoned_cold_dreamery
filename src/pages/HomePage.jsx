@@ -10,7 +10,7 @@ const signature_flower = [ indica_jar, hybrid_jar, sativa_jar ];
 const flavors = [ birthday_cake, blue_dream, sherblato ];
 const banners = [ logo_dude_pink, boricanna_shared_joint, logo_plain_estd, boricanna ];
 const carousel_webbanner_speed = 5000; // in ms
-const carousel_cream_speed = 500;
+const carousel_cream_speed = 600;
 
 const Home = () => {
   const [hover1, setHover1] = useState(false);
