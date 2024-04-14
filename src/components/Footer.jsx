@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
+
+import { SocialIcon } from 'react-social-icons';
 import NewsLetterSignUp from './NewsLetterSignUp';
 import Logo from './Logo';
 
@@ -23,9 +25,16 @@ const Footer = () => {
         </LeftBox>
         <RightBox>
           <IconBox>
-            <div>ig</div>
-            <div>twitter</div>
-            <div>fb</div>
+            <SocialIcon
+              url='https://www.instagram.com/thestoned_cold_dreamery/'
+              fgColor="black"
+              bgColor="white"
+              />
+            <SocialIcon
+              url='https://twitter.com/theSCDreamery'
+              fgColor="black"
+              bgColor='white'
+            />
           </IconBox>
           <Privacy>
             <PrivacyBox>Managing Data | Privacy Preferences</PrivacyBox>
@@ -36,7 +45,7 @@ const Footer = () => {
       </AboutLinks>
 
       <FooterLogoContainer>
-        <Logo size={'large'}/>
+        <Logo size={'large'}/> <span style={{color: 'white'}}>TM</span>
         {/* <Copyright>&#9400; 2020 - 2040 The Stoned Cold Dreamery. All rights reserved. </Copyright> */}
       </FooterLogoContainer>
       
