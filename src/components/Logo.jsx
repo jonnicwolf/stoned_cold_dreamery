@@ -7,7 +7,7 @@ const Logo = ({ size }) => {
   const options = {
     small: '2.5rem',
     medium: '3rem',
-    large: '90%'
+    large: '14vw'
   }
   return (
     <LogoImg src={logo_white} alt='scd logo' size={options[size]} />

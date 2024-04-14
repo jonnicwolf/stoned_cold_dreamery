@@ -23,6 +23,7 @@ const Footer = () => {
           <BoxLink>PRIVACY POLICY</BoxLink>
           <BoxLink>TERMS OF SERVICE</BoxLink>
         </LeftBox>
+
         <RightBox>
           <IconBox>
             <SocialIcon
@@ -55,16 +56,26 @@ const Footer = () => {
 
 const NewsLetterSignUpWrapper = styled.div`
   height: 40%;
+  @media screen and (max-width: 767px) {
+    height: 23%;
+  }
 `;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 10vh;
   height: 70vh;
+  @media screen and (max-width: 767px) {
+    height: 350vw;
+  }
 `;
 const AboutLinks = styled.div`
   display: flex;
   height: 50%;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    height: 40%;
+  }
 `;
 const LeftBox = styled.div`
   display: flex;
@@ -73,12 +84,18 @@ const LeftBox = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 767pc) {
+    width: 100%;
+  }
 `;
 const RightBox = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 30%;
+  @media screen and (max-width: 767pc) {
+    width: 100%;
+  }
 `;
 const BoxLink = styled(Link)`
   display: flex;
@@ -138,6 +155,13 @@ const FooterLogoContainer = styled.div`
   width: 100%;
   bottom: 0;
   z-index: 5;
+  overflow: hidden;
+  @media screen and (max-width: 767px) {
+    height: 10%;
+  }
+  @media screen and (min-width: 1500px) {
+    height: 30%;
+  }
 `;
 
 export default Footer;

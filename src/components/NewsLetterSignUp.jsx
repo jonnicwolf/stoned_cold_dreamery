@@ -37,7 +37,7 @@ const Container = styled.div`
 const Button = styled.button`
   border: none;
   background-color: white;
-  font-size: 3vw;
+  font-size: clamp(2vw,3vw, 25px);
   font-family: var(--font-family-modak);
   height: 60px;
   padding: 0;
