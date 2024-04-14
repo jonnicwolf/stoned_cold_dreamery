@@ -94,22 +94,8 @@ const InputContainer = styled.div`
 const Title = styled.h1`
   align-self: center;
   color: black;
-  font-size: 50px;
+  font-size: 2.5em;
   font-family: 'Bebas Neue';
-  @media only screen and (max-width: 767px) {
-    font-size: 30px;
-  }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    font-size: 50px;
-  }
-  @media (min-width: 2560px) {
-    font-size: 60px;
-  // }
 `;
-// const GlobalStyle = createGlobalStyle`
-//   body *:not(${InputContainer}) {
-//     opacity: 0.2;
-//   }
-
 
 export default NewsLetterSignUp;
