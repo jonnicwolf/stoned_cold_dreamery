@@ -13,13 +13,13 @@ const Footer = () => {
 
       <AboutLinks>
         <LeftBox>
-          <div>HOME TEAM</div>
-          <div>CONTACT US</div>
-          <div>REFER A FRIEND</div>
-          <div>ACCESSIBILITY</div>
-          <div>FAQS</div>
-          <div>PRIVACY POLICY</div>
-          <div>TERMS OF SERVICE</div>
+          <BoxLink>HOME TEAM</BoxLink>
+          <BoxLink>CONTACT US</BoxLink>
+          <BoxLink>REFER A FRIEND</BoxLink>
+          <BoxLink>ACCESSIBILITY</BoxLink>
+          <BoxLink>FAQS</BoxLink>
+          <BoxLink>PRIVACY POLICY</BoxLink>
+          <BoxLink>TERMS OF SERVICE</BoxLink>
         </LeftBox>
         <RightBox>
           <IconBox>
@@ -60,12 +60,10 @@ const AboutLinks = styled.div`
 const LeftBox = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  wrap: nowrap;
-  justify-content: space-around;
-  align-items: start;
   width: 70%;
-  height: 40vh;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 `;
 const RightBox = styled.div`
   display: flex;
@@ -75,7 +73,16 @@ const RightBox = styled.div`
   width: 30%;
 `;
 const BoxLink = styled(Link)`
-  
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  font-family: 'Modak';
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 2em;
+  color: rgb(0,0,0,1);
 `;
 const Privacy = styled.div`
   text-align: right;
@@ -97,10 +104,10 @@ const IconBox = styled.div`
   gap: 20%;
   height: 50%;
 `;
-const Copyright = styled.p`
-  font-size: 1.5vh;
-  font-family: Permanent Marker;
-`
+// const Copyright = styled.p`
+//   font-size: 1.5vh;
+//   font-family: Permanent Marker;
+// `
 const FooterLogoContainer = styled.div`
   align-items: center;
   background-color: black;
