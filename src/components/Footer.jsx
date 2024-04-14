@@ -30,7 +30,7 @@ const Footer = () => {
           <Privacy>
             <PrivacyBox>Managing Data | Privacy Preferences</PrivacyBox>
             <PrivacyBox>Do Not Sell My Personal Information</PrivacyBox>
-            <div>Interest-Based Ads</div>
+            <PrivacyBoxLarge>Interest-Based Ads</PrivacyBoxLarge>
           </Privacy>
         </RightBox>
       </AboutLinks>
@@ -45,7 +45,7 @@ const Footer = () => {
 };
 
 const NewsLetterSignUpWrapper = styled.div`
-  height: 30%;
+  height: 40%;
 `;
 const Container = styled.div`
   display: flex;
@@ -68,19 +68,18 @@ const LeftBox = styled.div`
 const RightBox = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  height: 40vh;
+  height: 100%;
   width: 30%;
 `;
 const BoxLink = styled(Link)`
   display: flex;
   align-items: center;
-  border: 2px solid black;
+  border: 1px solid black;
+  border-width: 1px 1px 0 1px;
   font-family: 'Modak';
   text-decoration: none;
   height: 100%;
   width: 100%;
-  padding-left: 10px;
   font-size: 2em;
   color: rgb(0,0,0,1);
   &:hover {
@@ -92,22 +91,30 @@ const BoxLink = styled(Link)`
 const Privacy = styled.div`
   text-align: right;
   height: 50%;
+  width: 100%;
+  
 `;
 const PrivacyBox = styled.div`
   height: 20%;
   width: 100%;
-  border: 1px solid grey;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border: 1px solid black;
+  border-width: 0 1px 1px 1px;
+`;
+const PrivacyBoxLarge = styled.div`
+  border: 1px solid black;
+  border-width: 0 1px 1px 1px;
+  height: 60%;
 `;
 const IconBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid blue;
   gap: 20%;
   height: 50%;
+  border: 1px solid black;
 `;
 // const Copyright = styled.p`
 //   font-size: 1.5vh;
@@ -118,10 +125,8 @@ const FooterLogoContainer = styled.div`
   background-color: black;
   display: flex;
   height: 20%;
-  border: 1px solid yellow;
   justify-content: center;
   width: 100%;
-  // position: fixed;
   bottom: 0;
   z-index: 5;
 `;

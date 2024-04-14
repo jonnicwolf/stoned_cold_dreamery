@@ -8,15 +8,15 @@ const NewsLetterSignUp = () => {
   return (
     <ConeContainer>
       <InputContainer>
-          <Title>GET NEWS & UPDATES</Title>
-          <Form action="">
-            <Input type="text" placeholder='email address'/>
-            <Button>SIGN UP</Button>
-          </Form>
-          <Disclaimer>
-            By clicking 'SIGN UP,' I represent I am at least the age of twenty-one (21), I have read, understood, and agree to the Terms of Service and Privacy Policy and I agree to receive emails and customer service communications from The Stoned Cold Dreamery via email. I can unsubscribe at any time by clicking 'unsubscribe' in emails.
-          </Disclaimer>
-        </InputContainer>
+        <Title>GET EXCLUSIVE NEWS AND CONTENT</Title>
+        <Form action="">
+          <Input type="text" placeholder='email address'/>
+          <Button>SIGN UP</Button>
+        </Form>
+        <Disclaimer>
+          By clicking 'SIGN UP,' I represent I am at least the age of twenty-one (21), I have read, understood, and agree to the Terms of Service and Privacy Policy and I agree to receive emails and customer service communications from The Stoned Cold Dreamery via email. I can unsubscribe at any time by clicking 'unsubscribe' in emails.
+        </Disclaimer>
+      </InputContainer>
       <Container />
     </ConeContainer>
   );
@@ -25,15 +25,12 @@ const NewsLetterSignUp = () => {
 const Container = styled.div`
   width: 100%;
   position: relative;
-  height: 30vh;
+  height: 100%;
   display: flex;
-  opacity: 20%;
+  opacity: 10%;
   flex-direction: column;
-  margin-top: 5px;
-  margin-bottom: 5px;
   background-image: url(${cone});
-  background-color: rgb(255,255,255);
-  background-size: 70px 70px;
+  background-size: 40px 40px;
   z-index: 2;
   }
 `;
@@ -72,13 +69,11 @@ const Button = styled.button`
   }
 `;
 const ConeContainer = styled.div`
-  border: 1px solid red;
   height: 100%;
   width: 100%;
   background-color: white;
   opacity: 100%;
   z-index: 1;
-  overflow: hidden;
   @media only screen and (max-width: 767px) {
     padding-bottom: 5vh;
   }
@@ -155,6 +150,7 @@ const Title = styled.h1`
   align-self: center;
   color: black;
   font-size: 50px;
+  font-family: 'Bebas Neue';
   @media only screen and (max-width: 767px) {
     font-size: 30px;
   }
@@ -163,7 +159,7 @@ const Title = styled.h1`
   }
   @media (min-width: 2560px) {
     font-size: 60px;
-  }
+  // }
 `;
 // const GlobalStyle = createGlobalStyle`
 //   body *:not(${InputContainer}) {
