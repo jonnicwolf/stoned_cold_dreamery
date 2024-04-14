@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
@@ -30,11 +30,16 @@ const [
 ] = animation;
 
 const NavBar = ({ scrollPixel }) => {
+  const [isMobile, setIsMobile] = useState(false);
   const { cartItems } = useCart();
   const location = useLocation();
   const background = location.pathname !== '/' ? 'black' : 'none';
-  const isMobile = window.innerWidth < 767;
+  
   console.log(isMobile)
+
+  useEffect(()=> {
+    setIsMobile(window.innerWidth < 700);
+  },[window.innerWidth])
 
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
@@ -67,7 +72,7 @@ const NavBar = ({ scrollPixel }) => {
 };
 
 const CartIcon = styled.img`
-  height: 6vw;
+  height:9vw;
   max-height: 50px;
 `;
 const CartItems = styled.div`
@@ -106,8 +111,8 @@ const CloudContainer1 = styled(CloudContainer)`
   }
 `;
 const Cone = styled.img`
-  width: 3vw;
-  height: 2vh;
+  width: 2.5vh;
+  height: 15vw;
 `
 const LogoTray = styled.div`
   align-items: center;
@@ -122,7 +127,7 @@ const LogoTray = styled.div`
   height: 100%;
   border: 1px solid red;
   @media only screen and (max-width: 767px) {
-    width: 80%;
+    width: 60%;
   }
 `;
 const LogoOrderDiv = styled.div`

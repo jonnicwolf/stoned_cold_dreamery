@@ -97,6 +97,9 @@ const Title = styled.h1`
   color: black;
   font-size: 2.5em;
   font-family: 'Bebas Neue';
+  @media screen and (max-width: 500px) {
+    font-size: 9vw;
+  }
 `;
 
 export default NewsLetterSignUp;
