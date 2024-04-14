@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 import styled from 'styled-components';
+
 import HomePage from './pages/HomePage';
 import CreamPage from "./pages/CreamPage";
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import HerbPage from './pages/HerbPage';
-import NavBar from './components/NavBar';
 import Sandbox from './pages/Sandbox';
+
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 function App() {
   const [scrollPixel, setScrollPixel] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      const screenWidth = document.documentElement.clientWidth;
       setScrollPixel(scrolled);
-      setScreenWidth(screenWidth);
     };
     window.addEventListener('scroll', handleScroll);
 
@@ -39,12 +38,7 @@ function App() {
         <Route exact path='/checkout' element={<CheckoutPage />} />
       </Routes>
 
-      { screenWidth <= 768
-        ? null
-        : <FooterLogoContainer>
-            <Copyright>&#9400; 2020 - 2040 The Stoned Cold Dreamery. All rights reserved. </Copyright>
-          </FooterLogoContainer>
-      }
+      <Footer />
     </Container>
   );
 };
@@ -52,21 +46,6 @@ function App() {
 const Container = styled.div`
   height: 100%;
   overflow-x: hidden;
-`;
-const Copyright = styled.p`
-  font-size: 1.5vh;
-  font-family: Permanent Marker;
-`
-const FooterLogoContainer = styled.footer`
-  align-items: center;
-  background-color: white;
-  display: flex;
-  height: 5vh;
-  justify-content: center;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: 5;
 `;
 
 export default App;

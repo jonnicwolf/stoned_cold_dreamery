@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
@@ -6,6 +6,7 @@ import { useCart } from './CartProvider';
 import Cloud from './Cloud';
 import {cloud, animation} from '../components/customizations';
 
+const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png')
 const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
 const {
   // tiny,
@@ -29,23 +30,35 @@ const [
 ] = animation;
 
 const NavBar = ({ scrollPixel }) => {
+  const [isMobile, setIsMobile] = useState(false);
   const { cartItems } = useCart();
   const location = useLocation();
   const background = location.pathname !== '/' ? 'black' : 'none';
+  
+  console.log(isMobile)
+
+  useEffect(()=> {
+    setIsMobile(window.innerWidth < 700);
+  },[])
 
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
-
+      { isMobile ?
       <LogoTray>
-        <StyledLink to='/'>
-          <LogoOrderDiv>
-            <Logo />
-          </LogoOrderDiv>
-        </StyledLink>
-        <CloudContainer1>
-          <Cloud scale={normal} animation={motion_three}/>
-        </CloudContainer1>
+        <Cone src={cone} alt="scd logo" />
       </LogoTray>
+      : 
+      <LogoTray>
+      <StyledLink to='/'>
+        <LogoOrderDiv>
+          <Logo size='small'/>
+        </LogoOrderDiv>
+      </StyledLink>
+      <CloudContainer1>
+        <Cloud scale={normal} animation={motion_three}/>
+      </CloudContainer1>
+    </LogoTray>
+    }
 
       <RightSubContainer>
         <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
@@ -59,7 +72,8 @@ const NavBar = ({ scrollPixel }) => {
 };
 
 const CartIcon = styled.img`
-  height: 2rem;
+  height:9vw;
+  max-height: 50px;
 `;
 const CartItems = styled.div`
   color: white;
@@ -68,16 +82,16 @@ const CartItems = styled.div`
 const Container = styled.div`
   display: flex;
   background-color: ${props => props.scrollPixel > 100 ? 'black' : props.background};
-  height: 5vh;
+  height: 5vw;
+  min-height: 60px;
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
   width: 100vw;
   z-index: 2;
   overflow: hidden;
-  @media (min-width: 320px) and (max-width: 425px) {
-    background-color: black;
-    height: 7.5vh;
+  @media screen and (min-width: 1500px) {
+    height: 5vh;
   }
 `;
 const CloudContainer = styled.div`
@@ -93,25 +107,22 @@ const CloudContainer1 = styled(CloudContainer)`
     transform: translate(-50px, -20px);
   }
 `;
+const Cone = styled.img`
+  width: 2.5vh;
+  height: 15vw;
+`
 const LogoTray = styled.div`
   align-items: center;
-  display:flex;
-  padding-left: 25px;
-  padding-top: 10px;
+  display: flex;
   align-self: flex-start;
   flex-wrap: wrap;
   border-radius: 0 50px 50px 0;
   position: relative;
-  width: 19vw;
+  width: 40%;
   overflow: hidden;
+  height: 100%;
   @media only screen and (max-width: 767px) {
-    border: 1px solid red;
-    width: 45vw;
-    padding-left: 10px;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: 55vw;
-    padding-left: 10px;
+    width: 60%;
   }
 `;
 const LogoOrderDiv = styled.div`
@@ -120,19 +131,14 @@ const LogoOrderDiv = styled.div`
 `;
 const RightSubContainer = styled.div`
   display: flex;
-  align-self: center;
+  align-items: center;
   justify-content: center;
-  gap: 5vw;
-  width: 70px;
-  transform: translateY(-15px);
+  width: 10%;
   @media only screen and (max-width: 767px) {
-    transform: translateY(5px);
+    width: 15%;
   }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    transform: translateY(5px);
-  }
-  @media only screen and (min-width: 1024px) {
-    transform: none;
+  @media screen and (min-width: 1500px) {
+    width: 5%;
   }
 `;
 const StyledLink = styled(Link)`
