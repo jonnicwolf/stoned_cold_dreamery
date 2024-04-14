@@ -83,6 +83,11 @@ const BoxLink = styled(Link)`
   padding-left: 10px;
   font-size: 2em;
   color: rgb(0,0,0,1);
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.2s ease-out;
+  }
 `;
 const Privacy = styled.div`
   text-align: right;
