@@ -6,6 +6,7 @@ import { useCart } from './CartProvider';
 import Cloud from './Cloud';
 import {cloud, animation} from '../components/customizations';
 
+const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png')
 const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
 const {
   // tiny,
@@ -32,20 +33,27 @@ const NavBar = ({ scrollPixel }) => {
   const { cartItems } = useCart();
   const location = useLocation();
   const background = location.pathname !== '/' ? 'black' : 'none';
+  const isMobile = window.innerWidth < 767;
+  console.log(isMobile)
 
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
-
+      { isMobile ?
       <LogoTray>
-        <StyledLink to='/'>
-          <LogoOrderDiv>
-            <Logo />
-          </LogoOrderDiv>
-        </StyledLink>
-        <CloudContainer1>
-          <Cloud scale={normal} animation={motion_three}/>
-        </CloudContainer1>
+        <Cone src={cone} alt="scd logo" />
       </LogoTray>
+      : 
+      <LogoTray>
+      <StyledLink to='/'>
+        <LogoOrderDiv>
+          <Logo size='small'/>
+        </LogoOrderDiv>
+      </StyledLink>
+      <CloudContainer1>
+        <Cloud scale={normal} animation={motion_three}/>
+      </CloudContainer1>
+    </LogoTray>
+    }
 
       <RightSubContainer>
         <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
@@ -59,26 +67,30 @@ const NavBar = ({ scrollPixel }) => {
 };
 
 const CartIcon = styled.img`
-  height: 2rem;
+  height: 6vw;
+  max-height: 50px;
 `;
 const CartItems = styled.div`
   color: white;
   font-size: 2rem;
+  max-
 `;
 const Container = styled.div`
   display: flex;
   background-color: ${props => props.scrollPixel > 100 ? 'black' : props.background};
-  height: 5vh;
+  height: 5vw;
+  min-height: 60px;
+  border: 1px solid red;
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
   width: 100vw;
   z-index: 2;
   overflow: hidden;
-  @media (min-width: 320px) and (max-width: 425px) {
-    background-color: black;
-    height: 7.5vh;
-  }
+  // @media (min-width: 320px) and (max-width: 425px) {
+  //   background-color: black;
+  //   height: 7.5vh;
+  // }
 `;
 const CloudContainer = styled.div`
   display: flex;
@@ -93,25 +105,24 @@ const CloudContainer1 = styled(CloudContainer)`
     transform: translate(-50px, -20px);
   }
 `;
+const Cone = styled.img`
+  width: 3vw;
+  height: 2vh;
+`
 const LogoTray = styled.div`
   align-items: center;
   display:flex;
-  padding-left: 25px;
-  padding-top: 10px;
+  // padding-top: 10px;
   align-self: flex-start;
   flex-wrap: wrap;
   border-radius: 0 50px 50px 0;
   position: relative;
-  width: 19vw;
+  width: 40%;
   overflow: hidden;
+  height: 100%;
+  border: 1px solid red;
   @media only screen and (max-width: 767px) {
-    border: 1px solid red;
-    width: 45vw;
-    padding-left: 10px;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: 55vw;
-    padding-left: 10px;
+    width: 80%;
   }
 `;
 const LogoOrderDiv = styled.div`
@@ -119,20 +130,13 @@ const LogoOrderDiv = styled.div`
   z-index: 2;
 `;
 const RightSubContainer = styled.div`
+  border: 1px solid red;
   display: flex;
-  align-self: center;
+  align-items: center;
   justify-content: center;
-  gap: 5vw;
-  width: 70px;
-  transform: translateY(-15px);
+  width: 20%;
   @media only screen and (max-width: 767px) {
-    transform: translateY(5px);
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    transform: translateY(5px);
-  }
-  @media only screen and (min-width: 1024px) {
-    transform: none;
+    width: 15%;
   }
 `;
 const StyledLink = styled(Link)`

@@ -37,7 +37,7 @@ const Container = styled.div`
 const Button = styled.button`
   border: none;
   background-color: white;
-  font-size: 25px;
+  font-size: 3vw;
   font-family: var(--font-family-modak);
   height: 60px;
   padding: 0;
@@ -71,6 +71,7 @@ const Form = styled.form`
   display: flex;
   justify-content: space-between;
   width: 60%;
+  min-width: 270px;
   border-radius: 30px;
 `;
 const Input = styled.input`
