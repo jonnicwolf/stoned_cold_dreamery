@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
-import NewsLetterSignUp from '../components/NewsLetterSignUp';
 import { indica_jar, hybrid_jar, sativa_jar } from '../photo_assets/signature_flower/index.js';
 import { birthday_cake,blue_dream, sherblato } from '../photo_assets/flavors/index.js';
 import { boricanna, boricanna_shared_joint, logo_dude_pink, logo_plain_estd  } from '../photo_assets/carousel_home/index.js';
