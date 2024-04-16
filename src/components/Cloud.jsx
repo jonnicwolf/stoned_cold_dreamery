@@ -1,15 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Cloud = ( {scale, animation} ) => {
+const Cloud = ({ scale, animation, text, color }) => {
   const { duration, left } = animation;
+
+  const scales = {
+    scale_1: (1.6 * scale) + 1.6,
+    scale_2: (2.4 * scale) + 2.4,
+    scale_3: (2.1 * scale) + 2.1,
+  }
+
   return (
-    <CloudFrame scale={scale} duration={duration} left={left}>
+    <CloudFrame scale={scales} duration={duration} left={left} color={color}>
+      <div>{text}</div>
       <div></div>
       <div></div>
       <div></div>
       <div></div>
-      <div></div>
+      
     </CloudFrame>
   );
 };
@@ -25,47 +33,44 @@ const CloudFrame = styled.div`
   border-radius: 10px;
   position: relative;
   margin: 20px 20px -10px 50px;
-  width: 54px;
-  height: 25px;
-  background: white;
+  width:  64 * ${props => props.scale};
+  height: 25 * ${props => props.scale};
+  // background: black;
   & div {
     -moz-box-shadow: inset -2px -3px 0 0 #f7e7eb;
     -webkit-box-shadow: inset -2px -3px 0 0 #f7e7eb;
     box-shadow: inset -2px -3px 0 0 #f7e7eb;
     position: absolute;
     border-radius: 50%;
-    width: 12px;
     width: 22px;
-    height: 12px;
     height: 20px;
     left: -3px;
     bottom: 0;
     background: #fafbf0;
-    background: black;
     z-index: 10;
   }
   & div:first-child + div {
-    -moz-transform: scale(1.6, 1.6);
-    -ms-transform: scale(1.6, 1.6);
-    -webkit-transform: scale(1.6, 1.6);
-    transform: scale(${props => props.scale});
+    -moz-transform:    scale(${props =>  props.scale.scale_1} );
+    -ms-transform:     scale(${props =>  props.scale.scale_1} );
+    -webkit-transform: scale(${props =>  props.scale.scale_1} );
+    transform:         scale(${props =>  props.scale.scale_1} );
     margin: 0 0 4px 13px;
     margin: 0 0 4px 3px;
     z-index: 9;
   }
   & div:first-child + div + div {
-    -moz-transform: scale(2.4, 2.4);
-    -ms-transform: scale(2.4, 2.4);
-    -webkit-transform: scale(2.4, 2.4);
-    transform: scale(${props => props.scale});
+    -moz-transform:    scale(${props =>  props.scale.scale_2} );
+    -ms-transform:     scale(${props =>  props.scale.scale_2} );
+    -webkit-transform: scale(${props =>  props.scale.scale_2} );
+    transform:         scale(${props =>  props.scale.scale_2} );
     margin: 0 0 9px 32px;
     z-index: 8;
   }
   & div:first-child + div + div + div {
-    -moz-transform: scale(1.3, 1.3);
-    -ms-transform: scale(1.3, 1.3);
-    -webkit-transform: scale(1.3, 1.3);
-    transform: scale(${props => props.scale});
+    -moz-transform:    scale(${props =>  props.scale.scale_3} );
+    -ms-transform:     scale(${props =>  props.scale.scale_3} );
+    -webkit-transform: scale(${props =>  props.scale.scale_3} );
+    transform:         scale(${props =>  props.scale.scale_3} );
     margin: 0 0 2px 50px;
     z-index: 7;
   }
