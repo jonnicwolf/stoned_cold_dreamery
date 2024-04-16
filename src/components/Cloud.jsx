@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Cloud = ( {scale, animation} ) => {
-  const {duration, left } = animation;
+  const { duration, left } = animation;
   return (
     <CloudFrame scale={scale} duration={duration} left={left}>
       <div></div>
@@ -41,6 +41,7 @@ const CloudFrame = styled.div`
     left: -3px;
     bottom: 0;
     background: #fafbf0;
+    background: black;
     z-index: 10;
   }
   & div:first-child + div {

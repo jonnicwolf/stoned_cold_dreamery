@@ -9,10 +9,8 @@ import {cloud, animation} from '../components/customizations';
 const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png')
 const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
 const {
-  // tiny,
-  // small,
-  normal,
-  // large
+  fluffy,
+  extra_fluffy
 } = cloud;
 const [
   // motion_one,
@@ -55,7 +53,7 @@ const NavBar = ({ scrollPixel }) => {
         </LogoOrderDiv>
       </StyledLink>
       <CloudContainer1>
-        <Cloud scale={normal} animation={motion_three}/>
+        <Cloud scale={fluffy} animation={motion_three}/>
       </CloudContainer1>
     </LogoTray>
     }
