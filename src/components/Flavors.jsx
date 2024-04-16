@@ -14,7 +14,18 @@ const Flavors = () => {
 
       <Frame color={'#ecd484'}>
         <Img src={birthday_cake} alt='Birthday Cake'/>
-        <div>Our collection of house flavors</div>
+
+        <FrameInfo>
+
+          <ImgTitle>Birthday Cake</ImgTitle>
+
+          <ImgInfo>
+            <Price>$15.99</Price>
+            <Button>ADD TO CART</Button>
+          </ImgInfo>
+
+        </FrameInfo>
+
       </Frame>
 
       <Frame color={'#44c4f4'}>
@@ -43,9 +54,8 @@ const Frame = styled.div`
   height: 100%
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   background-color: ${props => props.color}
-`;  
+`;
 const Title = styled(Frame)`
   font-family: 'Bebas Neue';
   font-size: 3vw;
@@ -57,5 +67,41 @@ const Img = styled.img`
   object-fit: cover;
   height: 70%;
 `;
+const FrameInfo = styled.div`
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+`;
+const ImgTitle = styled.div`
+  text-align: center;
+  
+  font-family: Permanent Marker;
+  color: white;
+  font-size: 2vw;
+  border: 1px solid red;
+`;
+const ImgInfo = styled.div`
+  display: flex;
+  height: 100%;
+  border: 1px solid red;
+`;
+const Price = styled.p`
+  
+  height: 100%;
+  width: 50%;
+  font-family: 'Chakra Petch';
+  font-weight: bold;
+  font-size: 2vw;
+  padding-left: 1vw;
+`;
+const Button = styled.button`
+  background: rgba(0,0,0,0);
+  width: 50%;
+  font-family: Modak;
+  font-size: 2vw;
+  line-height: 1.5vw;
+`;
+
+
 
 export default Flavors;
