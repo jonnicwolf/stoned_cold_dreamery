@@ -1,10 +1,12 @@
 import React from 'react';
-// import styled from 'styled-components';
-// import Footer from '../components/Footer';
+import Flavors from '../components/Flavors';
+import MultiFrameWindow4 from '../components/MultiFrameWindow4';
 
 const Sandbox = () => {
   return (
-    <></>
+    <>
+      <Flavors />
+    </>
   );
 };
 
