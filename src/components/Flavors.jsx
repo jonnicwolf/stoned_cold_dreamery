@@ -1,29 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Cloud from '../components/Cloud';
-import {cloud, animation} from '../components/customizations';
 
 const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
 const birthday_cake = require( '../photo_assets/flavors/birthday_cake.jpg' );
 const sherblato = require( '../photo_assets/flavors/sherblato.jpg' );
+const cloud = require('../photo_assets/cloud/—Pngtree—white cartoon clouds clipart_5568114.png');
 
 const Flavors = () => {
-  const [
-    motion_one,
-    motion_two,
-    motion_three,
-    motion_four,
-    motion_five,
-    motion_six,
-    motion_seven,
-    motion_eight,
-    motion_nine,
-    motion_ten,
-    motion_eleven,
-    motion_twelve,
-    motion_thirteen,
-  ] = animation;
-
   return (
     <Container>
       <TitleContainer color={'#c5e7fa'}>
@@ -38,7 +21,8 @@ const Flavors = () => {
           <ImgInfo>
             <Price>$15.99</Price>
             <Button>
-              <Cloud scale={0.5} animation={motion_thirteen} text={'CART+'} color={'black'} />
+              <Cloud src={cloud} alt="" />
+              <CartPlus>CART+</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
@@ -51,7 +35,8 @@ const Flavors = () => {
           <ImgInfo>
             <Price>$15.99</Price>
             <Button>
-              <Cloud scale={0.5} animation={motion_thirteen} text={'CART+'} color={'black'}/>
+              <Cloud src={cloud} alt="" />
+              <CartPlus>CART+</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
@@ -64,7 +49,8 @@ const Flavors = () => {
           <ImgInfo>
             <Price>$15.99</Price>
             <Button>
-              <Cloud scale={0.5} animation={motion_thirteen} text={'CART+'} color={'black'}/>
+              <Cloud src={cloud} alt="" />
+              <CartPlus>CART+</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
@@ -105,6 +91,7 @@ const Title = styled.div`
 const Img = styled.img`
   object-fit: cover;
   height: 70%;
+  position: relative;
 `;
 const FrameInfo = styled.div`
   height: 30%;
@@ -122,6 +109,7 @@ const ImgTitle = styled.div`
 const ImgInfo = styled.div`
   display: flex;
   height: 100%;
+  overflow: hidden;
 `;
 const Price = styled.p`
   height: 100%;
@@ -133,6 +121,7 @@ const Price = styled.p`
   transform: translateY(-10px);
 `;
 const Button = styled.button`
+  display: flex;
   position: relative;
   z-index: 1;
   width: 50%;
@@ -142,10 +131,28 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   background-color: transparent;
+  text-align: center;
 `;
 const SubTitle = styled.div`
   text-align: right;
   padding: 15px;
 `;
+const Cloud = styled.img`
+  height: 150%;
+  width: 100%;
+  transform: translateY(-1vh);
+`;
+const CartPlus = styled.span`
+  position: absolute;
+  top: 42%;
+  left: 25%;
+  font-size: 2w;
+  @media screen and (max-width: 599px) {
+    top: 25%
+  }
+  @media screen and (min-width: 600px) and (max-width: 1064px) {
+    top: 30%;
+  }
+`
 
 export default Flavors;
