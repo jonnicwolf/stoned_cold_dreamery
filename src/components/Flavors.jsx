@@ -14,28 +14,35 @@ const Flavors = () => {
 
       <Frame color={'#ecd484'}>
         <Img src={birthday_cake} alt='Birthday Cake'/>
-
         <FrameInfo>
-
           <ImgTitle>Birthday Cake</ImgTitle>
-
           <ImgInfo>
             <Price>$15.99</Price>
-            <Button>ADD TO CART</Button>
+            <Button>CART+</Button>
           </ImgInfo>
-
         </FrameInfo>
-
       </Frame>
 
       <Frame color={'#44c4f4'}>
         <Img src={blue_dream} alt="Blue Dream" />
-        <div>Our collection of house flavors</div>
+        <FrameInfo>
+          <ImgTitle>Blue Dream</ImgTitle>
+          <ImgInfo>
+            <Price>$15.99</Price>
+            <Button>CART+</Button>
+          </ImgInfo>
+        </FrameInfo>
       </Frame>
 
       <Frame color={'#942c4c'}>
         <Img src={sherblato} alt="Sherblato" />
-        <div>Our collection of house flavors</div>
+        <FrameInfo>
+          <ImgTitle>Sherblato</ImgTitle>
+          <ImgInfo>
+            <Price>$15.99</Price>
+            <Button>CART+</Button>
+          </ImgInfo>
+        </FrameInfo>
       </Frame>
     </Container>
   );
@@ -43,7 +50,6 @@ const Flavors = () => {
 
 const Container = styled.div`
   margin-top: 20vh;
-  border: 1px solid red;
   display: flex;
   width: 100vw;
   height: 30vw;
@@ -60,7 +66,6 @@ const Title = styled(Frame)`
   font-family: 'Bebas Neue';
   font-size: 3vw;
   letter-spacing: 5px;
-  text-align: center;
   height: 100%;
 `;
 const Img = styled.img`
@@ -71,22 +76,19 @@ const FrameInfo = styled.div`
   height: 30%;
   display: flex;
   flex-direction: column;
+  color: #faf1e6;
 `;
 const ImgTitle = styled.div`
-  text-align: center;
-  
+  padding-left: 15px;
   font-family: Permanent Marker;
-  color: white;
-  font-size: 2vw;
-  border: 1px solid red;
+  font-weight: bold;
+  font-size: 2.5vw;
 `;
 const ImgInfo = styled.div`
   display: flex;
   height: 100%;
-  border: 1px solid red;
 `;
 const Price = styled.p`
-  
   height: 100%;
   width: 50%;
   font-family: 'Chakra Petch';
@@ -95,7 +97,6 @@ const Price = styled.p`
   padding-left: 1vw;
 `;
 const Button = styled.button`
-  background: rgba(0,0,0,0);
   width: 50%;
   font-family: Modak;
   font-size: 2vw;
