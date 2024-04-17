@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
@@ -15,10 +16,10 @@ const Flavors = () => {
       </TitleContainer>
 
       <Frame color={'#ecd484'}>
-
-        <Img src={birthday_cake} alt='Birthday Cake'/>
+        <Link to='/cream'>
+          <Img src={birthday_cake} alt='Birthday Cake'/>
+        </Link>
         <FrameInfo>
-
           <ImgTitle>Birthday Cake</ImgTitle>
           <ImgInfo>
               <Price>$15.99</Price>
@@ -27,13 +28,13 @@ const Flavors = () => {
                 <CartPlus>CART+</CartPlus>
               </Button>
           </ImgInfo>
-
         </FrameInfo>
-
       </Frame>
 
       <Frame color={'#44c4f4'}>
-        <Img src={blue_dream} alt="Blue Dream" />
+        <Link to='/cream'>
+          <Img src={blue_dream} alt="Blue Dream" />
+        </Link>
         <FrameInfo>
           <ImgTitle>Blue Dream</ImgTitle>
           <ImgInfo>
@@ -47,7 +48,9 @@ const Flavors = () => {
       </Frame>
 
       <Frame color={'#942c4c'}>
-        <Img src={sherblato} alt="Sherblato" />
+        <Link to='/cream'>
+          <Img src={sherblato} alt="Sherblato" />
+        </Link>
         <FrameInfo>
           <ImgTitle>Sherblato</ImgTitle>
           <ImgInfo>
