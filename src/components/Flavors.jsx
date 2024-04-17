@@ -15,20 +15,24 @@ const Flavors = () => {
       </TitleContainer>
 
       <Frame color={'#ecd484'}>
+
         <Img src={birthday_cake} alt='Birthday Cake'/>
         <FrameInfo>
+
           <ImgTitle>Birthday Cake</ImgTitle>
           <ImgInfo>
-            <Price>$15.99</Price>
-            <Button>
-              <Cloud src={cloud} alt="" />
-              <CartPlus>CART+</CartPlus>
-            </Button>
+              <Price>$15.99</Price>
+              <Button>
+                <Cloud src={cloud} alt="" />
+                <CartPlus>CART+</CartPlus>
+              </Button>
           </ImgInfo>
+
         </FrameInfo>
+
       </Frame>
 
-      <Frame color={'#44c4f4'}>
+      {/* <Frame color={'#44c4f4'}>
         <Img src={blue_dream} alt="Blue Dream" />
         <FrameInfo>
           <ImgTitle>Blue Dream</ImgTitle>
@@ -54,7 +58,7 @@ const Flavors = () => {
             </Button>
           </ImgInfo>
         </FrameInfo>
-      </Frame>
+      </Frame> */}
     </Container>
   );
 };
@@ -64,14 +68,33 @@ const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 30vw;
+  @media screen and (max-width: 1064px) {
+    flex-wrap: wrap;
+    border: 1px solid red;
+    height: 60vh;
+  }
 `;
 const Frame = styled.div`
   width: 25%;
-  max-width: 25%;
+  // max-width: 25%;
   height: 100%
   display: flex;
   flex-direction: column;
-  background-color: ${props => props.color}
+  background-color: ${props => props.color};
+  @media screen and (max-width: 1064px) {
+    width: 50%;
+    height: 100%;
+  }
+`;
+const FrameInfo = styled.div`
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  @media screen and (max-width: 1064px) {
+    height: 35%;
+    border: 1px solid red;
+  }
 `;
 const TitleContainer = styled(Frame)`
   font-family: 'Bebas Neue';
@@ -92,12 +115,9 @@ const Img = styled.img`
   object-fit: cover;
   height: 70%;
   position: relative;
-`;
-const FrameInfo = styled.div`
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  color: white;
+  @media screen and (max-width: 1064px) {
+    height: 65%;
+  }
 `;
 const ImgTitle = styled.div`
   padding-left: 15px;
@@ -105,11 +125,15 @@ const ImgTitle = styled.div`
   font-weight: bold;
   font-size: 2.5vw;
   z-index: 1;
+  @media screen and (max-width: 1064px) {
+    font-size: 5vw;
+  }
 `;
 const ImgInfo = styled.div`
   display: flex;
   height: 100%;
   overflow: hidden;
+  // border: 1px solid red;
 `;
 const Price = styled.p`
   height: 100%;
@@ -119,6 +143,9 @@ const Price = styled.p`
   font-size: 2vw;
   padding-left: 1vw;
   transform: translateY(-10px);
+  @media screen and (max-width: 1064px) {
+    font-size: 5vw;
+  }
 `;
 const Button = styled.button`
   display: flex;
