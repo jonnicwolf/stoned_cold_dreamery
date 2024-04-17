@@ -64,7 +64,6 @@ const Flavors = () => {
 };
 
 const Container = styled.div`
-  margin-top: 20vh;
   display: flex;
   width: 100vw;
   height: 30vw;

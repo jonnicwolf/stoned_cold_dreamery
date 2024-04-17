@@ -52,9 +52,9 @@ const NavBar = ({ scrollPixel }) => {
           <Logo size='small'/>
         </LogoOrderDiv>
       </StyledLink>
-      <CloudContainer1>
+      {/* <CloudContainer1>
         <Cloud scale={1.8} animation={motion_three}/>
-      </CloudContainer1>
+      </CloudContainer1> */}
     </LogoTray>
     }
 

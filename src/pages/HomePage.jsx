@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
+import Flavors from '../components/Flavors.jsx'
 import { indica_jar, hybrid_jar, sativa_jar } from '../photo_assets/signature_flower/index.js';
 import { birthday_cake,blue_dream, sherblato } from '../photo_assets/flavors/index.js';
 import { boricanna, boricanna_shared_joint, logo_dude_pink, logo_plain_estd  } from '../photo_assets/carousel_home/index.js';
@@ -27,7 +28,8 @@ const Home = () => {
           size={'large'} />
       </WebBannerBackground>
 
-      <CarouselContainer>
+      <Flavors />
+      {/* <CarouselContainer>
         <CarouselItem1
           style={{backgroundColor: hover1 ? 'white' : 'black'}}
           onMouseEnter={()=>setHover1(true)}
@@ -48,17 +50,17 @@ const Home = () => {
           onMouseEnter={()=>setHover2(true)}
           onMouseLeave={()=>setHover2(false)}
           to='/herb'>
-          {/* <CarouselWrap> */}
+          <CarouselWrap>
             <Carousel
               slides={signature_flower}
               cover={false}
               time={carousel_cream_speed}
               activationMode={'hover'}
               size={'small'} />
-            {/* </CarouselWrap> */}
+            </CarouselWrap>
           <Herb style={{color: hover2 ? 'black' : 'white'}}>HERB</Herb>
         </CarouselItem2>
-      </CarouselContainer>
+      </CarouselContainer> */}
 
     </Container>
   );
