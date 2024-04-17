@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useCart } from './CartProvider';
@@ -11,7 +11,8 @@ const products = require('../data.json');
 
 const Flavors = () => {
   const { addItemToCart } = useCart();
- 
+  const [hoveredFrame, setHoveredFrame] = useState(null);
+
   return (
     <Container>
       <TitleContainer color={'#c5e7fa'}>
@@ -19,7 +20,10 @@ const Flavors = () => {
         <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
       </TitleContainer>
 
-      <Frame color={'#ecd484'}>
+      <Frame
+        color={'#ecd484'}
+        onMouseEnter={()=>setHoveredFrame('birthday_cake')}
+        onMouseLeave={()=>setHoveredFrame(null)}>
         <Link to='/cream'>
           <Img src={birthday_cake} alt='Birthday Cake'/>
         </Link>
@@ -28,14 +32,17 @@ const Flavors = () => {
           <ImgInfo>
               <Price>$15.99</Price>
               <Button onClick={()=> addItemToCart(products.cream.birthday_cake)}>
-                <Cloud src={cloud} alt="" />
+                <Cloud src={cloud} alt="" hover={hoveredFrame === 'birthday_cake'}/>
                 <CartPlus>CART+</CartPlus>
               </Button>
           </ImgInfo>
         </FrameInfo>
       </Frame>
 
-      <Frame color={'#44c4f4'}>
+      <Frame
+        color={'#44c4f4'}
+        onMouseEnter={()=>setHoveredFrame('blue_dream')}
+        onMouseLeave={()=>setHoveredFrame(null)}>
         <Link to='/cream'>
           <Img src={blue_dream} alt="Blue Dream" />
         </Link>
@@ -44,14 +51,17 @@ const Flavors = () => {
           <ImgInfo>
             <Price>$15.99</Price>
             <Button onClick={()=> addItemToCart(products.cream.blue_dream)}>
-              <Cloud src={cloud} alt="" />
+              <Cloud src={cloud} alt="" hover={hoveredFrame === 'blue_dream'}/>
               <CartPlus>CART+</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
       </Frame>
 
-      <Frame color={'#942c4c'}>
+      <Frame
+        color={'#942c4c'}
+        onMouseEnter={()=>setHoveredFrame('sherblato')}
+        onMouseLeave={()=>setHoveredFrame(null)}>
         <Link to='/cream'>
           <Img src={sherblato} alt="Sherblato" />
         </Link>
@@ -60,7 +70,7 @@ const Flavors = () => {
           <ImgInfo>
             <Price>$15.99</Price>
             <Button onClick={()=> addItemToCart(products.cream.sherblato)}>
-              <Cloud src={cloud} alt="" />
+              <Cloud src={cloud} alt="" hover={hoveredFrame === 'sherblato'}/>
               <CartPlus>CART+</CartPlus>
             </Button>
           </ImgInfo>
@@ -157,6 +167,9 @@ const Cloud = styled.img`
   height: 150%;
   width: 100%;
   transform: translateY(-1vh);
+  opacity: ${props => props.hover ? 1 : 0};
+  transition: opacity 0.1s linear;
+  
 `;
 const CartPlus = styled.span`
   position: absolute;
