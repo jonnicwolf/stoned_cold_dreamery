@@ -97,6 +97,9 @@ const Title = styled.div`
   font-size: 5vw;
   padding: 15px;
   font-family: Modak;
+  @media screen and (max-width: 1064px) {
+    font-size: 2vw;
+  }
 `;
 const Img = styled.img`
   object-fit: cover;
@@ -140,6 +143,9 @@ const Button = styled.button`
 const SubTitle = styled.div`
   text-align: right;
   padding: 15px;
+  @media screen and (max-width: 1064px) {
+    font-size: 2vw;
+  }
 `;
 const Cloud = styled.img`
   height: 150%;
@@ -151,6 +157,9 @@ const CartPlus = styled.span`
   top: 42%;
   left: 25%;
   font-size: 2vw;
+  @media screen and (max-width: 1064px) {
+    transform: translateY(-80%);
+  }
 `;
 
 export default Flavors;
