@@ -6,7 +6,8 @@ import SelectState from './SelectState';
 const CheckoutForm = () => {
   return (
     <Container>
-      <Form action={alert('This is a mock website. We do not accept any payments nor will we service this order. Thank you for shopping with the Stoned Cold Dreamery')}>
+      {/* <Form action={alert('This is a mock website. We do not accept any payments nor will we service this order. Thank you for shopping with the Stoned Cold Dreamery')}> */}
+      <Form>
         <label htmlFor="email" required>Email*</label>
         <Input type="email" style={{border: '1px solid grey', borderRadius: '5px'}} placeholder='holly.golightly@gmail.com' required/>
         <br />

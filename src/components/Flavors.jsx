@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useCart } from './CartProvider';
 
 const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
 const birthday_cake = require( '../photo_assets/flavors/birthday_cake.jpg' );
 const sherblato = require( '../photo_assets/flavors/sherblato.jpg' );
 const cloud = require('../photo_assets/cloud/—Pngtree—white cartoon clouds clipart_5568114.png');
+const products = require('../data.json');
 
 const Flavors = () => {
+  const { addItemToCart } = useCart();
+ 
   return (
     <Container>
       <TitleContainer color={'#c5e7fa'}>
@@ -23,7 +27,7 @@ const Flavors = () => {
           <ImgTitle>Birthday Cake</ImgTitle>
           <ImgInfo>
               <Price>$15.99</Price>
-              <Button>
+              <Button onClick={()=> addItemToCart(products.cream.birthday_cake)}>
                 <Cloud src={cloud} alt="" />
                 <CartPlus>CART+</CartPlus>
               </Button>
@@ -39,7 +43,7 @@ const Flavors = () => {
           <ImgTitle>Blue Dream</ImgTitle>
           <ImgInfo>
             <Price>$15.99</Price>
-            <Button>
+            <Button onClick={()=> addItemToCart(products.cream.blue_dream)}>
               <Cloud src={cloud} alt="" />
               <CartPlus>CART+</CartPlus>
             </Button>
@@ -55,7 +59,7 @@ const Flavors = () => {
           <ImgTitle>Sherblato</ImgTitle>
           <ImgInfo>
             <Price>$15.99</Price>
-            <Button>
+            <Button onClick={()=> addItemToCart(products.cream.sherblato)}>
               <Cloud src={cloud} alt="" />
               <CartPlus>CART+</CartPlus>
             </Button>
