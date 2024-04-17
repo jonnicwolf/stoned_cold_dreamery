@@ -32,7 +32,7 @@ const Flavors = () => {
 
       </Frame>
 
-      {/* <Frame color={'#44c4f4'}>
+      <Frame color={'#44c4f4'}>
         <Img src={blue_dream} alt="Blue Dream" />
         <FrameInfo>
           <ImgTitle>Blue Dream</ImgTitle>
@@ -58,7 +58,7 @@ const Flavors = () => {
             </Button>
           </ImgInfo>
         </FrameInfo>
-      </Frame> */}
+      </Frame>
     </Container>
   );
 };
@@ -68,33 +68,21 @@ const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 30vw;
-  @media screen and (max-width: 1064px) {
-    flex-wrap: wrap;
-    border: 1px solid red;
-    height: 60vh;
-  }
 `;
 const Frame = styled.div`
   width: 25%;
-  // max-width: 25%;
+  max-width: 25%;
   height: 100%
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   background-color: ${props => props.color};
-  @media screen and (max-width: 1064px) {
-    width: 50%;
-    height: 100%;
-  }
 `;
 const FrameInfo = styled.div`
   height: 30%;
   display: flex;
   flex-direction: column;
   color: white;
-  @media screen and (max-width: 1064px) {
-    height: 35%;
-    border: 1px solid red;
-  }
 `;
 const TitleContainer = styled(Frame)`
   font-family: 'Bebas Neue';
@@ -108,16 +96,12 @@ const TitleContainer = styled(Frame)`
 const Title = styled.div`
   font-size: 5vw;
   padding: 15px;
-  font-family: Modak
-
+  font-family: Modak;
 `;
 const Img = styled.img`
   object-fit: cover;
   height: 70%;
   position: relative;
-  @media screen and (max-width: 1064px) {
-    height: 65%;
-  }
 `;
 const ImgTitle = styled.div`
   padding-left: 15px;
@@ -125,15 +109,11 @@ const ImgTitle = styled.div`
   font-weight: bold;
   font-size: 2.5vw;
   z-index: 1;
-  @media screen and (max-width: 1064px) {
-    font-size: 5vw;
-  }
 `;
 const ImgInfo = styled.div`
   display: flex;
   height: 100%;
-  overflow: hidden;
-  // border: 1px solid red;
+  overflow: hidden; red;
 `;
 const Price = styled.p`
   height: 100%;
@@ -143,9 +123,6 @@ const Price = styled.p`
   font-size: 2vw;
   padding-left: 1vw;
   transform: translateY(-10px);
-  @media screen and (max-width: 1064px) {
-    font-size: 5vw;
-  }
 `;
 const Button = styled.button`
   display: flex;
@@ -173,13 +150,7 @@ const CartPlus = styled.span`
   position: absolute;
   top: 42%;
   left: 25%;
-  font-size: 2w;
-  @media screen and (max-width: 599px) {
-    top: 25%
-  }
-  @media screen and (min-width: 600px) and (max-width: 1064px) {
-    top: 30%;
-  }
-`
+  font-size: 2vw;
+`;
 
 export default Flavors;
