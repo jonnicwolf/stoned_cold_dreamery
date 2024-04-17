@@ -1,39 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from './Logo';
 import { useCart } from './CartProvider';
-import Cloud from './Cloud';
-import {cloud, animation} from '../components/customizations';
+
+import Logo from './Logo';
 
 const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png')
 const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
-const {
-  fluffy,
-  extra_fluffy
-} = cloud;
-const [
-  // motion_one,
-  // motion_two,
-  motion_three,
-  // motion_four,
-  // motion_five,
-  // motion_six,
-  // motion_seven,
-  // motion_eight,
-  // motion_nine,
-  // motion_ten,
-  // motion_eleven,
-  // motion_twelve
-] = animation;
 
 const NavBar = ({ scrollPixel }) => {
   const [isMobile, setIsMobile] = useState(false);
   const { cartItems } = useCart();
   const location = useLocation();
   const background = location.pathname !== '/' ? 'black' : 'none';
-  
-  console.log(isMobile)
 
   useEffect(()=> {
     setIsMobile(window.innerWidth < 700);
@@ -42,21 +21,18 @@ const NavBar = ({ scrollPixel }) => {
   return (
     <Container scrollPixel={ scrollPixel } background={ background }>
       { isMobile ?
-      <LogoTray>
-        <Cone src={cone} alt="scd logo" />
-      </LogoTray>
-      : 
-      <LogoTray>
-      <StyledLink to='/'>
-        <LogoOrderDiv>
-          <Logo size='small'/>
-        </LogoOrderDiv>
-      </StyledLink>
-      {/* <CloudContainer1>
-        <Cloud scale={1.8} animation={motion_three}/>
-      </CloudContainer1> */}
-    </LogoTray>
-    }
+        <LogoTray>
+          <Cone src={cone} alt="scd logo" />
+        </LogoTray>
+        :
+        <LogoTray>
+          <StyledLink to='/'>
+            <LogoOrderDiv>
+              <Logo size='small'/>
+            </LogoOrderDiv>
+          </StyledLink>
+        </LogoTray>
+      }
 
       <RightSubContainer>
         <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
@@ -92,19 +68,6 @@ const Container = styled.div`
     height: 5vh;
   }
 `;
-const CloudContainer = styled.div`
-  display: flex;
-  height: 10px;
-`;
-const CloudContainer1 = styled(CloudContainer)`
-  flex-direction: column;
-  transform: translate(-50px, -16px);
-  z-index: 1;
-  width: 4vw;
-  @media only screen and (max-width: 767px) {
-    transform: translate(-50px, -20px);
-  }
-`;
 const Cone = styled.img`
   width: 2.5vh;
   height: 15vw;
@@ -119,6 +82,7 @@ const LogoTray = styled.div`
   width: 40%;
   overflow: hidden;
   height: 100%;
+  padding: 0 0 0 30px;
   @media only screen and (max-width: 767px) {
     width: 60%;
   }
