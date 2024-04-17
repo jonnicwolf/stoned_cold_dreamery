@@ -1,11 +1,11 @@
 const cloud = {
-  tiny: 0.35,
-  small: 1,
-  normal: 2,
-  large: 1,
+  fluffy: 1.6,
+  extra_fluffy: 2,
 };
 
 const animation = [
+ 
+ 
   {duration: '2s',  left: '50%'},
   {duration: '10s',  left: '-100%'},
   {duration: '20s',  left: '50%'},
@@ -18,6 +18,7 @@ const animation = [
   {duration: '139s', left: '73%'},
   {duration: '152s', left: '-13%'},
   {duration: '8s', left: '0%'},
+  {duration: '0s', left: '0%'}
 ];
 
 export {cloud, animation};

@@ -17,6 +17,7 @@ const AddToCart = ({ item, itemType }) => {
     for (let i=0; i < quantity; i++) { addItemToCart(matchingItem) };
     return quantity;
   };
+  console.log(matchingItem, 'matching item')
 
   return (
     <Container>

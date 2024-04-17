@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import HomePage from './pages/HomePage';
@@ -13,6 +13,7 @@ import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
 function App() {
+  const location = useLocation();
   const [scrollPixel, setScrollPixel] = useState(0);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ function App() {
         <Route exact path='/checkout' element={<CheckoutPage />} />
       </Routes>
 
-      <Footer />
+      {location.pathname !== '/sandbox' && <Footer />}
     </Container>
   );
 };

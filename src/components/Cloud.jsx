@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Cloud = ( {scale, animation} ) => {
+const Cloud = ( {scale, animation, text} ) => {
   const {duration, left } = animation;
   return (
-    <CloudFrame scale={scale} duration={duration} left={left}>
-      <div></div>
+    <CloudFrame 
+      scale={scale}
+      duration={duration}
+      left={left}>
+      <div>
+        {text}
+      </div>
       <div></div>
       <div></div>
       <div></div>
