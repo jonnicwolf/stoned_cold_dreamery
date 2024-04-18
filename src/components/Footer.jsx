@@ -132,7 +132,6 @@ const Privacy = styled.div`
   text-align: right;
   height: 50%;
   width: 100%;
-  
 `;
 const PrivacyBox = styled.div`
   height: 20%;

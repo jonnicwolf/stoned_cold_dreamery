@@ -33,7 +33,7 @@ const Flavors = () => {
               <Price>$15.99</Price>
               <Button onClick={()=> addItemToCart(products.cream.birthday_cake)}>
                 <Cloud src={cloud} alt="" hover={hoveredFrame === 'birthday_cake'}/>
-                <CartPlus>CART+</CartPlus>
+                <CartPlus hover={hoveredFrame === 'birthday_cake'}>CART+</CartPlus>
               </Button>
           </ImgInfo>
         </FrameInfo>
@@ -52,7 +52,7 @@ const Flavors = () => {
             <Price>$15.99</Price>
             <Button onClick={()=> addItemToCart(products.cream.blue_dream)}>
               <Cloud src={cloud} alt="" hover={hoveredFrame === 'blue_dream'}/>
-              <CartPlus>CART+</CartPlus>
+              <CartPlus hover={hoveredFrame === 'blue_dream'}>CART+</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
@@ -71,7 +71,7 @@ const Flavors = () => {
             <Price>$15.99</Price>
             <Button onClick={()=> addItemToCart(products.cream.sherblato)}>
               <Cloud src={cloud} alt="" hover={hoveredFrame === 'sherblato'}/>
-              <CartPlus>CART+</CartPlus>
+              <CartPlus hover={hoveredFrame === 'sherblato'}>CART+</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
@@ -176,6 +176,7 @@ const CartPlus = styled.span`
   top: 42%;
   left: 25%;
   font-size: 2vw;
+  color: ${props => props.hover ? 'black' : 'white'};
   @media screen and (max-width: 1064px) {
     transform: translateY(-80%);
   }
