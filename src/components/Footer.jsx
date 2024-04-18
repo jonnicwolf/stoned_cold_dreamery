@@ -15,13 +15,27 @@ const Footer = () => {
 
       <AboutLinks>
         <LeftBox>
-          <BoxLink>HOME TEAM</BoxLink>
-          <BoxLink>CONTACT US</BoxLink>
-          <BoxLink>REFER A FRIEND</BoxLink>
-          <BoxLink>ACCESSIBILITY</BoxLink>
-          <BoxLink>FAQS</BoxLink>
-          <BoxLink>PRIVACY POLICY</BoxLink>
-          <BoxLink>TERMS OF SERVICE</BoxLink>
+          <BoxLink>
+            <PaddingWrap>HOME TEAM</PaddingWrap>
+          </BoxLink>
+          <BoxLink>
+            <PaddingWrap>CONTACT US</PaddingWrap>
+          </BoxLink>
+          <BoxLink>
+            <PaddingWrap>REFER A FRIEND</PaddingWrap>
+            </BoxLink>
+          <BoxLink>
+            <PaddingWrap>ACCESSIBILITY</PaddingWrap>
+          </BoxLink>
+          <BoxLink>
+            <PaddingWrap>FAQS</PaddingWrap>
+            </BoxLink>
+          <BoxLink>
+            <PaddingWrap>PRIVACY POLICY</PaddingWrap>
+          </BoxLink>
+          <BoxLink>
+            <PaddingWrap>TERMS OF SERVICE</PaddingWrap>
+          </BoxLink>
         </LeftBox>
 
         <RightBox>
@@ -47,9 +61,8 @@ const Footer = () => {
 
       <FooterLogoContainer>
         <Logo size={'large'}/> <span style={{color: 'white'}}>TM</span>
-        {/* <Copyright>&#9400; 2020 - 2040 The Stoned Cold Dreamery. All rights reserved. </Copyright> */}
       </FooterLogoContainer>
-      
+
     </Container>
   );
 };
@@ -108,6 +121,7 @@ const BoxLink = styled(Link)`
   width: 100%;
   font-size: 2em;
   color: rgb(0,0,0,1);
+  adding-left: 15px;
   &:hover {
     background-color: black;
     color: white;
@@ -142,10 +156,6 @@ const IconBox = styled.div`
   height: 50%;
   border: 1px solid black;
 `;
-// const Copyright = styled.p`
-//   font-size: 1.5vh;
-//   font-family: Permanent Marker;
-// `
 const FooterLogoContainer = styled.div`
   align-items: center;
   background-color: black;
@@ -162,6 +172,9 @@ const FooterLogoContainer = styled.div`
   @media screen and (min-width: 1500px) {
     height: 30%;
   }
+`;
+const PaddingWrap = styled.div`
+  padding-left: 5px;
 `;
 
 export default Footer;
