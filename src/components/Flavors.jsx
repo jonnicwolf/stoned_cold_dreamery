@@ -15,7 +15,7 @@ const Flavors = () => {
 
   return (
     <Container>
-      <TitleContainer color={'#daf3f1'}>
+      <TitleContainer color={'#fffff6'}>
         <Title>FLAVORS</Title>
         <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
       </TitleContainer>
@@ -81,10 +81,10 @@ const Flavors = () => {
 };
 
 const Container = styled.div`
+  border-bottom: 1px solid #ebbf9e;
   display: flex;
   width: 100vw;
   height: 30vw;
-  background-color: #daf3f1;
 `;
 const Frame = styled.div`
   width: 25%;
@@ -93,6 +93,7 @@ const Frame = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  border-right: 1px solid #ebbf9e;
   background-color: ${props => props.color};
 `;
 const FrameInfo = styled.div`

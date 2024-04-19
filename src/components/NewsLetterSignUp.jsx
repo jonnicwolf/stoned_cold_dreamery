@@ -31,12 +31,14 @@ const Container = styled.div`
   flex-direction: column;
   background-image: url(${cone});
   background-size: 40px 40px;
+  background-color: #fffff6;
   z-index: 2;
   }
 `;
 const Button = styled.button`
   border: none;
   background-color: white;
+  color: #104e65;
   font-size: 3vw;
   font-family: var(--font-family-modak);
   height: 60px;
@@ -47,7 +49,7 @@ const Button = styled.button`
     font-size: 1.5vw
   }
   &:hover {
-    background-color: black;
+    background-color: #104e65;
     color: white;
     transition: background-color 0.15s ease-in;
   }
@@ -55,7 +57,7 @@ const Button = styled.button`
 const ConeContainer = styled.div`
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: #fffff6;
   opacity: 100%;
   z-index: 1;
   @media only screen and (max-width: 767px) {
@@ -63,14 +65,14 @@ const ConeContainer = styled.div`
   }
 `;
 const Disclaimer = styled.div`
-  font-color:black;
+  font-color: #104e65;
   font-size: 12px;
   padding-top: 10px;
   width: 59%;
 `;
 const Form = styled.form`
   background-color: white;
-  border: 3px inset aqua;
+  border: 3px inset #d18755;
   display: flex;
   justify-content: space-between;
   width: 60%;
@@ -97,7 +99,7 @@ const InputContainer = styled.div`
 `;
 const Title = styled.h1`
   align-self: center;
-  color: black;
+  color: #104e65;
   font-size: 4vh;
   font-family: 'Bebas Neue';
   @media screen and (max-width: 500px) {

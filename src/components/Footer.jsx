@@ -42,13 +42,13 @@ const Footer = () => {
           <IconBox>
             <SocialIcon
               url='https://www.instagram.com/thestoned_cold_dreamery/'
-              fgColor="black"
-              bgColor="white"
+              fgColor="white"
+              bgColor="#104e65"
               />
             <SocialIcon
               url='https://twitter.com/theSCDreamery'
-              fgColor="black"
-              bgColor='white'
+              fgColor="white"
+              bgColor='#104e65'
             />
           </IconBox>
           <Privacy>
@@ -76,8 +76,8 @@ const NewsLetterSignUpWrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 1vh;
   height: 70vh;
+  color: #104e65;
   @media screen and (max-width: 767px) {
     height: 350vw;
   }
@@ -85,6 +85,7 @@ const Container = styled.div`
 const AboutLinks = styled.div`
   display: flex;
   height: 50%;
+  color: #104e65;
   @media screen and (max-width: 767px) {
     flex-direction: column;
     height: 40%;
@@ -95,6 +96,7 @@ const LeftBox = styled.div`
   flex-direction: column;
   width: 70%;
   height: 100%;
+  color: #104e65;
   align-items: center;
   justify-content: center;
   @media screen and (max-width: 767pc) {
@@ -105,6 +107,7 @@ const RightBox = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  color: #104e65;
   width: 30%;
   @media screen and (max-width: 767pc) {
     width: 100%;
@@ -113,17 +116,18 @@ const RightBox = styled.div`
 const BoxLink = styled(Link)`
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #d18755;
   border-width: 1px 1px 0 1px;
   font-family: 'Modak';
   text-decoration: none;
   height: 100%;
   width: 100%;
   font-size: 2em;
-  color: rgb(0,0,0,1);
+  
+  color: #104e65;
   adding-left: 15px;
   &:hover {
-    background-color: black;
+    background-color: #104e65;
     color: white;
     transition: background-color 0.2s ease-out;
   }
@@ -139,11 +143,12 @@ const PrivacyBox = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
+  color: #104e65;
 `;
 const PrivacyBoxLarge = styled.div`
-  border: 1px solid black;
+  border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
   height: 60%;
 `;
@@ -153,11 +158,11 @@ const IconBox = styled.div`
   justify-content: center;
   gap: 20%;
   height: 50%;
-  border: 1px solid black;
+  border: 1px solid #d18755;
 `;
 const FooterLogoContainer = styled.div`
   align-items: center;
-  background-color: black;
+  background-color: #104e65;
   display: flex;
   height: 20%;
   justify-content: center;
