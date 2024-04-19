@@ -96,7 +96,6 @@ const LeftBox = styled.div`
   flex-direction: column;
   width: 70%;
   height: 100%;
-  color: #104e65;
   align-items: center;
   justify-content: center;
   @media screen and (max-width: 767pc) {
@@ -107,7 +106,6 @@ const RightBox = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  color: #104e65;
   width: 30%;
   @media screen and (max-width: 767pc) {
     width: 100%;
@@ -123,7 +121,6 @@ const BoxLink = styled(Link)`
   height: 100%;
   width: 100%;
   font-size: 2em;
-  
   color: #104e65;
   adding-left: 15px;
   &:hover {

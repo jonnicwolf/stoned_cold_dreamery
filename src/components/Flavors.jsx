@@ -100,7 +100,7 @@ const FrameInfo = styled.div`
   height: 30%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #d18755;
 `;
 const TitleContainer = styled(Frame)`
   font-family: 'Bebas Neue';
@@ -115,6 +115,7 @@ const Title = styled.div`
   font-size: 5vw;
   padding: 15px;
   font-family: Modak;
+  color: #104e65;
   @media screen and (max-width: 1064px) {
     font-size: 2vw;
   }
@@ -161,6 +162,7 @@ const Button = styled.button`
 const SubTitle = styled.div`
   text-align: right;
   padding: 15px;
+  color: #104e65;
   @media screen and (max-width: 1064px) {
     font-size: 2vw;
   }
@@ -178,7 +180,7 @@ const CartPlus = styled.span`
   top: 42%;
   left: 25%;
   font-size: 2vw;
-  color: ${props => props.hover ? 'black' : 'white'};
+  color: ${props => props.hover ? '#104e65' : 'white'};
   @media screen and (max-width: 1064px) {
     transform: translateY(-80%);
   }
