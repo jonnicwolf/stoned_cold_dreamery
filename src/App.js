@@ -46,7 +46,7 @@ function App() {
         <Route path='/accessibility' element={<Accessibility />} />
         <Route path='/faqs'          element={<FAQS />}          />
         <Route path='/privacy'       element={<Privacy />}       />
-        {/* <Route path='/tos'           element={<TOS />}           /> */}
+        <Route path='/tos'           element={<TOS />}           />
       </Routes>
 
       {location.pathname !== '/sandbox' && <Footer />}
