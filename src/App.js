@@ -45,7 +45,7 @@ function App() {
         <Route path='/refer'         element={<Refer />}         />
         <Route path='/accessibility' element={<Accessibility />} />
         <Route path='/faqs'          element={<FAQS />}          />
-        {/* <Route path='/privacy'       element={<Privacy />}       /> */}
+        <Route path='/privacy'       element={<Privacy />}       />
         {/* <Route path='/tos'           element={<TOS />}           /> */}
       </Routes>
 
