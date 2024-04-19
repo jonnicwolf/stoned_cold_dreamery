@@ -13,7 +13,7 @@ const NavBar = ({ scrollPixel }) => {
   const { cartItems } = useCart();
   const location = useLocation();
   const background_gradient = 'radial-gradient(circle 90vw, #72bac9, #104e65)'
-  const background = location.pathname !== '/' ? background_gradient : '';
+  const background = location.pathname !== '/' ? background_gradient : null;
 
 
   useEffect(()=> {
