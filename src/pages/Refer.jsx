@@ -28,13 +28,11 @@ const Refer = () => {
 };
 
 const Container = styled.div`
-  // margin-top: 20vh;
   color: #104e65;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // margin-bottom: 10vh;
   background-image: url(${props => props.background})
 `;
 const BoxContainer = styled.div`
@@ -48,6 +46,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fffff6;
 `;
 const Title = styled.h1`
   font-size: 2vw;
