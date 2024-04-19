@@ -4,7 +4,18 @@ import styled from 'styled-components';
 const FAQS = () => {
   return (
     <Container>
-      <FAQGroup></FAQGroup>
+      <FAQGroup>
+        <FAQGroupTitle>FAQS</FAQGroupTitle>
+        <AnchorContainer>
+          <Anchor>Returns & Refunds</Anchor>
+          <Anchor>Shipping Policy</Anchor>
+          <Anchor>Modifying Orders</Anchor>
+          <Anchor>Payment Methods</Anchor>
+          <Anchor>Product Details</Anchor>
+          <Anchor>Retail Partnership</Anchor>
+          <Anchor>Unsubscribe</Anchor>
+        </AnchorContainer>
+      </FAQGroup>
       <Content>
         <Title>RETURNS & REFUNDS</Title>
         <LineBreak/>
@@ -40,26 +51,42 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 5vw;
   gap: 5vw;
+  border: 1px solid red;
 `;
 const FAQGroup = styled.div`
   width: 25%;
+  border: 1px solid red;
 `;
 const Content = styled.div`
   width: 75%;
   border: 1px solid red;
 `;
+
 const Title = styled.h1`
-  
+  font-family: Bebas Neue;
+  font-weight: bold;
+  font-size: 5vw;
+  margin: 20px 0 10px 0;
+`;
+const FAQGroupTitle = styled(Title)`
+  font-size: 3vw;
 `;
 const LineBreak = styled.div`
   border-bottom: 1px solid #104e65;
 `
 const FAQ = styled.div``;
 const FAQTitle = styled.h3`
-
+  font-weight: bold;
 `;
 const Policy = styled.div`
   line-height: 2.5vh;
 `;
+const AnchorContainer = styled.div`
+  display: flex;
+  border: 1px solid red;
+`;
+const Anchor = styled.a`
+
+`
 
 export default FAQS;
