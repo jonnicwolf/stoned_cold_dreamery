@@ -268,9 +268,6 @@ const Title = styled.h1`
   font-family: Bebas Neue;
   font-size: 15vw;
 `;
-const UnderlineTitle = styled.h3`
-  text-decoration: underline;
-`;
 const SubTitle = styled.h3``;
 const P = styled.p`
   line-height: 2.5vw;

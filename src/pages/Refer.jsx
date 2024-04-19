@@ -54,9 +54,6 @@ const Box = styled.div`
   background-color: #fffff6;
   padding-bottom: 5vw;
 `;
-const ConfirmationBox = styled(Box)`
-  text-align: center;
-`;
 const Title = styled.h1`
   font-size: 3vw;
   text-align: center;
