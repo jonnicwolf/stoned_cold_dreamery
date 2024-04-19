@@ -47,6 +47,7 @@ function App() {
 const Container = styled.div`
   height: 100%;
   overflow-x: hidden;
+  background-color: #daf3f1;
 `;
 
 export default App;

@@ -15,7 +15,7 @@ const Flavors = () => {
 
   return (
     <Container>
-      <TitleContainer color={'#c5e7fa'}>
+      <TitleContainer color={'#daf3f1'}>
         <Title>FLAVORS</Title>
         <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
       </TitleContainer>
@@ -84,6 +84,7 @@ const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 30vw;
+  background-color: #daf3f1;
 `;
 const Frame = styled.div`
   width: 25%;
