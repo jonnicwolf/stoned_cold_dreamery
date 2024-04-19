@@ -16,9 +16,6 @@ const Footer = () => {
       <AboutLinks>
         <LeftBox>
           <BoxLink>
-            <PaddingWrap>HOME TEAM</PaddingWrap>
-          </BoxLink>
-          <BoxLink>
             <PaddingWrap>CONTACT US</PaddingWrap>
           </BoxLink>
           <BoxLink>

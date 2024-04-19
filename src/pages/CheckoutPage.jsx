@@ -11,4 +11,4 @@ const Container = styled.div`
   margin-top: 12vh;
 `;
 
-export default CheckoutPage
+export default CheckoutPage;
