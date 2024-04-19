@@ -9,17 +9,21 @@ const Refer = () => {
   return (
     <Container background={background}>
       {showLinks ?
-        <P>We've sent your friend an email!</P> 
+        <BoxContainer>
+          <Box>
+            <P>We've sent your friend an email!</P>
+          </Box>
+        </BoxContainer>
         :
         <BoxContainer>
           <Box>
-            <P>Refer a Friend</P>
+            <ReferP>Refer a Friend</ReferP>
             <Title>GIVE $25, GET $25</Title>
             <P>Know someone who might dig the Dreamery? Give them $25 off their first order of $150 or more and get $25 off your next order.</P>
           
-            <Input placeholder='Their email address' />
+            <Input placeholder='email address' />
           
-          <Button onSubmit={()=>setShowLinks(!showLinks)}>NEXT</Button>
+          <Button onClick={()=>setShowLinks(!showLinks)}>NEXT</Button>
           </Box>
         </BoxContainer>
       }
@@ -28,48 +32,60 @@ const Refer = () => {
 };
 
 const Container = styled.div`
-  color: #104e65;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-image: url(${props => props.background})
 `;
 const BoxContainer = styled.div`
-  margin-top: 20vh;
-  margin-bottom: 10vh;
+  margin-top: 30vh;
+  margin-bottom: 30vh;
+  color: #104e65;
+  text-align: center;
+  font-family: 'Bebas Neue',
 `;
 const Box = styled.div`
   width: 70vw;
-  height: 70vh;
+  height: 70%;
   border: 1px solid #d18755;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fffff6;
+  padding-bottom: 5vw;
+`;
+const ConfirmationBox = styled(Box)`
+  text-align: center;
 `;
 const Title = styled.h1`
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
 `;
 const P = styled.p`
   font-size: 1.5vw;
+  width: 65%;
+`;
+const ReferP = styled(P)`
   text-align: center;
 `;
 const Input = styled.input`
-  width: 80%;
-  height: 5%;
+  width: 65%;
+  height: 5vw;
   border: 1px solid #d18755;
   margin-bottom: 5vw;
+  font-size: 2vw;
 `;
 const Button = styled.button`
   width: 50%;
-  height: 5%;
+  height: 5vw;
   padding: 0;
   margin: 0;
   font-size: 2vw;
+  letter-spacing: 5px;
   border: 1px solid #d18755;
-  background: transparent;
+  background: #104e65;
+  font-family: Modak;
+  color: white;
 `;
 
 export default Refer;

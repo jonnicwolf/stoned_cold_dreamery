@@ -7,7 +7,6 @@ import HomePage from './pages/HomePage';
 import ContactUs from './pages/ContactUs';
 import CreamPage from "./pages/CreamPage";
 import CartPage from './pages/CartPage';
-import CheckoutPage from './pages/CheckoutPage';
 import HerbPage from './pages/HerbPage';
 import FAQS from './pages/FAQS';
 import Privacy from './pages/Privacy';
@@ -37,17 +36,17 @@ function App() {
       <NavBar scrollPixel={scrollPixel} />
 
       <Routes>
-        <Route exact path='/' element={<HomePage/>} />
-        <Route path='/sandbox' element={<Sandbox />}/>
-        <Route exact path='/herb' element={<HerbPage />} />
-        <Route exact path='/cream' element={<CreamPage />} />
-        <Route exact path='/cart' element={<CartPage />} />
-        <Route exact path='/contact' element={<ContactUs />} />
-        <Route exact path='/refer' element={<Refer />} />
-        <Route exact path='/accessibility' element={<Accessibility />} />
-        <Route exact path='/faqs' element={<FAQS />} />
-        <Route exact path='/privacy' element={<Privacy />} />
-        <Route exact path='/tos' element={<TOS />} />
+        <Route exact path='/'        element={<HomePage/>}       />
+        <Route path='/sandbox'       element={<Sandbox />}       />
+        <Route path='/herb'          element={<HerbPage />}      />
+        <Route path='/cream'         element={<CreamPage />}     />
+        <Route path='/cart'          element={<CartPage />}      />
+        <Route path='/contact'       element={<ContactUs />}     />
+        <Route path='/refer'         element={<Refer />}         />
+        {/* <Route path='/accessibility' element={<Accessibility />} />
+        <Route path='/faqs'          element={<FAQS />}          />
+        <Route path='/privacy'       element={<Privacy />}       />
+        <Route path='/tos'           element={<TOS />}           /> */}
       </Routes>
 
       {location.pathname !== '/sandbox' && <Footer />}
