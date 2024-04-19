@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { SocialIcon } from 'react-social-icons';
 import NewsLetterSignUp from './NewsLetterSignUp';
 import Logo from './Logo';
+import ColoredCalendarIcon from './ColoredCalendarIcon';
 
 const Footer = () => {
   return (
@@ -15,10 +16,11 @@ const Footer = () => {
 
       <AboutLinks>
         <LeftBox>
-          <BoxLink>
+          {/* <BoxLink>
             <PaddingWrap>HOME TEAM</PaddingWrap>
-          </BoxLink>
+          </BoxLink> */}
           <BoxLink>
+            <ColoredCalendarIcon color={'#104e65'}/>
             <PaddingWrap>CONTACT US</PaddingWrap>
           </BoxLink>
           <BoxLink>
