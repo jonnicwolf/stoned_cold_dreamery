@@ -59,6 +59,8 @@ const Container = styled.div`
   height: 100%;
   overflow-x: hidden;
   background-color: #fffff6;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default App;

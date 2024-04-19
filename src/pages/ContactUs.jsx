@@ -39,7 +39,6 @@ const SubTitle = styled.h3`
 `;
 const CenterPg = styled.p`
   text-align: center;
-`
-
+`;
 
 export default ContactUs;
