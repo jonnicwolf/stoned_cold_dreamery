@@ -16,6 +16,7 @@ const FAQS = () => {
           <Anchor href='#7'>Unsubscribe</Anchor>
         </AnchorContainer>
       </FAQGroup>
+
       <Content>
         <FAQ id='1'>
           <Title>RETURNS & REFUNDS</Title>
@@ -39,6 +40,7 @@ const FAQS = () => {
             </p>
           </Policy>
         </FAQ>
+
         <FAQ id='2'>
           <Title>SHIPPING Policy</Title>
           <LineBreak />
@@ -86,6 +88,7 @@ const FAQS = () => {
             <br />
           </Policy>
         </FAQ>
+
         <FAQ id='3'>
           <Title>MODIFYING ORDERS</Title>
           <LineBreak />
@@ -102,6 +105,7 @@ const FAQS = () => {
             <br />
           </Policy>
         </FAQ>
+
         <FAQ id='4'>
           <Title>PAYMENT METHODS</Title>
           <LineBreak />
@@ -118,6 +122,7 @@ const FAQS = () => {
             <br />
           </Policy>
         </FAQ>
+
         <FAQ id='5'>
           <Title>PRODUCTS</Title>
           <LineBreak />
@@ -143,6 +148,7 @@ const FAQS = () => {
             <br />
           </Policy>
         </FAQ>
+
         <FAQ id='6'>
           <Title>RETAIL PARTNERSHIP</Title>
           <LineBreak />
@@ -153,6 +159,7 @@ const FAQS = () => {
             <br />
           </Policy>
         </FAQ>
+
         <FAQ id='7'>
           <Title>UNSUBSCRIBE</Title>
           <LineBreak />
@@ -169,18 +176,24 @@ const FAQS = () => {
 };
 
 const Container = styled.div`
-  margin-top: 10vh;
+  margin-top: 5vh;
   color: #104e65;
   display: flex;
   justify-content: space-between;
   padding: 5vw;
   gap: 5vw;
 `;
+
 const FAQGroup = styled.div`
   width: 25%;
+  position: fixed;
+  left: 5vw;
+  top: 0;
+  margin-top: 10vh;
 `;
 const Content = styled.div`
   width: 75%;
+  padding-left: 25%;
   display: flex;
   flex-direction: column;
   gap: 3vw;
@@ -211,7 +224,7 @@ const Policy = styled.div`
 const AnchorContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2vh;
+  gap: 0.8vh;
   `;
   const Anchor = styled.a`
   text-decoration: none;
