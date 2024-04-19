@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import { SocialIcon } from 'react-social-icons';
 import NewsLetterSignUp from './NewsLetterSignUp';
 import Logo from './Logo';
-import ColoredCalendarIcon from './ColoredCalendarIcon';
-import ColoredDocumentClockIcon from './ColoredDocumentClockIcon';
 
 const Footer = () => {
   return (
