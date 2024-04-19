@@ -15,7 +15,9 @@ const Logo = ({ size }) => {
 };
 
 const LogoImg = styled.img`
-  height: ${props => props.size ? props.size : '2.5rem'};
+  height: ${props => props.size ? props.size : '2rem'};
+  width: auto;
+  box-shadow:
 `;
 
 export default Logo;
