@@ -5,21 +5,23 @@ import { useCart } from './CartProvider';
 
 import Logo from './Logo';
 
-const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png')
+const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png');
 const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
 
 const NavBar = ({ scrollPixel }) => {
   const [isMobile, setIsMobile] = useState(false);
   const { cartItems } = useCart();
   const location = useLocation();
-  const background = location.pathname !== '/' ? 'black' : 'none';
+  const background_gradient = 'radial-gradient(circle 90vw, #72bac9, #104e65)'
+  const background = location.pathname !== '/' ? background_gradient : null;
+
 
   useEffect(()=> {
     setIsMobile(window.innerWidth < 700);
-  },[])
+  },[]);
 
   return (
-    <Container scrollPixel={ scrollPixel } background={ background }>
+    <Container scrollPixel={ scrollPixel } background={ background } background_gradient={ background_gradient }>
       { isMobile ?
         <LogoTray>
           <Cone src={cone} alt="scd logo" />
@@ -55,14 +57,14 @@ const CartItems = styled.div`
 `;
 const Container = styled.div`
   display: flex;
-  background-color: ${props => props.scrollPixel > 100 ? 'black' : props.background};
+  background-image: ${props => props.scrollPixel > 100 ? props.background_gradient : props.background };
   height: 5vw;
   min-height: 60px;
   justify-content: space-between;
   position: fixed;
   text-decoration: none;
   width: 100vw;
-  z-index: 2;
+  z-index: 99;
   overflow: hidden;
   @media screen and (min-width: 1500px) {
     height: 5vh;
@@ -82,7 +84,7 @@ const LogoTray = styled.div`
   width: 40%;
   overflow: hidden;
   height: 100%;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 15px;
   @media only screen and (max-width: 767px) {
     width: 60%;
   }

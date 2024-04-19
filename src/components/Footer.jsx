@@ -15,26 +15,40 @@ const Footer = () => {
 
       <AboutLinks>
         <LeftBox>
-          <BoxLink>HOME TEAM</BoxLink>
-          <BoxLink>CONTACT US</BoxLink>
-          <BoxLink>REFER A FRIEND</BoxLink>
-          <BoxLink>ACCESSIBILITY</BoxLink>
-          <BoxLink>FAQS</BoxLink>
-          <BoxLink>PRIVACY POLICY</BoxLink>
-          <BoxLink>TERMS OF SERVICE</BoxLink>
+          <BoxLink>
+            <PaddingWrap>HOME TEAM</PaddingWrap>
+          </BoxLink>
+          <BoxLink>
+            <PaddingWrap>CONTACT US</PaddingWrap>
+          </BoxLink>
+          <BoxLink>
+            <PaddingWrap>REFER A FRIEND</PaddingWrap>
+            </BoxLink>
+          <BoxLink>
+            <PaddingWrap>ACCESSIBILITY</PaddingWrap>
+          </BoxLink>
+          <BoxLink>
+            <PaddingWrap>FAQS</PaddingWrap>
+            </BoxLink>
+          <BoxLink>
+            <PaddingWrap>PRIVACY POLICY</PaddingWrap>
+          </BoxLink>
+          <BoxLink>
+            <PaddingWrap>TERMS OF SERVICE</PaddingWrap>
+          </BoxLink>
         </LeftBox>
 
         <RightBox>
           <IconBox>
             <SocialIcon
               url='https://www.instagram.com/thestoned_cold_dreamery/'
-              fgColor="black"
-              bgColor="white"
+              fgColor="white"
+              bgColor="#104e65"
               />
             <SocialIcon
               url='https://twitter.com/theSCDreamery'
-              fgColor="black"
-              bgColor='white'
+              fgColor="white"
+              bgColor='#104e65'
             />
           </IconBox>
           <Privacy>
@@ -47,9 +61,8 @@ const Footer = () => {
 
       <FooterLogoContainer>
         <Logo size={'large'}/> <span style={{color: 'white'}}>TM</span>
-        {/* <Copyright>&#9400; 2020 - 2040 The Stoned Cold Dreamery. All rights reserved. </Copyright> */}
       </FooterLogoContainer>
-      
+
     </Container>
   );
 };
@@ -63,8 +76,8 @@ const NewsLetterSignUpWrapper = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 1vh;
   height: 70vh;
+  color: #104e65;
   @media screen and (max-width: 767px) {
     height: 350vw;
   }
@@ -72,6 +85,7 @@ const Container = styled.div`
 const AboutLinks = styled.div`
   display: flex;
   height: 50%;
+  color: #104e65;
   @media screen and (max-width: 767px) {
     flex-direction: column;
     height: 40%;
@@ -100,16 +114,17 @@ const RightBox = styled.div`
 const BoxLink = styled(Link)`
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #d18755;
   border-width: 1px 1px 0 1px;
   font-family: 'Modak';
   text-decoration: none;
   height: 100%;
   width: 100%;
   font-size: 2em;
-  color: rgb(0,0,0,1);
+  color: #104e65;
+  adding-left: 15px;
   &:hover {
-    background-color: black;
+    background-color: #104e65;
     color: white;
     transition: background-color 0.2s ease-out;
   }
@@ -118,7 +133,6 @@ const Privacy = styled.div`
   text-align: right;
   height: 50%;
   width: 100%;
-  
 `;
 const PrivacyBox = styled.div`
   height: 20%;
@@ -126,11 +140,12 @@ const PrivacyBox = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
+  color: #104e65;
 `;
 const PrivacyBoxLarge = styled.div`
-  border: 1px solid black;
+  border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
   height: 60%;
 `;
@@ -140,15 +155,11 @@ const IconBox = styled.div`
   justify-content: center;
   gap: 20%;
   height: 50%;
-  border: 1px solid black;
+  border: 1px solid #d18755;
 `;
-// const Copyright = styled.p`
-//   font-size: 1.5vh;
-//   font-family: Permanent Marker;
-// `
 const FooterLogoContainer = styled.div`
   align-items: center;
-  background-color: black;
+  background-color: #104e65;
   display: flex;
   height: 20%;
   justify-content: center;
@@ -162,6 +173,9 @@ const FooterLogoContainer = styled.div`
   @media screen and (min-width: 1500px) {
     height: 30%;
   }
+`;
+const PaddingWrap = styled.div`
+  padding-left: 5px;
 `;
 
 export default Footer;

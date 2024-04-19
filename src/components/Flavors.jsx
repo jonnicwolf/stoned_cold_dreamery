@@ -15,7 +15,7 @@ const Flavors = () => {
 
   return (
     <Container>
-      <TitleContainer color={'#c5e7fa'}>
+      <TitleContainer color={'#fffff6'}>
         <Title>FLAVORS</Title>
         <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
       </TitleContainer>
@@ -33,7 +33,7 @@ const Flavors = () => {
               <Price>$15.99</Price>
               <Button onClick={()=> addItemToCart(products.cream.birthday_cake)}>
                 <Cloud src={cloud} alt="" hover={hoveredFrame === 'birthday_cake'}/>
-                <CartPlus>CART+</CartPlus>
+                <CartPlus hover={hoveredFrame === 'birthday_cake'}>CART+</CartPlus>
               </Button>
           </ImgInfo>
         </FrameInfo>
@@ -52,7 +52,7 @@ const Flavors = () => {
             <Price>$15.99</Price>
             <Button onClick={()=> addItemToCart(products.cream.blue_dream)}>
               <Cloud src={cloud} alt="" hover={hoveredFrame === 'blue_dream'}/>
-              <CartPlus>CART+</CartPlus>
+              <CartPlus hover={hoveredFrame === 'blue_dream'}>CART+</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
@@ -71,7 +71,7 @@ const Flavors = () => {
             <Price>$15.99</Price>
             <Button onClick={()=> addItemToCart(products.cream.sherblato)}>
               <Cloud src={cloud} alt="" hover={hoveredFrame === 'sherblato'}/>
-              <CartPlus>CART+</CartPlus>
+              <CartPlus hover={hoveredFrame === 'sherblato'}>CART+</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
@@ -81,6 +81,7 @@ const Flavors = () => {
 };
 
 const Container = styled.div`
+  border-bottom: 1px solid #ebbf9e;
   display: flex;
   width: 100vw;
   height: 30vw;
@@ -92,13 +93,14 @@ const Frame = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  border-right: 1px solid #ebbf9e;
   background-color: ${props => props.color};
 `;
 const FrameInfo = styled.div`
   height: 30%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #d18755;
 `;
 const TitleContainer = styled(Frame)`
   font-family: 'Bebas Neue';
@@ -113,6 +115,7 @@ const Title = styled.div`
   font-size: 5vw;
   padding: 15px;
   font-family: Modak;
+  color: #104e65;
   @media screen and (max-width: 1064px) {
     font-size: 2vw;
   }
@@ -159,6 +162,7 @@ const Button = styled.button`
 const SubTitle = styled.div`
   text-align: right;
   padding: 15px;
+  color: #104e65;
   @media screen and (max-width: 1064px) {
     font-size: 2vw;
   }
@@ -176,6 +180,7 @@ const CartPlus = styled.span`
   top: 42%;
   left: 25%;
   font-size: 2vw;
+  color: ${props => props.hover ? '#104e65' : 'white'};
   @media screen and (max-width: 1064px) {
     transform: translateY(-80%);
   }
