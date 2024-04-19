@@ -2,11 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
+import Accessibility from './pages/Accessibility';
 import HomePage from './pages/HomePage';
+import ContactUs from './pages/ContactUs';
 import CreamPage from "./pages/CreamPage";
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import HerbPage from './pages/HerbPage';
+import FAQS from './pages/FAQS';
+import Privacy from './pages/Privacy';
+import Refer from './pages/Refer';
+import TOS from './pages/TOS';
 import Sandbox from './pages/Sandbox';
 
 import NavBar from './components/NavBar';
@@ -36,7 +42,12 @@ function App() {
         <Route exact path='/herb' element={<HerbPage />} />
         <Route exact path='/cream' element={<CreamPage />} />
         <Route exact path='/cart' element={<CartPage />} />
-        <Route exact path='/checkout' element={<CheckoutPage />} />
+        <Route exact path='/contact' element={<ContactUs />} />
+        <Route exact path='/refer' element={<Refer />} />
+        <Route exact path='/accessibility' element={<Accessibility />} />
+        <Route exact path='/faqs' element={<FAQS />} />
+        <Route exact path='/privacy' element={<Privacy />} />
+        <Route exact path='/tos' element={<TOS />} />
       </Routes>
 
       {location.pathname !== '/sandbox' && <Footer />}
