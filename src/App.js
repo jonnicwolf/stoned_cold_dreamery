@@ -43,10 +43,10 @@ function App() {
         <Route path='/cart'          element={<CartPage />}      />
         <Route path='/contact'       element={<ContactUs />}     />
         <Route path='/refer'         element={<Refer />}         />
-        {/* <Route path='/accessibility' element={<Accessibility />} />
-        <Route path='/faqs'          element={<FAQS />}          />
-        <Route path='/privacy'       element={<Privacy />}       />
-        <Route path='/tos'           element={<TOS />}           /> */}
+        <Route path='/accessibility' element={<Accessibility />} />
+        {/* <Route path='/faqs'          element={<FAQS />}          /> */}
+        {/* <Route path='/privacy'       element={<Privacy />}       /> */}
+        {/* <Route path='/tos'           element={<TOS />}           /> */}
       </Routes>
 
       {location.pathname !== '/sandbox' && <Footer />}
