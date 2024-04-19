@@ -7,19 +7,19 @@ const FAQS = () => {
       <FAQGroup>
         <FAQGroupTitle>FAQS</FAQGroupTitle>
         <AnchorContainer>
-          <Anchor>Returns & Refunds</Anchor>
-          <Anchor>Shipping Policy</Anchor>
-          <Anchor>Modifying Orders</Anchor>
-          <Anchor>Payment Methods</Anchor>
-          <Anchor>Product Details</Anchor>
-          <Anchor>Retail Partnership</Anchor>
-          <Anchor>Unsubscribe</Anchor>
+          <Anchor href='#1'>Returns & Refunds</Anchor>
+          <Anchor href='#2'>Shipping Policy</Anchor>
+          <Anchor href='#3'>Modifying Orders</Anchor>
+          <Anchor href='#4'>Payment Methods</Anchor>
+          <Anchor href='#5'>Product Details</Anchor>
+          <Anchor href='#6'>Retail Partnership</Anchor>
+          <Anchor href='#7'>Unsubscribe</Anchor>
         </AnchorContainer>
       </FAQGroup>
       <Content>
-        <Title>RETURNS & REFUNDS</Title>
-        <LineBreak/>
-        <FAQ>
+        <FAQ id='1'>
+          <Title>RETURNS & REFUNDS</Title>
+          <LineBreak/>
           <FAQTitle>What is your return and refund policy?</FAQTitle>
           <Policy>
           We accept returns within 30 days of when they’re delivered. To be returned an item must be unused and unopened, and definitely not ashed in.
@@ -74,19 +74,24 @@ const FAQGroupTitle = styled(Title)`
 const LineBreak = styled.div`
   border-bottom: 1px solid #104e65;
 `
-const FAQ = styled.div``;
+const FAQ = styled.div`
+  border-bottom: 1px solid #104e65;
+`;
 const FAQTitle = styled.h3`
   font-weight: bold;
 `;
 const Policy = styled.div`
   line-height: 2.5vh;
+
 `;
 const AnchorContainer = styled.div`
   display: flex;
-  border: 1px solid red;
+  flex-direction: column;
+  gap: 2vh;
+  `;
+  const Anchor = styled.a`
+  text-decoration: none;
+  color: #104e65;
 `;
-const Anchor = styled.a`
-
-`
 
 export default FAQS;
