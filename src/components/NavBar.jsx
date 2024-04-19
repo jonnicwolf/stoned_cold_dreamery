@@ -48,8 +48,8 @@ const NavBar = ({ scrollPixel }) => {
 };
 
 const CartIcon = styled.img`
-  height:9vw;
-  max-height: 50px;
+  height: 8vw;
+  max-height: 40px;
 `;
 const CartItems = styled.div`
   color: white;
