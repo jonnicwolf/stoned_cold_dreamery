@@ -191,7 +191,7 @@ const Container = styled.div`
 const Title = styled.h1`
   text-align: center;
   font-family: Bebas Neue;
-  font-size: 5vw;
+  font-size: 10vw;
 `;
 const UnderlineTitle = styled.h3`
   text-decoration: underline;
