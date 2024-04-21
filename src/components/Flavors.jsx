@@ -199,7 +199,7 @@ const SubTitle = styled.div`
 const Cloud = styled.img`
   height: 150%;
   width: 100%;
-  transform: translateY(-1vh);
+  // transform: translateY(-2vw);
   opacity: ${props => props.hover ? 1 : 0};
   transition: opacity 0.1s linear;
 `;
