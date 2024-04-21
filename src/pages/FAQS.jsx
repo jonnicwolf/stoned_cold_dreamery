@@ -229,6 +229,9 @@ const AnchorContainer = styled.div`
   const Anchor = styled.a`
   text-decoration: none;
   color: #104e65;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export default FAQS;
