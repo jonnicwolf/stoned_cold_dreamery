@@ -21,11 +21,13 @@ const NavBar = ({ scrollPixel }) => {
   },[]);
 
   return (
-    <Container scrollPixel={ scrollPixel } background={ background } background_gradient={ background_gradient }>
+    <Container
+      scrollPixel={ scrollPixel }
+      background={ background }
+      background_gradient={ background_gradient }
+      isMobile={isMobile}>
       { isMobile ?
-        <LogoTray>
-          <Cone src={cone} alt="scd logo" />
-        </LogoTray>
+        null
         :
         <LogoTray>
           <StyledLink to='/'>
@@ -57,7 +59,7 @@ const CartItems = styled.div`
 `;
 const Container = styled.div`
   display: flex;
-  background-image: ${props => props.scrollPixel > 100 ? props.background_gradient : props.background };
+  background-image: ${props => props.isMobile ? null : props.scrollPixel > 100 ? props.background_gradient : props.background };
   height: 5vw;
   min-height: 60px;
   justify-content: space-between;
