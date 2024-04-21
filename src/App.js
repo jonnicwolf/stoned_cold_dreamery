@@ -1,7 +1,10 @@
+// TOOLS
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
+import ScrollToTop from './components/ScrollRestore';
 
+// PAGES
 import Accessibility from './pages/Accessibility';
 import HomePage from './pages/HomePage';
 import ContactUs from './pages/ContactUs';
@@ -14,6 +17,7 @@ import Refer from './pages/Refer';
 import TOS from './pages/TOS';
 import Sandbox from './pages/Sandbox';
 
+// SECTIONS
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
@@ -34,6 +38,7 @@ function App() {
   return (
     <Container className="App">
       <NavBar scrollPixel={scrollPixel} />
+      <ScrollToTop />
 
       <Routes>
         <Route exact path='/'        element={<HomePage/>}       />
