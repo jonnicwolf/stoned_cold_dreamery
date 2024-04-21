@@ -15,22 +15,22 @@ const Footer = () => {
 
       <AboutLinks>
         <LeftBox>
-          <BoxLink>
+          <BoxLink to='/contact'>
             <PaddingWrap>CONTACT US</PaddingWrap>
           </BoxLink>
-          <BoxLink>
+          <BoxLink to='/refer'>
             <PaddingWrap>REFER A FRIEND</PaddingWrap>
             </BoxLink>
-          <BoxLink>
+          <BoxLink to='/accessibility'>
             <PaddingWrap>ACCESSIBILITY</PaddingWrap>
           </BoxLink>
-          <BoxLink>
+          <BoxLink to='/faqs'>
             <PaddingWrap>FAQS</PaddingWrap>
             </BoxLink>
-          <BoxLink>
+          <BoxLink to='/privacy'>
             <PaddingWrap>PRIVACY POLICY</PaddingWrap>
           </BoxLink>
-          <BoxLink>
+          <BoxLink to='/tos'>
             <PaddingWrap>TERMS OF SERVICE</PaddingWrap>
           </BoxLink>
         </LeftBox>
