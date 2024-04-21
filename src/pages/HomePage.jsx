@@ -37,7 +37,7 @@ const Container = styled.div`
 `;
 const WebBannerBackground = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 100vw;
 `;
 
 export default Home;
