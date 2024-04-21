@@ -85,28 +85,44 @@ const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 30vw;
+  @media screen and (max-width: 690px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 102%;
+    height: 120vw;
+  }
+  @media screen and (min-width: 691px) and (max-width: 1064px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90vh;
+  }
 `;
 const Frame = styled.div`
   width: 25%;
-  max-width: 25%;
   height: 100%
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   border-right: 1px solid #ebbf9e;
   background-color: ${props => props.color};
+  @media screen and (max-width: 1064px) {
+    height: 50%;
+    width: 49.7vw;
+    border: 1px solid #ebbf9e;
+  }
 `;
 const FrameInfo = styled.div`
   height: 30%;
   display: flex;
   flex-direction: column;
   color: #d18755;
+  @media screen and (max-width: 700px) {
+    height: 20%;
+  }
 `;
 const TitleContainer = styled(Frame)`
   font-family: 'Bebas Neue';
   font-size: 3vw;
   letter-spacing: 5px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -117,12 +133,14 @@ const Title = styled.div`
   font-family: Modak;
   color: #104e65;
   @media screen and (max-width: 1064px) {
-    font-size: 2vw;
+    font-size: 7vw;
   }
 `;
 const Img = styled.img`
   object-fit: cover;
   height: 70%;
+  width: 100%;
+  max-width: 100%;
   position: relative;
 `;
 const ImgTitle = styled.div`
@@ -131,23 +149,33 @@ const ImgTitle = styled.div`
   font-weight: bold;
   font-size: 2.5vw;
   z-index: 1;
+  @media screen and (max-width: 1064px) {
+    font-size: 5vw;
+  }
 `;
 const ImgInfo = styled.div`
   display: flex;
-  height: 100%;
-  overflow: hidden; red;
+  height: 70%;
+  overflow: hidden;
+  align-items: center;
 `;
 const Price = styled.p`
+  display: flex;
+  height: 100%;
+  align-items: center;
   height: 100%;
   width: 50%;
   font-family: 'Chakra Petch';
   font-weight: bold;
   font-size: 2vw;
   padding-left: 1vw;
-  transform: translateY(-10px);
+  @media screen and (max-width: 1064px) {
+    font-size: 4vw;
+  }
 `;
 const Button = styled.button`
   display: flex;
+  align-items: center;
   position: relative;
   z-index: 1;
   width: 50%;
@@ -158,13 +186,14 @@ const Button = styled.button`
   cursor: pointer;
   background-color: transparent;
   text-align: center;
+  height: 100%;
 `;
 const SubTitle = styled.div`
   text-align: right;
   padding: 15px;
   color: #104e65;
   @media screen and (max-width: 1064px) {
-    font-size: 2vw;
+    font-size: 5vw;
   }
 `;
 const Cloud = styled.img`
@@ -173,7 +202,6 @@ const Cloud = styled.img`
   transform: translateY(-1vh);
   opacity: ${props => props.hover ? 1 : 0};
   transition: opacity 0.1s linear;
-  
 `;
 const CartPlus = styled.span`
   position: absolute;
@@ -182,7 +210,9 @@ const CartPlus = styled.span`
   font-size: 2vw;
   color: ${props => props.hover ? '#104e65' : 'white'};
   @media screen and (max-width: 1064px) {
-    transform: translateY(-80%);
+    font-size: 5vw;
+    top: 50%;
+    left: 35%;
   }
 `;
 
