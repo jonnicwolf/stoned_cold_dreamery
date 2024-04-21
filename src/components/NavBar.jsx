@@ -4,8 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { useCart } from './CartProvider';
 
 import Logo from './Logo';
-
-const cone = require('../photo_assets/logos_banners/cone_whiteBorder.png');
 const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
 
 const NavBar = ({ scrollPixel }) => {
@@ -38,10 +36,10 @@ const NavBar = ({ scrollPixel }) => {
         </LogoTray>
       }
 
-      <RightSubContainer>
+      <RightSubContainer scrollPixel={ scrollPixel }>
         <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
           <CartItems>{cartItems.length}</CartItems>
-          <CartIcon src={cart} />
+          <CartIcon src={cart} isMobile={isMobile}/>
         </StyledLink>
       </RightSubContainer>
 
@@ -62,7 +60,7 @@ const Container = styled.div`
   background-image: ${props => props.isMobile ? null : props.scrollPixel > 100 ? props.background_gradient : props.background };
   height: 5vw;
   min-height: 60px;
-  justify-content: space-between;
+  justify-content: ${props => props.isMobile ? 'flex-end' : 'space-between'};
   position: fixed;
   text-decoration: none;
   width: 100vw;
@@ -72,16 +70,11 @@ const Container = styled.div`
     height: 5vh;
   }
 `;
-const Cone = styled.img`
-  width: 2.5vh;
-  height: 15vw;
-`
 const LogoTray = styled.div`
   align-items: center;
   display: flex;
   align-self: flex-start;
   flex-wrap: wrap;
-  border-radius: 0 50px 50px 0;
   position: relative;
   width: 40%;
   overflow: hidden;
@@ -96,10 +89,11 @@ const LogoOrderDiv = styled.div`
   z-index: 2;
 `;
 const RightSubContainer = styled.div`
-  display: flex;
+  display: ${ props => props.scrollPixel > 100 ? 'none': 'flex' };;
   align-items: center;
   justify-content: center;
   width: 10%;
+
   @media only screen and (max-width: 767px) {
     width: 15%;
   }
