@@ -32,7 +32,7 @@ const Content = styled.div`
 `
 const Title = styled.h1`
   font-family: Bebas Neue;
-
+  font-size: 10vw;
 `;
 const P = styled.p`
 `;
