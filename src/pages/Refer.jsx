@@ -20,10 +20,10 @@ const Refer = () => {
             <ReferP>Refer a Friend</ReferP>
             <Title>GIVE $25, GET $25</Title>
             <P>Know someone who might dig the Dreamery? Give them $25 off their first order of $150 or more and get $25 off your next order.</P>
-          
-            <Input placeholder='email address' />
-          
-          <Button onClick={()=>setShowLinks(!showLinks)}>NEXT</Button>
+            <Form action="">
+              <Input placeholder='email address' required/>
+              <Button onSubmit={()=>setShowLinks(!showLinks)}>NEXT</Button>
+            </Form>
           </Box>
         </BoxContainer>
       }
@@ -66,12 +66,15 @@ const ReferP = styled(P)`
   text-align: center;
 `;
 const Input = styled.input`
-  width: 65%;
+  width: 80%;
   height: 5vw;
   border: 1px solid #d18755;
   margin-bottom: 5vw;
   font-size: 2vw;
 `;
+const Form = styled.form`
+  width: 80%;
+`
 const Button = styled.button`
   width: 50%;
   height: 5vw;
@@ -80,9 +83,14 @@ const Button = styled.button`
   font-size: 2vw;
   letter-spacing: 5px;
   border: 1px solid #d18755;
-  background: #104e65;
   font-family: Modak;
-  color: white;
+  color: #104e65;
+  background: none;
+  transition: all .2s linear;
+  &:hover {
+    background: #104e65;
+    color: white;
+  }
 `;
 
 export default Refer;
