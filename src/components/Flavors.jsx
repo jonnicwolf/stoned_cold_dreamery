@@ -85,16 +85,24 @@ const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 30vw;
+  @media screen and (max-width: 1064px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 80vh;
+  }
 `;
 const Frame = styled.div`
   width: 25%;
-  max-width: 25%;
   height: 100%
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   border-right: 1px solid #ebbf9e;
   background-color: ${props => props.color};
+  @media screen and (max-width: 1064px) {
+    height: 50%;
+    width: 49%;
+    border: 1px solid #ebbf9e;
+  }
 `;
 const FrameInfo = styled.div`
   height: 30%;
@@ -106,7 +114,6 @@ const TitleContainer = styled(Frame)`
   font-family: 'Bebas Neue';
   font-size: 3vw;
   letter-spacing: 5px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -123,6 +130,7 @@ const Title = styled.div`
 const Img = styled.img`
   object-fit: cover;
   height: 70%;
+  max-width: 100%;
   position: relative;
 `;
 const ImgTitle = styled.div`
