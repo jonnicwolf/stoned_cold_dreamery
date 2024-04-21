@@ -36,7 +36,7 @@ const NavBar = ({ scrollPixel }) => {
         </LogoTray>
       }
 
-      <RightSubContainer scrollPixel={ scrollPixel }>
+      <RightSubContainer scrollPixel={ scrollPixel } isMobile={ isMobile }>
         <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
           <CartItems>{cartItems.length}</CartItems>
           <CartIcon src={cart} isMobile={isMobile}/>
@@ -66,6 +66,7 @@ const Container = styled.div`
   width: 100vw;
   z-index: 99;
   overflow: hidden;
+  @media screen and (max-width: 1064px) {}
   @media screen and (min-width: 1500px) {
     height: 5vh;
   }
@@ -89,7 +90,7 @@ const LogoOrderDiv = styled.div`
   z-index: 2;
 `;
 const RightSubContainer = styled.div`
-  display: ${ props => props.scrollPixel > 100 ? 'none': 'flex' };;
+  display: ${ props => props.scrollPixel > 100 && props.isMobile ? 'none': 'flex' };;
   align-items: center;
   justify-content: center;
   width: 10%;

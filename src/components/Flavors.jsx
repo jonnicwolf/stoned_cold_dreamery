@@ -85,10 +85,16 @@ const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 30vw;
-  @media screen and (max-width: 1064px) {
+  @media screen and (max-width: 690px) {
     justify-content: center;
     flex-wrap: wrap;
-    height: 80vh;
+    width: 102%;
+    height: 120vw;
+  }
+  @media screen and (min-width: 691px) and (max-width: 1064px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90vh;
   }
 `;
 const Frame = styled.div`
@@ -100,7 +106,7 @@ const Frame = styled.div`
   background-color: ${props => props.color};
   @media screen and (max-width: 1064px) {
     height: 50%;
-    width: 49.81%;
+    width: 49.7vw;
     border: 1px solid #ebbf9e;
   }
 `;
@@ -109,6 +115,9 @@ const FrameInfo = styled.div`
   display: flex;
   flex-direction: column;
   color: #d18755;
+  @media screen and (max-width: 700px) {
+    height: 20%;
+  }
 `;
 const TitleContainer = styled(Frame)`
   font-family: 'Bebas Neue';
@@ -124,7 +133,7 @@ const Title = styled.div`
   font-family: Modak;
   color: #104e65;
   @media screen and (max-width: 1064px) {
-    font-size: 5vw;
+    font-size: 7vw;
   }
 `;
 const Img = styled.img`
@@ -140,29 +149,33 @@ const ImgTitle = styled.div`
   font-weight: bold;
   font-size: 2.5vw;
   z-index: 1;
-  @media screen and (max-width: 1064px){
-    font-size: 4vw;
+  @media screen and (max-width: 1064px) {
+    font-size: 5vw;
   }
 `;
 const ImgInfo = styled.div`
   display: flex;
-  height: 100%;
+  height: 70%;
   overflow: hidden;
+  align-items: center;
 `;
 const Price = styled.p`
+  display: flex;
+  height: 100%;
+  align-items: center;
   height: 100%;
   width: 50%;
   font-family: 'Chakra Petch';
   font-weight: bold;
   font-size: 2vw;
   padding-left: 1vw;
-  transform: translateY(-10px);
   @media screen and (max-width: 1064px) {
     font-size: 4vw;
   }
 `;
 const Button = styled.button`
   display: flex;
+  align-items: center;
   position: relative;
   z-index: 1;
   width: 50%;
@@ -173,6 +186,7 @@ const Button = styled.button`
   cursor: pointer;
   background-color: transparent;
   text-align: center;
+  height: 100%;
 `;
 const SubTitle = styled.div`
   text-align: right;
@@ -196,9 +210,9 @@ const CartPlus = styled.span`
   font-size: 2vw;
   color: ${props => props.hover ? '#104e65' : 'white'};
   @media screen and (max-width: 1064px) {
-    font-size: 4vw;
+    font-size: 5vw;
     top: 50%;
-    left: 45%;
+    left: 35%;
   }
 `;
 
