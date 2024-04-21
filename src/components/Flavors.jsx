@@ -100,7 +100,7 @@ const Frame = styled.div`
   background-color: ${props => props.color};
   @media screen and (max-width: 1064px) {
     height: 50%;
-    width: 49%;
+    width: 49.81%;
     border: 1px solid #ebbf9e;
   }
 `;
@@ -124,12 +124,13 @@ const Title = styled.div`
   font-family: Modak;
   color: #104e65;
   @media screen and (max-width: 1064px) {
-    font-size: 2vw;
+    font-size: 5vw;
   }
 `;
 const Img = styled.img`
   object-fit: cover;
   height: 70%;
+  width: 100%;
   max-width: 100%;
   position: relative;
 `;
@@ -139,11 +140,14 @@ const ImgTitle = styled.div`
   font-weight: bold;
   font-size: 2.5vw;
   z-index: 1;
+  @media screen and (max-width: 1064px){
+    font-size: 4vw;
+  }
 `;
 const ImgInfo = styled.div`
   display: flex;
   height: 100%;
-  overflow: hidden; red;
+  overflow: hidden;
 `;
 const Price = styled.p`
   height: 100%;
@@ -153,6 +157,9 @@ const Price = styled.p`
   font-size: 2vw;
   padding-left: 1vw;
   transform: translateY(-10px);
+  @media screen and (max-width: 1064px) {
+    font-size: 4vw;
+  }
 `;
 const Button = styled.button`
   display: flex;
@@ -172,7 +179,7 @@ const SubTitle = styled.div`
   padding: 15px;
   color: #104e65;
   @media screen and (max-width: 1064px) {
-    font-size: 2vw;
+    font-size: 5vw;
   }
 `;
 const Cloud = styled.img`
@@ -181,7 +188,6 @@ const Cloud = styled.img`
   transform: translateY(-1vh);
   opacity: ${props => props.hover ? 1 : 0};
   transition: opacity 0.1s linear;
-  
 `;
 const CartPlus = styled.span`
   position: absolute;
@@ -190,7 +196,9 @@ const CartPlus = styled.span`
   font-size: 2vw;
   color: ${props => props.hover ? '#104e65' : 'white'};
   @media screen and (max-width: 1064px) {
-    transform: translateY(-80%);
+    font-size: 4vw;
+    top: 50%;
+    left: 45%;
   }
 `;
 
