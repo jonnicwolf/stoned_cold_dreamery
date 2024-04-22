@@ -23,17 +23,18 @@ const Flavor = () => {
       <Info>
         <Segment2>
           <ProductTitle>
-            <FlavorButtonContainer>
+            {/* Gonna leave this here in case I change my mind later */}
+            {/* <FlavorButtonContainer>
               <FlavorTitle>{cream[flavor].name}</FlavorTitle>
               <FlavorButton color={'#ecd484'} onClick={() => handleFlavor('birthday_cake')}/>
               <FlavorButton color={'#44c4f4'} onClick={() => handleFlavor('blue_dream')}/>
               <FlavorButton color={'#942c4c'} onClick={() => handleFlavor('sherblato')}/>
-            </FlavorButtonContainer>
-            {/* <FlavorDropList value={flavor} onChange={handleFlavor}>
+            </FlavorButtonContainer> */}
+            <FlavorDropList value={flavor} onChange={handleFlavor}>
               <Option value="birthday_cake">Birthday Cake</Option>
               <Option value="sherblato">Sherblato</Option>
               <Option value="blue_dream">Blue Dream</Option>
-            </FlavorDropList> */}
+            </FlavorDropList>
             <P>{cream[flavor].description}</P>
           </ProductTitle>
           <NutritionSummary size='1Pt / 1500mg'/>
@@ -153,22 +154,22 @@ const P = styled.p`
   font-family: 'Chakra Petch', sans-serif;
   margin: 0;
 `;
-const FlavorButtonContainer = styled.div`
-  display: flex;
-  gap: 10px;
-  align-items: center;
-`;
-const FlavorButton = styled.button`
-  border-radius: 20px;
-  border: none;
-  height: 2vw;
-  width: 2vw;
-  background-color: ${props => props.color};
-`;
-const FlavorTitle = styled.h1`
-  font-family: Permanent  Marker, cursive;
-  padding: 0;
-  margin: 0;
-;`
+// const FlavorButtonContainer = styled.div`
+//   display: flex;
+//   gap: 10px;
+//   align-items: center;
+// `;
+// const FlavorButton = styled.button`
+//   border-radius: 20px;
+//   border: none;
+//   height: 2vw;
+//   width: 2vw;
+//   background-color: ${props => props.color};
+// `;
+// const FlavorTitle = styled.h1`
+//   font-family: Permanent  Marker, cursive;
+//   padding: 0;
+//   margin: 0;
+// ;`
 
 export default Flavor;
