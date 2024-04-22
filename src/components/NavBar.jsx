@@ -10,7 +10,7 @@ const NavBar = ({ scrollPixel }) => {
   const [isMobile, setIsMobile] = useState(false);
   const { cartItems } = useCart();
   const location = useLocation();
-  const background_gradient = 'radial-gradient(circle 90vw, #72bac9, #104e65)'
+  const background_gradient = 'radial-gradient(circle 30vw, #72bac9, #104e65)'
   const background = location.pathname !== '/' ? background_gradient : null;
 
 
@@ -66,7 +66,6 @@ const Container = styled.div`
   width: 100vw;
   z-index: 99;
   overflow: hidden;
-  @media screen and (max-width: 1064px) {}
   @media screen and (min-width: 1500px) {
     height: 5vh;
   }

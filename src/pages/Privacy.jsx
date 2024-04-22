@@ -205,5 +205,4 @@ const Ul = styled.ul`
   line-height: 2.5vw;
 `;
 
-
 export default Privacy;
