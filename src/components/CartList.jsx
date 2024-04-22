@@ -33,7 +33,7 @@ const CartList = () => {
                   <div>${(total/100 * NYCTax + total).toFixed(2)}</div>
                 </div>
               </Total>
-            : <Empty>Your cart is empty</Empty>
+            : <Empty>[EMPTY]</Empty>
         }
       </div>
       {cartItems.length > 0
@@ -86,6 +86,7 @@ const ClearButton = styled.button`
 `;
 const Empty = styled.p`
   font-size: 50px;
+  opacity: 30%;
   @media (min-width: 320px) and (max-width: 425px) {
     font-size: 34px;
   }

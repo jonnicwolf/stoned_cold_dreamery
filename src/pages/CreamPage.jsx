@@ -7,11 +7,11 @@ import AddItemToCart from '../components/AddItemToCart';
 import AboutThisItem from '../components/AboutThisItem';
 
 const Flavor = () => {
-  const [flavor,setFlavor] = useState('birthday_cake');
+  const [flavor, setFlavor] = useState('birthday_cake');
   const { cream } = require('../data.json');
 
-  function handleFlavor (event) {
-    setFlavor(event.target.value);
+  function handleFlavor (flavor) {
+    setFlavor(flavor);
   };
 
   return (
@@ -23,6 +23,13 @@ const Flavor = () => {
       <Info>
         <Segment2>
           <ProductTitle>
+            {/* Gonna leave this here in case I change my mind later */}
+            {/* <FlavorButtonContainer>
+              <FlavorTitle>{cream[flavor].name}</FlavorTitle>
+              <FlavorButton color={'#ecd484'} onClick={() => handleFlavor('birthday_cake')}/>
+              <FlavorButton color={'#44c4f4'} onClick={() => handleFlavor('blue_dream')}/>
+              <FlavorButton color={'#942c4c'} onClick={() => handleFlavor('sherblato')}/>
+            </FlavorButtonContainer> */}
             <FlavorDropList value={flavor} onChange={handleFlavor}>
               <Option value="birthday_cake">Birthday Cake</Option>
               <Option value="sherblato">Sherblato</Option>
@@ -65,19 +72,6 @@ const Container = styled.div`
 `;
 const Img = styled.img`
   border-radius: 30px;
-  @media only screen and (max-width: 768px) {
-    // align-self: center;
-    // height: 40vh;
-    width: 100%;
-    object-fit: cover;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    // transform: translateX(10%);
-    width: 100%;
-  }
-  // @media only screen and (min-width: 1024px) {
-  //   transform: translateX(-20%);
-  // }
 `;
 const FlavorDropList = styled.select`
   border: none;
@@ -118,7 +112,6 @@ const ImageContainer = styled(Segment)`
 `;
 const Segment2 = styled(Segment)`
   order: 3;
-  // border: 1px solid grey;
   border-radius: 10px;
   width: 40vw;
   @media only screen and (max-width: 767px) {
@@ -161,5 +154,22 @@ const P = styled.p`
   font-family: 'Chakra Petch', sans-serif;
   margin: 0;
 `;
+// const FlavorButtonContainer = styled.div`
+//   display: flex;
+//   gap: 10px;
+//   align-items: center;
+// `;
+// const FlavorButton = styled.button`
+//   border-radius: 20px;
+//   border: none;
+//   height: 2vw;
+//   width: 2vw;
+//   background-color: ${props => props.color};
+// `;
+// const FlavorTitle = styled.h1`
+//   font-family: Permanent  Marker, cursive;
+//   padding: 0;
+//   margin: 0;
+// ;`
 
 export default Flavor;
