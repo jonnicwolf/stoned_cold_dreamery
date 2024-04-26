@@ -142,6 +142,9 @@ const Option = styled.option`
 const P = styled.p`
   font-family: 'Chakra Petch', sans-serif;
   margin: 0;
+  @media screen and (max-width: 1024px) {
+    padding: 10px;
+  }
 `;
 // const FlavorButtonContainer = styled.div`
 //   display: flex;

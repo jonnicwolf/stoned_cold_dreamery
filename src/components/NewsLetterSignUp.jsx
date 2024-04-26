@@ -61,9 +61,9 @@ const ConeContainer = styled.div`
   background-color: #fffff6;
   opacity: 100%;
   z-index: 1;
-  @media only screen and (max-width: 767px) {
-    padding-bottom: 5vh;
-  }
+  // @media only screen and (max-width: 767px) {
+  //   padding-bottom: 5vh;
+  // }
 `;
 const Disclaimer = styled.div`
   font-color: #104e65;
