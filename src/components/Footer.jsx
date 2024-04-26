@@ -66,8 +66,8 @@ const Footer = () => {
 
 const NewsLetterSignUpWrapper = styled.div`
   height: 40%;
-  @media screen and (max-width: 767px) {
-    height: 23%;
+  @media screen and (max-width: 1024px) {
+    height: 40vh;
   }
 `;
 const Container = styled.div`
@@ -75,8 +75,10 @@ const Container = styled.div`
   flex-direction: column;
   height: 70vh;
   color: #104e65;
-  @media screen and (max-width: 767px) {
-    height: 350vw;
+  overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    height: 400vw;
+    border: 1px solid red;
   }
 `;
 const AboutLinks = styled.div`
@@ -95,7 +97,7 @@ const LeftBox = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 767pc) {
+  @media screen and (max-width: 767px) {
     width: 100%;
   }
 `;
@@ -158,18 +160,10 @@ const FooterLogoContainer = styled.div`
   align-items: center;
   background-color: #104e65;
   display: flex;
-  height: 20%;
   justify-content: center;
   width: 100%;
-  bottom: 0;
   z-index: 5;
   overflow: hidden;
-  @media screen and (max-width: 767px) {
-    height: 10%;
-  }
-  @media screen and (min-width: 1500px) {
-    height: 30%;
-  }
 `;
 const PaddingWrap = styled.div`
   padding-left: 5px;

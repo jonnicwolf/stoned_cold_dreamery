@@ -98,17 +98,10 @@ const Segment = styled.div`
 `;
 const ImageContainer = styled(Segment)`
   overflow: hidden;
-  width: 80vw;
+  width: 40vw;
   height: 100%;
   border-radius: 30px;
   align-self: center;
-  @media only screen and (max-width: 767px) {
-    width: auto;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: auto;
-    align-self: center;
-  }
 `;
 const Segment2 = styled(Segment)`
   order: 3;
@@ -132,11 +125,7 @@ const Segment2 = styled(Segment)`
 const Segment3 = styled(Segment)`
   order: 2;
   width: 40vw;
-  @media only screen and (max-width: 767px) {
-    width: 100%;
-    border: none;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     width: 100vw;
     border: none;
   }

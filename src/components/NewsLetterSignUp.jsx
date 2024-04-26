@@ -33,6 +33,7 @@ const Container = styled.div`
   background-size: 40px 40px;
   background-color: #fffff6;
   z-index: 2;
+  border: 1px solid blue;
   }
 `;
 const Button = styled.button`
