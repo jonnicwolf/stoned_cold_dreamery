@@ -98,7 +98,7 @@ const Segment = styled.div`
 `;
 const ImageContainer = styled(Segment)`
   overflow: hidden;
-  width: 40vw;
+  width: 80vw;
   height: 100%;
   border-radius: 30px;
   align-self: center;

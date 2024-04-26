@@ -67,7 +67,7 @@ const Footer = () => {
 const NewsLetterSignUpWrapper = styled.div`
   height: 40%;
   @media screen and (max-width: 1024px) {
-    height: 40vh;
+    height: 20%;
   }
 `;
 const Container = styled.div`
@@ -77,7 +77,7 @@ const Container = styled.div`
   color: #104e65;
   overflow: hidden;
   @media screen and (max-width: 1024px) {
-    height: 400vw;
+    height: 100%;
     border: 1px solid red;
   }
 `;
@@ -98,6 +98,7 @@ const LeftBox = styled.div`
   align-items: center;
   justify-content: center;
   @media screen and (max-width: 767px) {
+    height: 30%;
     width: 100%;
   }
 `;
@@ -106,7 +107,8 @@ const RightBox = styled.div`
   flex-direction: column;
   height: 100%;
   width: 30%;
-  @media screen and (max-width: 767pc) {
+  @media screen and (max-width: 767px) {
+    height: 40%;
     width: 100%;
   }
 `;
