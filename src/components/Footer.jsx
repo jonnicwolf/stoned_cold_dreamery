@@ -64,12 +64,6 @@ const Footer = () => {
   );
 };
 
-const NewsLetterSignUpWrapper = styled.div`
-  height: 40%;
-  @media screen and (max-width: 1024px) {
-    height: 20%;
-  }
-`;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -77,17 +71,34 @@ const Container = styled.div`
   color: #104e65;
   overflow: hidden;
   @media screen and (max-width: 1024px) {
-    height: 100%;
-    border: 1px solid red;
+    height: 140vh;
+  }
+`;
+const NewsLetterSignUpWrapper = styled.div`
+  height: 40%;
+  @media screen and (max-width: 1024px) {
+    height: 40%;
   }
 `;
 const AboutLinks = styled.div`
   display: flex;
   height: 50%;
   color: #104e65;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
-    height: 40%;
+    height: 50%;
+  }
+`;
+const FooterLogoContainer = styled.div`
+  align-items: center;
+  background-color: #104e65;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 5;
+  overflow: hidden;
+  @media screen and (max-height: 1024px) {
+    height: 10%;
   }
 `;
 const LeftBox = styled.div`
@@ -98,14 +109,14 @@ const LeftBox = styled.div`
   align-items: center;
   justify-content: center;
   @media screen and (max-width: 767px) {
-    height: 30%;
+    height: 60%;
     width: 100%;
   }
 `;
 const RightBox = styled.div`
   display: flex;
-  flex-direction: column;
   height: 100%;
+  flex-direction: column;
   width: 30%;
   @media screen and (max-width: 767px) {
     height: 40%;
@@ -157,15 +168,6 @@ const IconBox = styled.div`
   gap: 20%;
   height: 50%;
   border: 1px solid #d18755;
-`;
-const FooterLogoContainer = styled.div`
-  align-items: center;
-  background-color: #104e65;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  z-index: 5;
-  overflow: hidden;
 `;
 const PaddingWrap = styled.div`
   padding-left: 5px;
