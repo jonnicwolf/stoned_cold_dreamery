@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import SelectCountry from './SelectCountry';
 import SelectState from './SelectState';
 
 const CheckoutForm = () => {
+  const [isCheckboxClicked, setIsCheckboxClicked]  = useState(true);
+  
+  function handleClick () {
+    setIsCheckboxClicked(!isCheckboxClicked);
+  };
+
   return (
     <Container>
       {/* <Form action={alert('This is a mock website. We do not accept any payments nor will we service this order. Thank you for shopping with the Stoned Cold Dreamery')}> */}
@@ -40,9 +46,26 @@ const CheckoutForm = () => {
         <br />
 
         <SideBySide>
-          <input type="checkbox" />
+          <input type="checkbox" onChange={handleClick} />
           <label htmlFor="matchAddresses">Billing address is shipping address</label>
         </SideBySide><br />
+
+        {isCheckboxClicked &&
+          <>
+            <label htmlFor="shipping">Shipping Address*</label>
+            <Info>
+              <SelectCountry /><br />
+              <Address1 type="text" placeholder='Address line 1' required /><br />
+              <Address2 type="text" placeholder='Address line 2' />
+              <SideBySide>
+                <Input type="text" style={{borderRight: '1px solid grey', borderBottom: '1px solid grey'}} placeholder='City' required />
+                <Input type="number" style={{borderBottom: '1px solid grey', width: '100%'}} placeholder='Zip' required />
+              </SideBySide>
+              <SelectState />
+            </Info>
+          <br />
+          </>
+        }
 
         <Button>Pay</Button>
       </Form>
@@ -63,6 +86,12 @@ const Button = styled.button`
   border-radius: 15px;
   font-size: 18px;
   height: 5vh;
+  &:hover {
+    box-shadow: 2px 1px 10px #69e0f0;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in;
+  }
 `;
 const Form = styled.form`
   display: flex;

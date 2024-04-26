@@ -60,8 +60,8 @@ function App() {
 };
 
 const Container = styled.div`
-  height: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   background-color: #fffff6;
   display: flex;
   flex-direction: column;

@@ -21,7 +21,7 @@ const NutritionFacts = ({size}) => {
         </Stat>
         <Stat>
           <strong>2g</strong>
-          <StatName>Dietary Fiber</StatName>
+          <StatName>Fiber</StatName>
         </Stat>
         <Stat>
           <strong>22g</strong>
@@ -52,8 +52,9 @@ const StatContainer = styled.div`
   align-self: center;
   justify-content: space-between;
   gap: 20px;
-  width: 95%;
-  @media only screen and (min-width: 1024px) {
+  width: 35vw;
+  @media only screen and (max-width: 1024px) {
+    width: 80vw;
     gap: 10px;
   }
 `;
@@ -62,12 +63,18 @@ const Stat = styled.div`
   display: flex;
   flex-direction: column;
   font-family: 'Chakra Petch', sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   text-style: bold;
+  @media only screen and (max-width: 1024px) {
+    font-size: 1.2em;
+  }
 `;
 const StatName = styled.div`
   font-size: 50%;
   text-wrap: nowrap;
+  @media only screen and (max-width: 1024px) {
+    font-size: 75%;
+  }
 `;
 const Title = styled.div`
   font-family: 'Chakra Petch', sans-serif;

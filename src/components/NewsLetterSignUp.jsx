@@ -33,6 +33,7 @@ const Container = styled.div`
   background-size: 40px 40px;
   background-color: #fffff6;
   z-index: 2;
+  border: 1px solid blue;
   }
 `;
 const Button = styled.button`
@@ -60,9 +61,9 @@ const ConeContainer = styled.div`
   background-color: #fffff6;
   opacity: 100%;
   z-index: 1;
-  @media only screen and (max-width: 767px) {
-    padding-bottom: 5vh;
-  }
+  // @media only screen and (max-width: 767px) {
+  //   padding-bottom: 5vh;
+  // }
 `;
 const Disclaimer = styled.div`
   font-color: #104e65;

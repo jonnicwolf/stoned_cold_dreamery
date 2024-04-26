@@ -64,28 +64,41 @@ const Footer = () => {
   );
 };
 
-const NewsLetterSignUpWrapper = styled.div`
-  height: 40%;
-  @media screen and (max-width: 767px) {
-    height: 23%;
-  }
-`;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 70vh;
   color: #104e65;
-  @media screen and (max-width: 767px) {
-    height: 350vw;
+  overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    height: 140vh;
+  }
+`;
+const NewsLetterSignUpWrapper = styled.div`
+  height: 40%;
+  @media screen and (max-width: 1024px) {
+    height: 40%;
   }
 `;
 const AboutLinks = styled.div`
   display: flex;
   height: 50%;
   color: #104e65;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
-    height: 40%;
+    height: 50%;
+  }
+`;
+const FooterLogoContainer = styled.div`
+  align-items: center;
+  background-color: #104e65;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 5;
+  overflow: hidden;
+  @media screen and (max-height: 1024px) {
+    height: 10%;
   }
 `;
 const LeftBox = styled.div`
@@ -95,16 +108,18 @@ const LeftBox = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: 767pc) {
+  @media screen and (max-width: 767px) {
+    height: 60%;
     width: 100%;
   }
 `;
 const RightBox = styled.div`
   display: flex;
-  flex-direction: column;
   height: 100%;
+  flex-direction: column;
   width: 30%;
-  @media screen and (max-width: 767pc) {
+  @media screen and (max-width: 767px) {
+    height: 40%;
     width: 100%;
   }
 `;
@@ -153,23 +168,6 @@ const IconBox = styled.div`
   gap: 20%;
   height: 50%;
   border: 1px solid #d18755;
-`;
-const FooterLogoContainer = styled.div`
-  align-items: center;
-  background-color: #104e65;
-  display: flex;
-  height: 20%;
-  justify-content: center;
-  width: 100%;
-  bottom: 0;
-  z-index: 5;
-  overflow: hidden;
-  @media screen and (max-width: 767px) {
-    height: 10%;
-  }
-  @media screen and (min-width: 1500px) {
-    height: 30%;
-  }
 `;
 const PaddingWrap = styled.div`
   padding-left: 5px;

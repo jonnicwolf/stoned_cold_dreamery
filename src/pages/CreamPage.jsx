@@ -102,13 +102,6 @@ const ImageContainer = styled(Segment)`
   height: 100%;
   border-radius: 30px;
   align-self: center;
-  @media only screen and (max-width: 767px) {
-    width: auto;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: auto;
-    align-self: center;
-  }
 `;
 const Segment2 = styled(Segment)`
   order: 3;
@@ -132,11 +125,7 @@ const Segment2 = styled(Segment)`
 const Segment3 = styled(Segment)`
   order: 2;
   width: 40vw;
-  @media only screen and (max-width: 767px) {
-    width: 100%;
-    border: none;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  @media only screen and (max-width: 1024px) {
     width: 100vw;
     border: none;
   }
@@ -153,6 +142,9 @@ const Option = styled.option`
 const P = styled.p`
   font-family: 'Chakra Petch', sans-serif;
   margin: 0;
+  @media screen and (max-width: 1024px) {
+    padding: 10px;
+  }
 `;
 // const FlavorButtonContainer = styled.div`
 //   display: flex;
