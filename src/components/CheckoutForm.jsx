@@ -63,6 +63,12 @@ const Button = styled.button`
   border-radius: 15px;
   font-size: 18px;
   height: 5vh;
+  &:hover {
+    box-shadow: 2px 1px 10px #69e0f0;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in;
+  }
 `;
 const Form = styled.form`
   display: flex;
