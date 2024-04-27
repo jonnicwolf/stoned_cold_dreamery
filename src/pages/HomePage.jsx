@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import Carousel from '../components/Carousel';
 import Flavors from '../components/Flavors.jsx'
 
-import { boricanna, boricanna_shared_joint, logo_dude_pink, logo_plain_estd  } from '../photo_assets/carousel_home/index.js';
+import { logo_dude_pink, logo_plain_estd } from '../photo_assets/carousel_home/index.js';
 
-const banners = [ logo_dude_pink, boricanna_shared_joint, logo_plain_estd, boricanna ];
+const banners = [ logo_plain_estd, logo_dude_pink ];
 const carousel_webBanner_speed = 5000; // in ms
 
 const Home = () => {

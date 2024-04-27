@@ -25,7 +25,7 @@ const Carousel = ({ slides, cover, time, activationMode, size }) => {
       setTimeout(()=>{
         setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
         setFade(false);
-      }, (time/2));
+      }, (800));
     }; 
 
     let interval;

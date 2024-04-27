@@ -1,5 +1,4 @@
-export const [ boricanna,
-  boricanna_shared_joint,
+export const [
   logo_dude_pink,
   logo_plain_estd,
   logo_transparent_black,
@@ -8,8 +7,6 @@ export const [ boricanna,
   tub_bluedream
 ] = [
   
-  require('../../photo_assets/Boricanna_webBanner.jpg'),
-  require('../../photo_assets/carousel_home/boricanna-shared-joint.jpg'),
   require('../../photo_assets/carousel_home/scd-dude-pink.jpg'),
   require('../../photo_assets/carousel_home/scd-logo-estd.jpg'),
   require('../../photo_assets/carousel_home/scd-logo-transparent.png'),

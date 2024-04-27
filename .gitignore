@@ -11,6 +11,9 @@
 # production
 /build
 
+# pages
+
+
 # misc
 .DS_Store
 

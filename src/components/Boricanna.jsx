@@ -1,9 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Boricanna = () => {
+import Carousel from './Carousel';
+
+import { boricanna, boricanna_shared_joint } from '../photo_assets/carousel_home/index.js';
+const boricanna_slides = [ boricanna_shared_joint, boricanna,]
+
+
+const Boricanna = ({ slides }) => {
   return (
-    <div>Boricanna</div>
+    <Container>
+      <CarouselBox>
+        <Carousel
+          
+          />
+      </CarouselBox>
+      <TextBox></TextBox>
+    </Container>
   );
 };
 
