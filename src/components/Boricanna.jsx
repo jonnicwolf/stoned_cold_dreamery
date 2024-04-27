@@ -3,19 +3,28 @@ import styled from 'styled-components';
 
 import Carousel from './Carousel';
 
-import { boricanna, boricanna_shared_joint } from '../photo_assets/carousel_home/index.js';
-const boricanna_slides = [ boricanna_shared_joint, boricanna,]
+import { banner, shared_joint, sign_1, sign_2 } from '../photo_assets/boricanna/index.js';
+const boricanna_slides = [ banner, shared_joint, sign_1, sign_2];
+const slide_duration = 5000;
 
-
-const Boricanna = ({ slides }) => {
+const Boricanna = () => {
   return (
     <Container>
+      <TextBox>
+        <SubTitle>Our Growers</SubTitle>
+        <P>We at Stoned Cold Dreamery are proud to call Boricanna our exclusive growers for all our house-branded products.
+        <br /><br />
+        The Morales family in Trujillo Alto, Puerto Rico, cultivates a legacy of excellence at Boricanna.
+        <br /><br />
+        Since 2020, Boricanna has nurtured a deep-rooted commitment to sustainable agriculture and community empowerment. Through innovative farming practices and a passion for quality, Boricanna offers a transformative experience in cannabis cultivation.</P>
+      </TextBox>
       <CarouselBox>
         <Carousel
-          
+          slides={boricanna_slides}
+          time={3000}
+          size={'large'}
           />
       </CarouselBox>
-      <TextBox></TextBox>
     </Container>
   );
 };
@@ -23,17 +32,41 @@ const Boricanna = ({ slides }) => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 80vw;
+  height: 100vw;
   width: 100vw;
 `;
 
 const CarouselBox = styled.div`
-  height: 35%;
+  height: 70%;
   width: 100%;
 `;
 const TextBox = styled.div`
-  height: 45%;
+  display: flex;
+  background-color: #cca287;
+  color: #d18755;
+  height: 30%;
   width: 100%;
+`;
+
+const SubTitle = styled.p`
+  font-family: bebas neue;
+  padding: 35px;
+  color: #104e65;
+  width: 30%;
+  font-size: 6vw;
+  @media screen only and (max-width: 1024px) {
+    font-size: 4vw;
+  }
+`;
+const P = styled.p`
+  padding: 35px;
+  width: 70%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8vw;
+  @media screen and (max-width: 1024px) {
+    padding: 5px;
+  }
 `;
 
 export default Boricanna;

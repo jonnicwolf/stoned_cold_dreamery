@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Carousel from '../components/Carousel';
-import Flavors from '../components/Flavors.jsx'
+import Flavors from '../components/Flavors.jsx';
+import Boricanna from '../components/Boricanna.jsx';
 
 import { logo_dude_pink, logo_plain_estd } from '../photo_assets/carousel_home/index.js';
 
@@ -22,6 +23,7 @@ const Home = () => {
       </WebBannerBackground>
 
       <Flavors />
+      <Boricanna />
     </Container>
   );
 };
