@@ -13,7 +13,7 @@ const Carousel = ({ slides, cover, time, activationMode, size }) => {
       size_prop = '100%';
       break;
     case "medium":
-      size_prop = '85vh';
+      size_prop = '50vh';
       break;
     default:
       size_prop = '40vh';
@@ -25,7 +25,7 @@ const Carousel = ({ slides, cover, time, activationMode, size }) => {
       setTimeout(()=>{
         setSlideNum(slidePosition === 0 ? carouselLength-1 : slidePosition-1);
         setFade(false);
-      }, (time/2));
+      }, (800));
     }; 
 
     let interval;
