@@ -5,7 +5,7 @@ import Carousel from './Carousel';
 
 import { banner, shared_joint, sign_1, sign_2 } from '../photo_assets/boricanna/index.js';
 const boricanna_slides = [ banner, shared_joint, sign_1, sign_2];
-const slide_duration = 5000;
+const slide_duration = 3000;
 
 const Boricanna = () => {
   return (
@@ -21,7 +21,7 @@ const Boricanna = () => {
       <CarouselBox>
         <Carousel
           slides={boricanna_slides}
-          time={3000}
+          time={slide_duration}
           size={'large'}
           />
       </CarouselBox>
