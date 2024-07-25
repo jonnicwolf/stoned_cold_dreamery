@@ -23,6 +23,7 @@ const Home = () => {
       </WebBannerBackground>
 
       <Flavors />
+
       <Boricanna />
     </Container>
   );

@@ -15,7 +15,7 @@ const Flavors = () => {
 
   return (
     <Container>
-      <TitleContainer color={'#fffff6'}>
+      <TitleContainer color={'#fffff6'} style={{margin: '0px', borderRadius: '0px'}}>
         <Title>FLAVORS</Title>
         <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
       </TitleContainer>
@@ -85,6 +85,8 @@ const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 30vw;
+  background-color: white;
+  gap: 1vw;
   @media screen and (max-width: 690px) {
     justify-content: center;
     flex-wrap: wrap;
@@ -102,8 +104,12 @@ const Frame = styled.div`
   height: 100%
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #ebbf9e;
-  background-color: ${props => props.color};
+  // border-right: 1px solid #ebbf9e;
+  //background-color: ${props => props.color};
+  background-color: #f2f2f0;
+  padding: 55px;
+  margin: 1vw;
+  border-radius: 3%;
   @media screen and (max-width: 1064px) {
     height: 50%;
     width: 49.7vw;
