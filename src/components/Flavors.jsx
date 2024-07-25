@@ -154,6 +154,7 @@ const ImgTitle = styled.div`
   font-family: Permanent Marker;
   font-weight: bold;
   font-size: 3rem;
+  color: #104e65;
   z-index: 1;
   @media screen and (max-width: 1064px) {
     font-size: 4rem;
@@ -164,19 +165,20 @@ const ImgInfo = styled.div`
   height: 70%;
   overflow: hidden;
   align-items: center;
+  border: 1px solid red;
 `;
-const Price = styled.p`
+const Price = styled.p` 
+  border: 1px solid red;
   display: flex;
-  height: 100%;
   align-items: center;
   height: 100%;
   width: 50%;
   font-family: 'Chakra Petch';
   font-weight: bold;
-  font-size: 2vw;
-  padding-left: 1vw;
+  font-size: 2rem;
+  color: #104e65;
   @media screen and (max-width: 1064px) {
-    font-size: 4vw;
+    font-size: 3rem;
   }
 `;
 const Button = styled.button`
@@ -214,7 +216,8 @@ const CartPlus = styled.span`
   top: 42%;
   left: 25%;
   font-size: 2vw;
-  color: ${props => props.hover ? '#104e65' : 'white'};
+  // color: ${props => props.hover ? '#104e65' : 'white'};
+  color: #104e65;
   @media screen and (max-width: 1064px) {
     font-size: 5vw;
     top: 50%;
