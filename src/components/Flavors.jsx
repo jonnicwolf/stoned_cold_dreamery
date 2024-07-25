@@ -148,6 +148,7 @@ const Img = styled.img`
   width: 100%;
   max-width: 100%;
   position: relative;
+  border-radius: 5%;
 `;
 const ImgTitle = styled.div`
   padding-left: 15px;
