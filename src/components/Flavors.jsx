@@ -153,10 +153,10 @@ const ImgTitle = styled.div`
   padding-left: 15px;
   font-family: Permanent Marker;
   font-weight: bold;
-  font-size: 2.5vw;
+  font-size: 3rem;
   z-index: 1;
   @media screen and (max-width: 1064px) {
-    font-size: 5vw;
+    font-size: 4rem;
   }
 `;
 const ImgInfo = styled.div`
