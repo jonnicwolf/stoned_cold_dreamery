@@ -108,7 +108,7 @@ const Frame = styled.div`
   padding: 55px;
   margin: 1vw;
   border-radius: 3%;
-  box-shadow: 0px 5px 35px 1px;
+  box-shadow: 0px 1px 20px 1px;
   @media screen and (max-width: 1064px) {
     height: 50%;
     width: 49.7vw;
