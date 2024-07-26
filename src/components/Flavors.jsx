@@ -10,6 +10,12 @@ const birthday_cake = require( '../photo_assets/flavors/birthday_cake.jpg' );
 const sherblato = require( '../photo_assets/flavors/sherblato.jpg' );
 
 const products = require('../data.json');
+const mobile_products = {
+  blueDream: products.cream.blue_dream,
+  birthdayCake: products.cream.birthday_cake,
+  sherblato_: products.cream.sherblato
+}
+;
 
 const sw = window.innerWidth <= 720;
 
@@ -17,7 +23,7 @@ const Flavors = () => {
 
   function renderFlavors (sw) {
     return sw
-    ? (<Mobile_Flavors/>)
+    ? (<Mobile_Flavors products={mobile_products} />)
     : (<Container>
         <TitleContainer>
           <Title>FLAVORS</Title>

@@ -11,7 +11,7 @@ export default function FlavorCard ({ linkPath, product, imgSrc, title }) {
   function handleClick () {
     addItemToCart(product);
     navigate('/cart');
-  }
+  };
 
   return (
     <Container>
