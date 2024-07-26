@@ -22,7 +22,7 @@ export default function FlavorCard() {
           <Count>(4)</Count>
         </Stars>
         <Note>Ultra-pasteurized heavy cream base</Note>
-        <button>Buy Now</button>
+        <Button>Buy Now</Button>
       </Info>
     </Container>
   );
@@ -77,3 +77,20 @@ const Note = styled.p`
   font-weight: 700;
   width: 100%;
 `;
+
+const Button = styled.button`
+  border-radius: 20px;
+  border: 1px solid #104e65;
+  color: #104e65;
+  font-size: 1.5rem;
+  font-family: Chakra Petch;
+  width: 80%;
+  align-self: center;
+  transition: all 0.3s linear;
+  &: hover {
+    background-color: #104e65;
+    border: 1px solid white;
+    color: white;
+    scale: 1.1;
+  }
+`
