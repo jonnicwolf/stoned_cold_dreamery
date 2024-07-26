@@ -41,6 +41,10 @@ const Container = styled.div`
 const Img = styled.img`
   width: 100%;
   border-radius: 5%;
+  transition: all 0.3s linear;
+   &: hover {
+    scale: 1.1;
+   }
 `;
 
 const Info = styled.div`
