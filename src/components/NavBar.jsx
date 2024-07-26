@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useCart } from './CartProvider';
 
 import Logo from './Logo';
@@ -9,10 +9,7 @@ const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
 const NavBar = ({ scrollPixel }) => {
   const [isMobile, setIsMobile] = useState(false);
   const { cartItems } = useCart();
-  const location = useLocation();
   const background_gradient = 'radial-gradient(circle 30vw, #72bac9, #104e65)'
-  const background = location.pathname !== '/' ? background_gradient : null;
-
 
   useEffect(()=> {
     setIsMobile(window.innerWidth < 700);
@@ -21,20 +18,13 @@ const NavBar = ({ scrollPixel }) => {
   return (
     <Container
       scrollPixel={ scrollPixel }
-      background={ background }
       background_gradient={ background_gradient }
       isMobile={isMobile}>
-      { isMobile ?
-        null
-        :
-        <LogoTray>
-          <StyledLink to='/'>
-            <LogoOrderDiv>
-              <Logo size='small'/>
-            </LogoOrderDiv>
-          </StyledLink>
-        </LogoTray>
-      }
+      <LogoTray>
+        <StyledLink to='/'>
+          <Logo size='xsmall'/>
+        </StyledLink>
+      </LogoTray>
 
       <RightSubContainer scrollPixel={ scrollPixel } isMobile={ isMobile }>
         <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
@@ -57,15 +47,16 @@ const CartItems = styled.div`
 `;
 const Container = styled.div`
   display: flex;
-  background-image: ${props => props.isMobile ? null : props.scrollPixel > 100 ? props.background_gradient : props.background };
+  background-image: ${props =>  props.background_gradient};
   height: 5vw;
   min-height: 60px;
-  justify-content: ${props => props.isMobile ? 'flex-end' : 'space-between'};
+  justify-content: space-between};
   position: fixed;
   text-decoration: none;
   width: 100vw;
   z-index: 99;
   overflow: hidden;
+  transition: all 0.3s linear;
   @media screen and (min-width: 1500px) {
     height: 5vh;
   }
@@ -82,12 +73,10 @@ const LogoTray = styled.div`
   padding: 0 0 0 15px;
   @media only screen and (max-width: 767px) {
     width: 60%;
+    padding: 5px;
   }
 `;
-const LogoOrderDiv = styled.div`
-  position: relative;
-  z-index: 2;
-`;
+
 const RightSubContainer = styled.div`
   display: ${ props => props.scrollPixel > 100 && props.isMobile ? 'none': 'flex' };;
   align-items: center;
@@ -106,7 +95,6 @@ const StyledLink = styled(Link)`
   color: #FFFFFF;
   font-family: Modak;
   font-weight: normal;
-  transition: 0.3s;
 `;
 
 export default NavBar;

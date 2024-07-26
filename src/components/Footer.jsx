@@ -30,19 +30,19 @@ const Footer = () => {
           <BoxLink to='/privacy'>
             <PaddingWrap>PRIVACY POLICY</PaddingWrap>
           </BoxLink>
-          <BoxLink to='/tos'>
+          <BoxLink to='/tos' style={{borderBottom: '1px solid #d18755'}}>
             <PaddingWrap>TERMS OF SERVICE</PaddingWrap>
           </BoxLink>
         </LeftBox>
 
         <RightBox>
           <IconBox>
-            <SocialIcon
+            <Social
               url='https://www.instagram.com/thestoned_cold_dreamery/'
               fgColor="white"
               bgColor="#104e65"
               />
-            <SocialIcon
+            <Social
               url='https://twitter.com/theSCDreamery'
               fgColor="white"
               bgColor='#104e65'
@@ -69,9 +69,8 @@ const Container = styled.div`
   flex-direction: column;
   height: 70vh;
   color: #104e65;
-  overflow: hidden;
-  @media screen and (max-width: 1024px) {
-    height: 140vh;
+  @media screen and (max-width: 720px) {
+    height: 100vh;
   }
 `;
 const NewsLetterSignUpWrapper = styled.div`
@@ -84,9 +83,9 @@ const AboutLinks = styled.div`
   display: flex;
   height: 50%;
   color: #104e65;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 720px) {
     flex-direction: column;
-    height: 50%;
+    height: 90%;
   }
 `;
 const FooterLogoContainer = styled.div`
@@ -97,7 +96,7 @@ const FooterLogoContainer = styled.div`
   width: 100%;
   z-index: 5;
   overflow: hidden;
-  @media screen and (max-height: 1024px) {
+  @media screen and (max-height: 720px) {
     height: 10%;
   }
 `;
@@ -106,8 +105,6 @@ const LeftBox = styled.div`
   flex-direction: column;
   width: 70%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
   @media screen and (max-width: 767px) {
     height: 60%;
     width: 100%;
@@ -134,11 +131,13 @@ const BoxLink = styled(Link)`
   width: 100%;
   font-size: 2em;
   color: #104e65;
-  adding-left: 15px;
   &:hover {
     background-color: #104e65;
     color: white;
     transition: background-color 0.2s ease-out;
+  }
+  @media screen and (max-width: 720px) {
+    justify-content: center;
   }
 `;
 const Privacy = styled.div`
@@ -155,11 +154,18 @@ const PrivacyBox = styled.div`
   border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
   color: #104e65;
+  @media screen and (max-width: 720px) {
+    justify-content: center;
+  }
 `;
 const PrivacyBoxLarge = styled.div`
   border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
   height: 60%;
+  @media screen and (max-width: 720px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 const IconBox = styled.div`
   display: flex;
@@ -172,5 +178,11 @@ const IconBox = styled.div`
 const PaddingWrap = styled.div`
   padding-left: 5px;
 `;
+const Social = styled(SocialIcon)`
+  transition: all 0.3s linear;
+  &: hover {
+    scale: 1.1;
+  }
+`
 
 export default Footer;

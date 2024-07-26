@@ -34,6 +34,9 @@ const Container = styled.div`
   flex-direction: column;
   height: 100vw;
   width: 100vw;
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
 `;
 
 const CarouselBox = styled.div`

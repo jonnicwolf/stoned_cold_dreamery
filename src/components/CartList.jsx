@@ -7,7 +7,7 @@ const CartList = () => {
   const NYCTax = 8.875;
   return (
     <Container>
-      <div>
+      <CartItems>
         { cartItems.map((item) => (
           <Item key={item.id}>
             <ItemPhoto src={item.photo} alt="" />
@@ -18,24 +18,23 @@ const CartList = () => {
             <XButton onClick={()=> removeItemFromCart(item.id)}>❌</XButton>
           </Item>
         ))}
-      </div>
-      <div>
-        { cartItems.length !== 0
-            ? <Total>
-                <div>
-                  <div>Subtotal [{cartItems.length} {cartItems.length > 1 ? 'items' : 'item'}]</div>
-                  <div>Tax</div>
-                  <div>Total</div>
-                </div>
-                <div>
-                  <div>${total}</div>
-                  <div>${(total/100*NYCTax).toFixed(2)}</div>
-                  <div>${(total/100 * NYCTax + total).toFixed(2)}</div>
-                </div>
-              </Total>
-            : <Empty>[EMPTY]</Empty>
-        }
-      </div>
+      </CartItems>
+
+      { cartItems.length !== 0
+          ? <Total>
+              <div>
+                <div>Subtotal [{cartItems.length} {cartItems.length > 1 ? 'items' : 'item'}]</div>
+                <div>Tax</div>
+                <div>Total</div>
+              </div>
+              <div>
+                <div>${total}</div>
+                <div>${(total/100*NYCTax).toFixed(2)}</div>
+                <div>${(total/100 * NYCTax + total).toFixed(2)}</div>
+              </div>
+            </Total>
+          : <Empty>[EMPTY]</Empty>
+      }
       {cartItems.length > 0
         ? <ClearButton onClick={clearCart}>Clear Cart</ClearButton>
         : null
@@ -68,6 +67,12 @@ const Container = styled.div`
     padding: 0;
   }
 `;
+const CartItems = styled.div`
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  margin: 15px;
+`;
 const ClearButton = styled.button`
   background: none;
   border: none;
@@ -76,7 +81,8 @@ const ClearButton = styled.button`
   font-family: 'Chakra Petch', sans-serif;
   font-size: 20px;
   margin-top: 1vh;
-  width: 12vw;
+  padding: 5px;
+  margin: 15px;
   &:hover {
     box-shadow: 2px 1px 10px red;
     font-weight: bold;
@@ -100,24 +106,26 @@ const Empty = styled.p`
 const Item = styled.div`
   display: flex;
   margin-bottom: 1vh;
-  justify-content: space-evenly;
-  width: 50vw;
+  justify-content: space-between;
+  width: 100%;
+  gap: 5px;
 `;
 const ItemInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: Permanent Marker;
-  font-size: 30px;
+  font-size: 1rem;
 `;
 const ItemPhoto = styled.img`
-  height: 15vh;
-  width: 15vw;
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
 `;
 const Total = styled.div`
   display: flex;
-  font-size: 20px;
-  gap: 20vh;
+  font-size: 1rem;
+  gap: 20vw
 `;
 const XButton = styled.button`
   background: none;

@@ -16,10 +16,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   gap: 4vw;
-  margin-top: 15vh;
   @media only screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
+    margin-top: 14vh;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     flex-direction: column;
