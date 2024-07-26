@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { useCart } from './CartProvider';
 
 import FlavorCard from './FlavorCard';
 import Mobile_Flavors from './Mobile_Flavors';
@@ -9,12 +8,12 @@ import Mobile_Flavors from './Mobile_Flavors';
 const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
 const birthday_cake = require( '../photo_assets/flavors/birthday_cake.jpg' );
 const sherblato = require( '../photo_assets/flavors/sherblato.jpg' );
-const cloud = require('../photo_assets/cloud/—Pngtree—white cartoon clouds clipart_5568114.png');
+
 const products = require('../data.json');
+
 const sw = window.innerWidth <= 720;
 
 const Flavors = () => {
-  const { addItemToCart } = useCart();
 
   function renderFlavors (sw) {
     return sw
@@ -25,9 +24,21 @@ const Flavors = () => {
           <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
         </TitleContainer>
 
-        <FlavorCard linkPath={'/cream'} imgSrc={blue_dream} title={'Blue Dream'} />
-        <FlavorCard linkPath={'/cream'} imgSrc={birthday_cake} title={'Birthday Cake'} />
-        <FlavorCard linkPath={'/cream'} imgSrc={sherblato} title={'Sherblato'} />
+        <FlavorCard
+          linkPath={'/cream'}
+          product={products.cream.blue_dream}
+          imgSrc={blue_dream}
+          title={'Blue Dream'} />
+        <FlavorCard
+          linkPath={'/cream'}
+          product={products.cream.birthday_cake}
+          imgSrc={birthday_cake}
+          title={'Birthday Cake'} />
+        <FlavorCard
+          linkPath={'/cream'}
+          product={products.cream.sherblato}
+          imgSrc={sherblato}
+          title={'Sherblato'} />
       </Container>)
   }
 

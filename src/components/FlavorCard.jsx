@@ -1,8 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-export default function FlavorCard ({ linkPath, imgSrc, title }) {
+import { useCart } from './CartProvider';
+
+export default function FlavorCard ({ linkPath, product, imgSrc, title }) {
+  const { addItemToCart } = useCart();
+  const navigate = useNavigate();
+
+  function handleClick () {
+    addItemToCart(product);
+    navigate('/cart');
+  }
+
   return (
     <Container>
       <Link to={linkPath}>
@@ -20,7 +30,7 @@ export default function FlavorCard ({ linkPath, imgSrc, title }) {
           <Count>(4)</Count>
         </Stars>
         <Note>Ultra-pasteurized heavy cream base</Note>
-        <Button>Buy Now</Button>
+        <Button onClick={handleClick}>Buy Now</Button>
       </Info>
     </Container>
   );
