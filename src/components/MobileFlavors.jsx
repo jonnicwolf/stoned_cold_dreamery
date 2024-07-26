@@ -7,7 +7,7 @@ const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
 const birthday_cake = require( '../photo_assets/flavors/birthday_cake.jpg' );
 const sherblato = require( '../photo_assets/flavors/sherblato.jpg' );
 
-export default function Mobile_Flavors ({ products }) {
+export default function MobileFlavors ({ products }) {
   const { blueDream, birthdayCake, sherblato_ } = products;
   return (
     <Container>

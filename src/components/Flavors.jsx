@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import FlavorCard from './FlavorCard';
-import Mobile_Flavors from './Mobile_Flavors';
+import MobileFlavors from './MobileFlavors';
 
 const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
 const birthday_cake = require( '../photo_assets/flavors/birthday_cake.jpg' );
@@ -22,7 +22,7 @@ const Flavors = () => {
 
   function renderFlavors (sw) {
     return sw
-    ? (<Mobile_Flavors products={mobile_products} />)
+    ? (<MobileFlavors products={mobile_products} />)
     : (<Container>
         <TitleContainer>
           <Title>FLAVORS</Title>

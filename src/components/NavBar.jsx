@@ -48,7 +48,7 @@ const CartItems = styled.div`
 `;
 const Container = styled.div`
   display: flex;
-  background-image: ${props =>  props.background_gradient };
+  background-image: ${props =>  props.background_gradient};
   height: 5vw;
   min-height: 60px;
   justify-content: space-between};
