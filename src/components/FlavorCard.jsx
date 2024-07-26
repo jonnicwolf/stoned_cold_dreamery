@@ -36,6 +36,9 @@ const Container = styled.div`
   border-radius: 3%;
   box-shadow: 0px 1px 20px 1px;
   margin: 30px;
+  @media (max-width: 720px) {
+    width: 50%;
+  }
 `;
 
 const Img = styled.img`

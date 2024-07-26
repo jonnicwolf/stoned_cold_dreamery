@@ -66,6 +66,7 @@ const Container = styled.div`
   width: 100vw;
   z-index: 99;
   overflow: hidden;
+  transition: all 0.3s linear;
   @media screen and (min-width: 1500px) {
     height: 5vh;
   }

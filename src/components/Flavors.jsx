@@ -34,17 +34,6 @@ const Container = styled.div`
   width: 100vw;
   height: 30vw;
   background-color: white;
-  @media screen and (max-width: 690px) {
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 102%;
-    height: 120vw;
-  }
-  @media screen and (min-width: 691px) and (max-width: 1064px) {
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 90vh;
-  }
 `;
 const Frame = styled.div`
   width: 25%;
@@ -56,23 +45,6 @@ const Frame = styled.div`
   margin: 1vw;
   border-radius: 3%;
   box-shadow: 0px 1px 20px 1px;
-  @media screen and (max-width: 1064px) {
-    height: 50%;
-    width: 49.7vw;
-    border: 1px solid #ebbf9e;
-  }
-`;
-const FrameInfo = styled.div`
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border: 1px solid red;
-  //color: #d18755;
-  @media screen and (max-width: 700px) {
-    height: 20%;
-  }
 `;
 const TitleContainer = styled(Frame)`
   font-family: 'Bebas Neue';
@@ -91,56 +63,6 @@ const Title = styled.div`
     font-size: 7vw;
   }
 `;
-const Img = styled.img`
-  object-fit: cover;
-  height: 70%;
-  width: 100%;
-  max-width: 100%;
-  position: relative;
-  border-radius: 5%;
-`;
-const ImgTitle = styled.div`
-  padding-left: 15px;
-  font-family: Permanent Marker;
-  font-weight: bold;
-  font-size: 3rem;
-  color: #104e65;
-  z-index: 1;
-  @media screen and (max-width: 1064px) {
-    font-size: 4rem;
-  }
-`;
-const ImgInfo = styled.div`
-  display: flex;
-  height: 70%;
-  height: 50%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid red;
-`;
-const Price = styled.p`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 50%;
-  font-family: 'Chakra Petch';
-  font-weight: bold;
-  font-size: 2rem;
-  color: #104e65;
-  //border: 2px solid blue;
-  @media screen and (max-width: 1064px) {
-    font-size: 3rem;
-  }
-`;
-const Button = styled.button`
-  z-index: 1;
-  font-family: Modak;
-  border: none;
-  cursor: pointer;
-  background-color: none;
-  height: 100%;
-`;
 const SubTitle = styled.div`
   text-align: right;
   padding: 15px;
@@ -149,17 +71,6 @@ const SubTitle = styled.div`
     font-size: 5vw;
   }
 `;
-const Cloud = styled.img`
-  height: 150%;
-  width: 100%;
-  // transform: translateY(-2vw);
-  opacity: ${props => props.hover ? 1 : 0};
-  transition: opacity 0.1s linear;
-`;
-const CartPlus = styled.p`
-  font-size: 2rem;
-  color: #104e65;
-  height: 100%;
-`;
+
 
 export default Flavors;
