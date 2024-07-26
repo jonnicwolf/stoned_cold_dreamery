@@ -89,6 +89,7 @@ const Star = styled.img`
 `;
 const Count = styled.span`
   align-self: flex-end;
+  font-family: Chakra Petch;
   @media screen and (max-width: 720px) {
     font-size: 0.8rem;
   }

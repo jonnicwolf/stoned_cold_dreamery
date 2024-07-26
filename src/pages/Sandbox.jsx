@@ -7,7 +7,7 @@ import Mobile_Flavors from '../components/Mobile_Flavors';
 const Sandbox = () => {
   return (
     <Container>
-      <Mobile_Flavors />
+      <Flavors />
     </Container>
   );
 };

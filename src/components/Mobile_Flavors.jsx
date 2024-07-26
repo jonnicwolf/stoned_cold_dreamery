@@ -24,16 +24,21 @@ export default function Mobile_Flavors () {
 };
 
 const Container = styled.div`
-  font-family: Chakra Petch;
+  font-family: Bebas Neue;
+  background-color: white;
+  align-self: flex-start;
+  width: 100vw;
 `;
 const Title = styled.span`
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: bold;
   padding-left: 15px;
+  color: #d18755;
 `;
 const Slider = styled.div`
   display: flex;
   overflow-y: scroll;
   padding: 10px;
   margin: 5px;
+  z-index: 15;
 `;
