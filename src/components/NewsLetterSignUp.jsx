@@ -10,7 +10,7 @@ const NewsLetterSignUp = () => {
       <InputContainer>
         <Title>GET EXCLUSIVE NEWS AND CONTENT</Title>
         <Form action="">
-          <Input type="text" placeholder='email address'/>
+          <Input type="text" placeholder='ice@cream.com'/>
           <Button>SIGN UP</Button>
         </Form>
         <Disclaimer>
@@ -67,9 +67,11 @@ const ConeContainer = styled.div`
 `;
 const Disclaimer = styled.div`
   font-color: #104e65;
-  font-size: 12px;
-  padding-top: 10px;
-  width: 59%;
+  font-size: 0.5rem;
+  margin-top: 10px;
+  width: 80%;
+  // text-wrap: nowrap;
+  text-overflow: ellipsis;
 `;
 const Form = styled.form`
   background-color: white;
@@ -79,14 +81,20 @@ const Form = styled.form`
   width: 60%;
   min-width: 270px;
   border-radius: 30px;
+  @media screen and (max-width: 720px) {
+    width: 80%;
+  }
 `;
 const Input = styled.input`
   border: none;
-  font-size: 30px;
+  font-size: 2rem;
   outline: none;
   padding: 10px;
   width: 80%;
   border-radius: 30px;
+  @media screen and (max-width: 720px) {
+    font-size: 1.5rem;
+  }
 `;
 const InputContainer = styled.div`
   display: flex;
