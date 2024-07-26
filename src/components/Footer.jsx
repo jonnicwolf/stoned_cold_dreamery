@@ -30,7 +30,7 @@ const Footer = () => {
           <BoxLink to='/privacy'>
             <PaddingWrap>PRIVACY POLICY</PaddingWrap>
           </BoxLink>
-          <BoxLink to='/tos'>
+          <BoxLink to='/tos' style={{borderBottom: '1px solid #d18755'}}>
             <PaddingWrap>TERMS OF SERVICE</PaddingWrap>
           </BoxLink>
         </LeftBox>
@@ -67,8 +67,11 @@ const Footer = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 70vh;
   color: #104e65;
+  @media screen and (max-width: 720px) {
+    height: 100vh;
+  }
 `;
 const NewsLetterSignUpWrapper = styled.div`
   height: 40%;
@@ -102,8 +105,6 @@ const LeftBox = styled.div`
   flex-direction: column;
   width: 70%;
   height: 100%;
-  align-items: center;
-  justify-content: center;
   @media screen and (max-width: 767px) {
     height: 60%;
     width: 100%;
@@ -130,11 +131,13 @@ const BoxLink = styled(Link)`
   width: 100%;
   font-size: 2em;
   color: #104e65;
-  adding-left: 15px;
   &:hover {
     background-color: #104e65;
     color: white;
     transition: background-color 0.2s ease-out;
+  }
+  @media screen and (max-width: 720px) {
+    justify-content: center;
   }
 `;
 const Privacy = styled.div`
