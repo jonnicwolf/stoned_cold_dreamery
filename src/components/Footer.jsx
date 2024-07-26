@@ -37,12 +37,12 @@ const Footer = () => {
 
         <RightBox>
           <IconBox>
-            <SocialIcon
+            <Social
               url='https://www.instagram.com/thestoned_cold_dreamery/'
               fgColor="white"
               bgColor="#104e65"
               />
-            <SocialIcon
+            <Social
               url='https://twitter.com/theSCDreamery'
               fgColor="white"
               bgColor='#104e65'
@@ -154,11 +154,18 @@ const PrivacyBox = styled.div`
   border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
   color: #104e65;
+  @media screen and (max-width: 720px) {
+    justify-content: center;
+  }
 `;
 const PrivacyBoxLarge = styled.div`
   border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
   height: 60%;
+  @media screen and (max-width: 720px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 const IconBox = styled.div`
   display: flex;
@@ -171,5 +178,11 @@ const IconBox = styled.div`
 const PaddingWrap = styled.div`
   padding-left: 5px;
 `;
+const Social = styled(SocialIcon)`
+  transition: all 0.3s linear;
+  &: hover {
+    scale: 1.1;
+  }
+`
 
 export default Footer;
