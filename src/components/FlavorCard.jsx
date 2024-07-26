@@ -4,16 +4,16 @@ import styled from 'styled-components';
 
 const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
 
-export default function FlavorCard() {
+export default function FlavorCard ({ linkPath, imgSrc, title }) {
   return (
     <Container>
-      <Link to='/cream'>
-        <Img src={blue_dream}/>
+      <Link to={linkPath}>
+        <Img src={imgSrc}/>
       </Link>
 
       <Info>
         <Price>$15.99</Price>
-        <Title>Blue Dream</Title>
+        <Title>{title}</Title>
         <Stars>
             <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
             <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
