@@ -64,9 +64,13 @@ const Button = styled.button`
 
 const Disclaimer = styled.p`
   font-color: #104e65;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   margin-top: 10px;
   width: 80%;
+  max-width: 700px;
+  @media screen and (max-width: 720px) {
+    font-size: 0.5rem;
+  }
 `;
 const Form = styled.form`
   display: flex;

@@ -36,7 +36,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 100%;
   overflow-y: hidden;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 `;
 const WebBannerBackground = styled.div`
   width: 100vw;
