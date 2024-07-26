@@ -70,9 +70,9 @@ const Container = styled.div`
   height: 70vh;
   color: #104e65;
   overflow: hidden;
-  @media screen and (max-width: 1024px) {
-    height: 140vh;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   //height: 140vh;
+  // }
 `;
 const NewsLetterSignUpWrapper = styled.div`
   height: 40%;

@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import Flavors from '../components/Flavors';
 import FlavorCard from '../components/FlavorCard';
 import Mobile_Flavors from '../components/Mobile_Flavors';
+import NewsLetterSignUp from '../components/NewsLetterSignUp';
 
 const Sandbox = () => {
   return (
     <Container>
-      <Flavors />
+      <NewsLetterSignUp />
     </Container>
   );
 };
