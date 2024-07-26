@@ -20,7 +20,7 @@ const Flavors = () => {
     return sw
     ? (<Mobile_Flavors/>)
     : (<Container>
-        <TitleContainer color={'#fffff6'}>
+        <TitleContainer>
           <Title>FLAVORS</Title>
           <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
         </TitleContainer>
@@ -35,35 +35,20 @@ const Flavors = () => {
 };
 
 const Container = styled.div`
-  border-bottom: 1px solid #ebbf9e;
   display: flex;
   width: 100vw;
   height: 30vw;
   background-color: white;
 `;
-const Frame = styled.div`
-  width: 25%;
-  height: 100%
-  display: flex;
-  flex-direction: column;
-  background-color: #f2f2f0;
-  padding: 55px;
-  margin: 1vw;
-  border-radius: 3%;
-  box-shadow: 0px 1px 20px 1px;
-`;
-const TitleContainer = styled(Frame)`
-  margin: 0px;
-  border-radius: 0;
-  box-shadow: 'none';
-  font-family: 'Bebas Neue';
-  font-size: 3vw;
-  letter-spacing: 5px;
+const TitleContainer = styled.div`
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: fixed;
-  width: 40%;
+  background-color: #f2f2f0;
+  font-family: 'Bebas Neue';
+  font-size: 3vw;
+  letter-spacing: 5px;
 `;
 const Title = styled.div`
   font-size: 5vw;
