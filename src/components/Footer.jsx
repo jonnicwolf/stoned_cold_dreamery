@@ -67,12 +67,8 @@ const Footer = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 100vh;
   color: #104e65;
-  overflow: hidden;
-  // @media screen and (max-width: 1024px) {
-  //   //height: 140vh;
-  // }
 `;
 const NewsLetterSignUpWrapper = styled.div`
   height: 40%;
@@ -84,9 +80,9 @@ const AboutLinks = styled.div`
   display: flex;
   height: 50%;
   color: #104e65;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 720px) {
     flex-direction: column;
-    height: 50%;
+    height: 90%;
   }
 `;
 const FooterLogoContainer = styled.div`
@@ -97,7 +93,7 @@ const FooterLogoContainer = styled.div`
   width: 100%;
   z-index: 5;
   overflow: hidden;
-  @media screen and (max-height: 1024px) {
+  @media screen and (max-height: 720px) {
     height: 10%;
   }
 `;
