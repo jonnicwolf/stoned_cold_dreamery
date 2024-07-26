@@ -7,7 +7,9 @@ const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
 export default function FlavorCard() {
   return (
     <Container>
-      <Img src={blue_dream}/>
+      <Link to='/cream'>
+        <Img src={blue_dream}/>
+      </Link>
     </Container>
   );
 };
