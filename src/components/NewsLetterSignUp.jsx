@@ -101,10 +101,10 @@ const InputContainer = styled.div`
 const Title = styled.h1`
   align-self: center;
   color: #104e65;
-  font-size: 4vh;
+  font-size: 4rem;
   font-family: 'Bebas Neue';
   @media screen and (max-width: 500px) {
-    font-size: 9vw;
+    font-size: 2rem;
   }
 `;
 
