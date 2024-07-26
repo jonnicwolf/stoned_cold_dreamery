@@ -124,8 +124,8 @@ const ItemPhoto = styled.img`
 `;
 const Total = styled.div`
   display: flex;
-  font-size: 20px;
-  gap: 20vh;
+  font-size: 1rem;
+  gap: 20vw
 `;
 const XButton = styled.button`
   background: none;
