@@ -15,13 +15,13 @@ export default function FlavorCard() {
         <Price>$15.99</Price>
         <Title>Blue Dream</Title>
         <Stars>
-          <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
-          <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
-          <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
-          <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
-          <span>(4)</span>
+            <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
+            <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
+            <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
+            <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
+          <Count>(4)</Count>
         </Stars>
-        <span>Ultra-pasteurized heavy cream base</span>
+        <Note>Ultra-pasteurized heavy cream base</Note>
         <button>Buy Now</button>
       </Info>
     </Container>
@@ -61,10 +61,9 @@ const Info = styled.div`
   border: 1px solid red;
 `;
 const Price = styled.span`
-  font-size: 1rem;
+  font-size: 1.1rem;
   width: 100%;
   font-family: Chakra Petch;
-  font-weight: 700;
 `;
 const Title = styled.span`
   font-size: 2rem;
@@ -73,7 +72,18 @@ const Title = styled.span`
 `;
 const Stars = styled.div`
   display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
 `;
 const Star = styled.img`
   font-size: 1rem;
-`
+`;
+const Count = styled.span`
+  align-self: flex-end;
+`;
+const Note = styled.p`
+  color: #8a8987;
+  font-weight: 700;
+  width: 100%;
+`;
