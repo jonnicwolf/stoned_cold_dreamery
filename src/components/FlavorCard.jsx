@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
-
 export default function FlavorCard ({ linkPath, imgSrc, title }) {
   return (
     <Container>
