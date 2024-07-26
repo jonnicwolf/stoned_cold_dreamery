@@ -9,7 +9,6 @@ const cart = require('../photo_assets/icons/icons8-trolley-64.jpg');
 const NavBar = ({ scrollPixel }) => {
   const [isMobile, setIsMobile] = useState(false);
   const { cartItems } = useCart();
-  const location = useLocation();
   const background_gradient = 'radial-gradient(circle 30vw, #72bac9, #104e65)'
 
   useEffect(()=> {
