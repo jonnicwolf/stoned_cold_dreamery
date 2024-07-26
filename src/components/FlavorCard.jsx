@@ -10,6 +10,20 @@ export default function FlavorCard() {
       <Link to='/cream'>
         <Img src={blue_dream}/>
       </Link>
+
+      <Info>
+        <Price>$15.99</Price>
+        <Title>Blue Dream</Title>
+        <Stars>
+          <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
+          <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
+          <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
+          <Star src='https://img.icons8.com/?size=20&id=85784&format=png&color=000000/' />
+          <span>(4)</span>
+        </Stars>
+        <span>Ultra-pasteurized heavy cream base</span>
+        <button>Buy Now</button>
+      </Info>
     </Container>
   );
 };
@@ -39,3 +53,27 @@ const Img = styled.img`
   position: relative;
   border-radius: 5%;
 `;
+
+const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid red;
+`;
+const Price = styled.span`
+  font-size: 1rem;
+  width: 100%;
+  font-family: Chakra Petch;
+  font-weight: 700;
+`;
+const Title = styled.span`
+  font-size: 2rem;
+  width: 100%;
+  font-family: Permanent Marker;
+`;
+const Stars = styled.div`
+  display: flex;
+`;
+const Star = styled.img`
+  font-size: 1rem;
+`
