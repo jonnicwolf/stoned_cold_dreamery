@@ -34,31 +34,21 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #f2f2f0;
-  padding: 55px;
-  margin: 1vw;
+  padding: 30px;
   border-radius: 3%;
   box-shadow: 0px 1px 20px 1px;
-  @media screen and (max-width: 1064px) {
-    height: 50%;
-    width: 49.7vw;
-    border: 1px solid #ebbf9e;
-  }
 `;
 
 const Img = styled.img`
-  object-fit: cover;
-  height: 70%;
   width: 100%;
-  max-width: 100%;
-  position: relative;
   border-radius: 5%;
 `;
 
 const Info = styled.div`
+  margin-top: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid red;
 `;
 const Price = styled.span`
   font-size: 1.1rem;
