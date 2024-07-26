@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useCart } from './CartProvider';
 
+import FlavorCard from './FlavorCard';
+
 const blue_dream = require( '../photo_assets/flavors/blue_dream.jpg' );
 const birthday_cake = require( '../photo_assets/flavors/birthday_cake.jpg' );
 const sherblato = require( '../photo_assets/flavors/sherblato.jpg' );
@@ -11,7 +13,6 @@ const products = require('../data.json');
 
 const Flavors = () => {
   const { addItemToCart } = useCart();
-  
 
   return (
     <Container>
@@ -20,61 +21,9 @@ const Flavors = () => {
         <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
       </TitleContainer>
 
-      <Frame>
-        <Link to='/cream'>
-          <Img src={birthday_cake} alt='Birthday Cake'/>
-        </Link>
-        <FrameInfo>
-          <ImgTitle>Birthday Cake</ImgTitle>
-          <ImgInfo>
-              <Price>$15.99</Price>
-              <Button onClick={()=> addItemToCart(products.cream.birthday_cake)}>
-                {/* <Cloud src={cloud} alt="" hover={hoveredFrame === 'birthday_cake'}/> */}
-                <CartPlus>CART+</CartPlus>
-              </Button>
-          </ImgInfo>
-        </FrameInfo>
-      </Frame>
-
-      {/* <Frame
-        color={'#44c4f4'}
-        onMouseEnter={()=>setHoveredFrame('blue_dream')}
-        onMouseLeave={()=>setHoveredFrame(null)}>
-        <Link to='/cream'>
-          <Img src={blue_dream} alt="Blue Dream" />
-        </Link>
-        <FrameInfo>
-          <ImgTitle>Blue Dream</ImgTitle>
-          <ImgInfo>
-            <Price>$15.99</Price>
-            <Button onClick={()=> addItemToCart(products.cream.blue_dream)}>
-              <Cloud src={cloud} alt="" hover={hoveredFrame === 'blue_dream'}/>
-              <CartPlus hover={hoveredFrame === 'blue_dream'}>CART+</CartPlus>
-            </Button>
-          </ImgInfo>
-        </FrameInfo>
-      </Frame>
-
-      <Frame
-        color={'#942c4c'}
-        onMouseEnter={()=>setHoveredFrame('sherblato')}
-        onMouseLeave={()=>setHoveredFrame(null)}>
-        <Link to='/cream'>
-          <Img src={sherblato} alt="Sherblato" />
-        </Link>
-
-        <FrameInfo>
-          <ImgTitle>Sherblato</ImgTitle>
-
-          <ImgInfo>
-            <Price>$15.99</Price>
-            <Button onClick={()=> addItemToCart(products.cream.sherblato)}>
-              <Cloud src={cloud} alt="" hover={hoveredFrame === 'sherblato'}/>
-              <CartPlus hover={hoveredFrame === 'sherblato'}>BUY NOW</CartPlus>
-            </Button>
-          </ImgInfo>
-        </FrameInfo>
-      </Frame> */}
+      <FlavorCard linkPath={'/cream'} imgSrc={blue_dream} title={'Blue Dream'} />
+      <FlavorCard linkPath={'/cream'} imgSrc={birthday_cake} title={'Birthday Cake'} />
+      <FlavorCard linkPath={'/cream'} imgSrc={sherblato} title={'Sherblato'} />
     </Container>
   );
 };
@@ -85,7 +34,6 @@ const Container = styled.div`
   width: 100vw;
   height: 30vw;
   background-color: white;
-  gap: 1vw;
   @media screen and (max-width: 690px) {
     justify-content: center;
     flex-wrap: wrap;
