@@ -11,7 +11,7 @@ const products = require('../data.json');
 
 const Flavors = () => {
   const { addItemToCart } = useCart();
-  const [hoveredFrame, setHoveredFrame] = useState(null);
+  
 
   return (
     <Container>
@@ -20,10 +20,7 @@ const Flavors = () => {
         <SubTitle>The <br />Stoned Cold Dreamery's <br /> finest treats</SubTitle>
       </TitleContainer>
 
-      <Frame
-        color={'#ecd484'}
-        onMouseEnter={()=>setHoveredFrame('birthday_cake')}
-        onMouseLeave={()=>setHoveredFrame(null)}>
+      <Frame>
         <Link to='/cream'>
           <Img src={birthday_cake} alt='Birthday Cake'/>
         </Link>
@@ -32,14 +29,14 @@ const Flavors = () => {
           <ImgInfo>
               <Price>$15.99</Price>
               <Button onClick={()=> addItemToCart(products.cream.birthday_cake)}>
-                <Cloud src={cloud} alt="" hover={hoveredFrame === 'birthday_cake'}/>
-                <CartPlus hover={hoveredFrame === 'birthday_cake'}>CART+</CartPlus>
+                {/* <Cloud src={cloud} alt="" hover={hoveredFrame === 'birthday_cake'}/> */}
+                <CartPlus>CART+</CartPlus>
               </Button>
           </ImgInfo>
         </FrameInfo>
       </Frame>
 
-      <Frame
+      {/* <Frame
         color={'#44c4f4'}
         onMouseEnter={()=>setHoveredFrame('blue_dream')}
         onMouseLeave={()=>setHoveredFrame(null)}>
@@ -65,17 +62,19 @@ const Flavors = () => {
         <Link to='/cream'>
           <Img src={sherblato} alt="Sherblato" />
         </Link>
+
         <FrameInfo>
           <ImgTitle>Sherblato</ImgTitle>
+
           <ImgInfo>
             <Price>$15.99</Price>
             <Button onClick={()=> addItemToCart(products.cream.sherblato)}>
               <Cloud src={cloud} alt="" hover={hoveredFrame === 'sherblato'}/>
-              <CartPlus hover={hoveredFrame === 'sherblato'}>CART+</CartPlus>
+              <CartPlus hover={hoveredFrame === 'sherblato'}>BUY NOW</CartPlus>
             </Button>
           </ImgInfo>
         </FrameInfo>
-      </Frame>
+      </Frame> */}
     </Container>
   );
 };
@@ -119,7 +118,10 @@ const FrameInfo = styled.div`
   height: 30%;
   display: flex;
   flex-direction: column;
-  color: #d18755;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid red;
+  //color: #d18755;
   @media screen and (max-width: 700px) {
     height: 20%;
   }
@@ -163,12 +165,13 @@ const ImgTitle = styled.div`
 const ImgInfo = styled.div`
   display: flex;
   height: 70%;
-  overflow: hidden;
+  height: 50%;
+  width: 100%;
   align-items: center;
+  justify-content: center;
   border: 1px solid red;
 `;
-const Price = styled.p` 
-  border: 1px solid red;
+const Price = styled.p`
   display: flex;
   align-items: center;
   height: 100%;
@@ -177,23 +180,17 @@ const Price = styled.p`
   font-weight: bold;
   font-size: 2rem;
   color: #104e65;
+  //border: 2px solid blue;
   @media screen and (max-width: 1064px) {
     font-size: 3rem;
   }
 `;
 const Button = styled.button`
-  display: flex;
-  align-items: center;
-  position: relative;
   z-index: 1;
-  width: 50%;
   font-family: Modak;
-  font-size: 2vw;
-  line-height: 1.5vw;
   border: none;
   cursor: pointer;
-  background-color: transparent;
-  text-align: center;
+  background-color: none;
   height: 100%;
 `;
 const SubTitle = styled.div`
@@ -211,18 +208,10 @@ const Cloud = styled.img`
   opacity: ${props => props.hover ? 1 : 0};
   transition: opacity 0.1s linear;
 `;
-const CartPlus = styled.span`
-  position: absolute;
-  top: 42%;
-  left: 25%;
-  font-size: 2vw;
-  // color: ${props => props.hover ? '#104e65' : 'white'};
+const CartPlus = styled.p`
+  font-size: 2rem;
   color: #104e65;
-  @media screen and (max-width: 1064px) {
-    font-size: 5vw;
-    top: 50%;
-    left: 35%;
-  }
+  height: 100%;
 `;
 
 export default Flavors;
