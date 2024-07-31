@@ -65,20 +65,18 @@ const Footer = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 60vh;
   color: #104e65;
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1000px) {
     height: 100vh;
   }
 `;
-// const NewsLetterSignUpWrapper = styled.div`
-//   height: 50%;
-// `;
+
 const AboutLinks = styled.div`
   display: flex;
   height: 50%;
   color: #104e65;
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
     height: 90%;
   }
@@ -91,7 +89,7 @@ const FooterLogoContainer = styled.div`
   width: 100%;
   z-index: 5;
   overflow: hidden;
-  @media screen and (max-height: 720px) {
+  @media screen and (max-height: 1000px) {
     height: 10%;
   }
 `;
@@ -100,7 +98,7 @@ const LeftBox = styled.div`
   flex-direction: column;
   width: 70%;
   height: 100%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1000px) {
     height: 60%;
     width: 100%;
   }
@@ -110,7 +108,7 @@ const RightBox = styled.div`
   height: 100%;
   flex-direction: column;
   width: 30%;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1000px) {
     height: 40%;
     width: 100%;
   }
@@ -131,7 +129,7 @@ const BoxLink = styled(Link)`
     color: white;
     transition: background-color 0.2s ease-out;
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1200px) {
     justify-content: center;
     font-size: 1.5rem;
   }
@@ -150,7 +148,7 @@ const PrivacyBox = styled.div`
   border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
   color: #104e65;
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1200px) {
     justify-content: center;
   }
 `;
@@ -158,7 +156,7 @@ const PrivacyBoxLarge = styled.div`
   border: 1px solid #d18755;
   border-width: 0 1px 1px 1px;
   height: 60%;
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1200px) {
     display: flex;
     justify-content: center;
   }
