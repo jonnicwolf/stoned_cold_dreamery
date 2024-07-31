@@ -36,6 +36,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 100%;
   overflow-y: hidden;
+  overflow-x: hidden;
   margin-top: 3vh;
   @media screen and (max-width: 720px) {
     margin-top: 7vh;
