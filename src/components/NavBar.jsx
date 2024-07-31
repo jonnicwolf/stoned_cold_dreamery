@@ -27,9 +27,9 @@ const NavBar = ({ scrollPixel }) => {
       </LogoTray>
 
       <RightSubContainer scrollPixel={ scrollPixel } isMobile={ isMobile }>
-        <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
+        <StyledLink to='/cart'>
           <CartItems>{cartItems.length >= 1 ? cartItems.length : null}</CartItems>
-          <CartIcon src={cart} isMobile={isMobile}/>
+          <CartIcon src={cart} isMobile={isMobile} />
         </StyledLink>
       </RightSubContainer>
 
@@ -78,23 +78,21 @@ const LogoTray = styled.div`
 `;
 
 const RightSubContainer = styled.div`
-  display: ${ props => props.scrollPixel > 100 && props.isMobile ? 'none': 'flex' };;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 10%;
-
-  @media only screen and (max-width: 767px) {
-    width: 15%;
-  }
-  @media screen and (min-width: 1500px) {
-    width: 5%;
-  }
+  margin-right: 20px;
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #FFFFFF;
   font-family: Modak;
   font-weight: normal;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 `;
 
 export default NavBar;
