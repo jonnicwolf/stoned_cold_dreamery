@@ -83,7 +83,7 @@ const Title = styled.span`
   width: 100%;
   font-family: Permanent Marker;
   @media screen and (max-width: 1200px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 `;
 const Stars = styled.div`
