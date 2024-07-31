@@ -29,7 +29,6 @@ const Container = styled.div`
   background-color: white;
   align-self: flex-start;
   width: 100vw;
-
 `;
 const Title = styled.span`
   font-size: 2rem;
