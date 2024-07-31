@@ -62,18 +62,15 @@ const Container = styled.div`
   }
 `;
 const LogoTray = styled.div`
-  align-items: center;
   display: flex;
   align-self: flex-start;
   flex-wrap: wrap;
   position: relative;
   width: 40%;
-  overflow: hidden;
+  padding-left: 15px;
   height: 100%;
-  padding: 0 0 0 15px;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1200px) {
     width: 60%;
-    padding: 5px;
   }
 `;
 
@@ -82,7 +79,7 @@ const RightSubContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 10%;
-  margin-right: 20px;
+  margin-right: 15px;
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -92,6 +89,7 @@ const StyledLink = styled(Link)`
   font-size: 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
 `;
 
