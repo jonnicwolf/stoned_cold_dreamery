@@ -48,17 +48,17 @@ const Button = styled.button`
   color: #104e65;
   font-size: 1rem;
   font-family: var(--font-family-modak);
-  height: 60px;
+  // height: 60px;
   padding: 0;
   width: 20%;
   border-radius: 30px;
   @media screen and (min-width: 1800px) {
-    font-size: 1.5rem
+    font-size: 1.5rem;
   }
   &:hover {
     background-color: #104e65;
     color: white;
-    transition: background-color 0.15s ease-in;
+    transition: background-color 0.2s ease-in;
   }
 `;
 

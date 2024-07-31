@@ -40,6 +40,7 @@ const Container = styled.div`
   width: 30%;
   height: 100%
   display: flex;
+  align-content: space-evenly;
   flex-direction: column;
   background-color: #f2f2f0;
   padding: 30px;
@@ -81,8 +82,8 @@ const Title = styled.span`
   font-size: 2rem;
   width: 100%;
   font-family: Permanent Marker;
-  @media screen and (max-width: 720px) {
-    font-size: 0.8rem;
+  @media screen and (max-width: 1200px) {
+    font-size: 1rem;
   }
 `;
 const Stars = styled.div`
@@ -110,7 +111,7 @@ const Note = styled.p`
   width: 100%;
   padding: 0;
   margin: 0;
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1200px) {
     font-size: 0.5rem;
   }
 `;
@@ -134,4 +135,4 @@ const Button = styled.button`
   @media screen and (max-width: 720px) {
     font-size: 1rem;
   }
-`
+`;
