@@ -21,7 +21,7 @@ const Refer = () => {
             <Title>GIVE $25, GET $25</Title>
             <P>Know someone who might dig the Dreamery? Give them $25 off their first order of $150 or more and get $25 off your next order.</P>
             <Form action="">
-              <Input placeholder='email address' required/>
+              <Input placeholder='Email' required/>
               <Button onSubmit={()=>setShowLinks(!showLinks)}>NEXT</Button>
             </Form>
           </Box>
