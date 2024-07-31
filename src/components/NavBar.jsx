@@ -28,7 +28,7 @@ const NavBar = ({ scrollPixel }) => {
 
       <RightSubContainer scrollPixel={ scrollPixel } isMobile={ isMobile }>
         <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
-          <CartItems>{cartItems.length}</CartItems>
+          <CartItems>{cartItems.length >= 1 ? cartItems.length : null}</CartItems>
           <CartIcon src={cart} isMobile={isMobile}/>
         </StyledLink>
       </RightSubContainer>
