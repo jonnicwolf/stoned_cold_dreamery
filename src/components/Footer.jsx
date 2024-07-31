@@ -9,9 +9,7 @@ import Logo from './Logo';
 const Footer = () => {
   return (
     <Container>
-      <NewsLetterSignUpWrapper>
-        <NewsLetterSignUp />
-      </NewsLetterSignUpWrapper>
+      <NewsLetterSignUp />
 
       <AboutLinks>
         <LeftBox>
@@ -73,12 +71,9 @@ const Container = styled.div`
     height: 100vh;
   }
 `;
-const NewsLetterSignUpWrapper = styled.div`
-  height: 40%;
-  @media screen and (max-width: 1024px) {
-    height: 40%;
-  }
-`;
+// const NewsLetterSignUpWrapper = styled.div`
+//   height: 50%;
+// `;
 const AboutLinks = styled.div`
   display: flex;
   height: 50%;
@@ -129,7 +124,7 @@ const BoxLink = styled(Link)`
   text-decoration: none;
   height: 100%;
   width: 100%;
-  font-size: 2em;
+  font-size: 2rem;
   color: #104e65;
   &:hover {
     background-color: #104e65;
@@ -138,6 +133,7 @@ const BoxLink = styled(Link)`
   }
   @media screen and (max-width: 720px) {
     justify-content: center;
+    font-size: 1.5rem;
   }
 `;
 const Privacy = styled.div`

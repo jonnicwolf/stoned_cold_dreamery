@@ -42,4 +42,5 @@ const Slider = styled.div`
   padding: 10px;
   margin: 5px;
   z-index: 15;
+  gap: 30px;
 `;

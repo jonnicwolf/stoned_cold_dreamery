@@ -5,7 +5,7 @@ const logo_white = require('../photo_assets/carousel_home/scd-logo-white-transpa
 
 const Logo = ({ size }) => {
   const options = {
-    xsmall: '1.6rem',
+    xsmall: '2rem',
     small: '2.5rem',
     medium: '3rem',
     large: '14vw'
@@ -17,8 +17,6 @@ const Logo = ({ size }) => {
 
 const LogoImg = styled.img`
   height: ${props => props.size ? props.size : '2rem'};
-  width: auto;
-  box-shadow:
 `;
 
 export default Logo;

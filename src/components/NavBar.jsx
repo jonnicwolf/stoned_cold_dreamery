@@ -27,9 +27,9 @@ const NavBar = ({ scrollPixel }) => {
       </LogoTray>
 
       <RightSubContainer scrollPixel={ scrollPixel } isMobile={ isMobile }>
-        <StyledLink style={{fontSize: '5vh', display: 'flex'}} to='/cart'>
-          <CartItems>{cartItems.length}</CartItems>
-          <CartIcon src={cart} isMobile={isMobile}/>
+        <StyledLink to='/cart'>
+          <CartItems>{cartItems.length >= 1 ? cartItems.length : null}</CartItems>
+          <CartIcon src={cart} isMobile={isMobile} />
         </StyledLink>
       </RightSubContainer>
 
@@ -62,39 +62,35 @@ const Container = styled.div`
   }
 `;
 const LogoTray = styled.div`
-  align-items: center;
   display: flex;
   align-self: flex-start;
   flex-wrap: wrap;
   position: relative;
   width: 40%;
-  overflow: hidden;
+  padding-left: 15px;
   height: 100%;
-  padding: 0 0 0 15px;
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1200px) {
     width: 60%;
-    padding: 5px;
   }
 `;
 
 const RightSubContainer = styled.div`
-  display: ${ props => props.scrollPixel > 100 && props.isMobile ? 'none': 'flex' };;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 10%;
-
-  @media only screen and (max-width: 767px) {
-    width: 15%;
-  }
-  @media screen and (min-width: 1500px) {
-    width: 5%;
-  }
+  margin-right: 15px;
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #FFFFFF;
   font-family: Modak;
   font-weight: normal;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 `;
 
 export default NavBar;

@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import NewsLetterSignUp from '../components/NewsLetterSignUp';
+//import NewsLetterSignUp from '../components/NewsLetterSignUp';
+import Flavors from '../components/Flavors';
 
 const Sandbox = () => {
   return (
     <Container>
-      <NewsLetterSignUp />
+      <Flavors />
     </Container>
   );
 };
