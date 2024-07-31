@@ -55,6 +55,9 @@ const Container = styled.div`
   width: 100vw;
   height: 35vw;
   background-color: white;
+  @media screen and (max-width: 1200px) {
+    height: 40vw;
+  }
 `;
 const TitleContainer = styled.div`
   width: 30%;
@@ -63,24 +66,23 @@ const TitleContainer = styled.div`
   justify-content: space-between;
   background-color: #f2f2f0;
   font-family: 'Bebas Neue';
-  font-size: 3vw;
-  letter-spacing: 5px;
 `;
 const Title = styled.div`
-  font-size: 5vw;
+  font-size: 4rem;
   padding: 15px;
   font-family: Modak;
   color: #104e65;
-  @media screen and (max-width: 1064px) {
-    font-size: 7vw;
+  @media screen and (max-width: 1200px) {
+    font-size: 3rem;
   }
 `;
 const SubTitle = styled.div`
   text-align: right;
   padding: 15px;
   color: #104e65;
+  font-size: 1.5rem;
   @media screen and (max-width: 1064px) {
-    font-size: 5vw;
+    font-size: 2rem;
   }
 `;
 
