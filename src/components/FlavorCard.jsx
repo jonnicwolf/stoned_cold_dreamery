@@ -23,10 +23,10 @@ export default function FlavorCard ({ linkPath, product, imgSrc, title }) {
         <Price>$15.99</Price>
         <Title>{title}</Title>
         <Stars>
-            <Star src='https://img.icons8.com/?size=15&id=85784&format=png&color=000000/' />
-            <Star src='https://img.icons8.com/?size=15&id=85784&format=png&color=000000/' />
-            <Star src='https://img.icons8.com/?size=15&id=85784&format=png&color=000000/' />
-            <Star src='https://img.icons8.com/?size=15&id=85784&format=png&color=000000/' />
+          <Star src='https://img.icons8.com/?size=15&id=85784&format=png&color=000000/' />
+          <Star src='https://img.icons8.com/?size=15&id=85784&format=png&color=000000/' />
+          <Star src='https://img.icons8.com/?size=15&id=85784&format=png&color=000000/' />
+          <Star src='https://img.icons8.com/?size=15&id=85784&format=png&color=000000/' />
           <Count>(4)</Count>
         </Stars>
         <Note>Ultra-pasteurized heavy cream base</Note>
@@ -47,7 +47,7 @@ const Container = styled.div`
   box-shadow: 0px 1px 20px 1px;
   margin: 30px;
   @media (max-width: 720px) {
-    margin: 10px;
+    margin: 0;
   }
 `;
 
@@ -64,7 +64,7 @@ const Img = styled.img`
 `;
 
 const Info = styled.div`
-  margin-top: 2vw;
+  margin-top: 1vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,7 +82,7 @@ const Title = styled.span`
   width: 100%;
   font-family: Permanent Marker;
   @media screen and (max-width: 720px) {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 `;
 const Stars = styled.div`
@@ -108,6 +108,8 @@ const Note = styled.p`
   color: #8a8987;
   font-weight: 700;
   width: 100%;
+  padding: 0;
+  margin: 0;
   @media screen and (max-width: 720px) {
     font-size: 0.5rem;
   }
@@ -119,9 +121,10 @@ const Button = styled.button`
   color: #104e65;
   font-size: 1.5rem;
   font-family: Chakra Petch;
-  width: 80%;
+  width: 100%;
   align-self: center;
   transition: all 0.3s linear;
+  margin: 10px;
   &: hover {
     background-color: #104e65;
     border: 1px solid white;
@@ -129,6 +132,6 @@ const Button = styled.button`
     scale: 1.1;
   }
   @media screen and (max-width: 720px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 `

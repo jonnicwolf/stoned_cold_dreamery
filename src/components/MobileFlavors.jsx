@@ -29,6 +29,7 @@ const Container = styled.div`
   background-color: white;
   align-self: flex-start;
   width: 100vw;
+
 `;
 const Title = styled.span`
   font-size: 2rem;
@@ -42,4 +43,5 @@ const Slider = styled.div`
   padding: 10px;
   margin: 5px;
   z-index: 15;
+  gap: 30px;
 `;

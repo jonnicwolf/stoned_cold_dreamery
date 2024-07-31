@@ -53,7 +53,7 @@ const Flavors = () => {
 const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 30vw;
+  height: 35vw;
   background-color: white;
 `;
 const TitleContainer = styled.div`
