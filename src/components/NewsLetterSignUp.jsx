@@ -23,7 +23,8 @@ const NewsLetterSignUp = () => {
 
 const Container = styled.div`
   width: 100%;
-  position: absolute;
+  
+  height: fit-content;
   background-image: url(${cone});
   background-size: 40px 40px;
   background-color: #fffff6;
@@ -32,8 +33,6 @@ const Container = styled.div`
   z-index: 1;
 `;
 const Content = styled.div`
-  position: relative;
-  height: 100%;
   width: 100%;
   background-color: rgba(255,255,255,0.8);
   z-index: 2;
@@ -41,7 +40,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
+`;
 const Button = styled.button`
   border: none;
   background-color: white;
