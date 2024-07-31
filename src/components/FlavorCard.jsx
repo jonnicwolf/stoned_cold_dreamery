@@ -39,14 +39,14 @@ export default function FlavorCard ({ linkPath, product, imgSrc, title }) {
 const Container = styled.div`
   width: 30%;
   height: 100%
-  display: flex;
-  align-content: space-evenly;
-  flex-direction: column;
   background-color: #f2f2f0;
   padding: 30px;
   border-radius: 3%;
   box-shadow: 0px 1px 20px 1px;
   margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   @media (max-width: 720px) {
     margin: 0;
   }
@@ -55,6 +55,7 @@ const Container = styled.div`
 const Img = styled.img`
   width: 100%;
   border-radius: 5%;
+  align-self: end;
   transition: all 0.3s linear;
   &: hover {
     scale: 1.1;
@@ -132,7 +133,7 @@ const Button = styled.button`
     color: white;
     scale: 1.1;
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1200px) {
     font-size: 1rem;
   }
 `;

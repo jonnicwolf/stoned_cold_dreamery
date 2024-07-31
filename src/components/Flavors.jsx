@@ -80,7 +80,7 @@ const SubTitle = styled.div`
   text-align: right;
   padding: 15px;
   color: #104e65;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   @media screen and (max-width: 1064px) {
     font-size: 2rem;
   }
