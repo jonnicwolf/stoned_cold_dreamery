@@ -66,6 +66,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 60vh;
+  height: 100%;
   color: #104e65;
   @media screen and (max-width: 1000px) {
     height: 100vh;
@@ -74,7 +75,7 @@ const Container = styled.div`
 
 const AboutLinks = styled.div`
   display: flex;
-  height: 50%;
+  height: 40vh;
   color: #104e65;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
@@ -90,7 +91,7 @@ const FooterLogoContainer = styled.div`
   z-index: 5;
   overflow: hidden;
   @media screen and (max-height: 1000px) {
-    height: 10%;
+    height: 20%;
   }
 `;
 const LeftBox = styled.div`
@@ -177,6 +178,6 @@ const Social = styled(SocialIcon)`
   &: hover {
     scale: 1.1;
   }
-`
+`;
 
 export default Footer;

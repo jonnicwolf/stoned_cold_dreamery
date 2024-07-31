@@ -61,7 +61,6 @@ function App() {
 
 const Container = styled.div`
   overflow-x: hidden;
-  overflow-y: hidden;
   background-color: #fffff6;
   display: flex;
   flex-direction: column;
