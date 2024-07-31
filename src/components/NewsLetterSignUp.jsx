@@ -91,8 +91,8 @@ const Input = styled.input`
   padding: 10px;
   width: 80%;
   border-radius: 30px;
-  @media screen and (max-width: 720px) {
-    font-size: 1.5rem;
+  @media screen and (max-width: 1200px) {
+    font-size: 1rem;
   }
 `;
 
