@@ -266,16 +266,13 @@ const Container = styled.div`
 const Title = styled.h1`
   text-align: center;
   font-family: Bebas Neue;
-  font-size: 15vw;
+  font-size: 3rem;
 `;
 const SubTitle = styled.h3``;
 const P = styled.p`
-  line-height: 2.5vw;
-  font-size: 1.5vw;
+  font-size: 1rem;
 `;
-const Ul = styled.ul`
-  line-height: 2.5vw;
-`;
+const Ul = styled.ul``;
 
 
 export default TOS;

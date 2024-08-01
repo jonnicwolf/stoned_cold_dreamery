@@ -28,13 +28,12 @@ const Container = styled.div`
 const Content = styled.div`
   text-align: center;
   width: 70vw;
-  max-width:  800px;
-`
+  max-width: 800px;
+`;
 const Title = styled.h1`
   font-family: Bebas Neue;
   font-size: 10vw;
 `;
-const P = styled.p`
-`;
+const P = styled.p``;
 
 export default Accessibility;

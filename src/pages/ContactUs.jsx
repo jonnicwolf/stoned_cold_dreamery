@@ -27,12 +27,19 @@ const Container = styled.div`
   font-size: 2vw;
   font-size: 0.6rem;
   padding: 10px;
+  @media screen and (min-width: 720px) {
+    font-size: 1rem;
+    padding: 30px;
+  }
 `;
 const Title = styled.h1`
   text-align: center;
   font-size: 3rem;
   font-family: 'Bebas Neue';
   margin: 0;
+  @media screen and (min-width: 720px) {
+    font-size: 10rem;
+  }
 `;
 const SubTitle = styled.h3`
   text-align: center;
