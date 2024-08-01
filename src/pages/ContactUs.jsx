@@ -25,17 +25,18 @@ const Container = styled.div`
   margin-top: 10vh;
   color: #104e65;
   font-size: 2vw;
-  padding: 40px;
+  font-size: 0.6rem;
+  padding: 10px;
 `;
 const Title = styled.h1`
   text-align: center;
-  font-size: 14vw;
+  font-size: 3rem;
   font-family: 'Bebas Neue';
   margin: 0;
 `;
 const SubTitle = styled.h3`
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.5rem;
 `;
 const CenterPg = styled.p`
   text-align: center;
