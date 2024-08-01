@@ -189,7 +189,9 @@ const FAQGroup = styled.div`
   position: fixed;
   left: 5vw;
   top: 0;
+  font-size: 0.5rem;
   margin-top: 10vh;
+  
 `;
 const Content = styled.div`
   width: 75%;
@@ -210,7 +212,7 @@ const FAQGroupTitle = styled(Title)`
 `;
 const LineBreak = styled.div`
   border-bottom: 1px solid #104e65;
-`
+`;
 const FAQ = styled.div`
   // border-bottom: 1px solid #104e65;
 `;
@@ -225,8 +227,8 @@ const AnchorContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8vh;
-  `;
-  const Anchor = styled.a`
+`;
+const Anchor = styled.a`
   text-decoration: none;
   color: #104e65;
   &:hover {

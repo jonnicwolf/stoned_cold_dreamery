@@ -77,6 +77,7 @@ const AboutLinks = styled.div`
   display: flex;
   height: 40vh;
   color: #104e65;
+  background: #fffff6;
   @media screen and (max-width: 1000px) {
     flex-direction: column;
     height: 90%;
@@ -115,6 +116,7 @@ const RightBox = styled.div`
   }
 `;
 const BoxLink = styled(Link)`
+  background-color: #fffff6;
   display: flex;
   align-items: center;
   border: 1px solid #d18755;
@@ -125,6 +127,7 @@ const BoxLink = styled(Link)`
   width: 100%;
   font-size: 2rem;
   color: #104e65;
+  z-index: 4;
   &:hover {
     background-color: #104e65;
     color: white;
