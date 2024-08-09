@@ -78,8 +78,8 @@ const RightSubContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10%;
   margin-right: 15px;
+  
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
