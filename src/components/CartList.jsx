@@ -5,6 +5,7 @@ import { useCart } from './CartProvider';
 const CartList = () => {
   const { cartItems, total, removeItemFromCart, clearCart } = useCart();
   const NYCTax = 8.875;
+
   return (
     <Container>
       <CartItems>
