@@ -79,7 +79,6 @@ const RightSubContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 15px;
-  
 `;
 const StyledLink = styled(Link)`
   text-decoration: none;
